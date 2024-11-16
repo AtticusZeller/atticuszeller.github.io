@@ -1,0 +1,5 @@
+# Pre-commit
+
+## Python
+
+### Ruff
