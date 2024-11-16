@@ -37,6 +37,7 @@ echo 'eval "$(uvx --generate-shell-completion zsh)"' >> ~/.zshrc
 echo 'uvx --generate-shell-completion fish | source' >> ~/.config/fish/config.fish
 echo 'eval (uvx --generate-shell-completion elvish | slurp)' >> ~/.elvish/rc.elv
 ```
+
 - Uninstallation
 
 ```shell
