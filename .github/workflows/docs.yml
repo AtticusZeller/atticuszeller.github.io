@@ -25,7 +25,7 @@ jobs:
           enable-cache: true
 
       - name: deploy github page
-        run: uv run bash docs.sh deploy
+        run: bash docs.sh deploy
 
 # Reference
 # 1. https://squidfunk.github.io/mkdocs-material/publishing-your-site/
