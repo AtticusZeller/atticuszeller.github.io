@@ -202,3 +202,16 @@ wget -qO - https://download.opensuse.org/repositories/home:/npreining:/debian-ub
 sudo apt-get update
 sudo apt install --no-install-recommends --no-install-suggests onedrive
 ```
+
+
+### Zotero
+
+[GitHub - retorquere/zotero-deb: Packaged versions of Zotero and Juris-M for Debian-based systems](https://github.com/retorquere/zotero-deb)
+
+```bash
+wget -qO- https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh | sudo bash
+sudo apt update
+sudo apt install zotero
+```
+
+

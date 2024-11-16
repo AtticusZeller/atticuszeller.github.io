@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "CS/OS/Ubuntu/System.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "System"
             }
           },
           {
@@ -186,10 +186,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "CS/OS/Ubuntu/System.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline of System"
             }
           },
           {
@@ -248,9 +248,11 @@
   },
   "active": "5e04f9d1a08afcf5",
   "lastOpenFiles": [
+    "CS/OS/Ubuntu/Package.md",
+    "CS/OS/Ubuntu/Gnome.md",
+    "index.md",
     "CS/Language/python/Venv/UV.md",
     "CS/OS/Docker.md",
-    "CS/OS/Ubuntu/Package.md",
     "CS/OS/Ubuntu/System.md",
     "CS/OS/Ubuntu/Appearance.md",
     "CS/OS/Ubuntu/code_env.md",
@@ -259,7 +261,6 @@
     "Clippings/obsidian/My 10+ Obsidian Plugins As a Medium Writer.md",
     "Clippings/obsidian",
     "Clippings",
-    "CS/OS/Ubuntu/Gnome.md",
     "Reference/blog/Steph Ango/What can we remove.md",
     "Reference/linux/How to Monitor and Test the Health of SSD in Linux.md",
     "Steph Ango.md",
@@ -282,7 +283,6 @@
     "CS/OS/Ubuntu/bugs.md",
     "CS/OS/Ubuntu/net.md",
     "CS/VCS/git.md",
-    "index.md",
     "CS/Backend/DB/Supabase.md",
     "CS/Language/python/Ruff.md",
     "CS/Frontend/React",
