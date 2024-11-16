@@ -23,10 +23,11 @@ jobs:
         uses: astral-sh/setup-uv@v3
         with:
           enable-cache: true
-
+          cache-dependency-glob: ""
       - name: deploy github page
         run: bash docs.sh deploy
 
 # Reference
 # 1. https://squidfunk.github.io/mkdocs-material/publishing-your-site/
 # 2. https://github.com/Kludex/python-template/blob/main/.github/workflows/docs.yml
+# 3. https://github.com/astral-sh/setup-uv/tree/v3/
