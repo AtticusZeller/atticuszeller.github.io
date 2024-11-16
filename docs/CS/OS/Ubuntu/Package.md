@@ -125,7 +125,7 @@ To complete setup, restart your system. Now all you have to do is [install some 
 
 ```bash
 git clone git@github.com:popey/unsnap.git
-cd unsnap 
+cd unsnap
 ./unsnap auto
 ```
 

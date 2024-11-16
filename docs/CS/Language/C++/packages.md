@@ -22,7 +22,7 @@ sudo apt install libassimp-dev
 ```
 
 
-### 
+###
 ```bash
 sudo apt update
 sudo apt install libembree-dev

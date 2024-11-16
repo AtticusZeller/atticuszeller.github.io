@@ -83,7 +83,7 @@ plugins=(
 
 ### Vscode
 
-vs code terminal , Add these properties to the user `setttings.json`
+vs code terminal , Add these properties to the user `settings.json`
 
 ```json
 {

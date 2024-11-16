@@ -20,7 +20,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 ```
 
 ```bash
-# tests 
+# tests
 sudo docker run hello-world
 docker compose version
 ```
@@ -33,7 +33,7 @@ docker compose version
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
-# tests 
+# tests
 docker run hello-world
 ```
 

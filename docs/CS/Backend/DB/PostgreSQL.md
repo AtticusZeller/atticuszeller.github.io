@@ -12,7 +12,7 @@
 Automated repository configuration:
 
 ```bash
-sudo apt install -y postgresql-common  
+sudo apt install -y postgresql-common
 sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
 ```
 
@@ -102,7 +102,7 @@ sudo apt install pgadmin4
 sudo apt install pgadmin4-desktop
 
 # Install for web mode only:  for remote server
-sudo apt install pgadmin4-web 
+sudo apt install pgadmin4-web
 
 # Configure the webserver, if you installed pgadmin4-web:
 sudo /usr/pgadmin4/bin/setup-web.sh

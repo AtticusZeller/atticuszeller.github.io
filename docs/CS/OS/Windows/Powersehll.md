@@ -81,10 +81,10 @@ foreach ($file in $pythonFiles) {
     if ($file.FullName -ne $combinedFilePath) {
         # 为每个文件添加一个简单的注释行
         ("# Contents of " + $file.FullName) | Out-File -FilePath $combinedFilePath -Append
-        
+
         # 追加文件内容到combined.py
         Get-Content -Path $file.FullName | Out-File -FilePath $combinedFilePath -Append
-        
+
         # 添加换行以分隔不同的文件内容
         "`n" | Out-File -FilePath $combinedFilePath -Append
     }

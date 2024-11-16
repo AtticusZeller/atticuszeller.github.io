@@ -24,7 +24,7 @@ cd WhiteSur-gtk-theme
 -c Dark \
 -t blue \
 --gnome-shell \
---round 
+--round
 ```
 
 > [!NOTE]
@@ -60,7 +60,7 @@ sudo ./tweaks.sh -g -N
 
 ```bash
 git clone git@github.com:vinceliuice/WhiteSur-icon-theme.git
-cd WhiteSur-icon-theme 
+cd WhiteSur-icon-theme
 ./install.sh -a -b
 ```
 

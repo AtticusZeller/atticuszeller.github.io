@@ -68,7 +68,7 @@ node -v
 npm -v
 ```
 
-## Vscode 
+## Vscode
 
 
 [Running Visual Studio Code on Linux](https://code.visualstudio.com/docs/setup/linux#_updates)

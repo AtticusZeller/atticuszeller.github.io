@@ -45,17 +45,17 @@ EI 检索 SCI 升级版 计算机科学 4 区 SCI 基础版 工程技术 4 区 I
 1. [**Open Access 开放获取**](https://ietresearch.onlinelibrary.wiley.com/hub/journal/17519640/homepage/author-guidelines#oa)
 2. [**Special Issues 特刊**](https://ietresearch.onlinelibrary.wiley.com/hub/journal/17519640/homepage/author-guidelines#si)
 3. [**Article Types 文章类型**](https://ietresearch.onlinelibrary.wiley.com/hub/journal/17519640/homepage/author-guidelines#at)
-4. [**Preparing Your Submission  
+4. [**Preparing Your Submission
     准备您的投稿**](https://ietresearch.onlinelibrary.wiley.com/hub/journal/17519640/homepage/author-guidelines#pys)
-5. [**Peer Review and Decisions  
+5. [**Peer Review and Decisions
     同行评审与决策**](https://ietresearch.onlinelibrary.wiley.com/hub/journal/17519640/homepage/author-guidelines#pr)
-6. [**IET Journal Transfer Network  
+6. [**IET Journal Transfer Network
     IET 期刊转移网络**](https://ietresearch.onlinelibrary.wiley.com/hub/journal/17519640/homepage/author-guidelines#jtn)
-7. [**Guidelines on Publishing and Research Ethics in Journal Articles  
+7. [**Guidelines on Publishing and Research Ethics in Journal Articles
     期刊文章出版与研究伦理指南**](https://ietresearch.onlinelibrary.wiley.com/hub/journal/17519640/homepage/author-guidelines#gpr)
 8. [**Copyright and Licensing 版权与许可**](https://ietresearch.onlinelibrary.wiley.com/hub/journal/17519640/homepage/author-guidelines#cl)
 9. [**After Acceptance 接受后**](https://ietresearch.onlinelibrary.wiley.com/hub/journal/17519640/homepage/author-guidelines#aa)
-10. [**Editorial Office Contact Details  
+10. [**Editorial Office Contact Details
     编辑部联系方式**](https://ietresearch.onlinelibrary.wiley.com/hub/journal/17519640/homepage/author-guidelines#eocd)
 
 ### 1. Open Access 1. 开放获取
@@ -564,20 +564,20 @@ Copyright (2024) The Institution of Engineering and Technology. The Institution 
 - [About Cookies 关于 Cookies](https://onlinelibrary.wiley.com/cookies)
 - Manage Cookies 管理 Cookies
 - [Accessibility 无障碍访问](https://onlinelibrary.wiley.com/accessibility)
-- [Wiley Research DE&I Statement and Publishing Policies  
+- [Wiley Research DE&I Statement and Publishing Policies
     威利研究多样性、公平性和包容性声明及出版政策](https://onlinelibrary.wiley.com/publishing-policies)
 
 ### HELP & SUPPORT
 
 - [Contact Us 联系我们](https://hub.wiley.com/community/support/onlinelibrary)
 - [Training and Support 培训和支持](https://www.wiley.com/customer-success/wiley-online-library-training-hub)
-- [DMCA & Reporting Piracy  
+- [DMCA & Reporting Piracy
     DMCA 和举报盗版](https://onlinelibrary.wiley.com/dmca-notification-policy)
 
 ### OPPORTUNITIES
 
 - [Subscription Agents 订阅代理](https://onlinelibrary.wiley.com/agents)
-- [Advertisers & Corporate Partners  
+- [Advertisers & Corporate Partners
     广告商和企业合作伙伴](https://onlinelibrary.wiley.com/advertisers)
 
 ### CONNECT WITH WILEY

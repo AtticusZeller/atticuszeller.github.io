@@ -63,7 +63,7 @@ onnxruntime-gpu = "^1.17.0"
 - in download page select
 
 ```
-linux->x86_64->WSL-ubuntu->2.0->deb(loacl)
+linux->x86_64->WSL-ubuntu->2.0->deb(local)
 ```
 
 - then your got it, run to install
@@ -78,7 +78,7 @@ sudo apt-get -y install cuda
 # if sudo apt-get -y install cuda install the wrong version
 # search available package
 sudo apt-cache search cuda-toolkit
-# install by specifing version
+# install by specifying version
 sudo apt-get -y install cuda-toolkit-11-8
 ```
 

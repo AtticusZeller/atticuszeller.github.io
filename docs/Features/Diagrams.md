@@ -190,7 +190,7 @@ classDiagram
     +int postalCode
     +String country
     -validate()
-    +outputAsLabel()  
+    +outputAsLabel()
   }
 ```
 ````
@@ -222,7 +222,7 @@ classDiagram
     +int postalCode
     +String country
     -validate()
-    +outputAsLabel()  
+    +outputAsLabel()
   }
 ```
 

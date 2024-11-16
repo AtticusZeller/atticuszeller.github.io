@@ -188,7 +188,7 @@ git clean -fd
 
 ```bash
 git clone --recurse-submodules <repository-url>
-# if forget to with parms --recurse-submodules try following
+# if forget to with params --recurse-submodules try following
 git submodule update --init --recursive
 ```
 
@@ -203,9 +203,9 @@ git submodule update --init --recursive
 1. remove
 
 ```bash
-rm -rf thirdparty/GS_ICP_SLAM
-rm -rf .git/modules/thirdparty/GS_ICP_SLAM
-git config --remove-section submodule.thirdparty/GS_ICP_SLAM
+rm -rf third_party/GS_ICP_SLAM
+rm -rf .git/modules/third_party/GS_ICP_SLAM
+git config --remove-section submodule.third_party/GS_ICP_SLAM
 ```
 
 ## LFS

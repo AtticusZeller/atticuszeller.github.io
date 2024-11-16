@@ -73,7 +73,7 @@ This plugin is very convenient and intuitive, so I directly quoted the official 
 
 This plugin automatically fetches the webpage to extract link titles when they’re pasted, creating a markdown link with the correct title set.
 
-For example:  
+For example:
 When pasting [https://github.com/zolrath/obsidian-auto-link-title](https://github.com/zolrath/obsidian-auto-link-title), the plugin fetches the page and retrieves the title, resulting in a paste of: [zolrath/obsidian-auto-link-title: Automatically fetch the titles of pasted links](https://github.com/zolrath/obsidian-auto-link-title)
 
 ## 1.3 Copilot
