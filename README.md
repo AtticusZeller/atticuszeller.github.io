@@ -1,6 +1,6 @@
 # Home
 
-<h1 align="center">Hi there, I'm Atticus Zhou 👋</h1>
+<h1 align="center">Hi there, I'm Atticus Zeller 👋</h1>
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=atticuszz&label=Profile%20views&color=0e75b6&style=flat" alt="atticuszz" />
 </p>
@@ -8,7 +8,7 @@
 - 🔭 I’m currently working on __computer vision like deep learning and 3D-reconstruction__
 - 🌱 I’m currently learning __Advanced Python, FastAPI, Pytorch, CUDA, TypeScript, C++__
 - 💬 Ask me about __Python, FastAPI, Pytorch__
-- 📫 How to reach me: __zhouge1831@gmail.com__
+- 📫 How to reach me: __GitHub.AJZ@pm.me__
 - ⚡ Fun fact: __I'm also an analog photography enthusiast and a sports aficionado__
 
 <h3 align="left">Languages and Tools:</h3>
