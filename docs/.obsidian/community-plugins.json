@@ -1,11 +1,9 @@
 [
-  "quick-latex",
   "quick-explorer",
   "url-into-selection",
   "omnisearch",
   "obsidian-image-toolkit",
   "obsidian-git",
-  "obsidian-excalidraw-plugin",
   "editing-toolbar",
   "obsidian-auto-link-title",
   "obsidian-annotator",
@@ -13,11 +11,10 @@
   "obsidian-linter",
   "cycle-through-panes",
   "emoji-autocomplete",
-  "obsidian-latex-suite",
   "text-extractor",
   "oz-clear-unused-images",
   "various-complements",
   "obsidian-export-image",
-  "post-medium-draft",
-  "terminal"
+  "terminal",
+  "find-unlinked-files"
 ]
