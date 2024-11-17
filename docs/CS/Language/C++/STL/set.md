@@ -1,55 +1,62 @@
+# Set
+
 - std::set is an associative container that contains a sorted set of unique objects. It is usually implemented as a red-black tree.
 
-### Initialization
+## Initialization
 
-- **Empty Set**:
+- __Empty Set__:
+
   ```cpp
   std::set<int> mySet;
   ```
 
-### Insert Elements
+## Insert Elements
 
-- **Insert Single Element** (Average case O(log n)):
+- __Insert Single Element__ (Average case O(log n)):
 
   ```cpp
   mySet.insert(10); // Insert an element
   ```
 
-- **Emplace Element** (Average case O(log n)):
+- __Emplace Element__ (Average case O(log n)):
+
   ```cpp
   mySet.emplace(10); // Construct and insert element
   ```
 
-### Access Elements
+## Access Elements
 
-- **Find Element** (Average case O(log n)):
+- __Find Element__ (Average case O(log n)):
+
   ```cpp
   auto it = mySet.find(10); // Returns iterator to the element if found, otherwise returns mySet.end()
   ```
 
-### Removing Elements
+## Removing Elements
 
-- **Remove Element by Value** (Average case O(log n)):
+- __Remove Element by Value__ (Average case O(log n)):
+
   ```cpp
   mySet.erase(10); // Erases element with value 10
   ```
 
-### Query Attributes
+## Query Attributes
 
-- **Get Set Size** (O(1)):
+- __Get Set Size__ (O(1)):
 
   ```cpp
   size_t size = mySet.size(); // Returns the number of elements
   ```
 
-- **Check if Set is Empty** (O(1)):
+- __Check if Set is Empty__ (O(1)):
+
   ```cpp
   bool isEmpty = mySet.empty(); // Returns true if set is empty, otherwise false
   ```
 
-### Iterating through Set
+## Iterating through Set
 
-- **Using Iterator** (O(n)):
+- __Using Iterator__ (O(n)):
 
   ```cpp
   for (auto it = mySet.begin(); it != mySet.end(); ++it) {
@@ -57,16 +64,18 @@
   }
   ```
 
-- **Using Range-based For Loop** (O(n)):
+- __Using Range-based For Loop__ (O(n)):
+
   ```cpp
   for (const auto& elem : mySet) {
       // Access the element directly as elem
   }
   ```
 
-### Other Common Operations
+## Other Common Operations
 
-- **Clear Set** (O(n)):
+- __Clear Set__ (O(n)):
+
   ```cpp
   mySet.clear(); // Removes all elements from the set
   ```

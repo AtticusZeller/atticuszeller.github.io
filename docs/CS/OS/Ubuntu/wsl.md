@@ -176,7 +176,7 @@ sudo gunzip config.gz
 sudo mv config .config
 ```
 
-You may need to set `CONFIG_USB=y` in `.config` prior to running `menuconfig `to get all options enabled for selection. use `nano` to check it
+You may need to set `CONFIG_USB=y` in `.config` prior to running `menuconfig`to get all options enabled for selection. use `nano` to check it
 
 ### Config Kernel
 
@@ -294,7 +294,7 @@ usbipd list
 
 1. bind and attach device
 
-	> unattached occasionally, remember to `sudo chmod 777 /dev/video0`
+ > unattached occasionally, remember to `sudo chmod 777 /dev/video0`
 
 ```powershell
 usbipd bind --busid 2-1

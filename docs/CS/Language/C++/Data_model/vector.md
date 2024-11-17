@@ -1,108 +1,143 @@
-## Initialization
+# Initialization
 
-- **Empty Vector**:
+- __Empty Vector__:
+
   ```cpp
   std::vector<int> vec;
   ```
-- **Pre-allocate Size**:
+
+- __Pre-allocate Size__:
+
   ```cpp
   std::vector<int> vec(10);  // Contains 10 elements, all initialized to 0
   ```
-- **Pre-allocate Size with Value**:
+
+- __Pre-allocate Size with Value__:
+
   ```cpp
   std::vector<int> vec(10, 1);  // Contains 10 elements, all initialized to 1
   ```
-- **Initialize from Array**:
+
+- __Initialize from Array__:
+
   ```cpp
   int arr[] = {1, 2, 3};
   std::vector<int> vec(arr, arr + sizeof(arr) / sizeof(int));
   ```
-- **Initialize from Another Vector**:
+
+- __Initialize from Another Vector__:
+
   ```cpp
   std::vector<int> vec2(vec);
   ```
 
-## Adding Elements
+# Adding Elements
 
-- **Append to End**:
+- __Append to End__:
+
   ```cpp
   vec.push_back(4);
   ```
-- **Insert at Beginning**:
+
+- __Insert at Beginning__:
+
   ```cpp
   vec.insert(vec.begin(), 4);
   ```
-- **Insert at Specific Position**:
+
+- __Insert at Specific Position__:
+
   ```cpp
   vec.insert(vec.begin() + 1, 4);
   ```
-- **append vector**
+
+- __append vector__
 
 ```cpp
 vec.insert(vec.end(),vec_2.begin(),vec_2.end())
 ```
 
-## Access Elements
+# Access Elements
 
-- **Access Last Element**:
+- __Access Last Element__:
+
   ```cpp
   int last = vec.back();
   ```
-- **Access First Element**:
+
+- __Access First Element__:
+
   ```cpp
   int first = vec.front();
   ```
-- **Access i-th Element (0-based)**:
+
+- __Access i-th Element (0-based)__:
+
   ```cpp
   int elem = vec[i];
   ```
 
-## Removing Elements
+# Removing Elements
 
-- **Remove Last Element**:
+- __Remove Last Element__:
+
   ```cpp
   vec.pop_back();    ->void
   ```
-- **Remove i-th Element**:
+
+- __Remove i-th Element__:
+
   ```cpp
   vec.erase(vec.begin() + i);
   ```
-- **Remove a Range of Elements**:
+
+- __Remove a Range of Elements__:
+
   ```cpp
   vec.erase(vec.begin() + i, vec.begin() + j);  // Removes elements from i to j-1
   ```
 
-## Query Attributes
+# Query Attributes
 
-- **Get Vector Size**:
+- __Get Vector Size__:
+
   ```cpp
   size_t size = vec.size();
   ```
-- **Check if Vector is Empty**:
+
+- __Check if Vector is Empty__:
+
   ```cpp
   bool isEmpty = vec.empty();
   ```
 
-## Other Common Operations
+# Other Common Operations
 
-- **Clear Vector**:
+- __Clear Vector__:
+
   ```cpp
   vec.clear();
   ```
-- **Resize Vector**:
+
+- __Resize Vector__:
+
   ```cpp
   vec.resize(20);  // New elements are initialized to 0
   ```
-- **Find Element Position**:
+
+- __Find Element Position__:
+
   ```cpp
   std::find(vec.begin(), vec.end(), value) != vec.end()
   ```
-- **Sort Vector**:
+
+- __Sort Vector__:
+
   ```cpp
   std::sort(vec.begin(), vec.end());
   ```
 
-# examples
+# Examples
 
 ```c++
 

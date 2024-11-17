@@ -1,4 +1,4 @@
-# Powersehll
+# Powershell
 
 ## __kill__ The Process by PID
 

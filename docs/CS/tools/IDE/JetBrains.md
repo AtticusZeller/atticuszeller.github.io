@@ -3,9 +3,10 @@
 ## 激活工具
 
 [Linux激活教程 - Feishu Docs](https://laq8aq5ywv.feishu.cn/docx/C2eMdPsfTojpK9xXjqdc44sFn9f)
+
 - 下载地址
-	https://wwkh.lanzout.com/b03jufqhg
-	密码:7bou
+ <https://wwkh.lanzout.com/b03jufqhg>
+ 密码:7bou
 
 ```bash
 chmod +x scripts/install.sh
@@ -13,12 +14,12 @@ chmod +x scripts/install.sh
 ```
 
 - win 系统出现“Key is invalid”解决方法,Linux 系统按教程步骤找 Linux 文件夹里文件
-	[出现“Key is invalid”解决方法 - Feishu Docs](https://laq8aq5ywv.feishu.cn/docx/SE6WdKutQoHcCUxCWPbcSNfDnad)
+ [出现“Key is invalid”解决方法 - Feishu Docs](https://laq8aq5ywv.feishu.cn/docx/SE6WdKutQoHcCUxCWPbcSNfDnad)
 
 ## 断网激活
 
 正版激活码：
-https://hwmgu1yf37x.feishu.cn/docx/Y0PGdrvC2orriUxrFBxcavPxnqH
+<https://hwmgu1yf37x.feishu.cn/docx/Y0PGdrvC2orriUxrFBxcavPxnqH>
 
 ![[assets/Pasted image 20240420105746.png|400]]
 

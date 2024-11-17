@@ -1,6 +1,6 @@
-### reverse
+# Algorithm
 
--
+## Reverse
 
 ```c++
 #include <algorithm> // for std::reverse
@@ -12,9 +12,7 @@ int main() {
     std::cout << str << std::endl;  // 输出 "olleH"
 ```
 
-### char digit to int
-
--
+## Char Digit to Int
 
 ```c++
 #include <string>
@@ -25,8 +23,8 @@ int main() {
     long long num_3 = std::stoll(digit_char);
 
     // single char
-	char digitChar = '4';
-	int digit = digitChar - '0';
+ char digitChar = '4';
+ int digit = digitChar - '0';
     return 0;
 }
 ```

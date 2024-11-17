@@ -18,11 +18,11 @@ tags:
 
 ![Wesley Wei](https://miro.medium.com/v2/resize:fill:88:88/1*hCLWNjdqAVrir1skS1WAaw.jpeg)
 
-](https://wesley-wei.medium.com/?source=post_page-----6f440119587f--------------------------------)[
+](<https://wesley-wei.medium.com/?source=post_page-----6f440119587f--------------------------------)[>
 
 ![Programmer’s Career](https://miro.medium.com/v2/resize:fill:48:48/1*o2ds7K8QjAnEJBhcD63ZwA.png)
 
-](https://medium.programmerscareer.com/?source=post_page-----6f440119587f--------------------------------)
+](<https://medium.programmerscareer.com/?source=post_page-----6f440119587f-------------------------------->)
 
 ![](https://miro.medium.com/v2/resize:fit:1400/0*Vsm36yrGvKkbrI65)
 
@@ -95,7 +95,7 @@ AI is still rapidly developing, and its potential is limitless. If you input the
 
 Free AI tools are already very useful today. I welcome you to read my previous article:
 
-> _More about My AI Tools:_ [*Welcome to the AI Revolution: My Guide to Essential Tools and Concepts | by Wesley Wei | Jun, 2024 | Programmer’s Career*](https://medium.com/programmers-career/welcome-to-the-ai-revolution-my-guide-to-essential-tools-and-concepts-44bd7ca44362)
+> _More about My AI Tools:_ [_Welcome to the AI Revolution: My Guide to Essential Tools and Concepts | by Wesley Wei | Jun, 2024 | Programmer’s Career_](https://medium.com/programmers-career/welcome-to-the-ai-revolution-my-guide-to-essential-tools-and-concepts-44bd7ca44362)
 
 ## 1.4 Linter
 
@@ -201,4 +201,4 @@ __Don’t forget to follow me for more informative content, or feel free to shar
 
 See you in the next article. 👋
 
-> _中文文章:_ [*https://programmerscareer.com/zh-cn/obsidian-plugins/*](https://programmerscareer.com/zh-cn/obsidian-plugins/)_Author:_ [*Wesley Wei — Twitter*](https://twitter.com/WesleyWei0316) [*Wesley Wei — Medium*](https://wesley-wei.medium.com/)_Note: Originally written at_ [*https://programmerscareer.com/obsidian-plugins/*](https://programmerscareer.com/obsidian-plugins/) _at 2024–07–14 21:38. If you choose to repost or use this article, please cite the original source._
+> _中文文章:_ [_https://programmerscareer.com/zh-cn/obsidian-plugins/_](https://programmerscareer.com/zh-cn/obsidian-plugins/)_Author:_ [_Wesley Wei — Twitter_](https://twitter.com/WesleyWei0316) [_Wesley Wei — Medium_](https://wesley-wei.medium.com/)_Note: Originally written at_ [_https://programmerscareer.com/obsidian-plugins/_](https://programmerscareer.com/obsidian-plugins/) _at 2024–07–14 21:38. If you choose to repost or use this article, please cite the original source._

@@ -31,7 +31,7 @@ Start-Service ssh-agent
 ssh-keygen -t ed25519 -C "atticus.zeller@pm.me"
 ```
 
-_in normal powersehll_
+_in normal powershell_
 
 #### Add Ssh-key-pair into Ssh-agent
 

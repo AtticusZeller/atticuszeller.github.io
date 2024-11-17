@@ -39,9 +39,12 @@ To find instructions on how to install early access versions on your mobile devi
 2. [Get your Discord badge](https://help.obsidian.md/Licenses+and+payment/Catalyst+license#Get%20your%20Discord%20badge) to access insider channels.
 3. Open Discord.
 4. In the `#insider-mobile-release` channel, open __Pinned Messages__.
+
 - On desktop, select the pushpin icon in the upper-right corner.
 - On mobile, swipe left and select __Pins__.
+
 1. Under __Pinned Messages__, select the installation link for your device:
+
 - If you're using iOS, open the TestFlight link on your iPhone or iPad.
 - If you're using Android, download and install the APK file.
 
@@ -66,9 +69,11 @@ To switch back to using public versions (not early access) on desktop:
 4. Under __App__, disable __Receive early access versions__.
 5. Close Obsidian.
 6. Delete the `obsidian-VERSION.asar` file, where `VERSION` is the Obsidian version.
+
 - Windows: `%APPDATA%\obsidian\obsidian-VERSION.asar`
 - Mac: `~/Library/Application Support/obsidian/obsidian-VERSION.asar`
 - Linux: `~/.config/obsidian/obsidian-VERSION.asar`
+
 1. Restart Obsidian.
 
 ## Switch back to Public Versions on Mobile

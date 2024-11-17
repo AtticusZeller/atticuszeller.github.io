@@ -33,8 +33,8 @@ from fastapi impart FastAPI
 ```
 
 - item 1
-	- item 2
-	- item 3
+  - item 2
+  - item 3
 
 1. Item 1
 2. Item 2
@@ -52,4 +52,4 @@ Lorem ( … ) __Impsum__.
 - indented item
 - copypasted item B
 
-	as
+ as

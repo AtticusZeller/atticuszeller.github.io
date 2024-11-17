@@ -19,7 +19,7 @@
 ```powershell
 # check wsl kernel version
 wsl cat /proc/version
-# uodate
+# update
 wsl --update
 ```
 

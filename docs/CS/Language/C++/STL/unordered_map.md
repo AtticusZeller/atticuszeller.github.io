@@ -1,13 +1,15 @@
+# unordered_map
+
 ## Initialization
 
-- **Empty Unordered Map**:
+- __Empty Unordered Map__:
 
   ```cpp
   std::unordered_map<int, std::string> myMap;  // Empty unordered_map
 
   ```
 
-- **brace initialization**:
+- __brace initialization__:
 
 ```cpp
 std::unordered_map<int, std::string> myMap = {
@@ -19,7 +21,8 @@ std::unordered_map<int, std::string> myMap = {
 
 ## Insert Elements
 
-- **Insert Single Element**:
+- __Insert Single Element__:
+
   ```cpp
   myMap[1] = "one";  // Insert key-value pair
   // or
@@ -28,13 +31,14 @@ std::unordered_map<int, std::string> myMap = {
 
 ## Access Elements
 
-- **Access Value by Key**:
+- __Access Value by Key__:
 
   ```cpp
   std::string value = myMap[1];  // Access value by key, returns std::string
   ```
 
-- **Find Element**:
+- __Find Element__:
+
   ```cpp
   auto it = myMap.find(1);
   // Returns iterator to the element if key exists, otherwise returns myMap.end()
@@ -44,27 +48,29 @@ std::unordered_map<int, std::string> myMap = {
 
 ## Removing Elements
 
-- **Remove Element by Key**:
+- __Remove Element by Key__:
+
   ```cpp
   myMap.erase(1);  // Removes element with key 1, returns number of elements removed (size_t)
   ```
 
 ## Query Attributes
 
-- **Get Map Size**:
+- __Get Map Size__:
 
   ```cpp
   size_t size = myMap.size();  // Returns the number of elements in the map (size_t)
   ```
 
-- **Check if Map is Empty**:
+- __Check if Map is Empty__:
+
   ```cpp
   bool isEmpty = myMap.empty();  // Returns true if the map is empty, otherwise false (bool)
   ```
 
 ## Iterating through Unordered Map
 
-- **Using Iterator**:
+- __Using Iterator__:
 
   ```cpp
   for (auto it = myMap.begin(); it != myMap.end(); ++it) {
@@ -73,7 +79,8 @@ std::unordered_map<int, std::string> myMap = {
   }
   ```
 
-- **Using Range-based For Loop**:
+- __Using Range-based For Loop__:
+
   ```cpp
   for (const auto& [key, value] : myMap) {
       // key: key
@@ -83,7 +90,8 @@ std::unordered_map<int, std::string> myMap = {
 
 ## Other Common Operations
 
-- **Clear Map**:
+- __Clear Map__:
+
   ```cpp
   myMap.clear();  // Removes all elements from the map
   ```

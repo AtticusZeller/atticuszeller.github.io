@@ -8,7 +8,7 @@ int main() {
     // 添加元素到栈中
     myStack.push(1);
     // 输出栈顶元素
-	myStack.top();
+ myStack.top();
 
     // 移除栈顶元素
     myStack.pop();

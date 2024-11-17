@@ -19,7 +19,7 @@ tags:
 ___At the end of this post you can find a tl;dr with my suggestions for the most useful tools to improve your workflow with scientific papers.___
 
 __Major update (2020):
-We have released a tool for visually finding and exploring academic papers. See our__ [**launching blog post**](https://medium.com/connectedpapers/announcing-connected-papers-a-visual-tool-for-researchers-to-find-and-explore-academic-papers-89146a54c7d4?sk=eb6c686826e03958504008fedeffea18) __for__ [**Connected Papers**](https://www.connectedpapers.com/)__!__
+We have released a tool for visually finding and exploring academic papers. See our__ [__launching blog post__](https://medium.com/connectedpapers/announcing-connected-papers-a-visual-tool-for-researchers-to-find-and-explore-academic-papers-89146a54c7d4?sk=eb6c686826e03958504008fedeffea18) __for__ [__Connected Papers__](https://www.connectedpapers.com/)__!__
 
 As researchers, especially in (overly) prolific fields like Deep Learning, we often find ourselves overwhelmed by the huge amount of papers to read and keep track of in our work. I think one big reason for this is insufficient use of existing tools and services that aim to make our life easier. Another reason is the lack of a really __good__ product which meets all our needs under one interface, but that is a topic for another post.
 

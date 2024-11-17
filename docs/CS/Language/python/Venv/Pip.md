@@ -6,7 +6,7 @@
    git config --global http.proxy 'socks5://127.0.0.1:7891'
    git config --global https.proxy 'socks5://127.0.0.1:7891'
 
-git ls-remote --tags --heads https://github.com/strapi/ts-zen.git
+git ls-remote --tags --heads <https://github.com/strapi/ts-zen.git>
 
 1. 全局安装
    1. win+r +>cmd

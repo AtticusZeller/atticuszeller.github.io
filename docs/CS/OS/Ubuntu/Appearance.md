@@ -4,7 +4,7 @@
 
 ## Theme
 
-[GitHub - vinceliuice/WhiteSur-gtk-theme: MacOS Big Sur like theme for Gnome desktops](https://github.com/vinceliuice/WhiteSur-gtk-theme)
+[GitHub - vinceliuice/WhiteSur-gtk-theme: MacOS Big Sure like theme for Gnome desktops](https://github.com/vinceliuice/WhiteSur-gtk-theme)
 
 ### Basic Extension
 
@@ -16,7 +16,7 @@
 
 ```bash
 git clone git@github.com:vinceliuice/WhiteSur-gtk-theme.git
-cd WhiteSur-gtk-theme
+cd WhiteSure-gtk-theme
 ```
 
 ```bash
@@ -56,11 +56,11 @@ sudo ./tweaks.sh -g -N
 
 ## Icons
 
-[GitHub - vinceliuice/WhiteSur-icon-theme: MacOS Big Sur style icon theme for linux desktops](https://github.com/vinceliuice/WhiteSur-icon-theme)
+[GitHub - vinceliuice/WhiteSur-icon-theme: MacOS Big Sure style icon theme for linux desktops](https://github.com/vinceliuice/WhiteSur-icon-theme)
 
 ```bash
 git clone git@github.com:vinceliuice/WhiteSur-icon-theme.git
-cd WhiteSur-icon-theme
+cd WhiteSure-icon-theme
 ./install.sh -a -b
 ```
 

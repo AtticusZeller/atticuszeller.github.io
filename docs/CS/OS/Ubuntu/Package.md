@@ -16,6 +16,7 @@
 ### Principles
 
 APT is an advanced package management tool that uses dpkg as its backend. APT can:
+
 - Resolve dependencies
 - Fetch packages from configured sources
 - Perform complex package management operations
@@ -65,9 +66,9 @@ Assume we have created a remote repository called `deb-get-index` belonging to u
 >```bash
 >.
 >└── 02-github
->	├── manifest
->	└── packages
->		└── <your_packages>
+> ├── manifest
+> └── packages
+>  └── <your_packages>
 >```
 
 - first line in `manifest` is same to the `02-github.repo` ,then each line is `<your_packages>`
@@ -138,7 +139,8 @@ flatpak install flathub io.github.flattool.Warehouse
 ```
 
 > [!Bug] BUGs
->  1. use `flatpak-spawn --host --env=TERM=xterm-256color zsh` as shell path in `pycharm` [Can't use zsh in terminal · Issue #23 · flathub/com.jetbrains.IntelliJ-IDEA-Ultimate · GitHub](https://github.com/flathub/com.jetbrains.IntelliJ-IDEA-Ultimate/issues/23)
+>
+> 1. use `flatpak-spawn --host --env=TERM=xterm-256color zsh` as shell path in `pycharm` [Can't use zsh in terminal · Issue #23 · flathub/com.jetbrains.IntelliJ-IDEA-Ultimate · GitHub](https://github.com/flathub/com.jetbrains.IntelliJ-IDEA-Ultimate/issues/23)
 
 ## [Homebrew](https://docs.brew.sh/Homebrew-on-Linux)
 

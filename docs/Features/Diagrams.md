@@ -31,12 +31,13 @@ No further configuration is necessary. Advantages over a custom integration:
 - [x] Fonts and colors can be customized with [additional style sheets]
 - [x] Support for both, light and dark color schemes – _try it on this page!_
 
-  [^1]:
-	While all [Mermaid.js] features should work out-of-the-box, Material for
-	MkDocs will currently only adjust the fonts and colors for flowcharts,
-	sequence diagrams, class diagrams, state diagrams and entity relationship
-	diagrams. See the section on [other diagrams] for more information why this
-	is currently not implemented for all diagrams.
+  :[^1]
+
+ While all [Mermaid.js] features should work out-of-the-box, Material for
+ MkDocs will currently only adjust the fonts and colors for flowcharts,
+ sequence diagrams, class diagrams, state diagrams and entity relationship
+ diagrams. See the section on [other diagrams] for more information why this
+ is currently not implemented for all diagrams.
 
   [instant loading]: ../setup/setting-up-navigation.md#instant-loading
   [additional style sheets]: ../customization.md#additional-css

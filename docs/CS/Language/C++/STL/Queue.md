@@ -1,63 +1,67 @@
 A queue is a container adaptor that provides a FIFO (First-In-First-Out) data structure. The standard library's `std::queue` is defined in the header `<queue>`.
 
-## Initialization
+# Initialization
 
-- **Empty Queue**:
+- __Empty Queue__:
+
   ```cpp
   std::queue<int> q;
   ```
 
-## Adding Elements
+# Adding Elements
 
-- **Append to End**:
+- __Append to End__:
+
   ```cpp
   q.push(4);
   ```
 
-## Access Elements
+# Access Elements
 
-- **Access Next Element**:
+- __Access Next Element__:
 
   ```cpp
   int next = q.front();
   ```
 
-- **Access Last Element**:
+- __Access Last Element__:
+
   ```cpp
   int last = q.back();
   ```
 
-## Removing Elements
+# Removing Elements
 
-- **Remove Next Element**:
+- __Remove Next Element__:
+
   ```cpp
   q.pop();  // Removes the element at the front of the queue
   ```
 
-## Query Attributes
+# Query Attributes
 
-- **Get Queue Size**:
+- __Get Queue Size__:
 
   ```cpp
   size_t size = q.size();
   ```
 
-- **Check if Queue is Empty**:
+- __Check if Queue is Empty__:
+
   ```cpp
   bool isEmpty = q.empty();
   ```
 
-## Other Common Operations
+# Other Common Operations
 
-- **Swap Contents**:
+- __Swap Contents__:
+
   ```cpp
   std::queue<int> q1, q2;
   q1.swap(q2);  // Swaps the contents of q1 and q2
   ```
 
 # Examples
-
--
 
 ```cpp
 #include <iostream>

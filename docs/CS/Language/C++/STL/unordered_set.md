@@ -1,56 +1,63 @@
+# unordered_set
+
 - std::unordered_set is an associative container that contains a set of unique objects. Search, insertion, and removal operations have average constant-time complexity.
 
-### Initialization
+## Initialization
 
-- **Empty Unordered Set**:
+- __Empty Unordered Set__:
+
   ```cpp
   std::unordered_set<int> myUnorderedSet;
   ```
 
-### Insert Elements
+## Insert Elements
 
-- **Insert Single Element** (Average case O(1)):
+- __Insert Single Element__ (Average case O(1)):
 
   ```cpp
   myUnorderedSet.insert(10); // Insert an element
   ```
 
-- **Emplace Element** (Average case O(1)):
+- __Emplace Element__ (Average case O(1)):
+
   ```cpp
   myUnorderedSet.emplace(10); // Construct and insert element
   ```
 
-### Access Elements
+## Access Elements
 
-- **Find Element** (Average case O(1)):
+- __Find Element__ (Average case O(1)):
+
   ```cpp
   auto it = myUnorderedSet.find(10);
   // Returns iterator to the element if found, otherwise returns myUnorderedSet.end()
   ```
 
-### Removing Elements
+## Removing Elements
 
-- **Remove Element by Value** (Average case O(1)):
+- __Remove Element by Value__ (Average case O(1)):
+
   ```cpp
   myUnorderedSet.erase(10); // Erases element with value 10
   ```
 
-### Query Attributes
+## Query Attributes
 
-- **Get Unordered Set Size** (O(1)):
+- __Get Unordered Set Size__ (O(1)):
 
   ```cpp
   size_t size = myUnorderedSet.size(); // Returns the number of elements
   ```
 
-- **Check if Unordered Set is Empty** (O(1)):
+- __Check if Unordered Set is Empty__ (O(1)):
+
   ```cpp
   bool isEmpty = myUnorderedSet.empty(); // Returns true if unordered set is empty, otherwise false
   ```
 
-### Iterating through Unordered Set
+## Iterating through Unordered Set
 
-- **Using Iterator** (O(n)):
+- __Using Iterator__ (O(n)):
 
   ```cpp
   for (auto it = myUnorderedSet.begin(); it != myUnorderedSet.end(); ++it) {
@@ -58,16 +65,18 @@
   }
   ```
 
-- **Using Range-based For Loop** (O(n)):
+- __Using Range-based For Loop__ (O(n)):
+
   ```cpp
   for (const auto& elem : myUnorderedSet) {
       // Access the element directly as elem
   }
   ```
 
-### Other Common Operations
+## Other Common Operations
 
-- **Clear Unordered Set** (O(n)):
+- __Clear Unordered Set__ (O(n)):
+
   ```cpp
   myUnorderedSet.clear(); // Removes all elements from the unordered set
   ```
