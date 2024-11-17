@@ -239,6 +239,8 @@ skip_dir = "NVIDIA Nsight Compute"
 # https://github.com/abraunegg/onedrive/blob/master/docs/application-config-options.md#monitor_interval
 
 monitor_interval = "100"
+
+threads = "64"
 ```
 
 #### [Usage](https://github.com/abraunegg/onedrive/blob/master/docs/usage.md#first-steps)
