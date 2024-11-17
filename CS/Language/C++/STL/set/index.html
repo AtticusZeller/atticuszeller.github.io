@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#initialization" class="md-skip">
+        <a href="#set" class="md-skip">
           Skip to content
         </a>
       
@@ -1093,7 +1093,7 @@
         
   
   <span class="md-ellipsis">
-    Unordered set
+    unordered_set
   </span>
   
 
@@ -1114,7 +1114,7 @@
         
   
   <span class="md-ellipsis">
-    Vector
+    Initialization
   </span>
   
 
@@ -1290,6 +1290,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -1317,6 +1319,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1429,7 +1433,7 @@
         
   
   <span class="md-ellipsis">
-    Unordered map
+    unordered_map
   </span>
   
 
@@ -1450,7 +1454,7 @@
         
   
   <span class="md-ellipsis">
-    Unordered set
+    unordered_set
   </span>
   
 
@@ -1471,7 +1475,7 @@
         
   
   <span class="md-ellipsis">
-    Vector
+    Initialization
   </span>
   
 
@@ -2305,11 +2309,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../OS/Windows/Powersehll/" class="md-nav__link">
+      <a href="../../../../OS/Windows/Powershell/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Powersehll
+    Powershell
   </span>
   
 
@@ -2924,6 +2928,94 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer Vison
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Vison
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Learning/Computer%20Vison/3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Learning/Computer%20Vison/Image/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3282,6 +3374,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3375,52 +3469,51 @@
   
 
 
-  <h1>Set</h1>
-
+<h1 id="set">Set<a class="headerlink" href="#set" title="Permanent link">&para;</a></h1>
 <ul>
 <li>std::set is an associative container that contains a sorted set of unique objects. It is usually implemented as a red-black tree.</li>
 </ul>
-<h3 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">&para;</a></h3>
+<h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Empty Set</strong>:
-  <div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mySet</span><span class="p">;</span>
-</span></code></pre></div></li>
+<li><strong>Empty Set</strong>:</li>
 </ul>
-<h3 id="insert-elements">Insert Elements<a class="headerlink" href="#insert-elements" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mySet</span><span class="p">;</span>
+</span></code></pre></div>
+<h2 id="insert-elements">Insert Elements<a class="headerlink" href="#insert-elements" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Insert Single Element</strong> (Average case O(log n)):</li>
 </ul>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">mySet</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Insert an element</span>
 </span></code></pre></div>
 <ul>
-<li><strong>Emplace Element</strong> (Average case O(log n)):
-  <div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">mySet</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Construct and insert element</span>
-</span></code></pre></div></li>
+<li><strong>Emplace Element</strong> (Average case O(log n)):</li>
 </ul>
-<h3 id="access-elements">Access Elements<a class="headerlink" href="#access-elements" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">mySet</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Construct and insert element</span>
+</span></code></pre></div>
+<h2 id="access-elements">Access Elements<a class="headerlink" href="#access-elements" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Find Element</strong> (Average case O(log n)):
-  <div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mySet</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Returns iterator to the element if found, otherwise returns mySet.end()</span>
-</span></code></pre></div></li>
+<li><strong>Find Element</strong> (Average case O(log n)):</li>
 </ul>
-<h3 id="removing-elements">Removing Elements<a class="headerlink" href="#removing-elements" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mySet</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Returns iterator to the element if found, otherwise returns mySet.end()</span>
+</span></code></pre></div>
+<h2 id="removing-elements">Removing Elements<a class="headerlink" href="#removing-elements" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Remove Element by Value</strong> (Average case O(log n)):
-  <div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">mySet</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Erases element with value 10</span>
-</span></code></pre></div></li>
+<li><strong>Remove Element by Value</strong> (Average case O(log n)):</li>
 </ul>
-<h3 id="query-attributes">Query Attributes<a class="headerlink" href="#query-attributes" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">mySet</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Erases element with value 10</span>
+</span></code></pre></div>
+<h2 id="query-attributes">Query Attributes<a class="headerlink" href="#query-attributes" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Get Set Size</strong> (O(1)):</li>
 </ul>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mySet</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="c1">// Returns the number of elements</span>
 </span></code></pre></div>
 <ul>
-<li><strong>Check if Set is Empty</strong> (O(1)):
-  <div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isEmpty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mySet</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span><span class="w"> </span><span class="c1">// Returns true if set is empty, otherwise false</span>
-</span></code></pre></div></li>
+<li><strong>Check if Set is Empty</strong> (O(1)):</li>
 </ul>
-<h3 id="iterating-through-set">Iterating through Set<a class="headerlink" href="#iterating-through-set" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isEmpty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mySet</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span><span class="w"> </span><span class="c1">// Returns true if set is empty, otherwise false</span>
+</span></code></pre></div>
+<h2 id="iterating-through-set">Iterating through Set<a class="headerlink" href="#iterating-through-set" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Using Iterator</strong> (O(n)):</li>
 </ul>
@@ -3429,18 +3522,18 @@
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">}</span>
 </span></code></pre></div>
 <ul>
-<li><strong>Using Range-based For Loop</strong> (O(n)):
-  <div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">elem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mySet</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<li><strong>Using Range-based For Loop</strong> (O(n)):</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">elem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mySet</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="c1">// Access the element directly as elem</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">}</span>
-</span></code></pre></div></li>
-</ul>
-<h3 id="other-common-operations">Other Common Operations<a class="headerlink" href="#other-common-operations" title="Permanent link">&para;</a></h3>
+</span></code></pre></div>
+<h2 id="other-common-operations">Other Common Operations<a class="headerlink" href="#other-common-operations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Clear Set</strong> (O(n)):
-  <div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">mySet</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"> </span><span class="c1">// Removes all elements from the set</span>
-</span></code></pre></div></li>
+<li><strong>Clear Set</strong> (O(n)):</li>
 </ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">mySet</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"> </span><span class="c1">// Removes all elements from the set</span>
+</span></code></pre></div>
 
 
 
@@ -3463,7 +3556,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-11-16 06:05:14</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-11-17 06:16:39</span>
   </span>
 
     

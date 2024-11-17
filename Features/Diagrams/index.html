@@ -1082,7 +1082,7 @@
         
   
   <span class="md-ellipsis">
-    Unordered set
+    unordered_set
   </span>
   
 
@@ -1103,7 +1103,7 @@
         
   
   <span class="md-ellipsis">
-    Vector
+    Initialization
   </span>
   
 
@@ -1317,7 +1317,7 @@
         
   
   <span class="md-ellipsis">
-    Unordered map
+    unordered_map
   </span>
   
 
@@ -1338,7 +1338,7 @@
         
   
   <span class="md-ellipsis">
-    Unordered set
+    unordered_set
   </span>
   
 
@@ -1359,7 +1359,7 @@
         
   
   <span class="md-ellipsis">
-    Vector
+    Initialization
   </span>
   
 
@@ -2193,11 +2193,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS/OS/Windows/Powersehll/" class="md-nav__link">
+      <a href="../../CS/OS/Windows/Powershell/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Powersehll
+    Powershell
   </span>
   
 
@@ -2935,6 +2935,94 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer Vison
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Vison
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Learning/Computer%20Vison/3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Learning/Computer%20Vison/Image/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3424,10 +3512,16 @@ includes a <code>mermaid</code> code block:</p>
 <p>No further configuration is necessary. Advantages over a custom integration:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Works with <a href="../setup/setting-up-navigation.md#instant-loading">instant loading</a> without any additional effort</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Diagrams automatically use fonts and colors defined in <code>mkdocs.yml</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Diagrams automatically use fonts and colors defined in <code>mkdocs.yml</code>[^1]</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Fonts and colors can be customized with <a href="../customization.md#additional-css">additional style sheets</a></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Support for both, light and dark color schemes – <em>try it on this page!</em></li>
 </ul>
+<p>:[^1]</p>
+<p>While all <a href="https://mermaid.js.org/">Mermaid.js</a> features should work out-of-the-box, Material for
+ MkDocs will currently only adjust the fonts and colors for flowcharts,
+ sequence diagrams, class diagrams, state diagrams and entity relationship
+ diagrams. See the section on <a href="#other-diagram-types">other diagrams</a> for more information why this
+ is currently not implemented for all diagrams.</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <h3 id="using-flowcharts">Using Flowcharts<a class="headerlink" href="#using-flowcharts" title="Permanent link">&para;</a></h3>
 <p><a href="https://mermaid.js.org/syntax/flowchart.html">Flowcharts</a> are diagrams that represent workflows or processes. The steps
@@ -3635,18 +3729,6 @@ we don't consider them a good choice, mostly as they don't work well on mobile.<
 <p><p class="obsidian_backlink"><a href="https://atticuszeller.github.io/Features/code/#723f5c4c7a4925f4f995744a9820af67">Diagrams</a></p></p>
 </details>
 </div>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>While all <a href="https://mermaid.js.org/">Mermaid.js</a> features should work out-of-the-box, Material for
-MkDocs will currently only adjust the fonts and colors for flowcharts,
-sequence diagrams, class diagrams, state diagrams and entity relationship
-diagrams. See the section on <a href="#other-diagram-types">other diagrams</a> for more information why this
-is currently not implemented for all diagrams.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
 
 
 
@@ -3669,7 +3751,7 @@ is currently not implemented for all diagrams.&#160;<a class="footnote-backref" 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-11-16 06:33:58</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-11-17 06:16:39</span>
   </span>
 
     
