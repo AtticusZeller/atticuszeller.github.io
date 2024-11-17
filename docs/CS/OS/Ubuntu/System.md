@@ -204,6 +204,12 @@ sudo apt-get update
 sudo apt install --no-install-recommends --no-install-suggests onedrive
 ```
 
+#### Login
+
+```bash
+onedrive
+```
+
 #### Config
 
 ```bash
@@ -230,6 +236,16 @@ skip_dir = "DevSpace"
 # https://github.com/abraunegg/onedrive/blob/master/docs/application-config-options.md#monitor_interval
 
 monitor_interval = "100"
+```
+
+#### [Usage](https://github.com/abraunegg/onedrive/blob/master/docs/usage.md#first-steps)
+
+```bash
+onedrive --sync --verbose --resync
+```
+
+```bash
+onedrive --monitor
 ```
 
 ### Zotero
