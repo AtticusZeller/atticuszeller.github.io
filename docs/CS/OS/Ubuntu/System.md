@@ -204,6 +204,34 @@ sudo apt-get update
 sudo apt install --no-install-recommends --no-install-suggests onedrive
 ```
 
+#### Config
+
+```bash
+code ~/.config/onedrive
+```
+
+and fill it with following:
+
+```
+# sync home
+
+sync_dir = "~"
+
+# Skip dot files
+
+skip_dotfiles = "true"
+
+# Skip github sync dir
+
+skip_dir = "DevSpace"
+
+# upload_only = "true"
+
+# https://github.com/abraunegg/onedrive/blob/master/docs/application-config-options.md#monitor_interval
+
+monitor_interval = "100"
+```
+
 ### Zotero
 
 [GitHub - retorquere/zotero-deb: Packaged versions of Zotero and Juris-M for Debian-based systems](https://github.com/retorquere/zotero-deb)

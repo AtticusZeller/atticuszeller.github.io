@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS/OS/Ubuntu/sync.md",
+                "file": "CS/OS/Ubuntu/System.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sync"
+              "title": "System"
             }
           }
         ]
@@ -193,8 +193,8 @@
   },
   "active": "5e04f9d1a08afcf5",
   "lastOpenFiles": [
-    "Features/footntoes.md",
     "CS/OS/Ubuntu/sync.md",
+    "Features/footntoes.md",
     "Features/Draw.md",
     "CS/Language/C++/STL/String.md",
     "CS/Language/C++/STL/Queue.md",
