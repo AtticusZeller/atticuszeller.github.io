@@ -11,13 +11,15 @@
             "id": "5e04f9d1a08afcf5",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "docs/.obsidian/plugins/text-extractor/cache/367170fc03e183f108f601dc3d72c349.json",
-                "staged": false
+                "file": "Features/footntoes.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               },
-              "icon": "git-pull-request",
-              "title": "Diff View (367170fc03e183f108f601dc3d72c349.json)"
+              "icon": "lucide-file",
+              "title": "footntoes"
             }
           }
         ]
@@ -151,9 +153,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Features/footntoes.md"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of footntoes"
             }
           },
           {
@@ -192,6 +196,8 @@
   },
   "active": "5e04f9d1a08afcf5",
   "lastOpenFiles": [
+    "Features/Draw.md",
+    "Features/footntoes.md",
     "CS/Language/C++/STL/String.md",
     "CS/Language/C++/STL/Queue.md",
     "CS/Language/C++/STL/algorithm.md",
@@ -199,7 +205,6 @@
     "CS/Language/C++/packages.md",
     "CS/Language/C++/Data_model/unordered_map.md",
     "CS/Language/C++/Data_model/map.md",
-    "Features/footntoes.md",
     "Features/Icons, Emojis.md",
     "Features/Image.md",
     "Features/LaTeX Math Support.md",
@@ -221,7 +226,6 @@
     "Reference/obsidian/My 10+ Obsidian Plugins As a Medium Writer.md",
     "Paper/journals/IET/Main.md",
     "Paper/journals/IET/Submission.md",
-    "Paper/journals/IET/ITE computer vision.md",
     "Reference/obsidian",
     "Clippings",
     "Reference/blog/Steph Ango",
