@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS/OS/Ubuntu/System.md",
+                "file": "Learning/Computer Vison/Image.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "System"
+              "title": "Image"
             }
           }
         ]
@@ -193,6 +193,7 @@
   },
   "active": "5e04f9d1a08afcf5",
   "lastOpenFiles": [
+    "CS/OS/Ubuntu/System.md",
     "CS/OS/Ubuntu/sync.md",
     "Features/footntoes.md",
     "Features/Draw.md",
@@ -222,7 +223,6 @@
     "Reference/blog/Steph Ango/What can we remove.md",
     "CS/OS/default-clipper.json",
     "Reference/obsidian/My 10+ Obsidian Plugins As a Medium Writer.md",
-    "Paper/journals/IET/Main.md",
     "Reference/obsidian",
     "Clippings",
     "Reference/blog/Steph Ango",
