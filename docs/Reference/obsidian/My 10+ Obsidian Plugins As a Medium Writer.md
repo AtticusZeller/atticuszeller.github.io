@@ -9,6 +9,9 @@ description: "Hello, here is Wesley, Today’s article is about Obsidian Plugins
 tags:
   - "plugin"
 ---
+
+# My 10+ Obsidian Plugins As a Medium Writer
+
 ## Streamline Your Workflow: Top Plugins for Obsidian Writers
 
 [
@@ -92,7 +95,7 @@ AI is still rapidly developing, and its potential is limitless. If you input the
 
 Free AI tools are already very useful today. I welcome you to read my previous article:
 
-> *More about My AI Tools:* [*Welcome to the AI Revolution: My Guide to Essential Tools and Concepts | by Wesley Wei | Jun, 2024 | Programmer’s Career*](https://medium.com/programmers-career/welcome-to-the-ai-revolution-my-guide-to-essential-tools-and-concepts-44bd7ca44362)
+> _More about My AI Tools:_ [*Welcome to the AI Revolution: My Guide to Essential Tools and Concepts | by Wesley Wei | Jun, 2024 | Programmer’s Career*](https://medium.com/programmers-career/welcome-to-the-ai-revolution-my-guide-to-essential-tools-and-concepts-44bd7ca44362)
 
 ## 1.4 Linter
 
@@ -100,7 +103,7 @@ This plugin can help us standardize article formatting. I’ve made some customi
 
 ![](https://miro.medium.com/v2/resize:fit:1400/0*YQzPmpzVR3ELsybL.gif)
 
-If you’re someone who writes frequently, you should understand what this means: **time-saving**.
+If you’re someone who writes frequently, you should understand what this means: __time-saving__.
 
 When I finish writing an article, all I need to do is input the shortcut key, and the article formatting will be basically done, which will definitely save a lot of time.
 
@@ -182,7 +185,7 @@ All plugins can be downloaded through Community plugins, and you can choose the 
 
 I think there are too many plugins on Obsidian, which can be overwhelming. I believe we only need to select the ones that best suit our needs. I hope my recommended plugins include what you’re looking for.
 
-The plugins mentioned in this article are all those I’ve accumulated over time while using Obsidian to write slowly. They’re just a small part of the iceberg when it comes to Obsidian plugins, and the usage scenarios are only personal examples. **I welcome your comments telling me which plugins you like and how you use them.**
+The plugins mentioned in this article are all those I’ve accumulated over time while using Obsidian to write slowly. They’re just a small part of the iceberg when it comes to Obsidian plugins, and the usage scenarios are only personal examples. __I welcome your comments telling me which plugins you like and how you use them.__
 
 More Series Articles about Stay Ahead of The Curve：
 
@@ -192,10 +195,10 @@ More Series Articles about Stay Ahead of The Curve：
 
 And I’m Wesley, delighted to share knowledge from the world of programming.
 
-**Don’t forget to follow me for more informative content, or feel free to share this with others who may also find it beneficial. it would be a great help to me.**
+__Don’t forget to follow me for more informative content, or feel free to share this with others who may also find it beneficial. it would be a great help to me.__
 
-> *Give me some free applauds, highlights, or replies, and I’ll pay attention to those reactions, which will determine whether or not I continue to post this type of article.*
+> _Give me some free applauds, highlights, or replies, and I’ll pay attention to those reactions, which will determine whether or not I continue to post this type of article._
 
 See you in the next article. 👋
 
-> *中文文章:* [*https://programmerscareer.com/zh-cn/obsidian-plugins/*](https://programmerscareer.com/zh-cn/obsidian-plugins/)*Author:* [*Wesley Wei — Twitter*](https://twitter.com/WesleyWei0316) [*Wesley Wei — Medium*](https://wesley-wei.medium.com/)*Note: Originally written at* [*https://programmerscareer.com/obsidian-plugins/*](https://programmerscareer.com/obsidian-plugins/) *at 2024–07–14 21:38. If you choose to repost or use this article, please cite the original source.*
+> _中文文章:_ [*https://programmerscareer.com/zh-cn/obsidian-plugins/*](https://programmerscareer.com/zh-cn/obsidian-plugins/)_Author:_ [*Wesley Wei — Twitter*](https://twitter.com/WesleyWei0316) [*Wesley Wei — Medium*](https://wesley-wei.medium.com/)_Note: Originally written at_ [*https://programmerscareer.com/obsidian-plugins/*](https://programmerscareer.com/obsidian-plugins/) _at 2024–07–14 21:38. If you choose to repost or use this article, please cite the original source._

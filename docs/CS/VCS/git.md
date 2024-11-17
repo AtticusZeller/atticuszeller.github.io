@@ -14,20 +14,6 @@ git config --global init.defaultBranch main
 git config credential.helper
 ```
 
-### Proxy
-
-#### http\\https
-
-```bash
-
-# 与clash一致 设置👌 win
-git config --global http.proxy http://127.0.0.1:7890
-git config --global https.proxy http://127.0.0.1:7890
-# ubuntu in wsl ip is ipv4 of your win
-git config --global http.proxy http://192.168.0.107:7890
-git config --global https.proxy http://192.168.0.107:7890
-```
-
 ### SSH
 
 _in admin powershell_
@@ -42,7 +28,7 @@ Start-Service ssh-agent
 #### Generate Key-pair
 
 ```bash
-ssh-keygen -t ed25519 -C "1831768457@qq.com"
+ssh-keygen -t ed25519 -C "atticus.zeller@pm.me"
 ```
 
 _in normal powersehll_
@@ -97,36 +83,6 @@ _you may need to enter yes as it's requiring to trust connection to github_
 
 ```powershell
 ssh -T git@github.com
-```
-
-## Usual Commands
-
-### Reset Http Proxy
-
-```bash
-
-git config --global --unset http.proxy
-git config --global --unset https.proxy
-
-git config --global --unset core.gitProxy
-
-git config --local --unset http.proxy
-git config --local --unset https.proxy
-
-git config --local --unset core.gitProxy
-
-git config --global --unset http."https://github.com".proxy
-
-
-```
-
-### Check Info
-
-```bash
-# 列出本地配置
-git config --global --list
-# 只在本地仓库可以
-git config --local --list
 ```
 
 ### Remote
@@ -218,17 +174,3 @@ git add  "<file_path>.onnx"
 git commit -m "add extractor model .onnx"
 git push origin main
 ```
-
-## Pre-commit
-
-1. clean cache
-
-```bash
-pre-commit clean
-```
-
-## Mobile
-
-<script src="https://gist.github.com/Makeshift/43c7ecb3f1c28a623ea4386552712114.js"></script>
-
-https://gist.github.com/Makeshift/43c7ecb3f1c28a623ea4386552712114
