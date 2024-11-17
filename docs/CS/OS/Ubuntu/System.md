@@ -230,6 +230,8 @@ skip_dotfiles = "true"
 # Skip github sync dir
 
 skip_dir = "DevSpace"
+skip_dir = "miniconda3"
+skip_dir = "NVIDIA Nsight Compute"
 
 # upload_only = "true"
 
