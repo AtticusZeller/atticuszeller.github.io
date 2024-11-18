@@ -138,7 +138,7 @@ cd unsnap
 flatpak install flathub io.github.flattool.Warehouse
 ```
 
-### Override
+### [Override](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-override)
 
 global settings if no following with `flatpak list` got _Application ID_ like`com.example.App`
 
