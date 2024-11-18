@@ -245,12 +245,22 @@ threads = "64"
 
 #### [Usage](https://github.com/abraunegg/onedrive/blob/master/docs/usage.md#first-steps)
 
+once
+
 ```bash
 onedrive --sync --verbose --resync
 ```
 
+monitor
+
 ```bash
 onedrive --monitor
+```
+
+monitor as startup
+
+```bash
+...
 ```
 
 ### Zotero
