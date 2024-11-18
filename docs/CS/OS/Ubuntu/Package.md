@@ -138,6 +138,14 @@ cd unsnap
 flatpak install flathub io.github.flattool.Warehouse
 ```
 
+### Override
+
+global settings if no following with `flatpak list` got _Application ID_ like`com.example.App`
+
+```bash
+sudo flatpak override --filesystem=home
+```
+
 > [!Bug] BUGs
 >
 > 1. use `flatpak-spawn --host --env=TERM=xterm-256color zsh` as shell path in `pycharm` [Can't use zsh in terminal · Issue #23 · flathub/com.jetbrains.IntelliJ-IDEA-Ultimate · GitHub](https://github.com/flathub/com.jetbrains.IntelliJ-IDEA-Ultimate/issues/23)
