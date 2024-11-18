@@ -262,3 +262,7 @@ wget -qO- https://raw.githubusercontent.com/retorquere/zotero-deb/master/install
 sudo apt update
 sudo apt install zotero
 ```
+
+### LibreOffice
+
+theme [LibreOffice • Dracula Theme](https://draculatheme.com/libreoffice)
