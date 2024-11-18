@@ -7,9 +7,9 @@
 
 <h3 align="left">Languages and Tools:</h3>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=atticuszeller&layout=compact" alt="atticuszeller" width="400"/>
-</p>
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=atticuszeller&show_icons=true&theme=dark&title_color=ff0000&text_color=00ffff&bg_color=000000&locale=en" alt="atticuszeller" width="400"/>
-</p>
+<a href="https://github.com/atticuszeller/github-readme-stats">
+  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api?username=atticuszeller" />
+</a>
+<a href="https://github.com/atticuszeller">
+  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=atticuszeller&layout=compact&langs_count=8&card_width=320" />
+</a>
