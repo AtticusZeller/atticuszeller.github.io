@@ -233,12 +233,14 @@ skip_dotfiles = "true"
 skip_dir = "DevSpace"
 skip_dir = "miniconda3"
 skip_dir = "NVIDIA Nsight Compute"
+skip_dir = "snap"
+skip_dir = "cache"
+skip_dir = "temp"
 
 # upload_only = "true"
 
 # https://github.com/abraunegg/onedrive/blob/master/docs/application-config-options.md#monitor_interval
-
-monitor_interval = "100"
+monitor_interval = "600"
 
 threads = "64"
 ```
