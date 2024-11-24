@@ -16,9 +16,7 @@
       "name": "Typst"
     },
     {
-      "name": "PDF",
-      "customArguments": "--pdf-engine=xelatex --mathjax  --citeproc",
-      "openExportedFile": true
+      "name": "PDF"
     },
     {
       "name": "Word (.docx)"
@@ -51,13 +49,15 @@
       "name": "Bibliography"
     }
   ],
-  "defaultExportDirectoryMode": "Same",
+  "defaultExportDirectoryMode": "Auto",
   "openExportedFile": true,
   "env": {},
   "showExportProgressBar": true,
-  "lastEditName": "PDF",
   "lastExportDirectory": {
     "win32": "C:\\Users\\18317\\DevSpace\\DocHub/essay/texs"
   },
-  "lastExportType": "PDF"
+  "pandocPath": {
+    "linux": "/home/linuxbrew/.linuxbrew/bin/pandoc"
+  },
+  "lastEditName": "Markdown (Hugo)"
 }
