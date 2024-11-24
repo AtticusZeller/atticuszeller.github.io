@@ -188,11 +188,13 @@
       "omnisearch:Omnisearch": false,
       "obsidian-git:Open Git source control": false,
       "oz-clear-unused-images:Clear Unused Images": false,
-      "terminal:Open terminal": false
+      "terminal:Open terminal": false,
+      "hugo-publish:hugo sync": false
     }
   },
   "active": "5e04f9d1a08afcf5",
   "lastOpenFiles": [
+    "CS/OS/Ubuntu/Package.md",
     "CS/OS/Ubuntu/System.md",
     "Learning/Computer Vison/3D.md",
     "Learning/Computer Vison/Image.md",
@@ -222,7 +224,6 @@
     "Reference/obsidian/Early access versions - Obsidian Help.md",
     "Reference/blog/Steph Ango/What can we remove.md",
     "CS/OS/default-clipper.json",
-    "Reference/obsidian/My 10+ Obsidian Plugins As a Medium Writer.md",
     "Reference/obsidian",
     "Clippings",
     "Reference/blog/Steph Ango",

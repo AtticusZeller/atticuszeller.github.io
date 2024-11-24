@@ -1,0 +1,7 @@
+{
+  "blog_tag": "blog",
+  "blog_dir": "/",
+  "static_dir": "asset",
+  "site_dir": "/site",
+  "keep_list": ""
+}

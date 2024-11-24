@@ -54,10 +54,12 @@
   "env": {},
   "showExportProgressBar": true,
   "lastExportDirectory": {
-    "win32": "C:\\Users\\18317\\DevSpace\\DocHub/essay/texs"
+    "win32": "C:\\Users\\18317\\DevSpace\\DocHub/essay/texs",
+    "linux": "/home/atticus-zhou/Downloads"
   },
   "pandocPath": {
     "linux": "/home/linuxbrew/.linuxbrew/bin/pandoc"
   },
-  "lastEditName": "Markdown (Hugo)"
+  "lastEditName": "Markdown (Hugo)",
+  "lastExportType": "Markdown (Hugo)"
 }
