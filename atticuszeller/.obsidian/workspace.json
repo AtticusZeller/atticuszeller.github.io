@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "Reference/Finding and managing research papers a survey of tools and products.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "Finding and managing research papers a survey of tools and products"
             }
           }
         ]
@@ -193,6 +193,8 @@
   },
   "active": "86cc862afe85a258",
   "lastOpenFiles": [
+    "Learning/Reading list.md",
+    "index.md",
     "Reference/Finding and managing research papers a survey of tools and products.md",
     "CS/OS/Ubuntu/Appearance.md",
     "assets/Pasted image 20241126135048.png",
@@ -215,8 +217,6 @@
     "Features/LaTeX Math Support.md",
     "Features/Text Formatting.md",
     "Features/Table.md",
-    "index.md",
-    "Learning/Reading list.md",
     "Reference/linux/How to Monitor and Test the Health of SSD in Linux.md",
     "CS/OS/Windows/Powershell.md",
     "assets/Pasted image 20241117134255.png",
