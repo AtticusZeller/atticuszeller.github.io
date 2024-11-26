@@ -1,7 +1,0 @@
-mkdocs
-mkdocs-material
-mkdocs-git-revision-date-localized-plugin
-mkdocs-glightbox
-mkdocs-obsidian-bridge
-mkdocs-publisher
-pymdown-extensions

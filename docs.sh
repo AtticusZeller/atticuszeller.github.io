@@ -15,6 +15,8 @@ if [ "$1" == "dev" ]; then
     run_uvx mkdocs serve
 elif [ "$1" == "deploy" ]; then
     run_uvx mkdocs gh-deploy --force
+elif [ "$1" == "build" ]; then
+    run_uvx mkdocs build
 else
     echo "usage: $0 {dev|deploy}"
     exit 1
