@@ -188,8 +188,7 @@
       "omnisearch:Omnisearch": false,
       "obsidian-git:Open Git source control": false,
       "oz-clear-unused-images:Clear Unused Images": false,
-      "terminal:Open terminal": false,
-      "hugo-publish:hugo sync": false
+      "terminal:Open terminal": false
     }
   },
   "active": "5e04f9d1a08afcf5",
