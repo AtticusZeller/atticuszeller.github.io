@@ -73,8 +73,5 @@ sudo ./install.sh
 ```
 
 ## Wallpaper
-
-![[assets/Wallpapaer/wallpaper_1.jpg]]
-![[assets/Wallpapaer/wallpaper_2.jpg]]
-![[assets/Wallpapaer/wallpaper_3.jpg]]
-![[assets/Wallpapaer/wallpaper_4.jpg]]
+![[assets/Pasted image 20241126135048.png]]
+[OneDrive share link](https://1drv.ms/f/s!ApUonPPT2w2F1cQRzAErW2pdi_c0fA?e=X51X5Y)
