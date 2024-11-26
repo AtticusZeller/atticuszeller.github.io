@@ -10,6 +10,11 @@ repo_url: https://github.com/AtticusZeller/atticuszeller.github.io
 repo_name: A.J.Zeller
 edit_uri: edit/main/docs
 
+# build target dir
+docs_dir: atticuszeller
+# build output dir
+site_dir: site
+
 # Copyright
 copyright: Copyright &copy; 2016 - 2024 Atticus J. Zeller
 
