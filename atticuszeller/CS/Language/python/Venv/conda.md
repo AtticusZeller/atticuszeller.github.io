@@ -1,23 +1,41 @@
 # Conda
 
-## Proxy for Clash
 
-- add and test
+## Install Conda
 
-```bash
-conda config --set proxy_servers.http http://127.0.0.1:7890
-conda config --set proxy_servers.https https://127.0.0.1:7890
-conda config --show proxy_servers
-conda install --dry-run fastapi
-```
-
-- remove
+1. install by wget
 
 ```bash
-conda config --remove-key proxy_servers
-conda config --show proxy_servers
-conda install --dry-run fastapi
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+# note it may show that conda installed in /root/miniconda3
 ```
+
+> remember set no to auto activate in your shell if u use poetry,etc to manage py-env
+
+1. add `/root/miniconda3/bin` to `PATH` in `/etc/environment`
+
+```bash
+PATH="/root/miniconda3/bin:"
+source /etc/environment
+# or
+export PATH="/root/miniconda3/bin:$PATH"
+```
+
+1. test conda
+
+```bash
+conda info
+```
+
+1. optional, enable auto activate conda
+
+```bash
+conda config --set auto_activate_base true
+```
+
+> repeat to warn `conda init` ,try `conda init <shell>`
 
 ## Channels
 
