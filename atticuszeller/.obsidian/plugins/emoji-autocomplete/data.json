@@ -4,8 +4,10 @@
   "considerHistory": true,
   "historyLimit": 25,
   "history": [
-    "time",
     "fire",
+    "lightning",
+    "arrow_down",
+    "time",
     "fist",
     "carrot",
     "heart_eyes_cat",
