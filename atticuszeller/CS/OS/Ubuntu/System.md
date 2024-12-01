@@ -30,7 +30,7 @@ sudo usermod -aG sudo yourusername
 groups yourusername
 ```
 
-## [Sudoers](https://help.ubuntu.com/community/Sudoers)
+### [Sudoers](https://help.ubuntu.com/community/Sudoers)
 
 avoid be asked input passwd call `sudo` every time
 
