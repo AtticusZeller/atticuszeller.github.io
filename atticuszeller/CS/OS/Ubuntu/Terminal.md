@@ -93,3 +93,13 @@ vs code terminal , Add these properties to the user `settings.json`
   "terminal.integrated.defaultProfile.linux": "zsh"
 }
 ```
+
+## [Sudoers](https://help.ubuntu.com/community/Sudoers)
+
+avoid be asked input passwd call `sudo` every time
+
+```bash
+sudo visudo
+# fine the line begin with %sudo and replace it
+%sudo ALL=NOPASSWD: ALL
+```

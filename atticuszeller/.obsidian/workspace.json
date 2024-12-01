@@ -11,10 +11,15 @@
             "id": "d6ec06568b6ce63e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "CS/OS/Ubuntu/Terminal.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Terminal"
             }
           }
         ]
@@ -186,13 +191,13 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "b02e2e30d05790c3",
+  "active": "d6ec06568b6ce63e",
   "lastOpenFiles": [
+    "CS/OS/Proxy/Steps.md",
     "CS/OS/Ubuntu/System.md",
     "CS/OS/Proxy/clash-meta.yaml",
     "CS/OS/Proxy/x-ui.db",
     "CS/OS/Proxy/config.json",
-    "CS/OS/Proxy/Steps.md",
     "CS/OS/Proxy",
     "CS/OS/Ubuntu/Appearance.md",
     "CS/Language/Rust/config.md",
