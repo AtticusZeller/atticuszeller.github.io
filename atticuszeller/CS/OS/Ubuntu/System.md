@@ -2,6 +2,12 @@
 
 ## System
 
+### [Install](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
+
+1. download `ios file` [Download Ubuntu Desktop | Download | Ubuntu](https://ubuntu.com/download/desktop)
+2. download `Flash OS images app`[balenaEtcher - Flash OS images to SD cards & USB drives](https://etcher.balena.io/)
+3. let device start by the __flashed__ drivers
+
 ### Ignore Lid Switch
 
 ```bash
@@ -14,21 +20,24 @@ HandleLidSwitchDocked=ignore
 sudo systemctl restart systemd-logind
 ```
 
-### Change Password
+### [usermod](https://phoenixnap.com/kb/usermod-linux)
 
-```powershell
-# admin
-wsl -u root
-passwd %username% # empty for root
+add into `sudo` group
+
+```bash
+sudo usermod -aG sudo yourusername
+# check it
+groups yourusername
 ```
 
-### Upgrade to Root
+## [Sudoers](https://help.ubuntu.com/community/Sudoers)
 
-```shell
-usermod -aG sudo %username%
-sudo chown -R %username%  %filepath%
-# sudo chown -R atticuszz /etc/
+avoid be asked input passwd call `sudo` every time
 
+```bash
+sudo visudo
+# fine the line begin with %sudo and replace it
+%sudo ALL=NOPASSWD: ALL
 ```
 
 ## Basic Tools for Desktop
