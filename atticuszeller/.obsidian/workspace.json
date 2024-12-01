@@ -4,25 +4,81 @@
     "type": "split",
     "children": [
       {
-        "id": "73d5e45475fb5dcf",
-        "type": "tabs",
+        "id": "2c54f79f7b375cbe",
+        "type": "split",
         "children": [
           {
-            "id": "d6ec06568b6ce63e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CS/OS/Ubuntu/System.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "System"
-            }
+            "id": "3ec1a521cb91d6ea",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "86cc862afe85a258",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CS/OS/Proxy/Steps.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Steps"
+                }
+              }
+            ]
+          },
+          {
+            "id": "e5ff1a418229df96",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "6a469538f1892b7a",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "/home/atticuszz/DevSpace/atticuszeller/atticuszeller",
+                      "focus": false,
+                      "profile": {
+                        "args": [],
+                        "executable": "/bin/zsh",
+                        "name": "zsh",
+                        "platforms": {
+                          "darwin": true,
+                          "linux": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": true,
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": {
+                        "columns": 117,
+                        "data": "\u001b[38;5;39;1m~\u001b[38;5;31;22m/DevSpace/\u001b[38;5;39;1matticuszeller\u001b[38;5;31;22m/\u001b[38;5;39;1matticuszeller\u001b[38;5;31;22m \u001b[0mon \u001b[38;5;76mmain \u001b[38;5;178m!6\u001b[30m \u001b[38;5;244m───────────────────────────────────────────\u001b[30m \u001b[38;5;37mPy base\u001b[38;5;66m \u001b[0mat \u001b[38;5;66m20:42:24\u001b[30m \u001b[38;5;244m─╮\r\n\u001b[38;5;76m❯\u001b[0m \u001b[112C\u001b[38;5;244m─╯\u001b[114D\u001b[0m",
+                        "rows": 20
+                      }
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "terminal",
+                  "title": "Terminal: atticuszz@atticuszz-Legion-Y7000P-IRH8:~/DevSpace/atticuszeller/atticuszeller"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -191,26 +247,21 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "d6ec06568b6ce63e",
+  "active": "6a469538f1892b7a",
   "lastOpenFiles": [
-    "CS/OS/Ubuntu/System.md",
-    "CS/OS/Ubuntu/configs.md",
-    "CS/OS/Ubuntu/Terminal.md",
     "CS/OS/Proxy/Steps.md",
-    "CS/OS/Proxy/clash-meta.yaml",
-    "CS/OS/Proxy/x-ui.db",
-    "CS/OS/Proxy/config.json",
-    "CS/OS/Proxy",
-    "CS/OS/Ubuntu/Appearance.md",
     "CS/Language/Rust/config.md",
+    "CS/OS/Proxy/clash-meta.yaml",
+    "CS/OS/Proxy",
     "CS/Language/Rust",
     "Reference/Finding and managing research papers a survey of tools and products.md",
-    "CS/Language/Rust/config.md",
     "CS/Language/Rust",
     "Learning/Reading list.md",
     "index.md",
+    "CS/OS/Ubuntu/Appearance.md",
     "assets/Pasted image 20241126135048.png",
     "CS/OS/Ubuntu/Package.md",
+    "CS/OS/Ubuntu/System.md",
     "Learning/Computer Vison/3D.md",
     "Learning/Computer Vison/Image.md",
     "CS/OS/Ubuntu/sync.md",
@@ -226,12 +277,15 @@
     "Features/Icons, Emojis.md",
     "Features/Image.md",
     "Features/LaTeX Math Support.md",
+    "Features/Text Formatting.md",
     "assets/Pasted image 20241117134255.png",
     "assets/Pasted image 20241117133910.png",
     "Learning/Computer Vison",
     "CS/OS/default-clipper.json",
     "Reference/obsidian",
     "Clippings",
+    "Reference/blog/Steph Ango",
+    "Reference/blog",
     "assets/Wallpapaer/wallpaper_4.jpg",
     "assets/Wallpapaer/wallpaper_3.jpg",
     "assets/Wallpapaer/wallpaper_2.jpg",
