@@ -12,13 +12,6 @@
 2. download `Flash OS images app`[balenaEtcher - Flash OS images to SD cards & USB drives](https://etcher.balena.io/)
 3. let device start by the __flashed__ drivers
 
-### Wsl
-
-- in Microsoft Store download `wsl` and `ubuntu 22`
-
-### Connection
-
-connect by vscode or gateway,wsl mode or ssh
 
 #### Wsl
 
