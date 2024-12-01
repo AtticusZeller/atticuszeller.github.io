@@ -4,20 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3ec1a521cb91d6ea",
+        "id": "73d5e45475fb5dcf",
         "type": "tabs",
         "children": [
           {
-            "id": "86cc862afe85a258",
+            "id": "d6ec06568b6ce63e",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
-              "state": {
-                "file": "atticuszeller/CS/OS/Ubuntu/System.md",
-                "staged": false
-              },
-              "icon": "git-pull-request",
-              "title": "Diff View (System)"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -189,7 +186,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "86cc862afe85a258",
+  "active": "b02e2e30d05790c3",
   "lastOpenFiles": [
     "CS/OS/Ubuntu/System.md",
     "CS/OS/Proxy/clash-meta.yaml",
