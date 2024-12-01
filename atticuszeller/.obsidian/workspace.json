@@ -21,19 +21,8 @@
               "icon": "lucide-file",
               "title": "System"
             }
-          },
-          {
-            "id": "254ca9111418bba9",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -202,9 +191,13 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "e5fb1abf4287bce9",
+  "active": "b02e2e30d05790c3",
   "lastOpenFiles": [
-    "CS/OS/Untitled",
+    "CS/OS/Proxy/x-ui.db",
+    "CS/OS/Proxy/config.json",
+    "CS/OS/Proxy/Steps.md",
+    "CS/OS/Proxy/clash-meta.yaml",
+    "CS/OS/Proxy",
     "CS/OS/Ubuntu/System.md",
     "CS/OS/Ubuntu/Appearance.md",
     "CS/Language/Rust/config.md",
@@ -232,17 +225,12 @@
     "Features/Image.md",
     "Features/LaTeX Math Support.md",
     "Features/Text Formatting.md",
-    "Features/Table.md",
     "assets/Pasted image 20241117134255.png",
     "assets/Pasted image 20241117133910.png",
     "Learning/Computer Vison",
     "CS/OS/default-clipper.json",
     "Reference/obsidian",
     "Clippings",
-    "Reference/blog/Steph Ango",
-    "Reference/blog",
-    "Reference/linux",
-    "Reference",
     "assets/Wallpapaer/wallpaper_4.jpg",
     "assets/Wallpapaer/wallpaper_3.jpg",
     "assets/Wallpapaer/wallpaper_2.jpg",

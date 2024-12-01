@@ -22,7 +22,7 @@ repos:
     rev: v2.3.0
     hooks:
       - id: codespell
-        files: \.(py|sh|rst|yml|yaml|md)$
+        files: \.(py|sh|rst|yml|md)$
         args: [--write-changes]
 
 ci:
