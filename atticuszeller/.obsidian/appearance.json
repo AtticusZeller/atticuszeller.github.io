@@ -3,7 +3,8 @@
   "enabledCssSnippets": [
     "page_width",
     "zotero-annotations",
-    "excalidraw"
+    "excalidraw",
+    "Colored Sidebar Items"
   ],
   "accentColor": "",
   "baseFontSize": 17,
