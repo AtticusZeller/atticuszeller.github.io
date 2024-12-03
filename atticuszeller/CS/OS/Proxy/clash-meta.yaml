@@ -95,19 +95,7 @@ proxy-groups:
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
-  proxies:
-  - 🎅San Francisco vless 1
-  - 🌟San Francisco vless 2
-  - 🍎San Francisco vless 3
-  - 🎉San Francisco vless 4
-  - 🎶San Francisco vless 5
-  - 🍀San Francisco vless 6
-  - 🌞San Francisco vless 7
-  - 🌼San Francisco vless 8
-  - 🎁San Francisco vless 9
-  - 🦋San Francisco vless 10
-  - ⚡San Francisco vless 11
-  - 🌈San Francisco vless 12
+  include-all-proxies: true
 - name: 🎯 Direct
   type: select
   proxies:
