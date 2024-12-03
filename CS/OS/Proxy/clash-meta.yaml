@@ -22,6 +22,7 @@ tun:
   - any:53
   enable: true
 # https://wiki.metacubex.one/config/dns/
+# https://gist.github.com/liuran001/5ca84f7def53c70b554d3f765ff86a33
 dns:
   enable: true
   prefer-h3: true
