@@ -58,7 +58,7 @@ profile:
   store-fake-ip: true
 # https://github.com/vernesong/OpenClash/issues/2614
 keep-alive-interval: 600
-disable-keep-alive: false 
+
 proxies:
   - { "type": "vless", "name": "🎅San Francisco vless 1", "server": "atticuszeller.club", "port": 26748, "uuid": "0a0502aa-68ad-4d9e-8954-dc8bb83c7b2d", "skip-cert-verify": true, "network": "tcp", "flow": "xtls-rprx-vision", "tls": true, "udp": true}
   - { "type": "vless", "name": "🌟San Francisco vless 2", "server": "atticuszeller.club", "port": 12956, "uuid": "a2ff09b9-ad18-49c6-af91-bb49b65e6b76", "skip-cert-verify": true, "network": "tcp", "flow": "xtls-rprx-vision","tls": true, "udp": true}
