@@ -73,8 +73,19 @@
               "icon": "lucide-search",
               "title": "Search"
             }
+          },
+          {
+            "id": "34f7631c7ddae1de",
+            "type": "leaf",
+            "state": {
+              "type": "vertical-tabs",
+              "state": {},
+              "icon": "gallery-vertical",
+              "title": "Vertical tabs"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -191,7 +202,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "b02e2e30d05790c3",
+  "active": "34f7631c7ddae1de",
   "lastOpenFiles": [
     "CS/OS/Proxy/clash-meta.yaml",
     "CS/OS/Proxy/clash-meta-old (Copy).yaml",
