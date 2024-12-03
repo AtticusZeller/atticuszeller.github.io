@@ -118,8 +118,8 @@ proxy-groups:
 - name: 🍎 Apple
   type: select
   proxies:
-  - 🔰 Node
   - 🎯 Direct
+  - 🔰 Node
 - name: 📲 Telegram
   type: select
   proxies:
@@ -204,19 +204,24 @@ rule-providers:
     path: ./ruleset/applications.yaml
     interval: 86400
 rules:
-  - RULE-SET,applications,🎯 Direct
   # web panel
   - DOMAIN,clash.razord.top,🎯 Direct
   - DOMAIN,yacd.haishan.me,🎯 Direct
+  # local and private 
   - RULE-SET,lancidr,🎯 Direct
-  - RULE-SET,cncidr,🎯 Direct
   - RULE-SET,private,🎯 Direct
-  - RULE-SET,direct,🎯 Direct
+  # apple available in china 
   - RULE-SET,icloud,🍎 Apple
   - RULE-SET,apple,🍎 Apple
+  # global 
   - RULE-SET,telegramcidr,📲 Telegram
   - RULE-SET,proxy,🔰 Node
+  # Chinese apps
+  - RULE-SET,applications,🎯 Direct
+  - RULE-SET,direct,🎯 Direct
+  - RULE-SET,cncidr,🎯 Direct
   - GEOIP,LAN,🎯 Direct
   - GEOIP,CN,🎯 Direct
+  # ads
   - RULE-SET,reject,⛔️ Ads
   - MATCH,🐟 Remaining
