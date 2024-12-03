@@ -204,6 +204,8 @@ rule-providers:
     path: ./ruleset/applications.yaml
     interval: 86400
 rules:
+  # proxy apps
+  - RULE-SET,applications,🎯 Direct
   # web panel
   - DOMAIN,clash.razord.top,🎯 Direct
   - DOMAIN,yacd.haishan.me,🎯 Direct
@@ -216,8 +218,7 @@ rules:
   # global 
   - RULE-SET,telegramcidr,📲 Telegram
   - RULE-SET,proxy,🔰 Node
-  # Chinese apps
-  - RULE-SET,applications,🎯 Direct
+  # Chinese domains and IPS 
   - RULE-SET,direct,🎯 Direct
   - RULE-SET,cncidr,🎯 Direct
   - GEOIP,LAN,🎯 Direct
