@@ -204,6 +204,7 @@ rule-providers:
     path: ./ruleset/applications.yaml
     interval: 86400
 rules:
+  - RULE-SET,reject,⛔️ Ads
   - RULE-SET,applications,🎯 Direct
   # web panel
   - DOMAIN,clash.razord.top,🎯 Direct
@@ -218,5 +219,4 @@ rules:
   - RULE-SET,apple,🍎 Apple
   - RULE-SET,telegramcidr,📲 Telegram
   - RULE-SET,proxy,🔰 Node
-  - RULE-SET,reject,⛔️ Ads
   - MATCH,🐟 Remaining
