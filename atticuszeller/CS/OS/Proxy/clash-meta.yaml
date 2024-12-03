@@ -35,24 +35,18 @@ dns:
     - '+.local'
   default-nameserver:
     - 223.5.5.5
-    - 223.6.6.6
+    - 223.6.6.6          
+    - '[2402:4e00::]'   
+    - '[2400:3200::1]' 
+
+  # cloudflare DoT
   nameserver:
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.google/dns-query
-    # - https://223.5.5.5/dns-query  # 阿里DNS
-    # - https://223.6.6.6/dns-query  # 阿里DNS备用
-    # - https://doh.pub/dns-query    # DNSPod
-
-  # 国外DNS服务器
-  # # fallback:
-  #   - https://cloudflare-dns.com/dns-query
-  #   - https://dns.google/dns-query
-  #   - tls://8.8.4.4:853
-  #   - tls://1.0.0.1:853
-
-  # DNS策略分流
+    - 'tls://1.1.1.1'
+    - 'tls://1.0.0.1'
+    - 'tls://[2606:4700:4700::1111]'
+    - 'tls://[2606:4700:4700::1001]'
+  
   nameserver-policy:
-    # 中国大陆域名使用国内DNS
     "geosite:cn,private":
       - https://223.5.5.5/dns-query
       - https://223.6.6.6/dns-query
