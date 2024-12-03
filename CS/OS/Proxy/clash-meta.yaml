@@ -198,14 +198,14 @@ rules:
   # apple available in china 
   - RULE-SET,icloud,🍎 Apple
   - RULE-SET,apple,🍎 Apple
-  # global 
-  - RULE-SET,telegramcidr,📲 Telegram
-  - RULE-SET,proxy,🔰 Node
   # Chinese domains and IPS 
   - RULE-SET,direct,🎯 Direct
   - RULE-SET,cncidr,🎯 Direct
   - GEOIP,LAN,🎯 Direct
   - GEOIP,CN,🎯 Direct
+  # global 
+  - RULE-SET,telegramcidr,📲 Telegram
+  - RULE-SET,proxy,🔰 Node
   # ads
   - RULE-SET,reject,⛔️ Ads
   - MATCH,🐟 Remaining
