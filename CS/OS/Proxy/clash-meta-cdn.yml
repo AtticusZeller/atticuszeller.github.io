@@ -62,6 +62,7 @@ profile:
   store-fake-ip: true
 # https://github.com/vernesong/OpenClash/issues/2614
 keep-alive-interval: 60
+# https://clash.atticuszeller.club/717f9e5c-9922-49a0-aa12-3fa17d63a7a8
 proxies:
   - {name: CFnat, server: 127.0.0.1, port: 1234, type: vless, uuid: 717f9e5c-9922-49a0-aa12-3fa17d63a7a8, tls: true, tfo: false, skip-cert-verify: true, servername: clash.atticuszeller.club, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: clash.atticuszeller.club}}}
   - {name: CF随机节点, server: 103.21.245.5, port: 443, type: vless, uuid: 717f9e5c-9922-49a0-aa12-3fa17d63a7a8, tls: true, tfo: false, skip-cert-verify: true, servername: clash.atticuszeller.club, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: clash.atticuszeller.club}}}
