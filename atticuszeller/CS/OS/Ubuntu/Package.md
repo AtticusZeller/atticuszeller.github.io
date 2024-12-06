@@ -31,7 +31,7 @@ PPA (Personal Package Archive) allows developers and users to create their own s
 PPA source files are located in the `/etc/apt/sources.list.d/` directory.
 
 ### Add Personal Repo
-
+https://wiki.debian.org/DebianRepository/Format?action=show&redirect=RepositoryFormat
 Here's how to configure GPG signing in CI:
 
 Generate GPG key (locally):
