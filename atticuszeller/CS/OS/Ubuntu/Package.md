@@ -51,63 +51,6 @@ Add keys as GitHub Secrets:
 
 [GitHub - AtticusZeller/deb-index](https://github.com/AtticusZeller/deb-index)
 
-## [Deb-Get](https://github.com/wimpysworld/deb-get)
-
-Deb-Get is a tool for installing `.deb` packages, particularly useful for obtaining software from platforms like GitHub.
-
-### Installing Deb-Get
-
-```bash
-sudo apt install curl lsb-release wget
-curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
-```
-
-### Configuring GitHub PAT (Personal Access Token)
-
-1. Create a PAT on GitHub: Settings > Developer settings > Personal access tokens
-2. Set environment variable:
-
-   ```bash
-   echo 'export DEBGET_TOKEN=your_token_here' >> ~/.zshrc
-   source ~/.zshrc
-   ```
-
-### Basic Usage
-
-- Search for software: `deb-get search <package>`
-- Install software: `sudo deb-get install <package>`
-- Update all software: `deb-get update && deb-get upgrade`
-
-### [Adding External Repositories](https://github.com/wimpysworld/deb-get/tree/main?tab=readme-ov-file#adding-external-repositories)
-
-Assume we have created a remote repository called `deb-get-index` belonging to user `Atticuszz`,with a structure looks like:
-
-> [!EXAMPLE]
->
->```bash
->.
->└── 02-github
-> ├── manifest
-> └── packages
->  └── <your_packages>
->```
-
-- first line in `manifest` is same to the `02-github.repo` ,then each line is `<your_packages>`
-- `<your_packages>` should be created follow the [deb-get/EXTREPO.md](https://github.com/wimpysworld/deb-get/blob/main/EXTREPO.md)
-
-So, we create `02-github.repo` locally and put into our `url`
-
-```bash
-sudo touch /etc/deb-get/02-github.repo
-sudo curl -s "https://raw.githubusercontent.com/Atticuszz/deb-get-index/main/02-github/manifest" | sudo tee /etc/deb-get/02-github.repo > /dev/null
-```
-
-Finally, update local index
-
-```bash
-deb-get update
-```
-
 ## [Flatpak](https://flathub.org/)
 
 Flatpak is a system for building and distributing desktop applications.
