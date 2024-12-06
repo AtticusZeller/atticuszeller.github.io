@@ -1,6 +1,6 @@
 # Package
 
-[official tutorial](https://help.ubuntu.com/community/Repositories/Ubuntu)
+[Repositories official tutorial](https://help.ubuntu.com/community/Repositories/Ubuntu)
 
 ## APT (Advanced Package Tool)
 
