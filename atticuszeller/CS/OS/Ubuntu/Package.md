@@ -37,6 +37,8 @@ Here's how to configure GPG signing in CI:
 
 https://wiki.debian.org/DebianRepository/Setup
 
+https://wiki.debian.org/DebianRepository/Setup
+
 Generate GPG key (locally):
 
 ```bash
