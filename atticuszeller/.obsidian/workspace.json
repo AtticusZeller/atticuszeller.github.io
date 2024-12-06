@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS/OS/Ubuntu/Package.md",
+                "file": "CS/OS/Ubuntu/System.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Package"
+              "title": "System"
             }
           }
         ]
@@ -203,8 +203,8 @@
   },
   "active": "86cc862afe85a258",
   "lastOpenFiles": [
-    "CS/VCS/github/GPG-key.md",
     "CS/OS/Ubuntu/Package.md",
+    "CS/VCS/github/GPG-key.md",
     "CS/OS/Ubuntu/bugs.md",
     "CS/OS/Ubuntu/System.md",
     "CS/OS/Ubuntu/Terminal.md",
