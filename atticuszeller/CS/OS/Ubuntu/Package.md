@@ -45,9 +45,9 @@ gpg --armor --export YOUR_KEY_ID > public.key
 
 Add keys as GitHub Secrets:
 - Go to repo Settings -> Secrets and variables -> Actions -> Repository secrets
-- Add two secrets:
-  - `GPG_PRIVATE_KEY`: private key content
-  - `GPG_PASSPHRASE`: key passphrase
+- Add two secrets
+	-  `GPG_PRIVATE_KEY`: private key content
+	- `GPG_PASSPHRASE`: key passphrase
 
 [GitHub - AtticusZeller/deb-index](https://github.com/AtticusZeller/deb-index)
 
