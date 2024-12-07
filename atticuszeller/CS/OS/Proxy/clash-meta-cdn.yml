@@ -190,6 +190,9 @@ rules:
   # local and private 
   - RULE-SET,lancidr,🎯 Direct
   - RULE-SET,private,🎯 Direct
+  # global 
+  - RULE-SET,telegramcidr,📲 Telegram
+  - RULE-SET,proxy,🔰 Node
   # apple available in china 
   - RULE-SET,icloud,🍎 Apple
   - RULE-SET,apple,🍎 Apple
@@ -198,9 +201,6 @@ rules:
   - RULE-SET,cncidr,🎯 Direct
   - GEOIP,LAN,🎯 Direct
   - GEOIP,CN,🎯 Direct
-  # global 
-  - RULE-SET,telegramcidr,📲 Telegram
-  - RULE-SET,proxy,🔰 Node
   # ads
   - RULE-SET,reject,⛔️ Ads
   - MATCH,🐟 Remaining
