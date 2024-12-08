@@ -78,7 +78,8 @@ sniffer:
     QUIC:
       ports: [443, 8443]
 proxies:
-- vless://47c93258-fbaf-4a9d-a29f-3df65ffca12f@atticuszeller.club:2052?type=ws&path=%2Fws1&host=template.atticuszeller.club&security=tls&fp=firefox&alpn=h3%2Ch2#%F0%9F%94%A5-j48qpm0l
+  - {"type":"vless","name":"🔥-j48qpm0l","server":"atticuszeller.club","port":2052,"uuid":"47c93258-fbaf-4a9d-a29f-3df65ffca12f","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"template.atticuszeller.club","ws-opts":{"path":"/ws1","headers":{"host":"template.atticuszeller.club"}}}
+
 
 proxy-groups:
 - name: 🔰 Node
