@@ -4,81 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "d8c103715aeceaf9",
-        "type": "split",
+        "id": "73d5e45475fb5dcf",
+        "type": "tabs",
         "children": [
           {
-            "id": "3ec1a521cb91d6ea",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "86cc862afe85a258",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "CS/OS/Ubuntu/System.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "System"
-                }
-              }
-            ]
-          },
-          {
-            "id": "6b5c58c9e4a73f0a",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "eeaab55873ea0f44",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "terminal:terminal",
-                  "state": {
-                    "terminal:terminal": {
-                      "cwd": "/home/atticuszz/DevSpace/atticuszeller/atticuszeller",
-                      "focus": false,
-                      "profile": {
-                        "args": [],
-                        "executable": "/bin/zsh",
-                        "name": "zsh",
-                        "platforms": {
-                          "darwin": true,
-                          "linux": true
-                        },
-                        "pythonExecutable": "python3",
-                        "restoreHistory": true,
-                        "successExitCodes": [
-                          "0",
-                          "SIGINT",
-                          "SIGTERM"
-                        ],
-                        "terminalOptions": {
-                          "documentOverride": null
-                        },
-                        "type": "integrated",
-                        "useWin32Conhost": true
-                      },
-                      "serial": {
-                        "columns": 117,
-                        "data": "\u001b[38;5;39;1m~\u001b[38;5;31;22m/DevSpace/\u001b[38;5;39;1matticuszeller\u001b[38;5;31;22m/\u001b[38;5;39;1matticuszeller\u001b[38;5;31;22m \u001b[0mon \u001b[38;5;76mmain \u001b[38;5;178m!1\u001b[30m \u001b[38;5;244m───────────────────────────────────────────\u001b[30m \u001b[38;5;37mPy base\u001b[38;5;66m \u001b[0mat \u001b[38;5;66m15:04:11\u001b[30m \u001b[38;5;244m─╮\r\n\u001b[38;5;76m❯\u001b[0m \u001b[32mgit\u001b[0m \u001b[90;7mp\u001b[27mush -f origin main\u001b[89C\u001b[38;5;244m─╯\u001b[110D\u001b[90m",
-                        "rows": 21
-                      }
-                    }
-                  },
-                  "pinned": true,
-                  "icon": "terminal",
-                  "title": "Terminal: atticuszz@atticuszz-Legion-Y7000P-IRH8:~/DevSpace/atticuszeller/atticuszeller"
-                }
-              }
-            ]
+            "id": "d6ec06568b6ce63e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CS/VCS/git.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "git"
+            }
           }
-        ],
-        "direction": "horizontal"
+        ]
       }
     ],
     "direction": "vertical"
@@ -128,16 +72,6 @@
               },
               "icon": "lucide-search",
               "title": "Search"
-            }
-          },
-          {
-            "id": "34f7631c7ddae1de",
-            "type": "leaf",
-            "state": {
-              "type": "vertical-tabs",
-              "state": {},
-              "icon": "gallery-vertical",
-              "title": "Vertical tabs"
             }
           }
         ]
@@ -257,29 +191,33 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "eeaab55873ea0f44",
+  "active": "d6ec06568b6ce63e",
   "lastOpenFiles": [
+    "CS/VCS/git.md",
+    "CS/OS/Proxy/clash-template.yml",
+    "CS/OS/Proxy/clash-meta-old.yaml",
+    "CS/OS/Proxy/clash-meta-cdn.yml",
+    "CS/tools/IDE/JetBrains.md",
+    "CS/OS/GPU.md",
+    "CS/OS/Docker.md",
     "CS/OS/Ubuntu/System.md",
-    "CS/OS/Ubuntu/Package.md",
-    "CS/VCS/github/GPG-key.md",
-    "CS/OS/Ubuntu/bugs.md",
+    "CS/OS/Ubuntu/configs.md",
     "CS/OS/Ubuntu/Terminal.md",
     "CS/OS/Proxy/Steps.md",
-    "CS/OS/Proxy/clash-template.yml",
-    "CS/OS/Proxy/clash-meta-cdn.yml",
     "CS/OS/Proxy/clash-meta.yaml",
-    "CS/OS/Proxy/clash-meta-old (Copy).yaml",
-    "CS/OS/Proxy/Untitled.md",
-    "CS/OS/Proxy/clash-meta-old.yaml",
-    "CS/Language/Rust/config.md",
+    "CS/OS/Proxy/x-ui.db",
+    "CS/OS/Proxy/config.json",
     "CS/OS/Proxy",
+    "CS/OS/Ubuntu/Appearance.md",
+    "CS/Language/Rust/config.md",
     "CS/Language/Rust",
     "Reference/Finding and managing research papers a survey of tools and products.md",
+    "CS/Language/Rust/config.md",
     "CS/Language/Rust",
     "Learning/Reading list.md",
     "index.md",
-    "CS/OS/Ubuntu/Appearance.md",
     "assets/Pasted image 20241126135048.png",
+    "CS/OS/Ubuntu/Package.md",
     "Learning/Computer Vison/3D.md",
     "Learning/Computer Vison/Image.md",
     "CS/OS/Ubuntu/sync.md",
@@ -291,13 +229,9 @@
     "CS/Language/C++/STL/map.md",
     "CS/Language/C++/packages.md",
     "CS/Language/C++/Data_model/unordered_map.md",
-    "CS/Language/C++/Data_model/map.md",
-    "Features/Icons, Emojis.md",
-    "Features/Image.md",
     "assets/Pasted image 20241117134255.png",
     "assets/Pasted image 20241117133910.png",
     "Learning/Computer Vison",
-    "CS/OS/default-clipper.json",
     "assets/Wallpapaer/wallpaper_4.jpg",
     "assets/Wallpapaer/wallpaper_3.jpg",
     "assets/Wallpapaer/wallpaper_2.jpg",
