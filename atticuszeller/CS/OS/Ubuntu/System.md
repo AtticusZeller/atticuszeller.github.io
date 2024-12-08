@@ -279,7 +279,7 @@ monitor as startup
 ```bash
 brew install curl
 ls /home/linuxbrew/.linuxbrew/lib/libcurl*
-# get sudo nano /etc/ld.so.conf.d/linuxbrew-curl.conf.*
+# get /etc/ld.so.conf.d/linuxbrew-curl.conf.*
 echo "/home/linuxbrew/.linuxbrew/lib" | sudo tee /etc/ld.so.conf.d/linuxbrew-curl.conf
 # update
 sudo ldconfig
