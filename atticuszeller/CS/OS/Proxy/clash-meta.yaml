@@ -99,8 +99,8 @@ proxy-groups:
   - ♻️ Auto
   - 🎯 Direct
 - name: ♻️ Auto
-  # type: url-test
-  type: load-balance
+  type: url-test
+  #type: load-balance
   url: https://www.gstatic.com/generate_204
   interval: 300
   include-all-proxies: true
