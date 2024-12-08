@@ -274,6 +274,17 @@ monitor as startup
 ...
 ```
 
+### [Compatibility with curl](https://github.com/abraunegg/onedrive/blob/master/docs/usage.md#compatibility-with-curl)
+
+```bash
+brew install curl
+ls /home/linuxbrew/.linuxbrew/lib/libcurl*
+# get sudo nano /etc/ld.so.conf.d/linuxbrew-curl.conf.*
+echo "/home/linuxbrew/.linuxbrew/lib" | sudo tee /etc/ld.so.conf.d/linuxbrew-curl.conf
+# update
+sudo ldconfig
+```
+
 ### Zotero
 
 [GitHub - retorquere/zotero-deb: Packaged versions of Zotero and Juris-M for Debian-based systems](https://github.com/retorquere/zotero-deb)
