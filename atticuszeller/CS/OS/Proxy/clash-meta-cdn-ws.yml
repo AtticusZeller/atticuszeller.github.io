@@ -65,8 +65,8 @@ keep-alive-interval: 60
 # https://wiki.metacubex.one/config/general/#geo
 geodata-mode: false # enable mmdb data format
 geodata-loader: standard
-geo-auto-update: true   
-geo-update-interval: 24    
+geo-auto-update: true
+geo-update-interval: 24
 geox-url:
   mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
   asn: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"
@@ -134,6 +134,7 @@ proxy-groups:
   - 🔰 Node
 
 # https://github.com/Loyalsoldier/clash-rules
+# https://wiki.metacubex.one/config/rule-providers/
 rule-providers:
   icloud:
     type: http
@@ -178,14 +179,14 @@ rule-providers:
     interval: 86400
 
   cncidr:
-    type: http
+    type: https
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
     path: ./ruleset/cncidr.yaml
     interval: 86400
 
   lancidr:
-    type: http
+    type: https
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
     path: ./ruleset/lancidr.yaml
@@ -197,23 +198,41 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
     path: ./ruleset/applications.yaml
     interval: 86400
+
+  user-apps:
+    type: http
+    behavior: classical
+    url: "https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/apps.txt"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+
+  user-apps-cn:
+    type: http
+    behavior: classical
+    url: "https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/apps-cn.txt"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+
 rules:
   # proxy apps
   - RULE-SET,applications,🎯 Direct,no-resolve
+  # user apps
+  - RULE-SET,user-apps,🔰 Node
+  - RULE-SET,user-apps-cn,🎯 Direct
   # web panel
   - DOMAIN,clash.razord.top,🎯 Direct
   - DOMAIN,yacd.haishan.me,🎯 Direct
-  # local and private 
+  # local and private
   - RULE-SET,lancidr,🎯 Direct,no-resolve
   - RULE-SET,private,🎯 Direct
-  # global 
+  # global
   - GEOSITE,category-dev,🔰 Node
   - RULE-SET,telegramcidr,📲 Telegram,no-resolve
   - RULE-SET,proxy,🔰 Node
-  # apple available in china 
+  # apple available in china
   - RULE-SET,icloud,🍎 Apple
   - RULE-SET,apple,🍎 Apple
-  # Chinese domains and IPS 
+  # Chinese domains and IPS
   - RULE-SET,direct,🎯 Direct
   - RULE-SET,cncidr,🎯 Direct,no-resolve
   - GEOIP,LAN,🎯 Direct,no-resolve

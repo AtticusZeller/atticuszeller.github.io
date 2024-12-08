@@ -1,0 +1,6 @@
+payload:
+  # office
+  - PROCESS-NAME,qq
+  - PROCESS-NAME,qq.exe
+  - PROCESS-NAME,wechat
+  - PROCESS-NAME,WeChatAppEx
