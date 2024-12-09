@@ -60,6 +60,14 @@ global-client-fingerprint: firefox
 profile:
   store-selected: true
   store-fake-ip: true
+
+# https://wiki.metacubex.one/config/general/#geo
+geodata-mode: false       
+geodata-loader: standard   
+geo-auto-update: true      
+geo-update-interval: 24    
+
+
 # https://github.com/vernesong/OpenClash/issues/2614
 keep-alive-interval: 60
 # https://clash.atticuszeller.club/717f9e5c-9922-49a0-aa12-3fa17d63a7a8
