@@ -191,24 +191,24 @@ rule-providers:
     interval: 86400
 rules:
   # proxy apps
-  - RULE-SET,applications,🎯 Direct
+  - RULE-SET,applications,🎯 Direct,
   # web panel
   - DOMAIN,clash.razord.top,🎯 Direct
   - DOMAIN,yacd.haishan.me,🎯 Direct
   # local and private 
-  - RULE-SET,lancidr,🎯 Direct
+  - RULE-SET,lancidr,🎯 Direct,no-resolve
   - RULE-SET,private,🎯 Direct
   # global 
-  - RULE-SET,telegramcidr,📲 Telegram
+  - RULE-SET,telegramcidr,📲 Telegram,no-resolve
   - RULE-SET,proxy,🔰 Node
   # apple available in china 
   - RULE-SET,icloud,🍎 Apple
   - RULE-SET,apple,🍎 Apple
   # Chinese domains and IPS 
   - RULE-SET,direct,🎯 Direct
-  - RULE-SET,cncidr,🎯 Direct
-  - GEOIP,LAN,🎯 Direct
-  - GEOIP,CN,🎯 Direct
+  - RULE-SET,cncidr,🎯 Direct,no-resolve
+  - GEOIP,LAN,🎯 Direct,no-resolve
+  - GEOIP,CN,🎯 Direct,no-resolve
   # ads
   - RULE-SET,reject,⛔️ Ads
   - MATCH,🐟 Remaining
