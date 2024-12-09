@@ -87,7 +87,7 @@ proxies:
   - {"type":"vless","name":"🌞San Francisco WS 7","server":"atticuszeller.club","port":2095,"uuid":"49860041-c151-4f2b-a0ce-b3905d85e5a5","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"template.atticuszeller.club","ws-opts":{"path":"/ws7","headers":{"host":"template.atticuszeller.club"}}}
   - {"type":"vless","name":"🌼San Francisco WS 8","server":"atticuszeller.club","port":2096,"uuid":"280a4c55-2f68-407e-a38c-4a7575e9031b","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"template.atticuszeller.club","ws-opts":{"path":"/ws1ejjd","headers":{"host":"template.atticuszeller.club"}}}
   - {"type":"vless","name":"🎁San Francisco WS 9","server":"atticuszeller.club","port":8880,"uuid":"c08c126b-3b26-4612-af34-e3b3daeb552e","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"template.atticuszeller.club","ws-opts":{"path":"/ws1djjsisk","headers":{"host":"template.atticuszeller.club"}}}
-  - {"type":"vless","name":"⚡San Francisco WS 10","server":"atticuszeller.club","port":8443,"uuid":"60fe3daf-12f0-485d-87dd-f5f0ea114e51","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"template.atticuszeller.club","ws-opts":{"path":"/ws1dhudiej","headers":{"host":"template.atticuszeller.club"}}}
+  - {"type":"vless","name":"⚡San Francisco WS 10","server":"atticuszeller.club","port":8443,"uuid":"60fe3daf-12f0-485d-87dd-f5f0ea114e51","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"atticuszeller.club","ws-opts":{"path":"/ws1dhudiej","headers":{"host":"atticuszeller.club"}}}
 
 
 proxy-groups:
