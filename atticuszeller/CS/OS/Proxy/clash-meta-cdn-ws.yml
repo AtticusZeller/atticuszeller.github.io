@@ -67,6 +67,9 @@ geodata-mode: false # enable mmdb data format
 geodata-loader: standard
 geo-auto-update: true   
 geo-update-interval: 24    
+geox-url:
+  mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
+  asn: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"
 
 # https://wiki.metacubex.one/config/sniff/
 sniffer:
