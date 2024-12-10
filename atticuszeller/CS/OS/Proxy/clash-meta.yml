@@ -63,7 +63,7 @@ profile:
 # https://github.com/vernesong/OpenClash/issues/2614
 keep-alive-interval: 60
 # https://wiki.metacubex.one/config/general/#geo
-geodata-mode: false # enable mmdb data format
+geodata-mode: true
 geodata-loader: standard
 geo-auto-update: true
 geo-update-interval: 24
@@ -93,11 +93,6 @@ proxy-providers:
     path: ./proxy_providers/vps.yaml
     interval: 86400
     proxy: DIRECT
-    health-check:
-      enable: true
-      url: https://cp.cloudflare.com
-      interval: 300
-      lazy: true
     override:
       tfo: true # tcp fast open 
       mptcp: true
@@ -109,11 +104,6 @@ proxy-providers:
     path: ./proxy_providers/cdn.yaml
     interval: 86400
     proxy: DIRECT
-    health-check:
-      enable: true
-      url: https://cp.cloudflare.com
-      interval: 300
-      lazy: true
     override:
       tfo: true # tcp fast open 
       mptcp: true
