@@ -206,5 +206,6 @@ rules:
   - GEOSITE,cn,🎯 Direct
   # Reject
   - GEOSITE,category-porn,⛔️ Ads
+  - GEOSITE,category-ads-all,⛔️ Ads
   - MATCH,🐟 Remaining
 # GEOSITE https://github.com/v2fly/domain-list-community/tree/master
