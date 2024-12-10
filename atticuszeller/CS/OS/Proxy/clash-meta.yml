@@ -122,6 +122,7 @@ proxy-groups:
   type: url-test
   url: https://cp.cloudflare.com
   interval: 300
+  lazy: true
   include-all-proxies: true
   use:
   - vless-ws-tls-cdn
@@ -129,6 +130,7 @@ proxy-groups:
   type: url-test
   url: https://cp.cloudflare.com
   interval: 300
+  lazy: true
   include-all-proxies: true
   use:
   - vless-ws-cdn-worker
