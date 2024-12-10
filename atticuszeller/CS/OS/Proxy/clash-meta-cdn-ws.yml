@@ -92,7 +92,8 @@ proxies:
   - {"type":"vless","name":"🍀San Francisco WS 6","server":"atticuszeller.club","port":2087,"uuid":"06583fc5-5c31-415b-bd90-e67f39809306","skip-cert-verify":true,"udp":false,"tls":true,"network":"ws","servername":"atticuszeller.club","ws-opts":{"path":"/ws6fggfjbddgg","headers":{"host":"atticuszeller.club"}}}
   - {"type":"vless","name":"🌼San Francisco WS 8","server":"atticuszeller.club","port":2096,"uuid":"280a4c55-2f68-407e-a38c-4a7575e9031b","skip-cert-verify":true,"udp":false,"tls":true,"network":"ws","servername":"atticuszeller.club","ws-opts":{"path":"/ws1ejjd","headers":{"host":"atticuszeller.club"}}}
   - {"type":"vless","name":"⚡San Francisco WS 10","server":"atticuszeller.club","port":8443,"uuid":"60fe3daf-12f0-485d-87dd-f5f0ea114e51","skip-cert-verify":true,"udp":false,"tls":true,"network":"ws","servername":"atticuszeller.club","ws-opts":{"path":"/ws1dhudiej","headers":{"host":"atticuszeller.club"}}}
-
+  - name: "dns-out"
+    type: dns
 
 
 proxy-groups:
