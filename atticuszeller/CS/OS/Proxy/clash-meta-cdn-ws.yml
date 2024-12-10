@@ -199,26 +199,9 @@ rule-providers:
     path: ./ruleset/applications.yaml
     interval: 86400
 
-  user-apps:
-    type: http
-    behavior: classical
-    url: "https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/apps.yml"
-    path: ./ruleset/apps.yaml
-    interval: 86400
-
-  user-apps-cn:
-    type: http
-    behavior: classical
-    url: "https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/apps-cn.yml"
-    path: ./ruleset/apps-cn.yaml
-    interval: 86400
-
 rules:
   # proxy apps
   - RULE-SET,applications,🎯 Direct,no-resolve
-  # user apps
-  - RULE-SET,user-apps,🔰 Node
-  - RULE-SET,user-apps-cn,🎯 Direct
   # web panel
   - DOMAIN,clash.razord.top,🎯 Direct
   - DOMAIN,yacd.haishan.me,🎯 Direct
