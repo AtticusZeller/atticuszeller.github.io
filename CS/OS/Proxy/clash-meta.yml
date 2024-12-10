@@ -89,10 +89,10 @@ sniffer:
 proxy-providers:
   vless-ws-tls-cdn:
     type: http
-    url: "https://raw.githubusercontent.com/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-tls-cdn.yml"
+    url: "https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-tls-cdn.yml"
     path: ./proxy_providers/vps.yaml
     interval: 86400
-    proxy: 🔰 Node
+    proxy: DIRECT
     health-check:
       enable: true
       url: https://cp.cloudflare.com
