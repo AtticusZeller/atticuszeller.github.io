@@ -63,9 +63,9 @@ profile:
 # https://github.com/vernesong/OpenClash/issues/2614
 keep-alive-interval: 60
 # https://wiki.metacubex.one/config/general/#geo
-geodata-mode: false       
-geodata-loader: standard   
-geo-auto-update: true      
+geodata-mode: false # enable mmdb data format
+geodata-loader: standard
+geo-auto-update: true   
 geo-update-interval: 24    
 
 # https://wiki.metacubex.one/config/sniff/
