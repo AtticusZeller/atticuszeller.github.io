@@ -16,7 +16,7 @@ tun:
   stack: gvisor
   device: Meta
   auto-route: true
-  strict-route: false
+  strict-route: true
   auto-detect-interface: true
   dns-hijack:
   - any:53
