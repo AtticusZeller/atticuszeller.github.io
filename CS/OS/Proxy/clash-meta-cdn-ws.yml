@@ -214,4 +214,5 @@ rules:
   - RULE-SET,cncidr,🎯 Direct,no-resolve
   - GEOIP,LAN,🎯 Direct,no-resolve
   - GEOIP,CN,🎯 Direct,no-resolve
+  - GEOSITE,CN,🎯 Direct
   - MATCH,🐟 Remaining
