@@ -221,6 +221,4 @@ rules:
   - RULE-SET,cncidr,🎯 Direct,no-resolve
   - GEOIP,LAN,🎯 Direct,no-resolve
   - GEOIP,CN,🎯 Direct,no-resolve
-  # ads
-  - RULE-SET,reject,⛔️ Ads
   - MATCH,🐟 Remaining
