@@ -236,8 +236,6 @@ rule-providers:
     interval: 86400
 
 rules:
-  # proxy apps
-  - RULE-SET,applications,🎯 Direct,no-resolve
   # web panel
   - DOMAIN,clash.razord.top,🎯 Direct
   - DOMAIN,yacd.haishan.me,🎯 Direct
