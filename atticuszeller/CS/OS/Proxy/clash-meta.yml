@@ -89,7 +89,7 @@ sniffer:
 proxy-providers:
   vless-ws-tls-cdn:
     type: http
-    url: "http://test.com"
+    url: "https://raw.githubusercontent.com/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-tls-cdn.yml"
     path: ./proxy_providers/vps.yaml
     interval: 86400
     proxy: 🔰 Node
@@ -97,9 +97,7 @@ proxy-providers:
       enable: true
       url: https://cp.cloudflare.com
       interval: 300
-      timeout: 5000
       lazy: true
-      expected-status: 204
     override:
       tfo: true # tcp fast open 
       mptcp: true
@@ -114,7 +112,7 @@ proxy-groups:
   - 🎯 Direct
 - name: ♻️ Auto
   type: url-test
-  url: https://www.gstatic.com/generate_204
+  url: https://cp.cloudflare.com
   interval: 300
   include-all-proxies: true
 - name: 🎯 Direct
