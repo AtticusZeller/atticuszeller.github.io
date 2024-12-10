@@ -103,6 +103,7 @@ proxy-providers:
       #mptcp: true
       udp: false
       skip-cert-verify: true
+      dialer-proxy: ♻️ Auto
 
 proxy-groups:
 - name: 🔰 Node
