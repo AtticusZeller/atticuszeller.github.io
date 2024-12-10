@@ -91,7 +91,7 @@ proxy-providers:
     type: http
     url: "https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-tls-cdn.yml"
     path: ./proxy_providers/vps.yaml
-    interval: 86400
+    interval: 5
     proxy: DIRECT
     health-check:
       enable: true
@@ -107,7 +107,7 @@ proxy-providers:
     type: http
     url: "https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-cdn-worker.yml"
     path: ./proxy_providers/cdn.yaml
-    interval: 86400
+    interval: 5
     proxy: DIRECT
     health-check:
       enable: true
