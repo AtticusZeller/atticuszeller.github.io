@@ -35,9 +35,9 @@ dns:
     - '+.local'
   default-nameserver:
     - '223.5.5.5'
-    - '223.6.6.6'         
-    - '[2402:4e00::]'   
-    - '[2400:3200::1]' 
+    - '223.6.6.6'
+    - '[2402:4e00::]'
+    - '[2400:3200::1]'
 
   # cloudflare DoT and DoH
   nameserver:
@@ -210,7 +210,7 @@ rule-providers:
     type: http
     behavior: classical
     url: "https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/apps-cn.txt"
-    path: ./ruleset/apps.yaml
+    path: ./ruleset/apps-cn.yaml
     interval: 86400
 
 rules:
