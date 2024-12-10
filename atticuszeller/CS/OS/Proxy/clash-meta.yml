@@ -11,6 +11,12 @@ external-controller-cors:
   allow-private-network: true
   allow-origins:
   - '*'
+ntp:
+  enable: true
+  write-to-system: true
+  server: time.apple.com
+  port: 123
+  interval: 30
 tun:
   mtu: 9000
   stack: gvisor
