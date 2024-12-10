@@ -203,4 +203,6 @@ rules:
   - GEOIP,LAN,🎯 Direct,no-resolve
   - GEOIP,CN,🎯 Direct,no-resolve
   - GEOSITE,CN,🎯 Direct
+  - DOMAIN-KEYWORD,cn,🎯 Direct
+  - DOMAIN-SUFFIX,.cn,🎯 Direct
   - MATCH,🐟 Remaining
