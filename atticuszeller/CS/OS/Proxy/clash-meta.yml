@@ -100,10 +100,9 @@ proxy-providers:
       lazy: true
     override:
       tfo: true # tcp fast open 
-      #mptcp: true
+      mptcp: true
       udp: false
       skip-cert-verify: true
-      dialer-proxy: ♻️ Auto
 
 proxy-groups:
 - name: 🔰 Node
@@ -116,6 +115,9 @@ proxy-groups:
   url: https://cp.cloudflare.com
   interval: 300
   include-all-proxies: true
+  use:
+  - vless-ws-tls-cdn
+    
 - name: 🎯 Direct
   type: select
   proxies:
