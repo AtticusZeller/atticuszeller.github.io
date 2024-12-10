@@ -184,7 +184,7 @@ rule-providers:
     interval: 86400
 rules:
   # proxy apps
-  - RULE-SET,applications,🎯 Direct,
+  - RULE-SET,applications,🎯 Direct,no-resolve
   # web panel
   - DOMAIN,clash.razord.top,🎯 Direct
   - DOMAIN,yacd.haishan.me,🎯 Direct
@@ -192,6 +192,7 @@ rules:
   - RULE-SET,lancidr,🎯 Direct,no-resolve
   - RULE-SET,private,🎯 Direct
   # global 
+  - GEOSITE,category-dev,🔰 Node
   - RULE-SET,telegramcidr,📲 Telegram,no-resolve
   - RULE-SET,proxy,🔰 Node
   # apple available in china 
@@ -202,7 +203,8 @@ rules:
   - RULE-SET,cncidr,🎯 Direct,no-resolve
   - GEOIP,LAN,🎯 Direct,no-resolve
   - GEOIP,CN,🎯 Direct,no-resolve
-  - GEOSITE,CN,🎯 Direct
-  - DOMAIN-KEYWORD,cn,🎯 Direct
-  - DOMAIN-SUFFIX,.cn,🎯 Direct
+  - GEOSITE,cn,🎯 Direct
+  # Reject
+  - GEOSITE,category-porn,⛔️ Ads
   - MATCH,🐟 Remaining
+# GEOSITE https://github.com/v2fly/domain-list-community/tree/master
