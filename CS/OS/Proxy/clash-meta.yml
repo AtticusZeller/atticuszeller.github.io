@@ -103,6 +103,22 @@ proxy-providers:
       mptcp: true
       udp: false
       skip-cert-verify: true
+  vless-ws-cdn-worker:
+    type: http
+    url: "https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-cdn-worker.yml"
+    path: ./proxy_providers/cdn.yaml
+    interval: 86400
+    proxy: DIRECT
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com
+      interval: 300
+      lazy: true
+    override:
+      tfo: true # tcp fast open 
+      mptcp: true
+      udp: false
+      skip-cert-verify: true
 
 proxy-groups:
 - name: 🔰 Node
@@ -110,6 +126,7 @@ proxy-groups:
   proxies:
   - ♻️ Auto
   - 🎯 Direct
+  - ☁️ Cloudflare
 - name: ♻️ Auto
   type: url-test
   url: https://cp.cloudflare.com
@@ -117,12 +134,19 @@ proxy-groups:
   include-all-proxies: true
   use:
   - vless-ws-tls-cdn
-    
+- name: ☁️ Cloudflare 
+  type: url-test
+  url: https://cp.cloudflare.com
+  interval: 300
+  include-all-proxies: true
+  use:
+  - vless-ws-cdn-worker
 - name: 🎯 Direct
   type: select
   proxies:
   - DIRECT
   - ♻️ Auto
+  - ☁️ Cloudflare
 - name: 🐟 Remaining
   type: select
   proxies:
