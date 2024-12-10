@@ -68,7 +68,7 @@ geodata-loader: standard
 geo-auto-update: true
 geo-update-interval: 24
 geox-url:
-  geosite: https://github.com/Loyalsoldier/domain-list-custom/releases/latest/download/geosite.dat
+  geosite: "https://github.com/Loyalsoldier/domain-list-custom/releases/latest/download/geosite.dat"
   geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat"
   mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
   asn: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"
