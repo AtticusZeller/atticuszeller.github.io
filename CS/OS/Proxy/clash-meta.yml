@@ -111,17 +111,6 @@ proxy-providers:
       mptcp: true
       udp: true
       skip-cert-verify: true
-  vless-grpc-tls:
-    type: http
-    url: "https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-grpc-tls.yml"
-    path: ./proxy_providers/vps-grpc.yaml
-    interval: 86400
-    proxy: DIRECT
-    override:
-      tfo: true # tcp fast open
-      mptcp: true
-      udp: false
-      skip-cert-verify: true
   vless-ws-cdn-worker:
     type: http
     url: "https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-cdn-worker.yml"
@@ -138,7 +127,6 @@ proxy-groups:
 - name: 🔰 Node
   type: select
   proxies:
-  - ♻️ Auto-gRPC
   - ♻️ Auto-tcp
   - ♻️ Auto-ws
   - ☁️ Cloudflare
@@ -160,14 +148,6 @@ proxy-groups:
   include-all-proxies: true
   use:
   - vless-ws-tls-cdn
-- name: ♻️ Auto-gRPC
-  type: url-test
-  url: https://cp.cloudflare.com
-  interval: 300
-  lazy: true
-  include-all-proxies: true
-  use:
-  - vless-grpc-tls
 - name: ☁️ Cloudflare
   type: url-test
   url: https://cp.cloudflare.com
@@ -180,7 +160,6 @@ proxy-groups:
   type: select
   proxies:
   - DIRECT
-  - ♻️ Auto-gRPC
   - ♻️ Auto-tcp
   - ♻️ Auto-ws
   - ☁️ Cloudflare
