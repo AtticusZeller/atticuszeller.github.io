@@ -102,7 +102,7 @@ proxy-providers:
       skip-cert-verify: true
   vless-tcp-xtls-vision:
     type: http
-    url: "https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-tcp-xtls-vison.yml"
+    url: "https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-tcp-xtls-vision.yml"
     path: ./proxy_providers/vps-tcp.yaml
     interval: 86400
     proxy: DIRECT
