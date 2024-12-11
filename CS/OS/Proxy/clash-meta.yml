@@ -138,8 +138,9 @@ proxy-groups:
 - name: 🔰 Node
   type: select
   proxies:
-  - ♻️ Auto-ws
+  - ♻️ Auto-gRPC
   - ♻️ Auto-tcp
+  - ♻️ Auto-ws
   - ☁️ Cloudflare
   - 🎯 Direct
 
@@ -179,8 +180,9 @@ proxy-groups:
   type: select
   proxies:
   - DIRECT
-  - ♻️ Auto-ws
+  - ♻️ Auto-gRPC
   - ♻️ Auto-tcp
+  - ♻️ Auto-ws
   - ☁️ Cloudflare
 - name: 🐟 Remaining
   type: select
