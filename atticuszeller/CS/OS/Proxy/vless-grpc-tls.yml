@@ -1,0 +1,2 @@
+proxies:
+  - {"type":"vless","name":"🔥-j48qpm0l","server":"atticuszeller.club","port":2052,"uuid":"47c93258-fbaf-4a9d-a29f-3df65ffca12f","skip-cert-verify":true,"udp":true,"network":"grpc","tls":true,"grpc-opts":{"grpc-service-name":"grpc"},"servername":"grpc"}
