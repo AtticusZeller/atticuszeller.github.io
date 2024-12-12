@@ -98,7 +98,7 @@ proxy-providers:
     override:
       tfo: true # tcp fast open
       mptcp: true
-      udp: false
+      udp: true
       skip-cert-verify: true
   vless-tcp-xtls-vision:
     type: http
