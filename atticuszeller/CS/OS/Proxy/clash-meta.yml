@@ -211,8 +211,7 @@ rule-providers:
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
 rules:
   # web panel
-  - DOMAIN,clash.razord.top,🎯 Direct
-  - DOMAIN,yacd.haishan.me,🎯 Direct
+  - DOMAIN,metacubexd.pages.dev,🎯 Direct
   # local and private
   - RULE-SET,lancidr,🎯 Direct,no-resolve
   - RULE-SET,private,🎯 Direct
