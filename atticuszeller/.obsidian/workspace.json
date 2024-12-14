@@ -11,15 +11,10 @@
             "id": "d6ec06568b6ce63e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CS/OS/Ubuntu/Package.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Package"
+              "title": "New tab"
             }
           }
         ]
@@ -193,8 +188,10 @@
   },
   "active": "d6ec06568b6ce63e",
   "lastOpenFiles": [
-    "CS/Language/Rust/config.md",
+    "CS/Language/js_ts/npm_yarn.md",
+    "CS/Language/js_ts/vue.js/nuxt.js.md",
     "CS/OS/Ubuntu/Package.md",
+    "CS/Language/Rust/config.md",
     "CS/OS/Docker.md",
     "CS/OS/Proxy/vless-ws-tls-cdn.yml",
     "CS/OS/Proxy/vless-ws-cdn-worker.yml",
