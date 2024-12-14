@@ -38,7 +38,7 @@ external-controller-cors:
 
 # https://wiki.metacubex.one/config/general/#geo
 # https://github.com/MetaCubeX/meta-rules-dat/tree/master
-geodata-mode: false # mmdb model
+geodata-mode: true
 geox-url:
   geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
@@ -154,7 +154,7 @@ rule-providers:
     path: ./ruleset/direct.yaml
     type: http
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
- 
+
   proxy:
     behavior: domain
     interval: 86400
@@ -170,7 +170,7 @@ rules:
   - GEOIP,LAN,🎯 Direct,no-resolve
   - GEOIP,private,🎯 Direct,no-resolve
   - GEOSITE,private,🎯 Direct
-  
+
   # global
   - GEOSITE,github,🔰 Node
   - GEOSITE,python,🔰 Node
@@ -189,7 +189,7 @@ rules:
   - GEOIP,telegram,🔰 Node,no-resolve
   - GEOSITE,geolocation-!cn,🔰 Node
   - RULE-SET,proxy,🔰 Node
-  
+
   # Chinese domains and IPs
   - GEOIP,CN,🎯 Direct,no-resolve
   - GEOSITE,cn,🎯 Direct
