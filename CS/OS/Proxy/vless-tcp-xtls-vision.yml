@@ -9,20 +9,7 @@ proxies:
       "network": "tcp", 
       "flow": "xtls-rprx-vision", 
       "tls": true, 
-      "udp": true, 
-      "smux": { 
-          "enabled": true, 
-          "protocol": "h2mux", 
-          "max-connections": 64, 
-          "min-streams": 4, 
-          "max-streams": 0, 
-          "statistic": true, 
-          "only-tcp": true, 
-          "padding": false, 
-          "brutal-opts": { 
-              "enabled": false 
-          } 
-      } 
+      "udp": true
   }
   - { 
       "type": "vless", 
@@ -34,20 +21,7 @@ proxies:
       "network": "tcp", 
       "flow": "xtls-rprx-vision", 
       "tls": true, 
-      "udp": true, 
-      "smux": { 
-          "enabled": true, 
-          "protocol": "h2mux", 
-          "max-connections": 64, 
-          "min-streams": 4, 
-          "max-streams": 0, 
-          "statistic": true, 
-          "only-tcp": true, 
-          "padding": false, 
-          "brutal-opts": { 
-              "enabled": false 
-          } 
-      } 
+      "udp": true
   }
   - { 
       "type": "vless", 
@@ -59,20 +33,7 @@ proxies:
       "network": "tcp", 
       "flow": "xtls-rprx-vision", 
       "tls": true, 
-      "udp": true, 
-      "smux": { 
-          "enabled": true, 
-          "protocol": "h2mux", 
-          "max-connections": 64, 
-          "min-streams": 4, 
-          "max-streams": 0, 
-          "statistic": true, 
-          "only-tcp": true, 
-          "padding": false, 
-          "brutal-opts": { 
-              "enabled": false 
-          } 
-      } 
+      "udp": true
   }
   - { 
       "type": "vless", 
@@ -84,20 +45,7 @@ proxies:
       "network": "tcp", 
       "flow": "xtls-rprx-vision", 
       "tls": true, 
-      "udp": true, 
-      "smux": { 
-          "enabled": true, 
-          "protocol": "h2mux", 
-          "max-connections": 64, 
-          "min-streams": 4, 
-          "max-streams": 0, 
-          "statistic": true, 
-          "only-tcp": true, 
-          "padding": false, 
-          "brutal-opts": { 
-              "enabled": false 
-          } 
-      } 
+      "udp": true
   }
   - { 
       "type": "vless", 
@@ -109,20 +57,7 @@ proxies:
       "network": "tcp", 
       "flow": "xtls-rprx-vision", 
       "tls": true, 
-      "udp": true, 
-      "smux": { 
-          "enabled": true, 
-          "protocol": "h2mux", 
-          "max-connections": 64, 
-          "min-streams": 4, 
-          "max-streams": 0, 
-          "statistic": true, 
-          "only-tcp": true, 
-          "padding": false, 
-          "brutal-opts": { 
-              "enabled": false 
-          } 
-      } 
+      "udp": true
   }
   - { 
       "type": "vless", 
@@ -134,18 +69,5 @@ proxies:
       "network": "tcp", 
       "flow": "xtls-rprx-vision", 
       "tls": true, 
-      "udp": true, 
-      "smux": { 
-          "enabled": true, 
-          "protocol": "h2mux", 
-          "max-connections": 64, 
-          "min-streams": 4, 
-          "max-streams": 0, 
-          "statistic": true, 
-          "only-tcp": true, 
-          "padding": false, 
-          "brutal-opts": { 
-              "enabled": false 
-          } 
-      } 
+      "udp": true
   }
