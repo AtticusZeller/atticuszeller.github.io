@@ -180,8 +180,7 @@ rules:
   # web panel
   - DOMAIN,metacubexd.pages.dev,🎯 Direct
 
-  # local and private
-  - GEOIP,LAN,🎯 Direct,no-resolve
+  # local
   - GEOIP,private,🎯 Direct,no-resolve
   - GEOSITE,private,🎯 Direct
 
