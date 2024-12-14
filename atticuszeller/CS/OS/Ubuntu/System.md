@@ -278,11 +278,8 @@ monitor as startup
 
 ```bash
 brew install curl
-ls /home/linuxbrew/.linuxbrew/lib/libcurl*
-# get /etc/ld.so.conf.d/linuxbrew-curl.conf.*
-echo "/home/linuxbrew/.linuxbrew/lib" | sudo tee /etc/ld.so.conf.d/linuxbrew-curl.conf
-# update
-sudo ldconfig
+echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/curl/bin:$PATH"' >> ~/.zshrc
+echo 'export LD_LIBRARY_PATH="/home/linuxbrew/.linuxbrew/opt/curl/lib:$LD_LIBRARY_PATH"' >> ~/.zshrc
 ```
 
 ### Zotero
