@@ -4,25 +4,81 @@
     "type": "split",
     "children": [
       {
-        "id": "73d5e45475fb5dcf",
-        "type": "tabs",
+        "id": "8959f40e4a23e965",
+        "type": "split",
         "children": [
           {
-            "id": "d6ec06568b6ce63e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CS/OS/Ubuntu/System.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "System"
-            }
+            "id": "73d5e45475fb5dcf",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "d6ec06568b6ce63e",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CS/OS/Ubuntu/System.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "System"
+                }
+              }
+            ]
+          },
+          {
+            "id": "b6ec2b4254152278",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "5a880d745be3397c",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "/home/atticuszz/DevSpace/atticuszeller/atticuszeller",
+                      "focus": false,
+                      "profile": {
+                        "args": [],
+                        "executable": "/bin/zsh",
+                        "name": "zsh",
+                        "platforms": {
+                          "darwin": true,
+                          "linux": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": true,
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": {
+                        "columns": 117,
+                        "data": "uv\u001b[7;1m%\u001b[0m                                                                                                                  \r\n\u001b[38;5;76m❯\u001b[0m \u001b[32muvx\u001b[0m pre-commit  run --all-files\r\ncheck yaml...............................................................\u001b[42mPassed\u001b[0m\r\ncheck json...............................................................\u001b[42mPassed\u001b[0m\r\ncheck for added large files..............................................\u001b[42mPassed\u001b[0m\r\nfix end of files.........................................................\u001b[42mPassed\u001b[0m\r\ntrim trailing whitespace.................................................\u001b[42mPassed\u001b[0m\r\ndetect private key.......................................................\u001b[42mPassed\u001b[0m\r\ndetect destroyed symlinks................................................\u001b[42mPassed\u001b[0m\r\ncheck vcs permalinks.....................................................\u001b[42mPassed\u001b[0m\r\ncodespell................................................................\u001b[41mFailed\u001b[0m\r\n\u001b[2m- hook id: codespell\r\n- files were modified by this hook\r\n\r\n\u001b[38;5;39;1;22m~\u001b[38;5;31;22m/DevSpace/\u001b[38;5;39;1matticuszeller\u001b[38;5;31;22m/\u001b[38;5;39;1matticuszeller\u001b[38;5;31;22m \u001b[0mon \u001b[38;5;76mmain \u001b[38;5;178m!1\u001b[30m \u001b[38;5;244m───────────────────────────────────────────\u001b[30m \u001b[38;5;37mPy base\u001b[38;5;66m \u001b[0mat \u001b[38;5;66m13:32:30\u001b[30m \u001b[38;5;244m─╮\r\n\u001b[38;5;196m❯\u001b[0m \u001b[112C\u001b[38;5;244m─╯\u001b[114D\u001b[0m",
+                        "rows": 20
+                      }
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "terminal",
+                  "title": "Terminal: atticuszz@atticuszz-Legion-Y7000P-IRH8:~/DevSpace/atticuszeller/atticuszeller"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -201,8 +257,9 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "d6ec06568b6ce63e",
+  "active": "b02e2e30d05790c3",
   "lastOpenFiles": [
+    "CS/OS/Ubuntu/System.md",
     "CS/OS/Ubuntu/Package.md",
     "CS/Language/python/Venv/UV.md",
     "CS/Language/python/Ruff.md",
@@ -216,7 +273,6 @@
     "CS/OS/Proxy/clash-meta.yml",
     "CS/OS/Proxy/apps-cn.yml",
     "CS/OS/Proxy/apps.yml",
-    "CS/OS/Ubuntu/System.md",
     "CS/OS/Ubuntu/Gnome.md",
     "CS/OS/Ubuntu/bugs.md",
     "CS/OS/Ubuntu/Appearance.md",
