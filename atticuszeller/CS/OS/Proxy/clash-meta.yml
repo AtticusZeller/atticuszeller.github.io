@@ -1,4 +1,5 @@
-allow-lan: true
+---
+allow-lan: false
 # https://wiki.metacubex.one/config/dns/
 # https://gist.github.com/liuran001/5ca84f7def53c70b554d3f765ff86a33
 dns:
@@ -30,11 +31,17 @@ dns:
       - https://223.5.5.5/dns-query
       - https://223.6.6.6/dns-query
   prefer-h3: true
+# web panel: https://metacubexd.pages.dev/
+# only enable for local
 external-controller: 127.0.0.1:9097
 external-controller-cors:
   allow-origins:
     - '*'
   allow-private-network: true
+external-ui: ./ui
+external-ui-name: xd
+external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+find-process-mode: 'off'
 geo-auto-update: true
 geo-update-interval: 24
 geodata-loader: standard
@@ -207,15 +214,36 @@ rules:
   - GEOSITE,category-ads-all,⛔️ Ads
   - MATCH,🐟 Remaining
 secret: ''
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  override-destination: true
+  parse-pure-ip: true
+  sniff:
+    HTTP:
+      override-destination: true
+      ports: [80, 8080-8880]
+    QUIC:
+      ports: [443, 8443]
+    TLS:
+      ports: [443, 8443]
 tcp-concurrent: true
+# https://wiki.metacubex.one/config/inbound/tun/
 tun:
   auto-detect-interface: true
+  # for linux
+  auto-redirect: true
   auto-route: true
   device: Meta
   dns-hijack:
     - any:53
+    # DoT and DoH
+    - tcp://any:53
   enable: true
-  mtu: 9000
-  stack: gvisor
+  # linux only
+  gso: true
+  # system for  Windows: 设置 -> Windows 安全中心 -> 允许应用通过防火墙 -> 选中内核（clash-verge-rev 内核为 verge-mihomo）
+  stack: system
+  # fail if can not reach
   strict-route: true
 unified-delay: true
