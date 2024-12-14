@@ -1,4 +1,3 @@
----
 allow-lan: true
 # https://wiki.metacubex.one/config/dns/
 # https://gist.github.com/liuran001/5ca84f7def53c70b554d3f765ff86a33
@@ -15,7 +14,7 @@ dns:
     - +.local
   fake-ip-filter-mode: blacklist
   ipv6: true
-  listen: 0.0.0.0:53
+  listen: 0.0.0.0:1053
   # cloudflare DoT and DoH
   nameserver:
     - tls://1.1.1.1
