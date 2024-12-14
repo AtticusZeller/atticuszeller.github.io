@@ -234,6 +234,7 @@ tun:
   # for linux
   auto-redirect: true
   auto-route: true
+  device: Meta
   dns-hijack:
     - any:53
     # DoT and DoH
