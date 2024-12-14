@@ -163,6 +163,20 @@ rule-providers:
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
 
 rules:
+  # DNS direct
+  ## cloudflare
+  - IP-CIDR,1.1.1.1/32,🎯 Direct,no-resolve
+  - IP-CIDR,1.0.0.1/32,🎯 Direct,no-resolve
+  - IP-CIDR6,2606:4700:4700::1111/128,🎯 Direct,no-resolve
+  - IP-CIDR6,2606:4700:4700::1001/128,🎯 Direct,no-resolve
+  ## alidns
+  - IP-CIDR,223.5.5.5/32,🎯 Direct,no-resolve
+  - IP-CIDR,223.6.6.6/32,🎯 Direct,no-resolve
+  - IP-CIDR6,2400:3200::1/128,🎯 Direct,no-resolve
+  - IP-CIDR6,2400:3200:baba::1/128,🎯 Direct,no-resolve
+  - DOMAIN-SUFFIX,cloudflare-dns.com,🎯 Direct
+  - DOMAIN-SUFFIX,dns.alidns.com,🎯 Direct
+
   # web panel
   - DOMAIN,metacubexd.pages.dev,🎯 Direct
 
@@ -175,6 +189,7 @@ rules:
   - GEOSITE,github,🔰 Node
   - GEOSITE,python,🔰 Node
   - GEOSITE,ubuntu,🔰 Node
+  - GEOSITE,cloudflare,🔰 Node
   - GEOSITE,onedrive,🔰 Node
   - GEOSITE,microsoft,🔰 Node
   - GEOSITE,youtube,🔰 Node
