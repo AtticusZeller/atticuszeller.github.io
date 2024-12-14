@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS/Language/Rust/config.md",
+                "file": "CS/OS/Ubuntu/Package.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "config"
+              "title": "Package"
             }
           }
         ]
@@ -193,6 +193,7 @@
   },
   "active": "d6ec06568b6ce63e",
   "lastOpenFiles": [
+    "CS/Language/Rust/config.md",
     "CS/OS/Ubuntu/Package.md",
     "CS/OS/Docker.md",
     "CS/OS/Proxy/vless-ws-tls-cdn.yml",
@@ -215,9 +216,7 @@
     "CS/OS/Ubuntu/Terminal.md",
     "CS/OS/Proxy/Steps.md",
     "CS/OS/Proxy/clash-meta.yaml",
-    "CS/Language/Rust/config.md",
     "Reference/Finding and managing research papers a survey of tools and products.md",
-    "CS/Language/Rust/config.md",
     "Learning/Reading list.md",
     "index.md",
     "assets/Pasted image 20241126135048.png",
