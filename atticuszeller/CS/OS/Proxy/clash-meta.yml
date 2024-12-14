@@ -165,16 +165,16 @@ rule-providers:
 rules:
   # DNS direct
   ## cloudflare
-  - IP-CIDR,1.1.1.1/32,🎯 Direct,no-resolve
-  - IP-CIDR,1.0.0.1/32,🎯 Direct,no-resolve
-  - IP-CIDR6,2606:4700:4700::1111/128,🎯 Direct,no-resolve
-  - IP-CIDR6,2606:4700:4700::1001/128,🎯 Direct,no-resolve
+  - IP-CIDR,1.1.1.1/32,🔰 Node,no-resolve
+  - IP-CIDR,1.0.0.1/32,🔰 Node,no-resolve
+  - IP-CIDR6,2606:4700:4700::1111/128,🔰 Node,no-resolve
+  - IP-CIDR6,2606:4700:4700::1001/128,🔰 Node,no-resolve
   ## alidns
   - IP-CIDR,223.5.5.5/32,🎯 Direct,no-resolve
   - IP-CIDR,223.6.6.6/32,🎯 Direct,no-resolve
   - IP-CIDR6,2400:3200::1/128,🎯 Direct,no-resolve
   - IP-CIDR6,2400:3200:baba::1/128,🎯 Direct,no-resolve
-  - DOMAIN-SUFFIX,cloudflare-dns.com,🎯 Direct
+  - DOMAIN-SUFFIX,cloudflare-dns.com,🔰 Node
   - DOMAIN-SUFFIX,dns.alidns.com,🎯 Direct
 
   # web panel
