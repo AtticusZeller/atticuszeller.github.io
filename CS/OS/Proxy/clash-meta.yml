@@ -165,10 +165,6 @@ rule-providers:
 # https://github.com/MetaCubeX/meta-rules-dat/tree/master
 # https://wiki.metacubex.one/config/rules/
 rules:
-  # local
-  - GEOIP,private,🎯 Direct,no-resolve
-  - GEOSITE,private,🎯 Direct
-
   # DNS direct
   ## cloudflare
   - IP-CIDR,1.1.1.1/32,🔰 Node,no-resolve
@@ -182,6 +178,10 @@ rules:
   - IP-CIDR6,2400:3200:baba::1/128,🎯 Direct,no-resolve
   - DOMAIN-SUFFIX,cloudflare-dns.com,🔰 Node
   - DOMAIN-SUFFIX,dns.alidns.com,🎯 Direct
+
+  # local
+  - GEOIP,private,🎯 Direct,no-resolve
+  - GEOSITE,private,🎯 Direct
 
   # global
   - GEOSITE,github,🔰 Node
