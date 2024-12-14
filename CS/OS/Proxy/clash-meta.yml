@@ -36,16 +36,19 @@ external-controller-cors:
   allow-origins:
     - '*'
   allow-private-network: true
+
+# https://wiki.metacubex.one/config/general/#geo
+# https://github.com/MetaCubeX/meta-rules-dat/tree/master
+geodata-mode: false # mmdb model
+geox-url:
+  geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+  asn: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb"
 geo-auto-update: true
 geo-update-interval: 24
 geodata-loader: standard
-# https://wiki.metacubex.one/config/general/#geo
-geodata-mode: true
-geox-url:
-  asn: https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb
-  geoip: https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat
-  geosite: https://github.com/Loyalsoldier/domain-list-custom/releases/latest/download/geosite.dat
-  mmdb: https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb
+
 global-client-fingerprint: firefox
 ipv6: true
 # https://github.com/vernesong/OpenClash/issues/2614
@@ -101,16 +104,6 @@ proxy-groups:
       - 🔰 Node
       - 🎯 Direct
     type: select
-  - name: 🍎 Apple
-    proxies:
-      - 🎯 Direct
-      - 🔰 Node
-    type: select
-  - name: 📲 Telegram
-    proxies:
-      - 🔰 Node
-      - 🎯 Direct
-    type: select
   - name: ⛔️ Ads
     proxies:
       - REJECT
@@ -152,86 +145,62 @@ proxy-providers:
     proxy: DIRECT
     type: http
     url: https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-tls-cdn.yml
+
 # https://github.com/Loyalsoldier/clash-rules
 # https://wiki.metacubex.one/config/rule-providers/
 rule-providers:
-  apple:
-    behavior: domain
-    interval: 86400
-    path: ./ruleset/apple.yaml
-    type: http
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
-  applications:
-    behavior: classical
-    interval: 86400
-    path: ./ruleset/applications.yaml
-    type: http
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
-  cncidr:
-    behavior: ipcidr
-    interval: 86400
-    path: ./ruleset/cncidr.yaml
-    type: http
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
   direct:
     behavior: domain
     interval: 86400
     path: ./ruleset/direct.yaml
     type: http
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
-  icloud:
-    behavior: domain
-    interval: 86400
-    path: ./ruleset/icloud.yaml
-    type: http
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
-  lancidr:
-    behavior: ipcidr
-    interval: 86400
-    path: ./ruleset/lancidr.yaml
-    type: http
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
-  private:
-    behavior: domain
-    interval: 86400
-    path: ./ruleset/private.yaml
-    type: http
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+ 
   proxy:
     behavior: domain
     interval: 86400
     path: ./ruleset/proxy.yaml
     type: http
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
-  telegramcidr:
-    behavior: ipcidr
-    interval: 86400
-    path: ./ruleset/telegramcidr.yaml
-    type: http
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
+
 rules:
   # web panel
   - DOMAIN,metacubexd.pages.dev,🎯 Direct
+
   # local and private
-  - RULE-SET,lancidr,🎯 Direct,no-resolve
-  - RULE-SET,private,🎯 Direct
-  # global
-  - GEOSITE,category-dev,🔰 Node
-  - RULE-SET,telegramcidr,📲 Telegram,no-resolve
-  - RULE-SET,proxy,🔰 Node
-  # apple available in china
-  - RULE-SET,icloud,🍎 Apple
-  - RULE-SET,apple,🍎 Apple
-  # Chinese domains and IPS
-  - RULE-SET,direct,🎯 Direct
-  - RULE-SET,cncidr,🎯 Direct,no-resolve
   - GEOIP,LAN,🎯 Direct,no-resolve
+  - GEOIP,private,🎯 Direct,no-resolve
+  - GEOSITE,private,🎯 Direct
+  
+  # global
+  - GEOSITE,github,🔰 Node
+  - GEOSITE,python,🔰 Node
+  - GEOSITE,ubuntu,🔰 Node
+  - GEOSITE,onedrive,🔰 Node
+  - GEOSITE,microsoft,🔰 Node
+  - GEOSITE,youtube,🔰 Node
+  - GEOSITE,spotify,🔰 Node
+  - GEOSITE,google,🔰 Node
+  - GEOSITE,reddit,🔰 Node
+  - GEOSITE,protonmail,🔰 Node
+  - GEOSITE,openai,🔰 Node
+  - GEOSITE,apple,🔰 Node
+  - GEOSITE,category-dev,🔰 Node
+  - GEOSITE,category-scholar-!cn,🔰 Node
+  - GEOIP,telegram,🔰 Node,no-resolve
+  - GEOSITE,geolocation-!cn,🔰 Node
+  - RULE-SET,proxy,🔰 Node
+  
+  # Chinese domains and IPs
   - GEOIP,CN,🎯 Direct,no-resolve
   - GEOSITE,cn,🎯 Direct
-  # Reject
+  - RULE-SET,direct,🎯 Direct
+
+  # Rejsect
   - GEOSITE,category-porn,⛔️ Ads
   - GEOSITE,category-ads-all,⛔️ Ads
   - MATCH,🐟 Remaining
+
 secret: ''
 # https://wiki.metacubex.one/config/sniff/
 sniffer:
@@ -259,4 +228,3 @@ tun:
   stack: gvisor
   strict-route: true
 unified-delay: true
-# GEOSITE https://github.com/v2fly/domain-list-community/tree/master
