@@ -1,5 +1,5 @@
 # https://worker.atticuszeller.club/717f9e5c-9922-49a0-aa12-3fa17d63a7a8
-proxies: 
+proxies:
   - name: CF随机节点 2
     server: 104.16.239.143
     port: 443
