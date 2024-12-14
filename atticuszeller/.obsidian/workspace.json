@@ -84,8 +84,7 @@
               "title": "Vertical tabs"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -202,7 +201,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "f644abed1d7fbd38",
+  "active": "e5fb1abf4287bce9",
   "lastOpenFiles": [
     "CS/Language/python/Ruff.md",
     "CS/Language/python/Venv/UV.md",
