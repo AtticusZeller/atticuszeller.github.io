@@ -73,8 +73,19 @@
               "icon": "lucide-search",
               "title": "Search"
             }
+          },
+          {
+            "id": "f644abed1d7fbd38",
+            "type": "leaf",
+            "state": {
+              "type": "vertical-tabs",
+              "state": {},
+              "icon": "gallery-vertical",
+              "title": "Vertical tabs"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -191,7 +202,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "d6ec06568b6ce63e",
+  "active": "f644abed1d7fbd38",
   "lastOpenFiles": [
     "CS/Language/python/Ruff.md",
     "CS/Language/python/Venv/UV.md",
