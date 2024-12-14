@@ -162,6 +162,7 @@ rule-providers:
     type: http
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
 
+# https://github.com/MetaCubeX/meta-rules-dat/tree/master
 rules:
   # DNS direct
   ## cloudflare
