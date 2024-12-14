@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS/Language/python/Venv/UV.md",
+                "file": "CS/OS/Ubuntu/Package.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UV"
+              "title": "Package"
             }
           }
         ]
@@ -201,10 +201,10 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "e5fb1abf4287bce9",
+  "active": "d6ec06568b6ce63e",
   "lastOpenFiles": [
-    "CS/Language/python/Ruff.md",
     "CS/Language/python/Venv/UV.md",
+    "CS/Language/python/Ruff.md",
     "CS/Language/js_ts/npm_yarn.md",
     "CS/Language/js_ts/vue.js/nuxt.js.md",
     "CS/OS/Ubuntu/Package.md",
