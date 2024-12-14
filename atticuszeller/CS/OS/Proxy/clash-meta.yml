@@ -1,3 +1,4 @@
+---
 allow-lan: true
 # https://wiki.metacubex.one/config/dns/
 # https://gist.github.com/liuran001/5ca84f7def53c70b554d3f765ff86a33
@@ -35,19 +36,16 @@ external-controller-cors:
   allow-origins:
     - '*'
   allow-private-network: true
-
-# https://wiki.metacubex.one/config/general/#geo
-# https://github.com/MetaCubeX/meta-rules-dat/tree/master
-geodata-mode: true
-geox-url:
-  geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
-  geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
-  mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
-  asn: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb"
 geo-auto-update: true
 geo-update-interval: 24
 geodata-loader: standard
-
+# https://github.com/MetaCubeX/meta-rules-dat/tree/master
+geodata-mode: true
+geox-url:
+  asn: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb
+  geoip: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
+  geosite: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
+  mmdb: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb
 global-client-fingerprint: firefox
 ipv6: true
 # https://github.com/vernesong/OpenClash/issues/2614
@@ -144,7 +142,6 @@ proxy-providers:
     proxy: DIRECT
     type: http
     url: https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-tls-cdn.yml
-
 # https://github.com/Loyalsoldier/clash-rules
 # https://wiki.metacubex.one/config/rule-providers/
 rule-providers:
@@ -154,14 +151,13 @@ rule-providers:
     path: ./ruleset/direct.yaml
     type: http
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
-
   proxy:
     behavior: domain
     interval: 86400
     path: ./ruleset/proxy.yaml
     type: http
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
-
+# https://wiki.metacubex.one/config/general/#geo
 # https://github.com/MetaCubeX/meta-rules-dat/tree/master
 # https://wiki.metacubex.one/config/rules/
 rules:
@@ -178,11 +174,9 @@ rules:
   - IP-CIDR6,2400:3200:baba::1/128,🎯 Direct,no-resolve
   - DOMAIN-SUFFIX,cloudflare-dns.com,🔰 Node
   - DOMAIN-SUFFIX,dns.alidns.com,🎯 Direct
-
   # local
   - GEOIP,private,🎯 Direct,no-resolve
   - GEOSITE,private,🎯 Direct
-
   # global
   - GEOSITE,github,🔰 Node
   - GEOSITE,python,🔰 Node
@@ -194,28 +188,25 @@ rules:
   - GEOSITE,spotify,🔰 Node
   - GEOSITE,google,🔰 Node
   - GEOSITE,reddit,🔰 Node
+  - DOMAIN-SUFFIX,obsidian.md,🔰 Node
   - GEOSITE,protonmail,🔰 Node
   - GEOSITE,openai,🔰 Node
+  - GEOIP,telegram,🔰 Node,no-resolve
   - GEOSITE,apple,🔰 Node
   - GEOSITE,category-dev,🔰 Node
   - GEOSITE,category-scholar-!cn,🔰 Node
-  - GEOIP,telegram,🔰 Node,no-resolve
   - GEOSITE,geolocation-!cn,🔰 Node
   - RULE-SET,proxy,🔰 Node
-
   # Chinese domains and IPs
   - GEOIP,CN,🎯 Direct,no-resolve
   - GEOSITE,cn,🎯 Direct
   - RULE-SET,direct,🎯 Direct
-
   # web panel
   - DOMAIN,metacubexd.pages.dev,🎯 Direct
-
   # Rejsect
   - GEOSITE,category-porn,⛔️ Ads
   - GEOSITE,category-ads-all,⛔️ Ads
   - MATCH,🐟 Remaining
-
 secret: ''
 tcp-concurrent: true
 tun:
