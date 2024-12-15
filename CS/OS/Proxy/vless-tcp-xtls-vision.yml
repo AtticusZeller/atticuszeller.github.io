@@ -12,7 +12,9 @@ proxies:
     type: vless
     udp: true
     uuid: 0a0502aa-68ad-4d9e-8954-dc8bb83c7b2d
-  - flow: xtls-rprx-vision
+  - alpn:
+      - h2
+    flow: xtls-rprx-vision
     name: 🌟San Francisco TCP 2
     network: tcp
     port: 12956
@@ -22,7 +24,9 @@ proxies:
     type: vless
     udp: true
     uuid: a2ff09b9-ad18-49c6-af91-bb49b65e6b76
-  - flow: xtls-rprx-vision
+  - alpn:
+      - h2
+    flow: xtls-rprx-vision
     name: 🍎San Francisco TCP 3
     network: tcp
     port: 10898
@@ -32,7 +36,9 @@ proxies:
     type: vless
     udp: true
     uuid: ac9ed9d8-e803-4be1-898c-3beadd467536
-  - flow: xtls-rprx-vision
+  - alpn:
+      - h2
+    flow: xtls-rprx-vision
     name: 🎉San Francisco TCP 4
     network: tcp
     port: 53053
@@ -42,7 +48,9 @@ proxies:
     type: vless
     udp: true
     uuid: 9177902b-7cfc-4cef-ae3b-57edd95399e8
-  - flow: xtls-rprx-vision
+  - alpn:
+      - h2
+    flow: xtls-rprx-vision
     name: 🎶San Francisco TCP 5
     network: tcp
     port: 35097
@@ -52,7 +60,9 @@ proxies:
     type: vless
     udp: true
     uuid: 4757cacc-f675-4074-a4e2-ac6fdf6d2369
-  - flow: xtls-rprx-vision
+  - alpn:
+      - h2
+    flow: xtls-rprx-vision
     name: 🍀San Francisco TCP 6
     network: tcp
     port: 19381
