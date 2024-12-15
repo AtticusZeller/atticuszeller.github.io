@@ -35,8 +35,8 @@ dns:
       - tls://dot.pub
   respect-rules: true
   proxy-server-nameserver:
-  #  - tls://dot.pub
-    - https://doh.pub/dns-query
+    - tls://dot.pub
+    #- https://doh.pub/dns-query
   prefer-h3: true
 # web panel: https://metacubexd.pages.dev/
 # only enable for local
