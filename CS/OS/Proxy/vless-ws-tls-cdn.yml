@@ -1,6 +1,72 @@
+---
 proxies:
-  - {"type":"vless","name":"🌟San Francisco WS 2","server":"atticuszeller.club","port":2053,"uuid":"7fb9ba03-e3b6-4d55-b797-4c4f7c71a968","skip-cert-verify":true,"udp":false,"tls":true,"network":"ws","servername":"atticuszeller.club","ws-opts":{"path":"/ws2adsfasgd","headers":{"host":"atticuszeller.club"}}}
-  - {"type":"vless","name":"🎉San Francisco WS 4","server":"atticuszeller.club","port":2083,"uuid":"d96ab9fc-26e3-4c6f-bf91-4447df1c8b4e","skip-cert-verify":true,"udp":false,"tls":true,"network":"ws","servername":"atticuszeller.club","ws-opts":{"path":"/ws4fdhhkifccgu","headers":{"host":"atticuszeller.club"}}}
-  - {"type":"vless","name":"🍀San Francisco WS 6","server":"atticuszeller.club","port":2087,"uuid":"06583fc5-5c31-415b-bd90-e67f39809306","skip-cert-verify":true,"udp":false,"tls":true,"network":"ws","servername":"atticuszeller.club","ws-opts":{"path":"/ws6fggfjbddgg","headers":{"host":"atticuszeller.club"}}}
-  - {"type":"vless","name":"🌼San Francisco WS 8","server":"atticuszeller.club","port":2096,"uuid":"280a4c55-2f68-407e-a38c-4a7575e9031b","skip-cert-verify":true,"udp":false,"tls":true,"network":"ws","servername":"atticuszeller.club","ws-opts":{"path":"/ws1ejjd","headers":{"host":"atticuszeller.club"}}}
-  - {"type":"vless","name":"⚡San Francisco WS 10","server":"atticuszeller.club","port":8443,"uuid":"60fe3daf-12f0-485d-87dd-f5f0ea114e51","skip-cert-verify":true,"udp":false,"tls":true,"network":"ws","servername":"atticuszeller.club","ws-opts":{"path":"/ws1dhudiej","headers":{"host":"atticuszeller.club"}}}
+  - name: 🌟San Francisco WS 2
+    network: ws
+    port: 2053
+    server: atticuszeller.club
+    servername: atticuszeller.club
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: false
+    uuid: 7fb9ba03-e3b6-4d55-b797-4c4f7c71a968
+    ws-opts:
+      headers:
+        host: atticuszeller.club
+      path: /ws2adsfasgd
+  - name: 🎉San Francisco WS 4
+    network: ws
+    port: 2083
+    server: atticuszeller.club
+    servername: atticuszeller.club
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: false
+    uuid: d96ab9fc-26e3-4c6f-bf91-4447df1c8b4e
+    ws-opts:
+      headers:
+        host: atticuszeller.club
+      path: /ws4fdhhkifccgu
+  - name: 🍀San Francisco WS 6
+    network: ws
+    port: 2087
+    server: atticuszeller.club
+    servername: atticuszeller.club
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: false
+    uuid: 06583fc5-5c31-415b-bd90-e67f39809306
+    ws-opts:
+      headers:
+        host: atticuszeller.club
+      path: /ws6fggfjbddgg
+  - name: 🌼San Francisco WS 8
+    network: ws
+    port: 2096
+    server: atticuszeller.club
+    servername: atticuszeller.club
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: false
+    uuid: 280a4c55-2f68-407e-a38c-4a7575e9031b
+    ws-opts:
+      headers:
+        host: atticuszeller.club
+      path: /ws1ejjd
+  - name: ⚡San Francisco WS 10
+    network: ws
+    port: 8443
+    server: atticuszeller.club
+    servername: atticuszeller.club
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: false
+    uuid: 60fe3daf-12f0-485d-87dd-f5f0ea114e51
+    ws-opts:
+      headers:
+        host: atticuszeller.club
+      path: /ws1dhudiej
