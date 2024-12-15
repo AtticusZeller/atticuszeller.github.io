@@ -1,6 +1,8 @@
 ---
 proxies:
-  - flow: xtls-rprx-vision
+  - alpn:
+      - h2
+    flow: xtls-rprx-vision
     name: 🎅San Francisco TCP 1
     network: tcp
     port: 26748
