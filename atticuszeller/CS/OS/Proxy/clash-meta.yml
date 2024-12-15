@@ -14,7 +14,7 @@ dns:
     - '*.lan'
     - +.local
   fake-ip-filter-mode: blacklist
-  ipv6: true
+  ipv6: false
   listen: 0.0.0.0:1053
   # cloudflare DoT and DoH
   nameserver:
@@ -122,7 +122,6 @@ proxy-providers:
       skip-cert-verify: true
       tfo: true
       udp: true
-      ip-version: ipv4-prefer
     path: ./proxy_providers/vps-tcp.yaml
     proxy: DIRECT
     type: http
@@ -134,7 +133,6 @@ proxy-providers:
       skip-cert-verify: true
       tfo: true
       udp: false
-      ip-version: ipv4-prefer
     path: ./proxy_providers/cdn.yaml
     proxy: DIRECT
     type: http
@@ -146,7 +144,6 @@ proxy-providers:
       skip-cert-verify: true
       tfo: true
       udp: true
-      ip-version: ipv4-prefer
     path: ./proxy_providers/vps-ws.yaml
     proxy: DIRECT
     type: http
