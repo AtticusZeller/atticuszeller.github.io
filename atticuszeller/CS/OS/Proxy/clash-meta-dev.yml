@@ -18,10 +18,10 @@ dns:
   listen: 0.0.0.0:1053
   # cloudflare DoT and DoH
   nameserver:
-    - tls://1.1.1.1#dns
-    - tls://1.0.0.1#dns
-    - 'tls://[2606:4700:4700::1111]#dns'
-    - 'tls://[2606:4700:4700::1001]#dns'
+    - tls://1.1.1.1
+    - tls://1.0.0.1
+    - 'tls://[2606:4700:4700::1111]'
+    - 'tls://[2606:4700:4700::1001]'
     #- https://1.1.1.1/dns-query
     #- https://1.0.0.1/dns-query
     #- https://[2606:4700:4700::1111]/dns-query
