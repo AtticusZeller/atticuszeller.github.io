@@ -1,0 +1,242 @@
+---
+allow-lan: false
+# https://wiki.metacubex.one/config/dns/
+# https://gist.github.com/liuran001/5ca84f7def53c70b554d3f765ff86a33
+dns:
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - '[2400:3200::1]'
+    - '[2402:4e00::]' 
+  enable: true
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+    - '*.lan'
+    - +.local
+  fake-ip-filter-mode: blacklist
+  ipv6: true
+  listen: 0.0.0.0:1053
+  # cloudflare DoT and DoH
+  nameserver:
+    - tls://1.1.1.1
+    - tls://1.0.0.1
+    - 'tls://[2606:4700:4700::1111]'
+    - 'tls://[2606:4700:4700::1001]'
+    #- https://1.1.1.1/dns-query
+    #- https://1.0.0.1/dns-query
+    #- https://[2606:4700:4700::1111]/dns-query
+    #- https://[2606:4700:4700::1001]/dns-query
+  nameserver-policy:
+    "geosite:cn,private":
+      - tls://dns.alidns.com
+      - tls://dot.pub
+    "rule-set:direct":
+      - tls://dns.alidns.com
+      - tls://dot.pub
+  respect-rules: true
+  proxy-server-nameserver:
+    - tls://dot.pub
+  prefer-h3: true
+# web panel: https://metacubexd.pages.dev/
+# only enable for local
+external-controller: 127.0.0.1:9097
+external-controller-cors:
+  allow-origins:
+    - '*'
+  allow-private-network: true
+# external-ui: ./ui
+# external-ui-name: xd
+# external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+find-process-mode: 'off'
+geo-auto-update: true
+geo-update-interval: 24
+geodata-loader: standard
+# https://github.com/MetaCubeX/meta-rules-dat/tree/master
+geodata-mode: true
+geox-url:
+  asn: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb
+  geoip: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
+  geosite: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
+  mmdb: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb
+global-client-fingerprint: firefox
+ipv6: true
+# https://github.com/vernesong/OpenClash/issues/2614
+keep-alive-interval: 60
+log-level: info
+mixed-port: 45629
+# https://wiki.metacubex.one/config/general/
+mode: rule
+profile:
+  store-fake-ip: true
+  store-selected: true
+proxy-groups:
+  - name: 🔰 Node
+    proxies:
+      - ♻️ Auto-tcp
+      - ♻️ Auto-ws
+      - ☁️ Cloudflare
+      - 🎯 Direct
+    type: select
+  - include-all-proxies: true
+    interval: 300
+    lazy: true
+    name: ♻️ Auto-tcp
+    type: url-test
+    url: https://cp.cloudflare.com
+    use:
+      - vless-tcp-xtls-vision
+  - include-all-proxies: true
+    interval: 300
+    lazy: true
+    name: ♻️ Auto-ws
+    type: url-test
+    url: https://cp.cloudflare.com
+    use:
+      - vless-ws-tls-cdn
+  - include-all-proxies: true
+    interval: 300
+    lazy: true
+    name: ☁️ Cloudflare
+    type: url-test
+    url: https://cp.cloudflare.com
+    use:
+      - vless-ws-cdn-worker
+  - name: 🎯 Direct
+    proxies:
+      - DIRECT
+      - ♻️ Auto-tcp
+      - ♻️ Auto-ws
+      - ☁️ Cloudflare
+    type: select
+  - name: 🐟 Remaining
+    proxies:
+      - 🔰 Node
+      - 🎯 Direct
+    type: select
+  - name: ⛔️ Ads
+    proxies:
+      - REJECT
+      - 🎯 Direct
+      - 🔰 Node
+    type: select
+# https://wiki.metacubex.one/config/proxy-providers/
+proxy-providers:
+  vless-tcp-xtls-vision:
+    interval: 86400
+    override:
+      mptcp: true
+      skip-cert-verify: true
+      tfo: true
+      udp: true
+    path: ./proxy_providers/vps-tcp.yaml
+    proxy: DIRECT
+    type: http
+    url: https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-tcp-xtls-vision.yml
+  vless-ws-cdn-worker:
+    interval: 86400
+    override:
+      mptcp: true
+      skip-cert-verify: true
+      tfo: true
+      udp: false
+    path: ./proxy_providers/cdn.yaml
+    proxy: DIRECT
+    type: http
+    url: https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-cdn-worker.yml
+  vless-ws-tls-cdn:
+    interval: 86400
+    override:
+      mptcp: true
+      skip-cert-verify: true
+      tfo: true
+      udp: true
+    path: ./proxy_providers/vps-ws.yaml
+    proxy: DIRECT
+    type: http
+    url: https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-tls-cdn.yml
+# https://github.com/Loyalsoldier/clash-rules
+# https://wiki.metacubex.one/config/rule-providers/
+rule-providers:
+  direct:
+    behavior: domain
+    interval: 86400
+    path: ./ruleset/direct.yaml
+    type: http
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+  proxy:
+    behavior: domain
+    interval: 86400
+    path: ./ruleset/proxy.yaml
+    type: http
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+# https://wiki.metacubex.one/config/general/#geo
+# https://github.com/MetaCubeX/meta-rules-dat/tree/master
+# https://wiki.metacubex.one/config/rules/
+rules:
+  # DNS direct
+  ## cloudflare
+  - IP-CIDR,1.1.1.1/32,🔰 Node,no-resolve
+  - IP-CIDR,1.0.0.1/32,🔰 Node,no-resolve
+  - IP-CIDR6,2606:4700:4700::1111/128,🔰 Node,no-resolve
+  - IP-CIDR6,2606:4700:4700::1001/128,🔰 Node,no-resolve
+  ## alidns and dnspub
+  - IP-CIDR,223.5.5.5/32,🎯 Direct,no-resolve
+  - IP-CIDR,119.29.29.29/32,🎯 Direct,no-resolve
+  - IP-CIDR6,2400:3200::1/128,🎯 Direct,no-resolve
+  - IP-CIDR6,2402:4e00::/128,🎯 Direct,no-resolve
+  - DOMAIN-SUFFIX,dns.alidns.com,🎯 Direct
+  - DOMAIN-SUFFIX,dot.pub,🎯 Direct
+  # local
+  - GEOIP,private,🎯 Direct,no-resolve
+  - GEOSITE,private,🎯 Direct
+  # global
+  - GEOSITE,github,🔰 Node
+  - GEOSITE,python,🔰 Node
+  - GEOSITE,ubuntu,🔰 Node
+  - GEOSITE,cloudflare,🔰 Node
+  - GEOSITE,onedrive,🔰 Node
+  - GEOSITE,microsoft,🔰 Node
+  - GEOSITE,youtube,🔰 Node
+  - GEOSITE,spotify,🔰 Node
+  - GEOSITE,google,🔰 Node
+  - GEOSITE,reddit,🔰 Node
+  - DOMAIN-SUFFIX,obsidian.md,🔰 Node
+  - GEOSITE,protonmail,🔰 Node
+  - GEOSITE,openai,🔰 Node
+  - GEOIP,telegram,🔰 Node,no-resolve
+  - GEOSITE,apple,🔰 Node
+  - GEOSITE,category-dev,🔰 Node
+  - GEOSITE,category-scholar-!cn,🔰 Node
+  - GEOSITE,geolocation-!cn,🔰 Node
+  - RULE-SET,proxy,🔰 Node
+  # Chinese domains and IPs
+  - GEOIP,CN,🎯 Direct,no-resolve
+  - GEOSITE,cn,🎯 Direct
+  - RULE-SET,direct,🎯 Direct
+  # web panel
+  - DOMAIN,metacubexd.pages.dev,🎯 Direct
+  # Rejsect
+  - GEOSITE,category-porn,⛔️ Ads
+  - GEOSITE,category-ads-all,⛔️ Ads
+  - MATCH,🐟 Remaining
+secret: ''
+tcp-concurrent: true
+# https://wiki.metacubex.one/config/inbound/tun/
+tun:
+  auto-detect-interface: true
+  # for linux
+  auto-redirect: true
+  auto-route: true
+  device: Meta
+  dns-hijack:
+    - any:53
+    # DoT and DoH
+    - tcp://any:53
+  enable: true
+  # linux only
+  gso: true
+  # system for  Windows: 设置 -> Windows 安全中心 -> 允许应用通过防火墙 -> 选中内核（clash-verge-rev 内核为 verge-mihomo）
+  stack: system
+  # fail if can not reach
+  strict-route: true
+unified-delay: true
