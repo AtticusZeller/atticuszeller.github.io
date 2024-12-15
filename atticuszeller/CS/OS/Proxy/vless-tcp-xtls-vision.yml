@@ -1,73 +1,62 @@
+---
 proxies:
-  - {
-      "type": "vless",
-      "name": "🎅San Francisco TCP 1",
-      "server": "atticuszeller.club",
-      "port": 26748,
-      "uuid": "0a0502aa-68ad-4d9e-8954-dc8bb83c7b2d",
-      "skip-cert-verify": true,
-      "network": "tcp",
-      "flow": "xtls-rprx-vision",
-      "tls": true,
-      "udp": true
-  }
-  - {
-      "type": "vless",
-      "name": "🌟San Francisco TCP 2",
-      "server": "atticuszeller.club",
-      "port": 12956,
-      "uuid": "a2ff09b9-ad18-49c6-af91-bb49b65e6b76",
-      "skip-cert-verify": true,
-      "network": "tcp",
-      "flow": "xtls-rprx-vision",
-      "tls": true,
-      "udp": true
-  }
-  - {
-      "type": "vless",
-      "name": "🍎San Francisco TCP 3",
-      "server": "atticuszeller.club",
-      "port": 10898,
-      "uuid": "ac9ed9d8-e803-4be1-898c-3beadd467536",
-      "skip-cert-verify": true,
-      "network": "tcp",
-      "flow": "xtls-rprx-vision",
-      "tls": true,
-      "udp": true
-  }
-  - {
-      "type": "vless",
-      "name": "🎉San Francisco TCP 4",
-      "server": "atticuszeller.club",
-      "port": 53053,
-      "uuid": "9177902b-7cfc-4cef-ae3b-57edd95399e8",
-      "skip-cert-verify": true,
-      "network": "tcp",
-      "flow": "xtls-rprx-vision",
-      "tls": true,
-      "udp": true
-  }
-  - {
-      "type": "vless",
-      "name": "🎶San Francisco TCP 5",
-      "server": "atticuszeller.club",
-      "port": 35097,
-      "uuid": "4757cacc-f675-4074-a4e2-ac6fdf6d2369",
-      "skip-cert-verify": true,
-      "network": "tcp",
-      "flow": "xtls-rprx-vision",
-      "tls": true,
-      "udp": true
-  }
-  - {
-      "type": "vless",
-      "name": "🍀San Francisco TCP 6",
-      "server": "atticuszeller.club",
-      "port": 19381,
-      "uuid": "39bbe288-312f-4bb1-80e9-ada3f594dbe9",
-      "skip-cert-verify": true,
-      "network": "tcp",
-      "flow": "xtls-rprx-vision",
-      "tls": true,
-      "udp": true
-  }
+  - flow: xtls-rprx-vision
+    name: 🎅San Francisco TCP 1
+    network: tcp
+    port: 26748
+    server: atticuszeller.club
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: 0a0502aa-68ad-4d9e-8954-dc8bb83c7b2d
+  - flow: xtls-rprx-vision
+    name: 🌟San Francisco TCP 2
+    network: tcp
+    port: 12956
+    server: atticuszeller.club
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: a2ff09b9-ad18-49c6-af91-bb49b65e6b76
+  - flow: xtls-rprx-vision
+    name: 🍎San Francisco TCP 3
+    network: tcp
+    port: 10898
+    server: atticuszeller.club
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: ac9ed9d8-e803-4be1-898c-3beadd467536
+  - flow: xtls-rprx-vision
+    name: 🎉San Francisco TCP 4
+    network: tcp
+    port: 53053
+    server: atticuszeller.club
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: 9177902b-7cfc-4cef-ae3b-57edd95399e8
+  - flow: xtls-rprx-vision
+    name: 🎶San Francisco TCP 5
+    network: tcp
+    port: 35097
+    server: atticuszeller.club
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: 4757cacc-f675-4074-a4e2-ac6fdf6d2369
+  - flow: xtls-rprx-vision
+    name: 🍀San Francisco TCP 6
+    network: tcp
+    port: 19381
+    server: atticuszeller.club
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: 39bbe288-312f-4bb1-80e9-ada3f594dbe9

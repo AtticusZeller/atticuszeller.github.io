@@ -99,25 +99,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cbb2b0927a9a2b61",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Reference/linux/How to Monitor and Test the Health of SSD in Linux.md",
-                "collapseAll": true,
-                "extraContext": true,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for How to Monitor and Test the Health of SSD in Linux"
-            }
-          },
-          {
             "id": "dbce23fdc71b5bd7",
             "type": "leaf",
             "state": {
@@ -164,10 +145,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Features/footntoes.md"
+                "file": "CS/OS/Ubuntu/System.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of footntoes"
+              "title": "Outline of System"
             }
           },
           {
@@ -181,7 +162,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -201,7 +182,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "b02e2e30d05790c3",
+  "active": "d6ec06568b6ce63e",
   "lastOpenFiles": [
     "CS/OS/Ubuntu/System.md",
     "CS/OS/Ubuntu/Package.md",

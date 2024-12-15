@@ -259,7 +259,7 @@ threads = "16"
 once
 
 ```bash
-onedrive --sync --verbose --resync
+onedrive --sync --verbose
 ```
 
 monitor
