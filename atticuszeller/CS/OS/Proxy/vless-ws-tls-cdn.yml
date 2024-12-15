@@ -1,10 +1,11 @@
 ---
 proxies:
-  - name: 🌟San Francisco WS 2
+  - alpn:
+      - h2
+    name: 🌟San Francisco WS 2
     network: ws
     port: 2053
     server: atticuszeller.club
-    servername: atticuszeller.club
     skip-cert-verify: true
     tls: true
     type: vless
@@ -14,11 +15,12 @@ proxies:
       headers:
         host: atticuszeller.club
       path: /ws2adsfasgd
-  - name: 🎉San Francisco WS 4
+  - alpn:
+      - h2
+    name: 🎉San Francisco WS 4
     network: ws
     port: 2083
     server: atticuszeller.club
-    servername: atticuszeller.club
     skip-cert-verify: true
     tls: true
     type: vless
@@ -28,11 +30,12 @@ proxies:
       headers:
         host: atticuszeller.club
       path: /ws4fdhhkifccgu
-  - name: 🍀San Francisco WS 6
+  - alpn:
+      - h2
+    name: 🍀San Francisco WS 6
     network: ws
     port: 2087
     server: atticuszeller.club
-    servername: atticuszeller.club
     skip-cert-verify: true
     tls: true
     type: vless
@@ -42,11 +45,12 @@ proxies:
       headers:
         host: atticuszeller.club
       path: /ws6fggfjbddgg
-  - name: 🌼San Francisco WS 8
+  - alpn:
+      - h2
+    name: 🌼San Francisco WS 8
     network: ws
     port: 2096
     server: atticuszeller.club
-    servername: atticuszeller.club
     skip-cert-verify: true
     tls: true
     type: vless
@@ -56,11 +60,12 @@ proxies:
       headers:
         host: atticuszeller.club
       path: /ws1ejjd
-  - name: ⚡San Francisco WS 10
+  - alpn:
+      - h2
+    name: ⚡San Francisco WS 10
     network: ws
     port: 8443
     server: atticuszeller.club
-    servername: atticuszeller.club
     skip-cert-verify: true
     tls: true
     type: vless
