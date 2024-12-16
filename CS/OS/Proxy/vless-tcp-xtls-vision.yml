@@ -10,6 +10,7 @@ proxies:
       public-key: E4g_sdsCuiepmIuyjJA5BuCcY89m1zTkqLT1DJmL5H8
       short-id: 199bffd8
     server: atticuszeller.club
+    skip-cert-verify: true
     tls: true
     type: vless
     udp: true
