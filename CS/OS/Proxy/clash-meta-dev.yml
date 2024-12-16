@@ -214,6 +214,8 @@ rules:
   - GEOIP,CN,🎯 Direct,no-resolve
   - GEOSITE,cn,🎯 Direct
   - RULE-SET,direct,🎯 Direct
+  # x-ui panel
+  - DOMAIN-SUFFIX,atticuszeller.club,🎯 Direct
   # web panel
   - DOMAIN,metacubexd.pages.dev,🎯 Direct
   # Rejsect
