@@ -183,8 +183,6 @@ rules:
   # local
   - GEOIP,private,🎯 Direct,no-resolve
   - GEOSITE,private,🎯 Direct
-  # x-ui panel
-  - DOMAIN-SUFFIX,atticuszeller.club,🎯 Direct
   # global
   - GEOSITE,github,🔰 Node
   - GEOSITE,python,🔰 Node
@@ -211,6 +209,8 @@ rules:
   - RULE-SET,direct,🎯 Direct
   # web panel
   - DOMAIN,metacubexd.pages.dev,🎯 Direct
+  # x-ui panel
+  - DOMAIN-SUFFIX,atticuszeller.club,🎯 Direct
   # Rejsect
   - GEOSITE,category-porn,⛔️ Ads
   - GEOSITE,category-ads-all,⛔️ Ads
