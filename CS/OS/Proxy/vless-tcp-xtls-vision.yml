@@ -1,10 +1,6 @@
 ---
 proxies:
-  - alpn:
-      - h2
-    client-fingerprint: firefox
-    fingerprint: firefox
-    flow: xtls-rprx-vision
+  - flow: xtls-rprx-vision
     name: 🎅San Francisco TCP 1
     network: tcp
     port: 26748
