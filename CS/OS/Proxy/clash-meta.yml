@@ -183,6 +183,8 @@ rules:
   # local
   - GEOIP,private,🎯 Direct,no-resolve
   - GEOSITE,private,🎯 Direct
+  # x-ui panel
+  - DOMAIN-SUFFIX,atticuszeller.club,🎯 Direct
   # global
   - GEOSITE,github,🔰 Node
   - GEOSITE,python,🔰 Node
