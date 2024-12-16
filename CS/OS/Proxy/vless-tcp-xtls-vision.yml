@@ -13,7 +13,7 @@ proxies:
       short-id: 199bffd8
     server: atticuszeller.club
     servername: microsoft.com
-    tls: true
+    tls: false
     type: vless
     udp: true
     uuid: 0a0502aa-68ad-4d9e-8954-dc8bb83c7b2d
