@@ -1,6 +1,8 @@
 ---
 proxies:
-  - flow: xtls-rprx-vision
+  - alpn:
+      - h2
+    flow: xtls-rprx-vision
     name: 🎅San Francisco TCP 1
     network: tcp
     port: 26748
@@ -8,8 +10,6 @@ proxies:
       public-key: E4g_sdsCuiepmIuyjJA5BuCcY89m1zTkqLT1DJmL5H8
       short-id: 199bffd8
     server: atticuszeller.club
-    # sni: www.microsoft.com
-    # servername: microsoft.com
     tls: true
     type: vless
     udp: true
