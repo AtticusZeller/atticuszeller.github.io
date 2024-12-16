@@ -10,6 +10,8 @@ proxies:
       public-key: D8GNLa25JcujRhcveBvDvBddxkSq3JgOwlqedcavJx8
       short-id: 37650674
     server: atticuszeller.club
+    sni: www.yahoo.com
+    servername: www.yahoo.com
     skip-cert-verify: true
     tls: true
     type: vless
