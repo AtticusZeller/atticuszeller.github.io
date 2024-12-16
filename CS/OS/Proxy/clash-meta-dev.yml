@@ -240,4 +240,4 @@ tun:
   stack: system
   # fail if can not reach
   strict-route: true
-unified-delay: false
+unified-delay: true
