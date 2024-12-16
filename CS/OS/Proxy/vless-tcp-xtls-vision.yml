@@ -6,9 +6,9 @@ proxies:
     name: 🎅San Francisco TCP 1
     network: tcp
     port: 26748
-    # reality-opts:
-    #   public-key: E4g_sdsCuiepmIuyjJA5BuCcY89m1zTkqLT1DJmL5H8
-    #   short-id: 199bffd8
+    reality-opts:
+      public-key: D8GNLa25JcujRhcveBvDvBddxkSq3JgOwlqedcavJx8
+      short-id: 37650674
     server: atticuszeller.club
     skip-cert-verify: true
     tls: true
