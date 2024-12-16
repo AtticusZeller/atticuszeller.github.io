@@ -21,6 +21,9 @@ proxies:
     name: 🌟San Francisco TCP 2
     network: tcp
     port: 12956
+    reality-opts:
+      public-key: LAfLNVL5_3bnsw_I0eTYnsjNG0pq-OJRODxhhA_UDBE
+      short-id: 14f94e62e8f166
     server: atticuszeller.club
     skip-cert-verify: true
     tls: true
@@ -33,6 +36,9 @@ proxies:
     name: 🍎San Francisco TCP 3
     network: tcp
     port: 10898
+    reality-opts:
+      public-key: IXGFiczj1lcHyDnekU6EPZpAw7GjgC2IIVkACH6xoRM
+      short-id: f82922
     server: atticuszeller.club
     skip-cert-verify: true
     tls: true
@@ -45,6 +51,9 @@ proxies:
     name: 🎉San Francisco TCP 4
     network: tcp
     port: 53053
+    reality-opts:
+      public-key: 7dFnuP8xXzZhH9qAq5RiEi-YfkWuGRoGVcJEEYfSjz4
+      short-id: 1b252b41fd
     server: atticuszeller.club
     skip-cert-verify: true
     tls: true
@@ -57,6 +66,9 @@ proxies:
     name: 🎶San Francisco TCP 5
     network: tcp
     port: 35097
+    reality-opts:
+      public-key: hRPX_gjcze4rXE_UZPwvEl5XSYKnZZ9N_EAkpSnE4lA
+      short-id: 229a9b2b6b5cde
     server: atticuszeller.club
     skip-cert-verify: true
     tls: true
@@ -69,6 +81,9 @@ proxies:
     name: 🍀San Francisco TCP 6
     network: tcp
     port: 19381
+    reality-opts:
+      public-key: O4uOA4Y3UOUbVpTaOjxdlZH_jK4n_qKfCWoUhNMsy0Y
+      short-id: bdf0ef1614fec0
     server: atticuszeller.club
     skip-cert-verify: true
     tls: true
