@@ -8,8 +8,9 @@ proxies:
       public-key: E4g_sdsCuiepmIuyjJA5BuCcY89m1zTkqLT1DJmL5H8
       short-id: 199bffd8
     server: atticuszeller.club
+    sni: www.microsoft.com
     servername: microsoft.com
-    tls: false
+    tls: true
     type: vless
     udp: true
     uuid: 0a0502aa-68ad-4d9e-8954-dc8bb83c7b2d
