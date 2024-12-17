@@ -8,7 +8,7 @@ dns:
     - 119.29.29.29
     - '[2400:3200::1]'
     - '[2402:4e00::]'
-  enable: false
+  enable: true
   enhanced-mode: fake-ip
   fake-ip-filter:
     - '*.lan'
