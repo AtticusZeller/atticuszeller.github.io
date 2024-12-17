@@ -14,7 +14,7 @@ dns:
     - '*.lan'
     - +.local
   fake-ip-filter-mode: blacklist
-  ipv6: true
+  ipv6: false
   listen: 0.0.0.0:1053
   # cloudflare DoT and DoH
   nameserver:
