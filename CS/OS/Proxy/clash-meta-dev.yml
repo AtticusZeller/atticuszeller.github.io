@@ -22,20 +22,11 @@ dns:
     - 1.0.0.1
     - '[2606:4700:4700::1111]'
     - '[2606:4700:4700::1001]'
-  nameserver-policy:
-    geosite:cn,private:
-      - 223.5.5.5
-      - 119.29.29.29
-      - '[2400:3200::1]'
-      - '[2402:4e00::]'
-    rule-set:direct:
-      - 223.5.5.5
-      - 119.29.29.29
-      - '[2400:3200::1]'
-      - '[2402:4e00::]'
   prefer-h3: true
   proxy-server-nameserver:
     - 119.29.29.29
+  direct-nameserver:
+    - system
   respect-rules: true
 # web panel: https://metacubexd.pages.dev/
 # only enable for local
