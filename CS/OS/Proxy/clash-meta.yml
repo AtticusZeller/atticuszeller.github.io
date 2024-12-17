@@ -195,6 +195,7 @@ rules:
   - GEOSITE,google,🔰 Node
   - GEOSITE,reddit,🔰 Node
   - DOMAIN-SUFFIX,obsidian.md,🔰 Node
+  - DOMAIN-SUFFIX,zotero.org,🔰 Node
   - GEOSITE,protonmail,🔰 Node
   - GEOSITE,openai,🔰 Node
   - GEOIP,telegram,🔰 Node,no-resolve
