@@ -184,7 +184,7 @@ rules:
   - DOMAIN-SUFFIX,dns.alidns.com,🎯 Direct
   - DOMAIN-SUFFIX,dot.pub,🎯 Direct
   # local
-  - GEOIP,private,🎯 Direct
+  - GEOIP,private,🎯 Direct,no-resolve
   - GEOSITE,private,🎯 Direct
   # global
   - GEOSITE,github,🔰 Node
