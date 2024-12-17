@@ -209,7 +209,7 @@ rules:
   # Chinese domains and IPs
   - GEOSITE,cn,🎯 Direct
   - RULE-SET,direct,🎯 Direct
-  - GEOIP,CN,🎯 Direct,no-resolve
+  - GEOIP,CN,🎯 Direct
   # x-ui panel
   - DOMAIN-SUFFIX,atticuszeller.club,🎯 Direct
   # web panel
