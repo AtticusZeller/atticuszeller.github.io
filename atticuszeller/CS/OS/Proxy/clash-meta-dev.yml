@@ -59,7 +59,7 @@ geox-url:
   geosite: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
   mmdb: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb
 global-client-fingerprint: firefox
-ipv6: false
+ipv6: true
 # https://github.com/vernesong/OpenClash/issues/2614
 keep-alive-interval: 60
 log-level: info
