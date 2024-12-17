@@ -172,19 +172,19 @@ rule-providers:
 rules:
   # DNS direct
   ## cloudflare
-  - IP-CIDR,1.1.1.1/32,🔰 Node,no-resolve
-  - IP-CIDR,1.0.0.1/32,🔰 Node,no-resolve
-  - IP-CIDR6,2606:4700:4700::1111/128,🔰 Node,no-resolve
-  - IP-CIDR6,2606:4700:4700::1001/128,🔰 Node,no-resolve
+  - IP-CIDR,1.1.1.1/32,🔰 Node
+  - IP-CIDR,1.0.0.1/32,🔰 Node
+  - IP-CIDR6,2606:4700:4700::1111/128,🔰 Node
+  - IP-CIDR6,2606:4700:4700::1001/128,🔰 Node
   ## alidns and dnspub
-  - IP-CIDR,223.5.5.5/32,🎯 Direct,no-resolve
-  - IP-CIDR,119.29.29.29/32,🎯 Direct,no-resolve
-  - IP-CIDR6,2400:3200::1/128,🎯 Direct,no-resolve
-  - IP-CIDR6,2402:4e00::/128,🎯 Direct,no-resolve
+  - IP-CIDR,223.5.5.5/32,🎯 Direct
+  - IP-CIDR,119.29.29.29/32,🎯 Direct
+  - IP-CIDR6,2400:3200::1/128,🎯 Direct
+  - IP-CIDR6,2402:4e00::/128,🎯 Direct
   - DOMAIN-SUFFIX,dns.alidns.com,🎯 Direct
   - DOMAIN-SUFFIX,dot.pub,🎯 Direct
   # local
-  - GEOIP,private,🎯 Direct,no-resolve
+  - GEOIP,private,🎯 Direct
   - GEOSITE,private,🎯 Direct
   # global
   - GEOSITE,github,🔰 Node
@@ -200,7 +200,7 @@ rules:
   - DOMAIN-SUFFIX,obsidian.md,🔰 Node
   - GEOSITE,protonmail,🔰 Node
   - GEOSITE,openai,🔰 Node
-  - GEOIP,telegram,🔰 Node,no-resolve
+  - GEOIP,telegram,🔰 Node
   - GEOSITE,apple,🔰 Node
   - GEOSITE,category-dev,🔰 Node
   - GEOSITE,category-scholar-!cn,🔰 Node
