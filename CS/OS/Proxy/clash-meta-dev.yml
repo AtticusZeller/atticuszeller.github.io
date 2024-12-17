@@ -21,7 +21,7 @@ dns:
     - https://dns.alidns.com/dns-query
   prefer-h3: true
   proxy-server-nameserver:
-    - 119.29.29.29
+    - https://doh.pub/dns-query
   respect-rules: true
 
 # web panel: https://metacubexd.pages.dev/
