@@ -207,6 +207,7 @@ rules:
   - GEOSITE,geolocation-!cn,🔰 Node
   - RULE-SET,proxy,🔰 Node
   # Chinese domains and IPs
+  - DOMAIN-KEYWORD,cn,🎯 Direct
   - GEOSITE,cn,🎯 Direct
   - RULE-SET,direct,🎯 Direct
   - GEOIP,CN,🎯 Direct,no-resolve
