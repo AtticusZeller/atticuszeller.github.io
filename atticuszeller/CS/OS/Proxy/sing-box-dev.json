@@ -196,7 +196,7 @@
           "geosite-telegram",
           "geosite-spotify",
           "geosite-microsoft",
-          "geosite-geolocation-!cn",
+          "geosite-geolocation-!cn"
         ],
         "outbound": "Proxy"
       },
