@@ -81,7 +81,8 @@
       "inet6_range": "fc00::/18"
     },
     "strategy": "prefer_ipv4",
-    "independent_cache": false
+    "independent_cache": false,
+    "reverse_mapping": true
   },
   "inbounds": [
     {
