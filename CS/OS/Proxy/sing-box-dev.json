@@ -118,8 +118,7 @@
       "tag": "Proxy",
       "outbounds": [
         "🌟San Francisco TCP",
-        "direct",
-        "nau9zvkv"
+        "direct"
       ]
     },
     {
@@ -181,10 +180,6 @@
         "outbound": "dns-out"
       },
       {
-        "rule_set": "geosite-category-ads-all",
-        "outbound": "AdBlock"
-      },
-      {
         "clash_mode": "direct",
         "outbound": "direct"
       },
@@ -206,95 +201,18 @@
         "outbound": "direct"
       },
       {
-        "rule_set": "geosite-openai",
-        "outbound": "OpenAI"
-      },
-      {
         "rule_set": [
           "geosite-youtube",
           "geoip-google",
           "geosite-google",
-          "geosite-github"
-        ],
-        "outbound": "Google"
-      },
-      {
-        "rule_set": [
+          "geosite-github",
           "geoip-telegram",
-          "geosite-telegram"
+          "geosite-telegram",
+          "geosite-spotify",
+          "geosite-microsoft",
+          "geosite-geolocation-!cn",
         ],
-        "outbound": "Telegram"
-      },
-      {
-        "rule_set": [
-          "geoip-twitter",
-          "geosite-twitter"
-        ],
-        "outbound": "Twitter"
-      },
-      {
-        "rule_set": [
-          "geoip-facebook",
-          "geosite-facebook"
-        ],
-        "outbound": "Facebook"
-      },
-      {
-        "rule_set": "geosite-bilibili",
-        "outbound": "BiliBili"
-      },
-      {
-        "rule_set": "geosite-bahamut",
-        "outbound": "Bahamut"
-      },
-      {
-        "rule_set": "geosite-spotify",
-        "outbound": "Spotify"
-      },
-      {
-        "rule_set": "geosite-tiktok",
-        "outbound": "TikTok"
-      },
-      {
-        "rule_set": [
-          "geoip-netflix",
-          "geosite-netflix"
-        ],
-        "outbound": "Netflix"
-      },
-      {
-        "rule_set": "geosite-disney",
-        "outbound": "Disney+"
-      },
-      {
-        "rule_set": [
-          "geoip-apple",
-          "geosite-apple",
-          "geosite-amazon"
-        ],
-        "outbound": "Apple"
-      },
-      {
-        "rule_set": "geosite-microsoft",
-        "outbound": "Microsoft"
-      },
-      {
-        "rule_set": [
-          "geosite-category-games",
-          "geosite-dmm"
-        ],
-        "outbound": "Games"
-      },
-      {
-        "rule_set": [
-          "geosite-hbo",
-          "geosite-primevideo"
-        ],
-        "outbound": "Streaming"
-      },
-      {
-        "rule_set": "geosite-geolocation-!cn",
-        "outbound": "Global"
+        "outbound": "Proxy"
       },
       {
         "rule_set": [
@@ -304,21 +222,6 @@
         "outbound": "China"
       }
     ],
-    "rule_set": [
-      {
-        "type": "remote",
-        "tag": "geosite-category-ads-all",
-        "format": "binary",
-        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-openai",
-        "format": "binary",
-        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/Toperlock/sing-box-geosite/main/rule/OpenAI.srs",
-        "download_detour": "direct"
-      },
       {
         "type": "remote",
         "tag": "geosite-youtube",
