@@ -167,17 +167,8 @@
   "route": {
     "rules": [
       {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "port": 53
-          },
-          {
-            "protocol": "dns"
-          }
-        ],
-        "outbound": "dns-out"
+        "protocol": "dns",
+        "action": "hijack-dns"
       },
       {
         "clash_mode": "direct",
