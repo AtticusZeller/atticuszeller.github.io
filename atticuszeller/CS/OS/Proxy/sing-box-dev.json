@@ -205,7 +205,7 @@
         "outbound": "China"
       }
     ],
-"rule_set": [
+    "rule_set": [
       {
         "type": "remote",
         "tag": "geosite-youtube",
