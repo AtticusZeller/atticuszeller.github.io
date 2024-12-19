@@ -134,14 +134,6 @@
       "tag": "direct"
     },
     {
-      "type": "dns",
-      "tag": "dns-out"
-    },
-    {
-      "type": "block",
-      "tag": "block"
-    },
-    {
       "type": "vless",
       "tag": "🌟San Francisco TCP",
       "server": "atticuszeller.club",
