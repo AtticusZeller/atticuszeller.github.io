@@ -6,83 +6,49 @@
   "dns": {
     "servers": [
       {
-        "tag": "google",
-        "address": "tls://8.8.8.8"
-      },
-      {
-        "tag": "local",
-        "address": "https://223.5.5.5/dns-query",
+        "tag": "dns_resolver",
+        "address": "223.5.5.5",
         "detour": "direct"
       },
       {
-        "tag": "fakeip",
-        "address": "fakeip"
+        "tag": "dns_proxy",
+        "address": "https://dns.cloudflare.com/dns-query",
+        "address_resolver": "dns_resolver",
+        "detour": "Proxy"
       },
       {
-        "tag": "block",
-        "address": "rcode://success"
+        "tag": "dns_direct",
+        "address": "https://doh.pub/dns-query",
+        "address_resolver": "dns_resolver",
+        "detour": "direct"
       }
     ],
     "rules": [
       {
-        "rule_set": "geosite-category-ads-all",
-        "server": "block"
-      },
-      {
         "outbound": "any",
-        "server": "local"
+        "server": "dns_direct"
       },
       {
         "clash_mode": "direct",
-        "server": "local"
+        "server": "dns_direct"
       },
       {
         "clash_mode": "global",
-        "server": "google"
-      },
-      {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-        "rule_set": "geosite-cn",
-        "server": "fakeip"
+        "server": "dns_proxy"
       },
       {
         "rule_set": "geosite-cn",
-        "server": "local"
-      },
-      {
-        "type": "logical",
-        "mode": "and",
-        "rules": [
-          {
-            "rule_set": "geosite-geolocation-!cn",
-            "invert": true
-          },
-          {
-            "rule_set": "geoip-cn"
-          }
-        ],
-        "server": "google",
-        "client_subnet": "114.114.114.114/24"
-      },
-      {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-        "server": "fakeip"
+        "server": "dns_direct"
       }
     ],
+    "final": "dns_proxy",
+    "reverse_mapping": true,
     "fakeip": {
       "enabled": true,
       "inet4_range": "198.18.0.0/15",
       "inet6_range": "fc00::/18"
     },
-    "strategy": "prefer_ipv4",
-    "independent_cache": false,
-    "reverse_mapping": true
+    "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
@@ -95,20 +61,6 @@
       "auto_route": true,
       "strict_route": true,
       "stack": "system",
-      "platform": {
-        "http_proxy": {
-          "enabled": true,
-          "server": "127.0.0.1",
-          "server_port": 7890
-        }
-      },
-      "sniff": true
-    },
-    {
-      "type": "mixed",
-      "tag": "mixed",
-      "listen": "127.0.0.1",
-      "listen_port": 7890,
       "sniff": true
     }
   ],
@@ -405,7 +357,7 @@
         "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
         "download_detour": "direct"
       }
-    ],
+    ], 
     "final": "Proxy",
     "auto_detect_interface": true
   },
