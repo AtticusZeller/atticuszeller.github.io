@@ -130,10 +130,6 @@
         "outbound": "direct"
       },
       {
-        "domain_suffix": "obsidian.md",
-        "outbound": "proxy"
-      },
-      {
         "rule_set": [
           "geosite-github",
           "geosite-python",
@@ -153,6 +149,10 @@
           "geosite-geolocation-!cn",
           "geosite-telegram"
         ],
+        "outbound": "proxy"
+      },
+      {
+        "domain_suffix": "obsidian.md",
         "outbound": "proxy"
       },
       {
