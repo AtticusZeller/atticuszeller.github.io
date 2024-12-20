@@ -151,7 +151,7 @@
           "geosite-category-dev",
           "geosite-category-scholar-!cn",
           "geosite-geolocation-!cn",
-          "geoip-telegram"
+          "geosite-telegram"
         ],
         "outbound": "proxy"
       },
@@ -280,9 +280,9 @@
       },
       {
         "type": "remote",
-        "tag": "geoip-telegram",
+        "tag": "geosite-telegram",
         "format": "binary",
-        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/telegram.srs",
         "download_detour": "direct"
       },
       {
