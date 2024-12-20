@@ -59,15 +59,15 @@
   "inbounds": [
     {
       "type": "tun",
-      "tag": "tun",
+      "tag": "tun-in",
+      "mtu": 1492,
       "address": [
-        "172.19.0.0/30",
-        "fdfe:dcba:9876::/126"
+        "172.16.0.1/30",
+        "fd00::1/126"
       ],
       "auto_route": true,
       "strict_route": true,
-      "stack": "system",
-      "sniff": true
+      "stack": "system"
     }
   ],
   "outbounds": [
@@ -119,6 +119,10 @@
   "route": {
     "rules": [
       {
+        "inbound": "tun-in",
+        "action": "sniff"
+      },
+      {
         "protocol": "dns",
         "action": "hijack-dns"
       },
@@ -167,8 +171,7 @@
       {
         "domain_suffix": [
           ".cn",
-          "atticuszeller.club",
-          "obsidian.md"
+          "atticuszeller.club"
         ],
         "outbound": "direct"
       },
@@ -326,6 +329,7 @@
   "experimental": {
     "cache_file": {
       "enabled": true,
+      "path": "cache.db",
       "store_fakeip": true,
       "store_rdrc": true
     },
