@@ -22,7 +22,7 @@
                 "address_resolver": "dns_resolver",
                 "detour": "direct"
             },
-            # https://sing-box.sagernet.org/manual/proxy/client/#examples
+            // https://sing-box.sagernet.org/manual/proxy/client/#examples
             {
                 "tag": "cache",
                 "address": "fakeip"
@@ -64,7 +64,7 @@
         "server": "time.apple.com",
         "server_port": 123
     },
-    # https://github.com/chika0801/sing-box-examples/blob/main/Tun/self-use/sing-box_1.11.json
+    // https://github.com/chika0801/sing-box-examples/blob/main/Tun/self-use/sing-box_1.11.json
     "inbounds": [
         {
             "type": "tun",
@@ -335,7 +335,7 @@
             "store_fakeip": true,
             "store_rdrc": true
         },
-        # https://sing-box.sagernet.org/configuration/experimental/clash-api/
+        // https://sing-box.sagernet.org/configuration/experimental/clash-api/
         "clash_api": {
             "external_controller": "127.0.0.1:9090",
             "external_ui": "ui",
@@ -345,4 +345,4 @@
         }
     }
 }
-# https://jsonlint.com/
+// https://jsonlint.com/
