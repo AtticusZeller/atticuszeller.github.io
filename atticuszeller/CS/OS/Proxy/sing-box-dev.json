@@ -57,7 +57,7 @@
         "fd00::1/126"
       ],
       "auto_route": true,
-      "strict_route": false,
+      "strict_route": true,
       "stack": "system",
       "platform": {
         "http_proxy": {
