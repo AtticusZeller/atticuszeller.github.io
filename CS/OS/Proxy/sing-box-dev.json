@@ -107,7 +107,7 @@
     },
     {
       "type": "vless",
-      "tag": "🌟San Francisco TCP",
+      "tag": "🔥San Francisco TCP",
       "tcp_fast_open": true,
       "tcp_multi_path": true,
       "server": "atticuszeller.club",
@@ -128,6 +128,28 @@
         }
       },
       "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🌟San Francisco WS",
+      "server": "atticuszeller.club",
+      "server_port": 2053,
+      "uuid": "7fb9ba03-e3b6-4d55-b797-4c4f7c71a968",
+      "transport": {
+        "type": "ws",
+        "path": "/ws2adsfasgd",
+        "headers": {
+          "Host": "atticuszeller.club"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "atticuszeller.club",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     }
   ],
   "route": {
