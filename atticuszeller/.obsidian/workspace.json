@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS/OS/Ubuntu/System.md",
+                "file": "CS/VCS/git.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "System"
+              "title": "git"
             }
           }
         ]
@@ -201,10 +201,13 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "b02e2e30d05790c3",
+  "active": "d6ec06568b6ce63e",
   "lastOpenFiles": [
-    "CS/OS/Proxy/clash-meta-dev.yml",
+    "CS/VCS/github/SSH_keypair_setup_for_GitHub.md",
+    "CS/VCS/git.md",
     "CS/OS/Ubuntu/System.md",
+    "CS/OS/Ubuntu/Terminal.md",
+    "CS/OS/Proxy/clash-meta-dev.yml",
     "CS/OS/Ubuntu/Package.md",
     "CS/Language/python/Venv/UV.md",
     "CS/Language/python/Ruff.md",
@@ -221,16 +224,13 @@
     "CS/OS/Ubuntu/Gnome.md",
     "CS/OS/Ubuntu/bugs.md",
     "CS/OS/Ubuntu/Appearance.md",
-    "CS/VCS/git.md",
     "CS/OS/Proxy/clash-template.yml",
     "CS/OS/Proxy/clash-meta-old.yaml",
     "CS/OS/Proxy/clash-meta-cdn.yml",
     "CS/tools/IDE/JetBrains.md",
     "CS/OS/GPU.md",
     "CS/OS/Ubuntu/configs.md",
-    "CS/OS/Ubuntu/Terminal.md",
     "CS/OS/Proxy/Steps.md",
-    "CS/OS/Proxy/clash-meta.yaml",
     "Reference/Finding and managing research papers a survey of tools and products.md",
     "Learning/Reading list.md",
     "index.md",

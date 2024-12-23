@@ -74,6 +74,8 @@ Host github.com
     Hostname ssh.github.com
     Port 443
     User git
+    # 30327 is your local proxy port
+    ProxyCommand nc -X connect -x 127.0.0.1:30327 %h %p
 ```
 
 #### Test Test Ssh Connect
