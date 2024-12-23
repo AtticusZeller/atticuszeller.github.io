@@ -90,7 +90,7 @@
       "tag": "mixed-in",
       "listen": "127.0.0.1",
       "listen_port": 30327,
-      "set_system_proxy": true
+      "set_system_proxy": false
     }
   ],
   "outbounds": [
