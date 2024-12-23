@@ -310,7 +310,7 @@
     ],
     "final": "proxy",
     "auto_detect_interface": true,
-    "override_android_vpn": true
+    "override_android_vpn": false
   },
   "experimental": {
     "cache_file": {
