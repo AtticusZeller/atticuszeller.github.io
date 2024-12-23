@@ -79,13 +79,19 @@
         "http_proxy": {
           "enabled": true,
           "server": "127.0.0.1",
-          "server_port": 3327,
+          "server_port": 30327,
           "bypass_domain": [],
           "match_domain": []
         }
       }
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 30327,
+      "set_system_proxy": true
     }
-
   ],
   "outbounds": [
     {
@@ -139,7 +145,6 @@
         "ip_is_private": true,
         "outbound": "direct"
       },
-
       {
         "rule_set": [
           "geosite-github",
