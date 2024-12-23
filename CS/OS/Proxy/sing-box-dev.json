@@ -99,6 +99,7 @@
       "outbounds": [
         "🔥San Francisco TCP",
         "🌟San Francisco WS",
+        "🌩️San Francisco WS",
         "direct"
       ]
     },
@@ -146,6 +147,28 @@
       "tls": {
         "enabled": true,
         "server_name": "atticuszeller.club",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🌩️San Francisco WS",
+      "server": "proxy.woker.atticux.me",
+      "server_port": 443,
+      "uuid": "717f9e5c-9922-49a0-aa12-3fa17d63a7a8",
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "proxy.woker.atticux.me"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "proxy.woker.atticux.me",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
