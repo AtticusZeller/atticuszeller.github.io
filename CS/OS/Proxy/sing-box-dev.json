@@ -132,6 +132,9 @@
     }
   ],
   "route": {
+    "final": "proxy",
+    "auto_detect_interface": true,
+    "override_android_vpn": true,
     "rules": [
       {
         "inbound": "tun-in",
@@ -192,139 +195,136 @@
         "type": "remote",
         "tag": "geosite-geolocation-!cn",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-python",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-python.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-python.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-ubuntu",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-ubuntu.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-ubuntu.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-cloudflare",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cloudflare.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-cloudflare.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-onedrive",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-onedrive.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-onedrive.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-reddit",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-reddit.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-reddit.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-protonmail",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-protonmail.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-protonmail.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-category-dev",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-dev.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-category-dev.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-category-scholar-!cn",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-scholar-!cn.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-category-scholar-!cn.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-github",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-github.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-microsoft",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-microsoft.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-microsoft.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-youtube",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-spotify",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-spotify.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-spotify.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-google",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-google.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-apple",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-apple.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-apple.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-openai",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-telegram",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-telegram.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-telegram.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geoip-cn",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "geosite-cn",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
-        "download_detour": "proxy"
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "direct"
       }
-    ],
-    "final": "proxy",
-    "auto_detect_interface": true,
-    "override_android_vpn": true
+    ]
   },
   "experimental": {
     "cache_file": {
