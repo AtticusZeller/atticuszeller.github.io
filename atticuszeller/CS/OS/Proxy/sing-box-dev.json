@@ -96,6 +96,7 @@
       "tag": "🔥San Francisco TCP",
       "tcp_fast_open": true,
       "tcp_multi_path": true,
+      "udp_fragment": true,
       "server": "atticuszeller.club",
       "server_port": 26748,
       "uuid": "0a0502aa-68ad-4d9e-8954-dc8bb83c7b2d",
@@ -118,6 +119,8 @@
     {
       "type": "vless",
       "tag": "🌟San Francisco WS",
+      "tcp_fast_open": true,
+      "tcp_multi_path": true,
       "server": "atticuszeller.club",
       "server_port": 2053,
       "uuid": "7fb9ba03-e3b6-4d55-b797-4c4f7c71a968",
