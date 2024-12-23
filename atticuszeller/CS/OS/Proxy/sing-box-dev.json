@@ -97,7 +97,9 @@
       "type": "selector",
       "tag": "proxy",
       "outbounds": [
-        "🌟San Francisco TCP",
+        "🔥San Francisco TCP",
+        "🌟San Francisco WS",
+        "🌩️San Francisco WS",
         "direct"
       ]
     },
@@ -107,7 +109,7 @@
     },
     {
       "type": "vless",
-      "tag": "🌟San Francisco TCP",
+      "tag": "🔥San Francisco TCP",
       "tcp_fast_open": true,
       "tcp_multi_path": true,
       "server": "atticuszeller.club",
@@ -128,6 +130,50 @@
         }
       },
       "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🌟San Francisco WS",
+      "server": "atticuszeller.club",
+      "server_port": 2053,
+      "uuid": "7fb9ba03-e3b6-4d55-b797-4c4f7c71a968",
+      "transport": {
+        "type": "ws",
+        "path": "/ws2adsfasgd",
+        "headers": {
+          "Host": "atticuszeller.club"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "atticuszeller.club",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🌩️San Francisco WS",
+      "server": "104.16.239.143",
+      "server_port": 443,
+      "uuid": "717f9e5c-9922-49a0-aa12-3fa17d63a7a8",
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "proxy.woker.atticux.me"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "proxy.woker.atticux.me",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     }
   ],
   "route": {
