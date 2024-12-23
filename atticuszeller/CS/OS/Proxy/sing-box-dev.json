@@ -21,23 +21,12 @@
         "address": "https://doh.pub/dns-query",
         "address_resolver": "dns_resolver",
         "detour": "direct"
-      },
-      {
-        "tag": "cache",
-        "address": "fakeip"
       }
     ],
     "rules": [
       {
         "outbound": "any",
         "server": "dns_direct"
-      },
-      {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-        "server": "cache"
       },
       {
         "rule_set": "geosite-geolocation-!cn",
@@ -50,11 +39,6 @@
     ],
     "final": "dns_proxy",
     "reverse_mapping": true,
-    "fakeip": {
-      "enabled": true,
-      "inet4_range": "198.18.0.0/15",
-      "inet6_range": "fc00::/18"
-    },
     "strategy": "prefer_ipv4"
   },
   "ntp": {
