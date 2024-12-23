@@ -213,6 +213,7 @@ rules:
   - GEOIP,CN,🎯 Direct,no-resolve
   # x-ui panel
   - DOMAIN-SUFFIX,atticuszeller.club,🎯 Direct
+  - DOMAIN-SUFFIX,atticux.me,🎯 Direct
   # web panel
   - DOMAIN,metacubexd.pages.dev,🎯 Direct
   # Rejsect
