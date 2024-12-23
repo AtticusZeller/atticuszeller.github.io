@@ -60,7 +60,7 @@ ipv6: true
 # https://github.com/vernesong/OpenClash/issues/2614
 keep-alive-interval: 60
 log-level: info
-mixed-port: 45629
+mixed-port: 30327
 # https://wiki.metacubex.one/config/general/
 mode: rule
 profile:
