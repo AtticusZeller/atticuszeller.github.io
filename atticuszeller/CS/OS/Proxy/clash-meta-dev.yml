@@ -51,10 +51,10 @@ geodata-loader: standard
 # https://github.com/MetaCubeX/meta-rules-dat/tree/master
 geodata-mode: true
 geox-url:
-  asn: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb
-  geoip: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
-  geosite: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
-  mmdb: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb
+  asn: https://release.gh.atticux.me/MetaCubeX/meta-rules-dat/raw/refs/heads/release/GeoLite2-ASN.mmdb
+  geoip: https://release.gh.atticux.me/MetaCubeX/meta-rules-dat/raw/refs/heads/release/geoip.dat
+  geosite: https://release.gh.atticux.me/MetaCubeX/meta-rules-dat/raw/refs/heads/release/geosite.dat
+  mmdb: https://release.gh.atticux.me/MetaCubeX/meta-rules-dat/raw/refs/heads/release/country.mmdb
 global-client-fingerprint: firefox
 ipv6: true
 # https://github.com/vernesong/OpenClash/issues/2614
@@ -128,7 +128,7 @@ proxy-providers:
     path: ./proxy_providers/vps-tcp.yaml
     proxy: DIRECT
     type: http
-    url: https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-tcp-xtls-vision.yml
+    url: https://raw.gh.atticux.me/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-tcp-xtls-vision.yml
   vless-ws-cdn-worker:
     interval: 86400
     override:
@@ -139,7 +139,7 @@ proxy-providers:
     path: ./proxy_providers/cdn.yaml
     proxy: DIRECT
     type: http
-    url: https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-cdn-worker.yml
+    url: https://raw.gh.atticux.me/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-cdn-worker.yml
   vless-ws-tls-cdn:
     interval: 86400
     override:
@@ -150,7 +150,7 @@ proxy-providers:
     path: ./proxy_providers/vps-ws.yaml
     proxy: DIRECT
     type: http
-    url: https://raw.atticuszeller.club/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-tls-cdn.yml
+    url: https://raw.gh.atticux.me/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-tls-cdn.yml
 # https://github.com/Loyalsoldier/clash-rules
 # https://wiki.metacubex.one/config/rule-providers/
 rule-providers:
@@ -159,13 +159,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/direct.yaml
     type: http
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    url: https://raw.gh.atticux.me/Loyalsoldier/clash-rules/refs/heads/release/direct.txt
   proxy:
     behavior: domain
     interval: 86400
     path: ./ruleset/proxy.yaml
     type: http
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    url: https://raw.gh.atticux.me/Loyalsoldier/clash-rules/refs/heads/release/proxy.txt
 # https://wiki.metacubex.one/config/general/#geo
 # https://github.com/MetaCubeX/meta-rules-dat/tree/master
 # https://wiki.metacubex.one/config/rules/
