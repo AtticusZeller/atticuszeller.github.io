@@ -2,11 +2,11 @@
 # https://magic.atticuszeller.club/717f9e5c-9922-49a0-aa12-3fa17d63a7a8
 proxies:
   - client-fingerprint: random
-    name: CF随机节点 2
+    name: 🌩️San Francisco WS
     network: ws
     port: 443
     server: 104.16.239.143
-    servername: magic.atticuszeller.club
+    servername: worker.proxy.atticux.me
     skip-cert-verify: true
     tfo: false
     tls: true
@@ -14,80 +14,5 @@ proxies:
     uuid: 717f9e5c-9922-49a0-aa12-3fa17d63a7a8
     ws-opts:
       headers:
-        Host: magic.atticuszeller.club
-      path: /?ed=2560
-  - client-fingerprint: random
-    name: CF随机节点 5
-    network: ws
-    port: 443
-    server: 103.21.244.73
-    servername: magic.atticuszeller.club
-    skip-cert-verify: true
-    tfo: false
-    tls: true
-    type: vless
-    uuid: 717f9e5c-9922-49a0-aa12-3fa17d63a7a8
-    ws-opts:
-      headers:
-        Host: magic.atticuszeller.club
-      path: /?ed=2560
-  - client-fingerprint: random
-    name: CF随机节点 6
-    network: ws
-    port: 443
-    server: 104.16.255.241
-    servername: magic.atticuszeller.club
-    skip-cert-verify: true
-    tfo: false
-    tls: true
-    type: vless
-    uuid: 717f9e5c-9922-49a0-aa12-3fa17d63a7a8
-    ws-opts:
-      headers:
-        Host: magic.atticuszeller.club
-      path: /?ed=2560
-  - client-fingerprint: random
-    name: CF随机节点 7
-    network: ws
-    port: 443
-    server: 104.24.158.140
-    servername: magic.atticuszeller.club
-    skip-cert-verify: true
-    tfo: false
-    tls: true
-    type: vless
-    uuid: 717f9e5c-9922-49a0-aa12-3fa17d63a7a8
-    ws-opts:
-      headers:
-        Host: magic.atticuszeller.club
-      path: /?ed=2560
-  - client-fingerprint: random
-    name: CF随机节点 9
-    network: ws
-    port: 443
-    server: 172.64.49.86
-    servername: magic.atticuszeller.club
-    skip-cert-verify: true
-    tfo: false
-    tls: true
-    type: vless
-    uuid: 717f9e5c-9922-49a0-aa12-3fa17d63a7a8
-    ws-opts:
-      headers:
-        Host: magic.atticuszeller.club
-      path: /?ed=2560
-  - client-fingerprint: random
-    name: CF随机节点 10
-    network: ws
-    port: 443
-    server: 188.114.98.255
-    servername: magic.atticuszeller.club
-    skip-cert-verify: true
-    tfo: false
-    tls: true
-    type: vless
-    uuid: 717f9e5c-9922-49a0-aa12-3fa17d63a7a8
-    ws-opts:
-      headers:
-        Host: magic.atticuszeller.club
+        Host: worker.proxy.atticux.me
       path: /?ed=2560
