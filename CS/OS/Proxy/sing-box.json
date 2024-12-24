@@ -1,0 +1,378 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "dns": {
+        "servers": [
+            {
+                "tag": "dns_resolver",
+                "address": "223.5.5.5",
+                "detour": "direct"
+            },
+            {
+                "tag": "dns_proxy",
+                "address": "https://dns.cloudflare.com/dns-query",
+                "address_resolver": "dns_resolver",
+                "detour": "proxy"
+            },
+            {
+                "tag": "dns_direct",
+                "address": "https://doh.pub/dns-query",
+                "address_resolver": "dns_resolver",
+                "detour": "direct"
+            }
+        ],
+        "rules": [
+            {
+                "outbound": "any",
+                "server": "dns_direct"
+            },
+            {
+                "rule_set": "geosite-geolocation-!cn",
+                "server": "dns_proxy"
+            },
+            {
+                "rule_set": "geosite-cn",
+                "server": "dns_direct"
+            }
+        ],
+        "final": "dns_proxy",
+        "reverse_mapping": true,
+        "strategy": "prefer_ipv4"
+    },
+    "ntp": {
+        "enabled": true,
+        "interval": "30m0s",
+        "server": "time.apple.com",
+        "server_port": 123
+    },
+    "inbounds": [
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "mtu": 1492,
+            "address": [
+                "172.16.0.1/30",
+                "fd00::1/126"
+            ],
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "system",
+            "platform": {
+                "http_proxy": {
+                    "enabled": true,
+                    "server": "127.0.0.1",
+                    "server_port": 30327,
+                    "bypass_domain": [],
+                    "match_domain": []
+                }
+            }
+        },
+        {
+            "type": "mixed",
+            "tag": "mixed-in",
+            "listen": "127.0.0.1",
+            "listen_port": 30327
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "selector",
+            "tag": "proxy",
+            "outbounds": [
+                "🔥San Francisco TCP",
+                "🌟San Francisco WS",
+                "🌩️San Francisco WS",
+                "direct"
+            ]
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "vless",
+            "tag": "🔥San Francisco TCP",
+            "tcp_fast_open": true,
+            "tcp_multi_path": true,
+            "udp_fragment": true,
+            "server": "atticuszeller.club",
+            "server_port": 26748,
+            "uuid": "0a0502aa-68ad-4d9e-8954-dc8bb83c7b2d",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "server_name": "atticuszeller.club",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "D8GNLa25JcujRhcveBvDvBddxkSq3JgOwlqedcavJx8",
+                    "short_id": "37650674"
+                }
+            },
+            "packet_encoding": "xudp"
+        },
+        {
+            "type": "vless",
+            "tag": "🌟San Francisco WS",
+            "tcp_fast_open": true,
+            "tcp_multi_path": true,
+            "server": "atticuszeller.club",
+            "server_port": 2053,
+            "uuid": "7fb9ba03-e3b6-4d55-b797-4c4f7c71a968",
+            "transport": {
+                "type": "ws",
+                "path": "/ws2adsfasgd",
+                "headers": {
+                    "Host": "atticuszeller.club"
+                }
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "atticuszeller.club",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                }
+            }
+        },
+        {
+            "type": "vless",
+            "tag": "🌩️San Francisco WS",
+            "server": "104.16.239.143",
+            "server_port": 443,
+            "uuid": "717f9e5c-9922-49a0-aa12-3fa17d63a7a8",
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2560",
+                "headers": {
+                    "Host": "proxy.woker.atticux.me"
+                }
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "proxy.woker.atticux.me",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                }
+            }
+        }
+    ],
+    "route": {
+        "final": "proxy",
+        "auto_detect_interface": true,
+        "override_android_vpn": true,
+        "rules": [
+            {
+                "inbound": "tun-in",
+                "action": "sniff"
+            },
+            {
+                "protocol": "dns",
+                "action": "hijack-dns"
+            },
+            {
+                "ip_is_private": true,
+                "outbound": "direct"
+            },
+            {
+                "rule_set": [
+                    "geosite-github",
+                    "geosite-python",
+                    "geosite-ubuntu",
+                    "geosite-cloudflare",
+                    "geosite-onedrive",
+                    "geosite-microsoft",
+                    "geosite-youtube",
+                    "geosite-spotify",
+                    "geosite-google",
+                    "geosite-reddit",
+                    "geosite-protonmail",
+                    "geosite-openai",
+                    "geosite-apple",
+                    "geosite-category-dev",
+                    "geosite-category-scholar-!cn",
+                    "geosite-geolocation-!cn",
+                    "geosite-telegram"
+                ],
+                "outbound": "proxy"
+            },
+            {
+                "domain_suffix": "obsidian.md",
+                "outbound": "proxy"
+            },
+            {
+                "domain_suffix": [
+                    ".cn",
+                    "metacubexd.pages.dev",
+                    "atticuszeller.club",
+                    "atticux.me"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "rule_set": [
+                    "geoip-cn",
+                    "geosite-cn"
+                ],
+                "outbound": "direct"
+            }
+        ],
+        "rule_set": [
+            {
+                "type": "remote",
+                "tag": "geosite-geolocation-!cn",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-python",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-python.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-ubuntu",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-ubuntu.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-cloudflare",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-cloudflare.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-onedrive",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-onedrive.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-reddit",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-reddit.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-protonmail",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-protonmail.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-category-dev",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-category-dev.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-category-scholar-!cn",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-category-scholar-!cn.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-github",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-github.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-microsoft",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-microsoft.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-youtube",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-spotify",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-spotify.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-google",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-google.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-apple",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-apple.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-openai",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-telegram",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-telegram.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geoip-cn",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-cn",
+                "format": "binary",
+                "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+                "download_detour": "direct"
+            }
+        ]
+    },
+    "experimental": {
+        "cache_file": {
+            "enabled": true,
+            "path": "cache.db",
+            "store_rdrc": true
+        },
+        "clash_api": {
+            "external_controller": "127.0.0.1:9090",
+            "access_control_allow_origin": [
+                "http://127.0.0.1",
+                "https://metacubexd.pages.dev"
+            ],
+            "access_control_allow_private_network": true,
+            "default_mode": "rule"
+        }
+    }
+}

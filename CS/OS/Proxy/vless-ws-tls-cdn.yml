@@ -2,6 +2,22 @@
 proxies:
   - alpn:
       - h2
+    flow: xtls-rprx-vision
+    name: 👨‍💻 test node
+    network: ws
+    port: 2053
+    server: proxy.atticux.me
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: false
+    uuid: 7fb9ba03-e3b6-4d55-b797-4c4f7c71a968
+    ws-opts:
+      headers:
+        host: proxy.atticux.me
+      path: /ws
+  - alpn:
+      - h2
     name: 🌟San Francisco WS 2
     network: ws
     port: 2053

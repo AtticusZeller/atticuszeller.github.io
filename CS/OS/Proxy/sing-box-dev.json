@@ -97,21 +97,21 @@
       "tcp_fast_open": true,
       "tcp_multi_path": true,
       "udp_fragment": true,
-      "server": "atticuszeller.club",
-      "server_port": 26748,
-      "uuid": "0a0502aa-68ad-4d9e-8954-dc8bb83c7b2d",
+      "server": "proxy.atticux.me",
+      "server_port": 30327,
+      "uuid": "0d2e4803-89e3-42e6-ad63-1b6d5aa5721a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "atticuszeller.club",
+        "server_name": "proxy.atticux.me",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "D8GNLa25JcujRhcveBvDvBddxkSq3JgOwlqedcavJx8",
-          "short_id": "37650674"
+          "public_key": "fJ3b58jpeT5OQm7aplg3TGAXYUsgpYNLJyoNxih_nxE",
+          "short_id": "71a93f"
         }
       },
       "packet_encoding": "xudp"
