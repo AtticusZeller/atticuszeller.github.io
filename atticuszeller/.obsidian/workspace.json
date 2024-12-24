@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS/OS/Ubuntu/System.md",
+                "file": "CS/OS/Proxy/Steps.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "System"
+              "title": "Steps"
             }
           }
         ]
@@ -203,9 +203,10 @@
   },
   "active": "d6ec06568b6ce63e",
   "lastOpenFiles": [
+    "CS/OS/Proxy/sing-box.json",
+    "CS/OS/Ubuntu/System.md",
     "CS/VCS/git.md",
     "CS/VCS/github/SSH_keypair_setup_for_GitHub.md",
-    "CS/OS/Ubuntu/System.md",
     "CS/OS/Ubuntu/Terminal.md",
     "CS/OS/Proxy/clash-meta-dev.yml",
     "CS/OS/Ubuntu/Package.md",
@@ -239,7 +240,6 @@
     "Learning/Computer Vison/Image.md",
     "CS/OS/Ubuntu/sync.md",
     "Features/footntoes.md",
-    "Features/Draw.md",
     "assets/Pasted image 20241117134255.png",
     "assets/Pasted image 20241117133910.png",
     "assets/Wallpapaer/wallpaper_4.jpg",
