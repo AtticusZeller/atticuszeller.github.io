@@ -85,7 +85,8 @@
         "🌟San Francisco WS",
         "🌩️San Francisco WS",
         "direct"
-      ]
+      ],
+      "default": "🔥San Francisco TCP"
     },
     {
       "type": "direct",
