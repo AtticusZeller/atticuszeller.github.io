@@ -230,7 +230,7 @@ tun:
   auto-redirect: true
   auto-route: true
   device: Meta
-  mtu: 1492,
+  mtu: 1492
   dns-hijack:
     - any:53
     # DoT and DoH
