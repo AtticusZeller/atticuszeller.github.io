@@ -151,12 +151,12 @@
         "type": "ws",
         "path": "/?ed=2560",
         "headers": {
-          "Host": "proxy.woker.atticux.me"
+          "Host": "worker.proxy.atticux.me"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "proxy.woker.atticux.me",
+        "server_name": "worker.proxy.atticux.me",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
