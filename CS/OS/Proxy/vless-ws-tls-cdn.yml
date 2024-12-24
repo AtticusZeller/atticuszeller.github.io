@@ -3,7 +3,7 @@ proxies:
   - alpn:
       - h2
     flow: xtls-rprx-vision
-    name: 👨‍💻 test node
+    name: 👨‍💻 test node ws
     network: ws
     port: 2053
     server: proxy.atticux.me
@@ -11,7 +11,7 @@ proxies:
     tls: true
     type: vless
     udp: false
-    uuid: 7fb9ba03-e3b6-4d55-b797-4c4f7c71a968
+    uuid: 6a5f528d-1641-406f-95b8-ee9c574d79b3
     ws-opts:
       headers:
         host: proxy.atticux.me

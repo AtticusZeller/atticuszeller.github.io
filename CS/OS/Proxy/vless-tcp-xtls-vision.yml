@@ -3,7 +3,7 @@ proxies:
   - alpn:
       - h2
     flow: xtls-rprx-vision
-    name: 👨‍💻 test node
+    name: 👨‍💻 test node tcp
     network: tcp
     port: 30327
     reality-opts:
