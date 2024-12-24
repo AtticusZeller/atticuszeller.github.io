@@ -204,7 +204,10 @@
         "outbound": "proxy"
       },
       {
-        "domain_suffix": "obsidian.md",
+        "domain_suffix": [
+          "obsidian.md",
+          "zotero.org"
+        ],
         "outbound": "proxy"
       },
       {

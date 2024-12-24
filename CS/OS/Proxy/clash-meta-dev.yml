@@ -198,6 +198,7 @@ rules:
   - GEOSITE,google,🔰 Node
   - GEOSITE,reddit,🔰 Node
   - DOMAIN-SUFFIX,obsidian.md,🔰 Node
+  - DOMAIN-SUFFIX,zotero.org,🔰 Node
   - GEOSITE,protonmail,🔰 Node
   - GEOSITE,openai,🔰 Node
   - GEOIP,telegram,🔰 Node,no-resolve
@@ -229,6 +230,7 @@ tun:
   auto-redirect: true
   auto-route: true
   device: Meta
+  mtu: 1492,
   dns-hijack:
     - any:53
     # DoT and DoH
