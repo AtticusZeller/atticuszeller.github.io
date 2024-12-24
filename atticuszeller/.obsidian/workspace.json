@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS/VCS/git.md",
+                "file": "CS/OS/Ubuntu/System.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git"
+              "title": "System"
             }
           }
         ]
@@ -203,8 +203,8 @@
   },
   "active": "d6ec06568b6ce63e",
   "lastOpenFiles": [
-    "CS/VCS/github/SSH_keypair_setup_for_GitHub.md",
     "CS/VCS/git.md",
+    "CS/VCS/github/SSH_keypair_setup_for_GitHub.md",
     "CS/OS/Ubuntu/System.md",
     "CS/OS/Ubuntu/Terminal.md",
     "CS/OS/Proxy/clash-meta-dev.yml",
