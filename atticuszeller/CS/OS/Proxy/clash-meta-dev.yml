@@ -79,7 +79,22 @@ proxies:
     tls: true
     type: vless
     udp: true
-    uuid: 0d2e4803-89e3-42e6-ad63-1b6d5aa5721a
+    uuid: 0d2e4803-89e3-42e6-ad63-1b6d5aa5721
+  - client-fingerprint: random
+    name: 🌩️San Francisco WS
+    network: ws
+    port: 443
+    server: 104.16.239.143
+    servername: worker.proxy.atticux.me
+    skip-cert-verify: true
+    tfo: false
+    tls: true
+    type: vless
+    uuid: 717f9e5c-9922-49a0-aa12-3fa17d63a7a8
+    ws-opts:
+      headers:
+        Host: worker.proxy.atticux.me
+      path: /?ed=2560
 
 proxy-groups:
   - name: 🔰 Node
