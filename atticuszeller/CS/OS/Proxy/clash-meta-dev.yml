@@ -9,11 +9,7 @@ dns:
     - '[2400:3200::1]'
     - '[2402:4e00::]'
   enable: true
-  enhanced-mode: fake-ip
-  fake-ip-filter:
-    - '*.lan'
-    - +.local
-  fake-ip-filter-mode: blacklist
+  enhanced-mode: redir-host
   ipv6: true
   listen: 0.0.0.0:1053
   # cloudflare DoT and DoH
@@ -243,3 +239,10 @@ tun:
   # fail if can not reach
   strict-route: true
 unified-delay: true
+
+ntp:
+  enable: true
+  write-to-system: true
+  server: time.apple.com
+  port: 123
+  interval: 30
