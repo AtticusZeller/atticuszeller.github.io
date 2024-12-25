@@ -64,42 +64,39 @@ profile:
   store-selected: true
 proxy-groups:
   - name: 🔰 Node
-    proxies:
-      - ♻️ Auto-tcp
-      - ♻️ Auto-ws
-      - ☁️ Cloudflare
-      - 🎯 Direct
     type: select
-  - include-all-proxies: true
-    interval: 300
-    lazy: true
-    name: ♻️ Auto-tcp
-    type: url-test
-    url: https://cp.cloudflare.com
+    include-all-proxies: true
     use:
       - vless-tcp-xtls-vision
-  - include-all-proxies: true
-    interval: 300
-    lazy: true
-    name: ♻️ Auto-ws
-    type: url-test
-    url: https://cp.cloudflare.com
-    use:
       - vless-ws-tls-cdn
-  - include-all-proxies: true
-    interval: 300
-    lazy: true
-    name: ☁️ Cloudflare
-    type: url-test
-    url: https://cp.cloudflare.com
-    use:
       - vless-ws-cdn-worker
+  # - include-all-proxies: true
+  #   interval: 300
+  #   lazy: true
+  #   name: ♻️ Auto-tcp
+  #   type: url-test
+  #   url: https://cp.cloudflare.com
+  #   use:
+  #     - vless-tcp-xtls-vision
+  # - include-all-proxies: true
+  #   interval: 300
+  #   lazy: true
+  #   name: ♻️ Auto-ws
+  #   type: url-test
+  #   url: https://cp.cloudflare.com
+  #   use:
+  #     - vless-ws-tls-cdn
+  # - include-all-proxies: true
+  #   interval: 300
+  #   lazy: true
+  #   name: ☁️ Cloudflare
+  #   type: url-test
+  #   url: https://cp.cloudflare.com
+  #   use:
+  #     - vless-ws-cdn-worker
   - name: 🎯 Direct
     proxies:
       - DIRECT
-      - ♻️ Auto-tcp
-      - ♻️ Auto-ws
-      - ☁️ Cloudflare
     type: select
   - name: 🐟 Remaining
     proxies:
