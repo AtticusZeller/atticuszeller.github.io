@@ -155,41 +155,7 @@ proxy-groups:
       - 🎯 Direct
       - 🔰 Node
     type: select
-# https://wiki.metacubex.one/config/proxy-providers/
-proxy-providers:
-  vless-tcp-xtls-vision:
-    interval: 86400
-    override:
-      mptcp: true
-      skip-cert-verify: true
-      tfo: true
-      udp: true
-    path: ./proxy_providers/vps-tcp.yaml
-    proxy: DIRECT
-    type: http
-    url: https://raw.gh.atticux.me/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-tcp-xtls-vision.yml
-  vless-ws-cdn-worker:
-    interval: 86400
-    override:
-      mptcp: true
-      skip-cert-verify: true
-      tfo: true
-      udp: false
-    path: ./proxy_providers/cdn.yaml
-    proxy: DIRECT
-    type: http
-    url: https://raw.gh.atticux.me/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-cdn-worker.yml
-  vless-ws-tls-cdn:
-    interval: 86400
-    override:
-      mptcp: true
-      skip-cert-verify: true
-      tfo: true
-      udp: true
-    path: ./proxy_providers/vps-ws.yaml
-    proxy: DIRECT
-    type: http
-    url: https://raw.gh.atticux.me/AtticusZeller/atticuszeller.github.io/refs/heads/main/atticuszeller/CS/OS/Proxy/vless-ws-tls-cdn.yml
+# 
 # https://github.com/Loyalsoldier/clash-rules
 # https://wiki.metacubex.one/config/rule-providers/
 rule-providers:
