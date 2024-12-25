@@ -80,6 +80,22 @@ proxies:
     type: vless
     udp: true
     uuid: 0d2e4803-89e3-42e6-ad63-1b6d5aa5721
+  - alpn:
+      - h2
+    flow: xtls-rprx-vision
+    name: 🌟San Francisco WS
+    network: ws
+    port: 2053
+    server: proxy.atticux.me
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: false
+    uuid: 6a5f528d-1641-406f-95b8-ee9c574d79b3
+    ws-opts:
+      headers:
+        host: proxy.atticux.me
+      path: /ws
   - client-fingerprint: random
     name: 🌩️San Francisco WS
     network: ws
