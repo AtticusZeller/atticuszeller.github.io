@@ -62,14 +62,29 @@ mode: rule
 profile:
   store-fake-ip: true
   store-selected: true
+
+
+proxies:
+  - alpn:
+      - h2
+    flow: xtls-rprx-vision
+    name: 🔥San Francisco TCP
+    network: tcp
+    port: 30327
+    reality-opts:
+      public-key: fJ3b58jpeT5OQm7aplg3TGAXYUsgpYNLJyoNxih_nxE
+      short-id: 71a93f
+    server: proxy.atticux.me
+    skip-cert-verify: true
+    tls: true
+    type: vless
+    udp: true
+    uuid: 0d2e4803-89e3-42e6-ad63-1b6d5aa5721a
+
 proxy-groups:
   - name: 🔰 Node
     type: select
     include-all-proxies: true
-    use:
-      - vless-tcp-xtls-vision
-      - vless-ws-tls-cdn
-      - vless-ws-cdn-worker
   # - include-all-proxies: true
   #   interval: 300
   #   lazy: true
