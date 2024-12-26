@@ -74,7 +74,7 @@ proxies:
     reality-opts:
       public-key: fJ3b58jpeT5OQm7aplg3TGAXYUsgpYNLJyoNxih_nxE
       short-id: 71a93f
-    server: proxy.atticux.me
+    server: magic.atticux.me
     skip-cert-verify: true
     tls: true
     type: vless
@@ -86,7 +86,7 @@ proxies:
     name: 🌟San Francisco WS
     network: ws
     port: 2053
-    server: proxy.atticux.me
+    server: magic.atticux.me
     skip-cert-verify: true
     tls: true
     type: vless
@@ -94,7 +94,7 @@ proxies:
     uuid: 6a5f528d-1641-406f-95b8-ee9c574d79b3
     ws-opts:
       headers:
-        host: proxy.atticux.me
+        host: magic.atticux.me
       path: /ws
   - client-fingerprint: random
     name: 🌩️San Francisco WS
