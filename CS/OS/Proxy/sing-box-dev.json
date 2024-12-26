@@ -85,10 +85,10 @@
       "type": "selector",
       "tag": "proxy",
       "outbounds": [
-        "🔥San Francisco TCP",
-        "🌟San Francisco WS",
+        "direct",
         "🌩️San Francisco WS",
-        "direct"
+        "🌟San Francisco WS",
+        "🔥San Francisco TCP"
       ],
       "default": "🔥San Francisco TCP"
     },
