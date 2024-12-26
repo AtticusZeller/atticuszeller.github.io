@@ -89,7 +89,7 @@ proxies:
     skip-cert-verify: true
     tls: true
     type: vless
-    udp: false
+    udp: true
     tfo: true
     uuid: 6a5f528d-1641-406f-95b8-ee9c574d79b3
     ws-opts:
@@ -116,6 +116,9 @@ proxy-groups:
   - name: 🔰 Node
     type: select
     include-all-proxies: true
+    url: https://cp.cloudflare.com
+    interval: 300
+    timeout: 5000
   - name: 🎯 Direct
     proxies:
       - DIRECT
