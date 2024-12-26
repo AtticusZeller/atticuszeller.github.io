@@ -68,7 +68,6 @@ proxies:
   - name: 🔥San Francisco TCP
     type: vless
     server: magic.atticux.me
-    SNI: magic.atticux.me
     port: 30327
     uuid: 0d2e4803-89e3-42e6-ad63-1b6d5aa5721
     network: tcp
