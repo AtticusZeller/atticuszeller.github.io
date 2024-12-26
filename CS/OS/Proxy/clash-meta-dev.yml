@@ -75,7 +75,8 @@ proxies:
     alpn:
       - h2
     flow: xtls-rprx-vision
-    skip-cert-verify: true
+    skip-cert-verify: false
+    tfo: true
     udp: true
 
   - alpn:
