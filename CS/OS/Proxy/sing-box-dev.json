@@ -99,47 +99,45 @@
     {
       "type": "vless",
       "tag": "🔥San Francisco TCP",
-      "tcp_fast_open": true,
-      "tcp_multi_path": true,
-      "udp_fragment": true,
-      "server": "proxy.atticux.me",
+      "server": "magic.atticux.me",
       "server_port": 30327,
-      "uuid": "0d2e4803-89e3-42e6-ad63-1b6d5aa5721a",
+      "uuid": "e5a23945-bdb4-4409-aa84-f764f7d99fff",
       "flow": "xtls-rprx-vision",
+      "tcp_fast_open": true,
+      "udp_fragment": true,
+      "tcp_multi_path": true,
       "tls": {
         "enabled": true,
-        "server_name": "proxy.atticux.me",
+        "server_name": "magic.atticux.me",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "fJ3b58jpeT5OQm7aplg3TGAXYUsgpYNLJyoNxih_nxE",
-          "short_id": "71a93f"
+          "public_key": "sdSvvtiNTo955rd6nQQQDIaLqydrQoyPvQBuCPXLG20",
+          "short_id": "60e81fdbec0d"
         }
-      },
-      "packet_encoding": "xudp"
+      }
     },
     {
       "type": "vless",
       "tag": "🌟San Francisco WS",
-      "tcp_fast_open": true,
-      "tcp_multi_path": true,
-      "udp_fragment": true,
-      "server": "proxy.atticux.me",
+      "server": "magic.atticux.me",
       "server_port": 2053,
       "uuid": "6a5f528d-1641-406f-95b8-ee9c574d79b3",
+      "tcp_fast_open": true,
+      "tcp_multi_path": true,
       "transport": {
         "type": "ws",
         "path": "/ws",
         "headers": {
-          "Host": "proxy.atticux.me"
+          "Host": "magic.atticux.me"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "proxy.atticux.me",
+        "server_name": "magic.atticux.me",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"

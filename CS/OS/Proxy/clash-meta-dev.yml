@@ -91,6 +91,7 @@ proxies:
     tls: true
     type: vless
     udp: false
+    tfo: true
     uuid: 6a5f528d-1641-406f-95b8-ee9c574d79b3
     ws-opts:
       headers:
