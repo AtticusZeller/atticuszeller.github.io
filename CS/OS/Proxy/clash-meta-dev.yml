@@ -69,13 +69,11 @@ proxies:
     type: vless
     server: magic.atticux.me
     port: 30327
-    uuid: 0d2e4803-89e3-42e6-ad63-1b6d5aa5721
+    uuid: e5a23945-bdb4-4409-aa84-f764f7d99fff
     network: tcp
     tls: true
-    alpn:
-      - h2
     flow: xtls-rprx-vision
-    skip-cert-verify: false
+    skip-cert-verify: true
     tfo: true
     udp: true
 
