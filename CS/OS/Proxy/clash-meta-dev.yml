@@ -74,6 +74,9 @@ proxies:
     tls: true
     flow: xtls-rprx-vision
     skip-cert-verify: true
+    reality-opts:
+      public-key: sdSvvtiNTo955rd6nQQQDIaLqydrQoyPvQBuCPXLG20
+      short-id: 60e81fdbec0d
     tfo: true
     udp: true
 
