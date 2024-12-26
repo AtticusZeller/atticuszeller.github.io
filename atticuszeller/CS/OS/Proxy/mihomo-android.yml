@@ -65,36 +65,37 @@ profile:
 
 
 proxies:
-  - alpn:
-      - h2
-    flow: xtls-rprx-vision
-    name: 🔥San Francisco TCP
-    network: tcp
-    port: 30327
-    reality-opts:
-      public-key: fJ3b58jpeT5OQm7aplg3TGAXYUsgpYNLJyoNxih_nxE
-      short-id: 71a93f
-    server: proxy.atticux.me
-    skip-cert-verify: true
-    tls: true
+  - name: 🔥San Francisco TCP
     type: vless
+    server: magic.atticux.me
+    port: 30327
+    uuid: e5a23945-bdb4-4409-aa84-f764f7d99fff
+    network: tcp
+    tls: true
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    reality-opts:
+      public-key: sdSvvtiNTo955rd6nQQQDIaLqydrQoyPvQBuCPXLG20
+      short-id: 60e81fdbec0d
+    tfo: true
     udp: true
-    uuid: 0d2e4803-89e3-42e6-ad63-1b6d5aa5721
+
   - alpn:
       - h2
     flow: xtls-rprx-vision
     name: 🌟San Francisco WS
     network: ws
     port: 2053
-    server: proxy.atticux.me
+    server: magic.atticux.me
     skip-cert-verify: true
     tls: true
     type: vless
+    tfo: true
     udp: false
     uuid: 6a5f528d-1641-406f-95b8-ee9c574d79b3
     ws-opts:
       headers:
-        host: proxy.atticux.me
+        host: magic.atticux.me
       path: /ws
   - client-fingerprint: random
     name: 🌩️San Francisco WS
@@ -116,30 +117,6 @@ proxy-groups:
   - name: 🔰 Node
     type: select
     include-all-proxies: true
-  # - include-all-proxies: true
-  #   interval: 300
-  #   lazy: true
-  #   name: ♻️ Auto-tcp
-  #   type: url-test
-  #   url: https://cp.cloudflare.com
-  #   use:
-  #     - vless-tcp-xtls-vision
-  # - include-all-proxies: true
-  #   interval: 300
-  #   lazy: true
-  #   name: ♻️ Auto-ws
-  #   type: url-test
-  #   url: https://cp.cloudflare.com
-  #   use:
-  #     - vless-ws-tls-cdn
-  # - include-all-proxies: true
-  #   interval: 300
-  #   lazy: true
-  #   name: ☁️ Cloudflare
-  #   type: url-test
-  #   url: https://cp.cloudflare.com
-  #   use:
-  #     - vless-ws-cdn-worker
   - name: 🎯 Direct
     proxies:
       - DIRECT
@@ -155,7 +132,7 @@ proxy-groups:
       - 🎯 Direct
       - 🔰 Node
     type: select
-# 
+
 # https://github.com/Loyalsoldier/clash-rules
 # https://wiki.metacubex.one/config/rule-providers/
 rule-providers:
