@@ -65,21 +65,23 @@ profile:
 
 
 proxies:
-  - alpn:
-      - h2
-    flow: xtls-rprx-vision
-    name: 🔥San Francisco TCP
-    network: tcp
+  proxies:
+  - name: 🔥San Francisco TCP
+    type: vless
+    server: magic.atticux.me
     port: 30327
+    uuid: 0d2e4803-89e3-42e6-ad63-1b6d5aa5721
+    network: tcp
+    tls: true
     reality-opts:
       public-key: fJ3b58jpeT5OQm7aplg3TGAXYUsgpYNLJyoNxih_nxE
       short-id: 71a93f
-    server: magic.atticux.me
+    alpn:
+      - h2
+    flow: xtls-rprx-vision
     skip-cert-verify: true
-    tls: true
-    type: vless
     udp: true
-    uuid: 0d2e4803-89e3-42e6-ad63-1b6d5aa5721
+
   - alpn:
       - h2
     flow: xtls-rprx-vision
@@ -116,30 +118,6 @@ proxy-groups:
   - name: 🔰 Node
     type: select
     include-all-proxies: true
-  # - include-all-proxies: true
-  #   interval: 300
-  #   lazy: true
-  #   name: ♻️ Auto-tcp
-  #   type: url-test
-  #   url: https://cp.cloudflare.com
-  #   use:
-  #     - vless-tcp-xtls-vision
-  # - include-all-proxies: true
-  #   interval: 300
-  #   lazy: true
-  #   name: ♻️ Auto-ws
-  #   type: url-test
-  #   url: https://cp.cloudflare.com
-  #   use:
-  #     - vless-ws-tls-cdn
-  # - include-all-proxies: true
-  #   interval: 300
-  #   lazy: true
-  #   name: ☁️ Cloudflare
-  #   type: url-test
-  #   url: https://cp.cloudflare.com
-  #   use:
-  #     - vless-ws-cdn-worker
   - name: 🎯 Direct
     proxies:
       - DIRECT
