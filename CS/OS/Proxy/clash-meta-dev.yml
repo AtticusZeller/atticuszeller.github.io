@@ -69,14 +69,10 @@ proxies:
     type: vless
     server: magic.atticux.me
     SNI: magic.atticux.me
-    servername: magic.atticux.me
     port: 30327
     uuid: 0d2e4803-89e3-42e6-ad63-1b6d5aa5721
     network: tcp
     tls: true
-    reality-opts:
-      public-key: fJ3b58jpeT5OQm7aplg3TGAXYUsgpYNLJyoNxih_nxE
-      short-id: 71a93f
     alpn:
       - h2
     flow: xtls-rprx-vision
