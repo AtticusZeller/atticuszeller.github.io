@@ -94,3 +94,26 @@ foreach ($file in $pythonFiles) {
 Write-Host "All Python files have been combined into $combinedFilePath"
 
 ```
+
+
+## Oh My Posh 
+
+```powershell
+winget install JanDeDobbeleer.OhMyPosh -s winget
+code  $PROFILE
+```
+
+```txt
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\powerlevel10k_lean.omp.json" | Invoke-Expression
+
+Import-Module PSReadLine
+
+Set-PSReadLineOption -PredictionSource History
+
+Set-PSReadLineOption -PredictionViewStyle ListView
+
+Import-Module Terminal-Icons
+```
+
+
+
