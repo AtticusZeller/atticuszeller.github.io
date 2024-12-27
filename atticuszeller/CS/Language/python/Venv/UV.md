@@ -1,6 +1,4 @@
-# UV
-
-## [Installation](https://docs.astral.sh/uv/getting-started/installation/)
+# [Installation](https://docs.astral.sh/uv/getting-started/installation/)
 
 - download
 
@@ -47,7 +45,7 @@ rm -r "$(uv tool dir)"
 rm ~/.cargo/bin/uv ~/.cargo/bin/uvx
 ```
 
-## [python](https://docs.astral.sh/uv/concepts/python-versions/#installing-a-python-version)
+# [python](https://docs.astral.sh/uv/concepts/python-versions/#installing-a-python-version)
 
 - `uv` will [automatically fetch Python versions](https://docs.astral.sh/uv/guides/install-python/#automatic-python-downloads) as needed — you don't need to install Python to get started.
 - also it can manage your python envs
@@ -65,7 +63,7 @@ source .venv/bin/activate
 uv python find
 ```
 
-## Tool
+# Tool
 
 package installed as tool would be manage in a special isolated environment
 
@@ -75,11 +73,9 @@ package installed as tool would be manage in a special isolated environment
 uvx ruff check
 ```
 
-## Dependencies
+# Dependencies
 
-### Scripts
-
-[Running scripts | uv](https://docs.astral.sh/uv/guides/scripts/)
+## [Scripts](https://docs.astral.sh/uv/guides/scripts)
 
 we can add dependencies that are automatically managed by `uv` on calling:
 
@@ -89,13 +85,11 @@ uv add --script <your_script.py> "<package_a>" "<package_b>"
 
 then we would find some the declaration of dependencies in your `your_script.py`
 
-### Project
-
-[Projects | uv](https://docs.astral.sh/uv/concepts/projects/)
+## [Project](https://docs.astral.sh/uv/concepts/projects)
 
 we use `pyproject.toml` to manage python projects' dependencies.
 
-#### Add
+### Add
 
 Package name and version would be added into `pyproject.toml` while calling:
 
@@ -130,7 +124,7 @@ uv add pytest --dev
 uv add --group docs mkdocs
 ```
 
-#### Sync
+### Sync
 
 sync all dependencies from `pyproject.toml`
 
@@ -140,7 +134,7 @@ uv sync --all-extras --all-groups
 
 `sync` ->`dependencies`, `--all-extras` -> `--optional`, `--all-groups` -> `dependency-groups`
 
-#### Update
+### Update
 
 update all
 
