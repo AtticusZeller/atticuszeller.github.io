@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS/Language/python/Venv/UV.md",
+                "file": "CS/OS/Windows/Powershell.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "UV"
+              "title": "Powershell"
             }
           }
         ]
@@ -212,6 +212,7 @@
   },
   "active": "d6ec06568b6ce63e",
   "lastOpenFiles": [
+    "CS/Language/python/Venv/UV.md",
     "Untitled.md",
     "CS/OS/Windows/Powershell.md",
     "CS/OS/Windows/CMD.md",
@@ -225,7 +226,6 @@
     "CS/OS/Proxy/sing-box.json",
     "CS/VCS/github/SSH_keypair_setup_for_GitHub.md",
     "CS/OS/Proxy/clash-meta-dev.yml",
-    "CS/Language/python/Venv/UV.md",
     "CS/Language/python/Ruff.md",
     "CS/Language/js_ts/npm_yarn.md",
     "CS/Language/js_ts/vue.js/nuxt.js.md",
