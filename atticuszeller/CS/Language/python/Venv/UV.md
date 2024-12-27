@@ -95,16 +95,6 @@ then we would find some the declaration of dependencies in your `your_script.py`
 
 we use `pyproject.toml` to manage python projects' dependencies.
 
-#### Sync
-
-sync all dependencies from `pyproject.toml`
-
-```
-uv sync --all-extras --dev
-```
-
-`sync` ->`dependencies`, `--all-extras` -> `--optional`, `--dev` -> `dev-dependencies`
-
 #### Add
 
 Package name and version would be added into `pyproject.toml` while calling:
@@ -128,16 +118,27 @@ uv add requests --git https://github.com/psf/requests
 There ate _three_ sort of groups in `pyproject.toml`
 
 1. we add package to `dependencies` of `[project]` normally
-2. `dev-dependencies` of `[tool.uv]` contains developments needed
+2. `dependency-groups` of `[tool.uv]` contains developments needed
 3. `optional_group` of `[project.optional-dependencies]` contains special group needed
 
 ```bash
+# same to uv add --group dev pytest
 uv add pytest --dev
 ```
 
 ```bash
-uv add mkdocs-material pymdown-extensions mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-obsidian-bridge mkdocs-publisher --optional mkdocs
+uv add --group docs mkdocs
 ```
+
+#### Sync
+
+sync all dependencies from `pyproject.toml`
+
+```
+uv sync --all-extras --all-groups
+```
+
+`sync` ->`dependencies`, `--all-extras` -> `--optional`, `--all-groups` -> `dependency-groups`
 
 #### Update
 

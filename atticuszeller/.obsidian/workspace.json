@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS/OS/Windows/Powershell.md",
+                "file": "CS/Language/python/Venv/UV.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,23 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Powershell"
-            }
-          },
-          {
-            "id": "ad4661869e073d09",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.0"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.8.0"
+              "title": "UV"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -223,8 +210,9 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "ad4661869e073d09",
+  "active": "d6ec06568b6ce63e",
   "lastOpenFiles": [
+    "Untitled.md",
     "CS/OS/Windows/Powershell.md",
     "CS/OS/Windows/CMD.md",
     "CS/OS/Ubuntu/Terminal.md",
@@ -261,7 +249,6 @@
     "assets/Pasted image 20241126135048.png",
     "Learning/Computer Vison/3D.md",
     "Learning/Computer Vison/Image.md",
-    "CS/OS/Ubuntu/sync.md",
     "assets/Pasted image 20241117134255.png",
     "assets/Pasted image 20241117133910.png",
     "assets/Wallpapaer/wallpaper_4.jpg",
