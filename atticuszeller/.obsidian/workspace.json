@@ -15,14 +15,36 @@
               "state": {
                 "file": "CS/OS/Windows/Powershell.md",
                 "mode": "source",
+                "source": false,
                 "backlinks": true,
-                "source": false
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
               "title": "Powershell"
             }
+          },
+          {
+            "id": "ad4661869e073d09",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.0"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.8.0"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -201,7 +223,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "d6ec06568b6ce63e",
+  "active": "ad4661869e073d09",
   "lastOpenFiles": [
     "CS/OS/Windows/Powershell.md",
     "CS/OS/Windows/CMD.md",

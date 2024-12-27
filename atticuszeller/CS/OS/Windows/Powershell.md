@@ -1,8 +1,34 @@
-# Powershell
+# [Oh My Posh](https://ohmyposh.dev/docs/installation/windows)
+
+```powershell
+winget install JanDeDobbeleer.OhMyPosh -s winget
+$env:Path += ";C:\Users\user\AppData\Local\Programs\oh-my-posh\bin"
+oh-my-posh font install
+code  $PROFILE
+```
+
+```txt
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\peru.omp.json" | Invoke-Expression
+Import-Module PSReadLine
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
+Import-Module Terminal-Icons
+```
+
+set `powershell` as default instead of `windows powershell`
+set front in config-> default -> appearance
+
+[GitHub - marticliment/UniGetUI: UniGetUI: The Graphical Interface for your package managers. Could be terribly described as a package manager manager to manage your package managers](https://github.com/marticliment/UniGetUI)
+
+```Powershell
+winget install --exact --id MartiCliment.UniGetUI --source winget
+```
+
+# Tips
 
 ## __kill__ The Process by PID
 
-```ps
+```powershell
 taskkill /PID <PID> /F
 ```
 
@@ -10,7 +36,7 @@ taskkill /PID <PID> /F
 
 _the last line of output is PID_
 
-```ps
+```powershell
 netstat -ano | findstr :<port>
 ```
 
@@ -18,14 +44,14 @@ netstat -ano | findstr :<port>
 
 [Sysinternals Suite - Microsoft Apps](https://www.microsoft.com/store/productId/9P7KNL5RWT25?ocid=pdpshare)
 
-```ps
+```powershell
 handle.exe <file path>
 ```
 
 ## Get Command .exe Path
 
-```ps
-(Get-Command poetry).Source
+```PowerShell
+where.exe poetry
 ```
 
 `->C:\Users\18317\AppData\Roaming\Python\Scripts\poetry.exe`
@@ -58,62 +84,3 @@ if ($currentPath -notcontains $newPath) {
 [Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
 
 ```
-
-## Combine Project Files such as .py
-
-```powershell
-# 设置需要递归搜索的目录路径
-$directoryPath = "C:\path\to\your\python\files"
-
-# 指定合并后的文件名和路径
-$combinedFileName = "combined.py"
-$combinedFilePath = Join-Path -Path $directoryPath -ChildPath $combinedFileName
-
-# 创建或清空之前的合并文件
-"" | Out-File -FilePath $combinedFilePath
-
-# 递归地获取所有Python文件
-$pythonFiles = Get-ChildItem -Path $directoryPath -Filter *.py -Recurse
-
-# 循环遍历每个文件并追加到combined.py
-foreach ($file in $pythonFiles) {
-    # 确保不处理目标文件本身
-    if ($file.FullName -ne $combinedFilePath) {
-        # 为每个文件添加一个简单的注释行
-        ("# Contents of " + $file.FullName) | Out-File -FilePath $combinedFilePath -Append
-
-        # 追加文件内容到combined.py
-        Get-Content -Path $file.FullName | Out-File -FilePath $combinedFilePath -Append
-
-        # 添加换行以分隔不同的文件内容
-        "`n" | Out-File -FilePath $combinedFilePath -Append
-    }
-}
-
-# 输出结果提示
-Write-Host "All Python files have been combined into $combinedFilePath"
-
-```
-
-
-## Oh My Posh 
-
-```powershell
-winget install JanDeDobbeleer.OhMyPosh -s winget
-code  $PROFILE
-```
-
-```txt
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\powerlevel10k_lean.omp.json" | Invoke-Expression
-
-Import-Module PSReadLine
-
-Set-PSReadLineOption -PredictionSource History
-
-Set-PSReadLineOption -PredictionViewStyle ListView
-
-Import-Module Terminal-Icons
-```
-
-
-
