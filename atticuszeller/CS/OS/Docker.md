@@ -43,3 +43,9 @@ docker run hello-world
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
+
+### Check the Running Container
+
+```bash
+docker ps
+```

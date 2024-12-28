@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS/OS/Windows/Powershell.md",
+                "file": "CS/OS/Ubuntu/Terminal.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Powershell"
+              "title": "Terminal"
             }
           }
         ]
@@ -212,20 +212,17 @@
   },
   "active": "d6ec06568b6ce63e",
   "lastOpenFiles": [
-    "CS/Language/python/Venv/UV.md",
-    "Untitled.md",
-    "CS/OS/Windows/Powershell.md",
-    "CS/OS/Windows/CMD.md",
-    "CS/OS/Ubuntu/Terminal.md",
-    "CS/OS/GPU.md",
     "CS/OS/Docker.md",
     "CS/VCS/git.md",
+    "CS/OS/Proxy/sing-box-moble.json",
+    "CS/OS/Ubuntu/Terminal.md",
     "CS/OS/Ubuntu/System.md",
     "CS/OS/Ubuntu/Gnome.md",
     "CS/OS/Ubuntu/Package.md",
     "CS/OS/Proxy/sing-box.json",
     "CS/VCS/github/SSH_keypair_setup_for_GitHub.md",
     "CS/OS/Proxy/clash-meta-dev.yml",
+    "CS/Language/python/Venv/UV.md",
     "CS/Language/python/Ruff.md",
     "CS/Language/js_ts/npm_yarn.md",
     "CS/Language/js_ts/vue.js/nuxt.js.md",
@@ -239,8 +236,8 @@
     "CS/OS/Ubuntu/bugs.md",
     "CS/OS/Ubuntu/Appearance.md",
     "CS/OS/Proxy/clash-template.yml",
-    "CS/OS/Proxy/clash-meta-old.yaml",
     "CS/tools/IDE/JetBrains.md",
+    "CS/OS/GPU.md",
     "CS/OS/Ubuntu/configs.md",
     "CS/OS/Proxy/Steps.md",
     "Reference/Finding and managing research papers a survey of tools and products.md",
@@ -249,6 +246,8 @@
     "assets/Pasted image 20241126135048.png",
     "Learning/Computer Vison/3D.md",
     "Learning/Computer Vison/Image.md",
+    "CS/OS/Ubuntu/sync.md",
+    "Features/footntoes.md",
     "assets/Pasted image 20241117134255.png",
     "assets/Pasted image 20241117133910.png",
     "assets/Wallpapaer/wallpaper_4.jpg",
