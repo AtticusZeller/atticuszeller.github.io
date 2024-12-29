@@ -58,22 +58,7 @@
       ],
       "auto_route": true,
       "strict_route": true,
-      "stack": "system",
-      "platform": {
-        "http_proxy": {
-          "enabled": true,
-          "server": "127.0.0.1",
-          "server_port": 30327,
-          "bypass_domain": [],
-          "match_domain": []
-        }
-      }
-    },
-    {
-      "type": "mixed",
-      "tag": "mixed-in",
-      "listen": "127.0.0.1",
-      "listen_port": 30327
+      "stack": "system"
     }
   ],
   "outbounds": [
@@ -166,7 +151,6 @@
   "route": {
     "final": "proxy",
     "auto_detect_interface": true,
-    "override_android_vpn": true,
     "rules": [
       {
         "inbound": "tun-in",
