@@ -208,8 +208,6 @@ tcp-concurrent: true
 # https://wiki.metacubex.one/config/inbound/tun/
 tun:
   auto-detect-interface: true
-  # for linux
-  auto-redirect: true
   auto-route: true
   device: Meta
   mtu: 1492
