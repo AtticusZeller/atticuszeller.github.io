@@ -231,6 +231,6 @@ unified-delay: true
 ntp:
   enable: true
   write-to-system: true
-  server: time.apple.com
+  server: time.cloudflare.com
   port: 123
   interval: 30
