@@ -1,6 +1,6 @@
 {
   "log": {
-    "level": "info",
+    "level": "warning",
     "timestamp": true
   },
   "dns": {
@@ -58,17 +58,13 @@
       ],
       "auto_route": true,
       "strict_route": true,
-      "route_exclude_address_set": [
-        "geoip-cn"
-      ],
+      "route_exclude_address_set": "geoip-cn",
       "stack": "system",
       "platform": {
         "http_proxy": {
           "enabled": true,
           "server": "127.0.0.1",
-          "server_port": 30327,
-          "bypass_domain": [],
-          "match_domain": []
+          "server_port": 30327
         }
       }
     },
@@ -85,6 +81,7 @@
       "tag": "proxy",
       "outbounds": [
         "direct",
+        "hy2-out",
         "🌩️San Francisco WS",
         "🌟San Francisco WS",
         "🔥San Francisco TCP"
@@ -98,13 +95,13 @@
     {
       "type": "vless",
       "tag": "🔥San Francisco TCP",
+      "tcp_fast_open": true,
+      "tcp_multi_path": true,
+      "udp_fragment": true,
       "server": "magic.atticux.me",
       "server_port": 30327,
       "uuid": "e5a23945-bdb4-4409-aa84-f764f7d99fff",
       "flow": "xtls-rprx-vision",
-      "tcp_fast_open": true,
-      "udp_fragment": true,
-      "tcp_multi_path": true,
       "tls": {
         "enabled": true,
         "server_name": "magic.atticux.me",
@@ -122,24 +119,24 @@
     {
       "type": "vless",
       "tag": "🌟San Francisco WS",
+      "tcp_fast_open": true,
+      "tcp_multi_path": true,
       "server": "magic.atticux.me",
       "server_port": 2053,
       "uuid": "6a5f528d-1641-406f-95b8-ee9c574d79b3",
-      "tcp_fast_open": true,
-      "tcp_multi_path": true,
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "magic.atticux.me"
-        }
-      },
       "tls": {
         "enabled": true,
         "server_name": "magic.atticux.me",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "magic.atticux.me"
         }
       }
     },
@@ -149,13 +146,6 @@
       "server": "104.16.239.143",
       "server_port": 443,
       "uuid": "717f9e5c-9922-49a0-aa12-3fa17d63a7a8",
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560",
-        "headers": {
-          "Host": "worker.proxy.atticux.me"
-        }
-      },
       "tls": {
         "enabled": true,
         "server_name": "worker.proxy.atticux.me",
@@ -163,43 +153,38 @@
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "worker.proxy.atticux.me"
+        }
       }
     },
     {
-  "type": "hysteria2",
-  "tag": "hy2-out",
-  "server": "magic.atticux.me",
-  "server_port": 8443,
-  "server_ports": ["8443:8443"],  // 可选，端口范围
-  "hop_interval": "30s",          // 端口跳跃间隔
-  "up_mbps": 100,                 // 上行带宽
-  "down_mbps": 100,               // 下行带宽
-  "password": "UptVghIUI1djt/K2wwfrYQ==",    // 认证密码
-  "network": "tcp,udp",           // 启用的网络类型
-  
-  // TLS 配置
-  "tls": {
-    "enabled": true,
-    "server_name": "magic.atticux.me",
-    "alpn": ["h3"],
-    "utls": {
-      "enabled": true,
-      "fingerprint": "chrome"
+      "type": "hysteria2",
+      "tag": "hy2-out",
+      "connect_timeout": "5s",
+      "tcp_fast_open": true,
+      "tcp_multi_path": true,
+      "udp_fragment": true,
+      "domain_strategy": "prefer_ipv4",
+      "server": "magic.atticux.me",
+      "server_port": 8443,
+      "hop_interval": "30s",
+      "up_mbps": 300,
+      "down_mbps": 300,
+      "password": "UptVghIUI1djt/K2wwfrYQ==",
+      "tls": {
+        "enabled": true,
+        "server_name": "magic.atticux.me",
+        "insecure": true,
+        "alpn": "h3"
+      }
     }
-  },
-
-  // 连接相关配置
-  "tcp_fast_open": true,          // 启用 TCP 快速打开
-  "tcp_multi_path": true,         // 启用多路径 TCP
-  "udp_fragment": true,           // 启用 UDP 分片
-  "connect_timeout": "5s",        // 连接超时时间
-  "domain_strategy": "prefer_ipv4"
-  }
   ],
   "route": {
-    "final": "proxy",
-    "auto_detect_interface": true,
-    "override_android_vpn": true,
     "rules": [
       {
         "inbound": "tun-in",
@@ -392,7 +377,10 @@
         "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
         "download_detour": "direct"
       }
-    ]
+    ],
+    "final": "proxy",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
   },
   "experimental": {
     "cache_file": {
@@ -402,12 +390,12 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:9090",
+      "default_mode": "rule",
       "access_control_allow_origin": [
         "http://127.0.0.1",
         "https://metacubexd.pages.dev"
       ],
-      "access_control_allow_private_network": true,
-      "default_mode": "rule"
+      "access_control_allow_private_network": true
     }
   }
 }
