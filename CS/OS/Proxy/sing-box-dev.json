@@ -58,13 +58,11 @@
       ],
       "auto_route": true,
       "strict_route": true,
-      "route_exclude_address_set": [
-        "geoip-cn"
-      ],
+      "route_exclude_address_set": "geoip-cn",
       "stack": "system"
     }
   ],
-    "outbounds": [
+  "outbounds": [
     {
       "type": "selector",
       "tag": "proxy",
@@ -161,8 +159,8 @@
       "domain_strategy": "prefer_ipv4",
       "server": "magic.atticux.me",
       "server_port": 8443,
-      "up_mbps": 300,
-      "down_mbps": 300,
+      "up_mbps": 500,
+      "down_mbps": 500,
       "password": "UptVghIUI1djt/K2wwfrYQ==",
       "tls": {
         "enabled": true,
@@ -173,8 +171,6 @@
     }
   ],
   "route": {
-    "final": "proxy",
-    "auto_detect_interface": true,
     "rules": [
       {
         "inbound": "tun-in",
@@ -367,7 +363,9 @@
         "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
         "download_detour": "direct"
       }
-    ]
+    ],
+    "final": "proxy",
+    "auto_detect_interface": true
   },
   "experimental": {
     "cache_file": {
@@ -377,12 +375,12 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:9090",
+      "default_mode": "rule",
       "access_control_allow_origin": [
         "http://127.0.0.1",
         "https://metacubexd.pages.dev"
       ],
-      "access_control_allow_private_network": true,
-      "default_mode": "rule"
+      "access_control_allow_private_network": true
     }
   }
 }
