@@ -164,7 +164,36 @@
           "fingerprint": "firefox"
         }
       }
+    },
+    {
+  "type": "hysteria2",
+  "tag": "hy2-out",
+  "server": "magic.atticux.me",
+  "server_port": 8443,
+  "server_ports": ["8443:8443"],  // 可选，端口范围
+  "hop_interval": "30s",          // 端口跳跃间隔
+  "up_mbps": 100,                 // 上行带宽
+  "down_mbps": 100,               // 下行带宽
+  "password": "your_password",    // 认证密码
+  "network": "tcp,udp",           // 启用的网络类型
+  
+  // TLS 配置
+  "tls": {
+    "enabled": true,
+    "server_name": "magic.atticux.me",
+    "alpn": ["h3"],
+    "utls": {
+      "enabled": true,
+      "fingerprint": "chrome"
     }
+  },
+
+  // 连接相关配置
+  "tcp_fast_open": true,          // 启用 TCP 快速打开
+  "tcp_multi_path": true,         // 启用多路径 TCP
+  "udp_fragment": true,           // 启用 UDP 分片
+  "connect_timeout": "5s",        // 连接超时时间
+  "domain_strategy": "prefer_ipv4"
   ],
   "route": {
     "final": "proxy",
