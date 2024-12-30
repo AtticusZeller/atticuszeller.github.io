@@ -172,7 +172,6 @@
       "domain_strategy": "prefer_ipv4",
       "server": "magic.atticux.me",
       "server_port": 8443,
-      "hop_interval": "30s",
       "up_mbps": 300,
       "down_mbps": 300,
       "password": "UptVghIUI1djt/K2wwfrYQ==",
