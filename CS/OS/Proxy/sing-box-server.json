@@ -59,13 +59,5 @@
       }
     ],
     "final": "direct"
-  },
-  "experimental": {
-    "cache_file": {
-      "enabled": true,
-      "path": "cache.db",
-      "cache_id": "default",
-      "store_rdrc": true
-    }
   }
 }
