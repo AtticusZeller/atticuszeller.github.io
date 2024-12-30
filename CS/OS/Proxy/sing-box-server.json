@@ -39,7 +39,11 @@
     "rules": [
       {
         "ip_is_private": true,
-         "action": "reject"
+        "rule_set": [
+          "geoip-cn",
+          "geosite-cn"
+        ],
+        "action": "reject"
       }
     ],
     "rule_set": [
