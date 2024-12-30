@@ -1,1 +1,75 @@
-tedy
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "inbounds": [
+    {
+      "type": "hysteria2",
+      "tag": "hy2-in",
+      "listen": "::",
+      "listen_port": 8443,
+      "tcp_fast_open": true,
+      "tcp_multi_path": true,
+      "sniff": true,
+      "sniff_override_destination": false,
+      "domain_strategy": "prefer_ipv4",
+      "up_mbps": 1000,
+      "down_mbps": 1000,
+      "users": [
+        {
+          "name": "atticux",
+          "password": "UptVghIUI1djt/K2wwfrYQ=="
+        }
+      ],
+      "tls": {
+        "enabled": true,
+        "certificate_path": "/root/cert-CF/magic.atticux.me/fullchain.pem",
+        "key_path": "/root/cert-CF/magic.atticux.me/privkey.pem"
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "block"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geoip-cn",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-cn",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "direct"
+      }
+    ],
+    "final": "direct"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "cache_id": "default",
+      "store_rdrc": true
+    }
+  }
+}
