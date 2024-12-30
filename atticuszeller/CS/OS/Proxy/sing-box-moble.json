@@ -174,7 +174,7 @@
   "hop_interval": "30s",          // 端口跳跃间隔
   "up_mbps": 100,                 // 上行带宽
   "down_mbps": 100,               // 下行带宽
-  "password": "your_password",    // 认证密码
+  "password": "UptVghIUI1djt/K2wwfrYQ==",    // 认证密码
   "network": "tcp,udp",           // 启用的网络类型
   
   // TLS 配置
@@ -194,6 +194,7 @@
   "udp_fragment": true,           // 启用 UDP 分片
   "connect_timeout": "5s",        // 连接超时时间
   "domain_strategy": "prefer_ipv4"
+  }
   ],
   "route": {
     "final": "proxy",
