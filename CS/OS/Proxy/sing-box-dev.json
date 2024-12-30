@@ -64,17 +64,18 @@
       "stack": "system"
     }
   ],
-  "outbounds": [
+    "outbounds": [
     {
       "type": "selector",
       "tag": "proxy",
       "outbounds": [
-        "direct",
+        "⚡San Francisco Hy2",
         "🌩️San Francisco WS",
         "🌟San Francisco WS",
-        "🔥San Francisco TCP"
+        "🔥San Francisco TCP",
+        "direct"
       ],
-      "default": "🔥San Francisco TCP"
+      "default": "⚡San Francisco Hy2"
     },
     {
       "type": "direct",
@@ -83,13 +84,13 @@
     {
       "type": "vless",
       "tag": "🔥San Francisco TCP",
+      "tcp_fast_open": true,
+      "tcp_multi_path": true,
+      "udp_fragment": true,
       "server": "magic.atticux.me",
       "server_port": 30327,
       "uuid": "e5a23945-bdb4-4409-aa84-f764f7d99fff",
       "flow": "xtls-rprx-vision",
-      "tcp_fast_open": true,
-      "udp_fragment": true,
-      "tcp_multi_path": true,
       "tls": {
         "enabled": true,
         "server_name": "magic.atticux.me",
@@ -107,24 +108,24 @@
     {
       "type": "vless",
       "tag": "🌟San Francisco WS",
+      "tcp_fast_open": true,
+      "tcp_multi_path": true,
       "server": "magic.atticux.me",
       "server_port": 2053,
       "uuid": "6a5f528d-1641-406f-95b8-ee9c574d79b3",
-      "tcp_fast_open": true,
-      "tcp_multi_path": true,
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "magic.atticux.me"
-        }
-      },
       "tls": {
         "enabled": true,
         "server_name": "magic.atticux.me",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "magic.atticux.me"
         }
       }
     },
@@ -134,13 +135,6 @@
       "server": "104.16.239.143",
       "server_port": 443,
       "uuid": "717f9e5c-9922-49a0-aa12-3fa17d63a7a8",
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560",
-        "headers": {
-          "Host": "worker.proxy.atticux.me"
-        }
-      },
       "tls": {
         "enabled": true,
         "server_name": "worker.proxy.atticux.me",
@@ -148,6 +142,33 @@
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "worker.proxy.atticux.me"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "⚡San Francisco Hy2",
+      "connect_timeout": "5s",
+      "tcp_fast_open": true,
+      "tcp_multi_path": true,
+      "udp_fragment": true,
+      "domain_strategy": "prefer_ipv4",
+      "server": "magic.atticux.me",
+      "server_port": 8443,
+      "up_mbps": 300,
+      "down_mbps": 300,
+      "password": "UptVghIUI1djt/K2wwfrYQ==",
+      "tls": {
+        "enabled": true,
+        "server_name": "magic.atticux.me",
+        "insecure": true,
+        "alpn": "h3"
       }
     }
   ],
