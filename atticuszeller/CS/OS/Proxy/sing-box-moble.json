@@ -80,13 +80,13 @@
       "type": "selector",
       "tag": "proxy",
       "outbounds": [
-        "direct",
-        "hy2-out",
+        "⚡San Francisco Hy2",
         "🌩️San Francisco WS",
         "🌟San Francisco WS",
-        "🔥San Francisco TCP"
+        "🔥San Francisco TCP",
+        "direct"
       ],
-      "default": "🔥San Francisco TCP"
+      "default": "⚡San Francisco Hy2"
     },
     {
       "type": "direct",
@@ -164,7 +164,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "hy2-out",
+      "tag": "⚡San Francisco Hy2",
       "connect_timeout": "5s",
       "tcp_fast_open": true,
       "tcp_multi_path": true,
