@@ -38,12 +38,8 @@
   "route": {
     "rules": [
       {
-        "protocol": "dns",
-        "outbound": "dns-out"
-      },
-      {
         "ip_is_private": true,
-        "outbound": "block"
+         "action": "reject"
       }
     ],
     "rule_set": [
