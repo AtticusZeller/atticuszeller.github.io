@@ -21,7 +21,7 @@
       {
         "rule_set": "geosite-cn",
         "action": "reject",
-        "method": "default
+        "method": "default"
       }
     ],
     "final": "dns_direct",
