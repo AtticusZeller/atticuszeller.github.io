@@ -3,7 +3,7 @@
     "level": "info",
     "timestamp": true
   },
-    "dns": {
+  "dns": {
     "servers": [
       {
         "tag": "dns_resolver",
@@ -39,7 +39,6 @@
       "udp_fragment": true,
       "up_mbps": 5000,
       "down_mbps": 5000,
-      "brutal_debug": true,
       "users": [
         {
           "name": "atticux",
@@ -50,7 +49,8 @@
         "enabled": true,
         "certificate_path": "/root/cert-CF/magic.atticux.me/fullchain.pem",
         "key_path": "/root/cert-CF/magic.atticux.me/privkey.pem"
-      }
+      },
+      "brutal_debug": true
     }
   ],
   "outbounds": [
@@ -66,12 +66,10 @@
         "action": "resolve",
         "strategy": "prefer_ipv4",
         "server": "dns_direct"
-},
+      },
       {
         "ip_is_private": true,
-        "rule_set": [
-          "geoip-cn"
-        ],
+        "rule_set": "geoip-cn",
         "action": "reject",
         "method": "default"
       }
