@@ -11,11 +11,12 @@
       "listen_port": 8443,
       "tcp_fast_open": true,
       "tcp_multi_path": true,
+      "udp_fragment": true,
       "sniff": true,
       "sniff_override_destination": false,
       "domain_strategy": "prefer_ipv4",
-      "up_mbps": 1000,
-      "down_mbps": 1000,
+      "up_mbps": 5000,
+      "down_mbps": 5000,
       "users": [
         {
           "name": "atticux",
