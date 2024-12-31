@@ -65,6 +65,22 @@ profile:
 
 
 proxies:
+  - name: "⚡San Francisco Hy2"
+    type: hysteria2
+    server: magic.atticux.me
+    port: 8443
+    password: UptVghIUI1djt/K2wwfrYQ==
+    up: "500 Mbps"
+    down: "500 Mbps"
+    upd: true
+    tfo: true
+    mptcp: true
+    # TLS 相关配置
+    sni: magic.atticux.me
+    skip-cert-verify: true
+    alpn: 
+      - h3
+
   - name: 🔥San Francisco TCP
     type: vless
     server: magic.atticux.me
@@ -79,7 +95,7 @@ proxies:
       short-id: 60e81fdbec0d
     tfo: true
     udp: true
-
+    mptcp: true
   - alpn:
       - h2
     flow: xtls-rprx-vision
@@ -91,7 +107,8 @@ proxies:
     tls: true
     type: vless
     tfo: true
-    udp: false
+    udp: true
+    mptcp: true
     uuid: 6a5f528d-1641-406f-95b8-ee9c574d79b3
     ws-opts:
       headers:
