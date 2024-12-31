@@ -77,6 +77,8 @@ proxies:
     mptcp: true
     # TLS 相关配置
     skip-cert-verify: true
+    alpn:
+      - h3
 
   - name: 🔥San Francisco TCP
     type: vless
