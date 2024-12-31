@@ -169,7 +169,6 @@
       "tcp_fast_open": true,
       "tcp_multi_path": true,
       "udp_fragment": true,
-      "domain_strategy": "prefer_ipv4",
       "server": "magic.atticux.me",
       "server_port": 8443,
       "up_mbps": 500,
