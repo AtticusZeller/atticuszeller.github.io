@@ -78,7 +78,7 @@ proxies:
       short-id: 60e81fdbec0d
     tfo: true
     udp: true
-
+    mptcp: true
   - alpn:
       - h2
     flow: xtls-rprx-vision
@@ -89,8 +89,9 @@ proxies:
     skip-cert-verify: true
     tls: true
     type: vless
-    udp: true
     tfo: true
+    udp: true
+    mptcp: true
     uuid: 6a5f528d-1641-406f-95b8-ee9c574d79b3
     ws-opts:
       headers:
@@ -210,8 +211,6 @@ tcp-concurrent: true
 # https://wiki.metacubex.one/config/inbound/tun/
 tun:
   auto-detect-interface: true
-  # for linux
-  auto-redirect: true
   auto-route: true
   device: Meta
   mtu: 1492
@@ -231,6 +230,6 @@ unified-delay: true
 ntp:
   enable: true
   write-to-system: true
-  server: time.cloudflare.com
+  server: time.tencent.com
   port: 123
   interval: 30
