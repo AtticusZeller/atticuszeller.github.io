@@ -1,6 +1,6 @@
 {
   "log": {
-    "level": "info",
+    "level": "warning",
     "timestamp": true
   },
   "dns": {
@@ -29,10 +29,6 @@
         "server": "dns_direct"
       },
       {
-        "rule_set": "geosite-geolocation-!cn",
-        "server": "dns_proxy"
-      },
-      {
         "rule_set": "geosite-cn",
         "server": "dns_direct"
       }
@@ -44,7 +40,7 @@
   "ntp": {
     "enabled": true,
     "interval": "30m0s",
-    "server": "time.cloudflare.com",
+    "server": "time.tencent.com",
     "server_port": 123
   },
   "inbounds": [
@@ -156,7 +152,6 @@
       "tcp_fast_open": true,
       "tcp_multi_path": true,
       "udp_fragment": true,
-      "domain_strategy": "prefer_ipv4",
       "server": "magic.atticux.me",
       "server_port": 8443,
       "up_mbps": 500,
