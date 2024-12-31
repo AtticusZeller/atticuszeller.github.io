@@ -29,10 +29,6 @@
         "server": "dns_direct"
       },
       {
-        "rule_set": "geosite-geolocation-!cn",
-        "server": "dns_proxy"
-      },
-      {
         "rule_set": "geosite-cn",
         "server": "dns_direct"
       }
@@ -58,7 +54,6 @@
       ],
       "auto_route": true,
       "strict_route": true,
-      "route_exclude_address_set": "geoip-cn",
       "stack": "system",
       "platform": {
         "http_proxy": {
