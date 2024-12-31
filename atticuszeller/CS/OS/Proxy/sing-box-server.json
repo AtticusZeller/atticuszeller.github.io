@@ -3,6 +3,31 @@
     "level": "info",
     "timestamp": true
   },
+    "dns": {
+    "servers": [
+      {
+        "tag": "dns_resolver",
+        "address": "1.1.1.1",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns_direct",
+        "address": "https://dns.cloudflare.com/dns-query",
+        "address_resolver": "dns_resolver",
+        "detour": "direct"
+      }
+    ],
+    "rules": [
+      {
+        "rule_set": "geosite-cn",
+        "action": "reject",
+        "method": "default
+      }
+    ],
+    "final": "dns_direct",
+    "reverse_mapping": true,
+    "strategy": "prefer_ipv4"
+  },
   "inbounds": [
     {
       "type": "hysteria2",
@@ -37,11 +62,18 @@
   "route": {
     "rules": [
       {
+        "inbound": "hy2-in",
+        "action": "resolve",
+        "strategy": "prefer_ipv4",
+        "server": "dns_direct"
+},
+      {
         "ip_is_private": true,
         "rule_set": [
           "geoip-cn"
         ],
-        "action": "reject"
+        "action": "reject",
+        "method": "default"
       }
     ],
     "rule_set": [
