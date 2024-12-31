@@ -76,7 +76,6 @@ proxies:
     tfo: true
     mptcp: true
     # TLS 相关配置
-    sni: magic.atticux.me
     skip-cert-verify: true
     alpn: 
       - h3
