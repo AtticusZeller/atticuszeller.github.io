@@ -12,7 +12,6 @@
       "tcp_fast_open": true,
       "tcp_multi_path": true,
       "udp_fragment": true,
-      "domain_strategy": "prefer_ipv4",
       "up_mbps": 5000,
       "down_mbps": 5000,
       "users": [
