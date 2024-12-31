@@ -41,11 +41,6 @@
           "geoip-cn"
         ],
         "action": "reject"
-      },
-      {
-        "inbound": "hy2-in",
-        "action": "sniff",
-        "timeout": "1s"
       }
     ],
     "rule_set": [
