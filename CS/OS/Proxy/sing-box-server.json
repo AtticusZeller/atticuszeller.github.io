@@ -1,6 +1,6 @@
 {
   "log": {
-    "level": "debug",
+    "level": "info",
     "timestamp": true
   },
   "inbounds": [
@@ -25,7 +25,7 @@
         "certificate_path": "/root/cert-CF/magic.atticux.me/fullchain.pem",
         "key_path": "/root/cert-CF/magic.atticux.me/privkey.pem"
       },
-      "brutal_debug": true
+      "brutal_debug": false
     }
   ],
   "outbounds": [
