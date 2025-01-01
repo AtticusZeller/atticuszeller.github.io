@@ -1,5 +1,3 @@
-# Terminal
-
 ## Front
 
 preferences-->profiles->Text

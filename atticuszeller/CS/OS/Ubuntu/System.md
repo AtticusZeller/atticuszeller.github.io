@@ -1,5 +1,3 @@
-# System
-
 ## System
 
 ### [Install](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
