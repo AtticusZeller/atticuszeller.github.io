@@ -1,4 +1,4 @@
-# [Oh My Posh](https://ohmyposh.dev/docs/installation/windows)
+## [Oh My Posh](https://ohmyposh.dev/docs/installation/windows)
 
 ```powershell
 winget install JanDeDobbeleer.OhMyPosh -s winget
@@ -24,15 +24,15 @@ set front in config-> default -> appearance
 winget install --exact --id MartiCliment.UniGetUI --source winget
 ```
 
-# Tips
+## Tips
 
-## __kill__ The Process by PID
+### __kill__ The Process by PID
 
 ```powershell
 taskkill /PID <PID> /F
 ```
 
-## Find out the Process Occupied the __port__
+### Find out the Process Occupied the __port__
 
 _the last line of output is PID_
 
@@ -40,7 +40,7 @@ _the last line of output is PID_
 netstat -ano | findstr :<port>
 ```
 
-## Find out the Process Occupied the __file__
+### Find out the Process Occupied the __file__
 
 [Sysinternals Suite - Microsoft Apps](https://www.microsoft.com/store/productId/9P7KNL5RWT25?ocid=pdpshare)
 
@@ -48,7 +48,7 @@ netstat -ano | findstr :<port>
 handle.exe <file path>
 ```
 
-## Get Command .exe Path
+### Get Command .exe Path
 
 ```PowerShell
 where.exe poetry
@@ -56,7 +56,7 @@ where.exe poetry
 
 `->C:\Users\18317\AppData\Roaming\Python\Scripts\poetry.exe`
 
-## Add Path
+### Add Path
 
 _admin_
 

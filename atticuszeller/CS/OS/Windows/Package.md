@@ -1,4 +1,4 @@
-# [developer tools](https://github.com/ScoopInstaller/Scoop)
+## [developer tools](https://github.com/ScoopInstaller/Scoop)
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
