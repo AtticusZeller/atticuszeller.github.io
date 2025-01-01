@@ -1,6 +1,4 @@
-# Appearance
-
-[scripts/theme\_manager.sh at main · Atticuszz/scripts · GitHub](https://github.com/Atticuszz/scripts/blob/main/theme_manager.sh)
+[scripts/theme\_manager.sh](https://github.com/AtticusZeller/scripts/blob/main/theme_manager.sh)
 
 ## Theme
 
