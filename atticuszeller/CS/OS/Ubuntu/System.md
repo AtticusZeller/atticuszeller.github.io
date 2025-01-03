@@ -40,6 +40,8 @@ sudo visudo
 
 ### SSH Server
 
+#### Install and Enable
+
 ```bash
 sudo apt update
 sudo apt install openssh-server
@@ -48,10 +50,23 @@ sudo systemctl enable ssh
 sudo systemctl status ssh
 ```
 
+#### Add Ssh Key
+
+copy your key
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+write into ssh server
+
+```bash
+echo "your key content" >> ~/.ssh/authorized_keys
+```
 
 ### Current User
 
-```bash
+ ```bash
 whoami
 ```
 
