@@ -64,6 +64,30 @@ write into ssh server
 echo "your key content" >> ~/.ssh/authorized_keys
 ```
 
+#### Add Ssh Config(optional)
+
+```bash
+code ~/.ssh/config
+```
+
+write the following into ssh config
+
+```bash
+Host ubuntu-laptop
+	Hostname 192.168.0.107
+	Port 22
+	User root
+```
+
+we assume `192.168.0.107` is your ssh server IP which could be found after running `ifconfig`
+
+#### Connect
+
+```bash
+# == ssh root@192.168.0.107
+ssh ubuntu-laptop
+```
+
 ### Current User
 
  ```bash
