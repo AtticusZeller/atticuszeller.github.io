@@ -38,7 +38,7 @@ sudo visudo
 %sudo ALL=NOPASSWD: ALL
 ```
 
-### SSH server
+### SSH Server
 
 ```bash
 sudo apt update
@@ -46,6 +46,12 @@ sudo apt install openssh-server
 sudo systemctl start ssh
 sudo systemctl enable ssh
 sudo systemctl status ssh
+```
+
+### Current User
+
+```bash
+whoami
 ```
 
 ## Basic Tools for Desktop

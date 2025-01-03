@@ -53,7 +53,7 @@
         "fd00::1/126"
       ],
       "auto_route": true,
-      "strict_route": true,
+      "strict_route": false,
       "route_exclude_address_set": "geoip-cn",
       "stack": "system"
     }
@@ -176,6 +176,7 @@
         "action": "hijack-dns"
       },
       {
+        "port": 22,
         "ip_is_private": true,
         "outbound": "direct"
       },
