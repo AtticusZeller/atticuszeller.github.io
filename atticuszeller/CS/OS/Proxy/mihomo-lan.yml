@@ -36,9 +36,9 @@ external-controller-cors:
   allow-origins:
     - '*'
   allow-private-network: true
-# external-ui: ./ui
-# external-ui-name: xd
-# external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+external-ui: ./ui
+external-ui-name: xd
+external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
 find-process-mode: 'off'
 geo-auto-update: true
 geo-update-interval: 24
