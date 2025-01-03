@@ -53,7 +53,7 @@
         "fd00::1/126"
       ],
       "auto_route": true,
-      "strict_route": true,
+      "strict_route": false,
       "route_exclude_address_set": "geoip-cn",
       "stack": "system"
     }
@@ -177,7 +177,6 @@
       },
       {
         "port": 22,
-        "source_ip_is_private": true,
         "ip_is_private": true,
         "outbound": "direct"
       },
