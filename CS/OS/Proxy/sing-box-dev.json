@@ -54,10 +54,6 @@
       ],
       "auto_route": true,
       "strict_route": false,
-      "route_exclude_address": [
-        "192.168.0.0/16",
-        "fc00::/7"
-      ],
       "route_exclude_address_set": "geoip-cn",
       "stack": "system"
     }
