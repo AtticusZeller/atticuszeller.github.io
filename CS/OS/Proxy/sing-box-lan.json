@@ -186,11 +186,18 @@
                 "action": "hijack-dns"
             },
             {
-                "port": 22,
                 "ip_is_private": true,
                 "outbound": "direct"
             },
             {
+                "protocol": "ssh",
+                "outbound": "direct"
+            },
+            {
+                "domain_suffix": [
+                    "obsidian.md",
+                    "zotero.org"
+                ],
                 "rule_set": [
                     "geosite-github",
                     "geosite-python",
@@ -213,25 +220,23 @@
                 "outbound": "proxy"
             },
             {
-                "domain_suffix": [
-                    "obsidian.md",
-                    "zotero.org"
+                "domain_keyword": [
+                    "cn"
                 ],
-                "outbound": "proxy"
-            },
-            {
                 "domain_suffix": [
+                    ".cn",
                     "metacubexd.pages.dev",
-                    "atticuszeller.club",
                     "atticux.me"
                 ],
+                "rule_set": "geosite-cn",
                 "outbound": "direct"
             },
             {
-                "rule_set": [
-                    "geoip-cn",
-                    "geosite-cn"
-                ],
+                "action": "resolve",
+                "server": "dns_direct"
+            },
+            {
+                "rule_set": "geoip-cn",
                 "outbound": "direct"
             }
         ],
@@ -381,8 +386,8 @@
         },
         "clash_api": {
             "external_controller": "0.0.0.0:9090",
-            "default_mode": "rule",
-            "external_ui": "./dashboard",
+            "default_mode": "Rule",
+            "external_ui": "./ui",
             "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/gh-pages.zip",
             "external_ui_download_detour": "proxy"
         }
