@@ -42,6 +42,10 @@
       },
       {
         "ip_is_private": true,
+        "action": "reject",
+        "method": "default"
+      },
+      {
         "rule_set": [
           "geoip-cn",
           "geosite-cn"
