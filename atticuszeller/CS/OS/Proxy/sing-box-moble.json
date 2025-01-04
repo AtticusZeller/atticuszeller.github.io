@@ -1,6 +1,6 @@
 {
   "log": {
-    "level": "warning",
+    "level": "info",
     "timestamp": true
   },
   "dns": {
@@ -66,6 +66,9 @@
     {
       "type": "mixed",
       "tag": "mixed-in",
+      "tcp_fast_open": true,
+      "tcp_multi_path": true,
+      "udp_fragment": true,
       "listen": "127.0.0.1",
       "listen_port": 30327
     }
@@ -192,6 +195,14 @@
         "outbound": "direct"
       },
       {
+        "protocol": "ssh",
+        "outbound": "direct"
+      },
+      {
+        "domain_suffix": [
+          "obsidian.md",
+          "zotero.org"
+        ],
         "rule_set": [
           "geosite-github",
           "geosite-python",
@@ -214,25 +225,23 @@
         "outbound": "proxy"
       },
       {
-        "domain_suffix": [
-          "obsidian.md",
-          "zotero.org"
+        "domain_keyword": [
+          "cn"
         ],
-        "outbound": "proxy"
-      },
-      {
         "domain_suffix": [
+          ".cn",
           "metacubexd.pages.dev",
-          "atticuszeller.club",
           "atticux.me"
         ],
+        "rule_set": "geosite-cn",
         "outbound": "direct"
       },
       {
-        "rule_set": [
-          "geoip-cn",
-          "geosite-cn"
-        ],
+        "action": "resolve",
+        "server": "dns_direct"
+      },
+      {
+        "rule_set": "geoip-cn",
         "outbound": "direct"
       }
     ],
