@@ -37,6 +37,10 @@
   "route": {
     "rules": [
       {
+        "rule_set": "geosite-google",
+        "outbound": "direct"
+      },
+      {
         "ip_is_private": true,
         "rule_set": [
           "geoip-cn",
@@ -59,6 +63,13 @@
         "tag": "geosite-cn",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-google",
+        "format": "binary",
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-google.srs",
         "download_detour": "direct"
       }
     ],
