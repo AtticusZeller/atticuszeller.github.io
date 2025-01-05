@@ -1,5 +1,5 @@
 ---
-title: 13 Linux Terminal Shortcuts Every Power Linux User Must Know
+title: 12 Linux Terminal Shortcuts Every Power Linux User Must Know
 source: https://linuxhandbook.com/linux-shortcuts/
 author:
   - "[[Abhishek Prakash]]"
