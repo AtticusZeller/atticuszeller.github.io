@@ -6,7 +6,7 @@ preferences-->profiles->Text
 
 ## Zsh
 
-[ZSH + Oh My ZSH! on Windows with WSL - DEV Community](https://dev.to/equiman/zsh-on-windows-with-wsl-1jck)
+[ZSH + Oh My ZSH!](https://dev.to/equiman/zsh-on-windows-with-wsl-1jck)
 ![assets/Pasted_image_20240224182254.png](assets/Pasted_image_20240224182254.png)
 
 ### Install Zsh
