@@ -1,3 +1,5 @@
+# Powershell
+
 ## [Oh My Posh](https://ohmyposh.dev/docs/installation/windows)
 
 ```powershell
