@@ -1,26 +1,24 @@
 {
     "log": {
-        "level": "info",
+        "level": "warning",
         "timestamp": true
     },
     "dns": {
         "servers": [
             {
-                "tag": "dns_resolver",
+                "tag": "dns_direct",
                 "address": "223.5.5.5",
                 "detour": "direct"
             },
             {
-                "tag": "dns_proxy",
-                "address": "https://dns.cloudflare.com/dns-query",
-                "address_resolver": "dns_resolver",
+                "tag": "cloudflare-gateway",
+                "address": "172.64.36.1",
                 "detour": "proxy"
             },
             {
-                "tag": "dns_direct",
-                "address": "https://doh.pub/dns-query",
-                "address_resolver": "dns_resolver",
-                "detour": "direct"
+                "tag": "google",
+                "address": "8.8.8.8",
+                "detour": "proxy"
             }
         ],
         "rules": [
@@ -29,22 +27,22 @@
                 "server": "dns_direct"
             },
             {
-                "rule_set": "geosite-geolocation-!cn",
-                "server": "dns_proxy"
+                "rule_set": "geosite-python",
+                "server": "google"
             },
             {
                 "rule_set": "geosite-cn",
                 "server": "dns_direct"
             }
         ],
-        "final": "dns_proxy",
+        "final": "cloudflare-gateway",
         "reverse_mapping": true,
         "strategy": "prefer_ipv4"
     },
     "ntp": {
         "enabled": true,
         "interval": "30m0s",
-        "server": "ntp.ntsc.ac.cn",
+        "server": "time.tencent.com",
         "server_port": 123
     },
     "inbounds": [
@@ -58,9 +56,8 @@
             ],
             "auto_route": true,
             "strict_route": true,
-            "stack": "system",
-            "sniff": true,
-            "sniff_override_destination": true
+            "route_exclude_address_set": "geoip-cn",
+            "stack": "system"
         }
     ],
     "outbounds": [
@@ -68,31 +65,28 @@
             "type": "selector",
             "tag": "proxy",
             "outbounds": [
-                "direct",
+                "⚡San Francisco Hy2",
                 "🌩️San Francisco WS",
                 "🌟San Francisco WS",
-                "🔥San Francisco TCP"
+                "🔥San Francisco TCP",
+                "direct"
             ],
-            "default": "🔥San Francisco TCP"
+            "default": "⚡San Francisco Hy2"
         },
         {
             "type": "direct",
             "tag": "direct"
         },
         {
-            "tag": "dns",
-            "type": "dns"
-        },
-        {
             "type": "vless",
             "tag": "🔥San Francisco TCP",
+            "tcp_fast_open": true,
+            "tcp_multi_path": true,
+            "udp_fragment": true,
             "server": "magic.atticux.me",
             "server_port": 30327,
             "uuid": "e5a23945-bdb4-4409-aa84-f764f7d99fff",
             "flow": "xtls-rprx-vision",
-            "tcp_fast_open": true,
-            "udp_fragment": true,
-            "tcp_multi_path": true,
             "tls": {
                 "enabled": true,
                 "server_name": "magic.atticux.me",
@@ -110,24 +104,24 @@
         {
             "type": "vless",
             "tag": "🌟San Francisco WS",
+            "tcp_fast_open": true,
+            "tcp_multi_path": true,
             "server": "magic.atticux.me",
             "server_port": 2053,
             "uuid": "6a5f528d-1641-406f-95b8-ee9c574d79b3",
-            "tcp_fast_open": true,
-            "tcp_multi_path": true,
-            "transport": {
-                "type": "ws",
-                "path": "/ws",
-                "headers": {
-                    "Host": "magic.atticux.me"
-                }
-            },
             "tls": {
                 "enabled": true,
                 "server_name": "magic.atticux.me",
                 "utls": {
                     "enabled": true,
                     "fingerprint": "firefox"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/ws",
+                "headers": {
+                    "Host": "magic.atticux.me"
                 }
             }
         },
@@ -137,13 +131,6 @@
             "server": "104.16.239.143",
             "server_port": 443,
             "uuid": "717f9e5c-9922-49a0-aa12-3fa17d63a7a8",
-            "transport": {
-                "type": "ws",
-                "path": "/?ed=2560",
-                "headers": {
-                    "Host": "worker.proxy.atticux.me"
-                }
-            },
             "tls": {
                 "enabled": true,
                 "server_name": "worker.proxy.atticux.me",
@@ -151,23 +138,58 @@
                     "enabled": true,
                     "fingerprint": "firefox"
                 }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2560",
+                "headers": {
+                    "Host": "worker.proxy.atticux.me"
+                }
+            }
+        },
+        {
+            "type": "hysteria2",
+            "tag": "⚡San Francisco Hy2",
+            "connect_timeout": "5s",
+            "tcp_fast_open": true,
+            "tcp_multi_path": true,
+            "udp_fragment": true,
+            "server": "magic.atticux.me",
+            "server_port": 8443,
+            "up_mbps": 500,
+            "down_mbps": 500,
+            "password": "UptVghIUI1djt/K2wwfrYQ==",
+            "tls": {
+                "enabled": true,
+                "server_name": "magic.atticux.me",
+                "insecure": true,
+                "alpn": "h3"
             }
         }
     ],
     "route": {
-        "final": "proxy",
-        "auto_detect_interface": true,
-        "override_android_vpn": true,
         "rules": [
             {
+                "inbound": "tun-in",
+                "action": "sniff"
+            },
+            {
                 "protocol": "dns",
-                "outbound": "dns"
+                "action": "hijack-dns"
             },
             {
                 "ip_is_private": true,
                 "outbound": "direct"
             },
             {
+                "protocol": "ssh",
+                "outbound": "direct"
+            },
+            {
+                "domain_suffix": [
+                    "obsidian.md",
+                    "zotero.org"
+                ],
                 "rule_set": [
                     "geosite-github",
                     "geosite-python",
@@ -190,25 +212,19 @@
                 "outbound": "proxy"
             },
             {
-                "domain_suffix": [
-                    "obsidian.md",
-                    "zotero.org"
+                "domain_keyword": [
+                    "cn"
                 ],
-                "outbound": "proxy"
-            },
-            {
                 "domain_suffix": [
+                    ".cn",
                     "metacubexd.pages.dev",
-                    "atticuszeller.club",
                     "atticux.me"
                 ],
+                "rule_set": "geosite-cn",
                 "outbound": "direct"
             },
             {
-                "rule_set": [
-                    "geoip-cn",
-                    "geosite-cn"
-                ],
+                "rule_set": "geoip-cn",
                 "outbound": "direct"
             }
         ],
@@ -346,7 +362,9 @@
                 "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
                 "download_detour": "direct"
             }
-        ]
+        ],
+        "final": "proxy",
+        "auto_detect_interface": true
     },
     "experimental": {
         "cache_file": {
@@ -356,12 +374,12 @@
         },
         "clash_api": {
             "external_controller": "127.0.0.1:9090",
+            "default_mode": "Rule",
             "access_control_allow_origin": [
                 "http://127.0.0.1",
                 "https://metacubexd.pages.dev"
             ],
-            "access_control_allow_private_network": true,
-            "default_mode": "rule"
+            "access_control_allow_private_network": true
         }
     }
 }
