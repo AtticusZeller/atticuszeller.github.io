@@ -1,4 +1,4 @@
-# Home
+## Home
 
 <h1 align="center">Hi there, I'm Atticus Zeller 👋</h1>
 
