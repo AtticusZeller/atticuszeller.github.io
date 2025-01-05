@@ -1,4 +1,4 @@
-[scripts/theme\_manager.sh](https://github.com/AtticusZeller/scripts/blob/main/theme_manager.sh)
+[theme\_manager.sh](https://github.com/AtticusZeller/scripts/blob/main/theme_manager.sh)
 
 ## Theme
 
