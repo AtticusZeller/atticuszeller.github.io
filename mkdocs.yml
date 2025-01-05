@@ -50,6 +50,9 @@ theme:
       # When anchor following for the table of contents is enabled, the sidebar is automatically scrolled so that the active anchor is always visible
       - toc.follow
 
+      # header is automatically hidden when the user scrolls past a certain threshold, leaving more space for content.
+      - header.autohide
+
       # search
       - search.suggest
       - search.highlight
