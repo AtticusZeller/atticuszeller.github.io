@@ -91,3 +91,7 @@ vs code terminal , Add these properties to the user `settings.json`
   "terminal.integrated.defaultProfile.linux": "zsh"
 }
 ```
+
+## Shortcut
+
+![[assets/Pasted image 20250105103733.png]]
