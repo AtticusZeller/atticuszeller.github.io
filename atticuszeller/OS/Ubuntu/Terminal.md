@@ -87,9 +87,9 @@ vs code terminal , Add these properties to the user `settings.json`
 
 ```json
 {
-  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.fontSize": 15,
   "terminal.integrated.shellIntegration.enabled": true,
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.defaultProfile.linux": "zsh"
 }
 ```
