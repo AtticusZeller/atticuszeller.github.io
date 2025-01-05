@@ -17,7 +17,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 > [!INFO]
 > __Nerd Fonts__ is a project that patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular 'iconic fonts' such as [Font Awesome](https://github.com/FortAwesome/Font-Awesome), [Devicons](https://github.com/devicons/devicon), [Octicons](https://github.com/primer/octicons), and [others](https://github.com/ryanoasis/nerd-fonts#glyph-sets).[\[2\]](https://github.com/ryanoasis/nerd-fonts)
 
-download and update cache
+Download Nerd Fonts and update Font cache:
 
 ```bash
 mkdir -p ~/.local/share/fonts
@@ -65,7 +65,7 @@ p10k configure
 
 ### Install Plugins
 
-> update plugins via `omz update` manually or it will prompt you to update sometimes
+> [!NOTE] You can update plugins manually use `omz update`, or the system will periodically prompt you for updates.
 
 install extra plugin from GitHub
 
@@ -97,21 +97,22 @@ plugins=(
 
 #### Command-not-found
 
-this plugin uses the command-not-found package for zsh to provide suggested packages to be installed if a command cannot be found.
+this plugin uses the command-not-found package for Zsh to provide suggested packages to be installed if a command cannot be found.
 
 #### Extract
 
-this plugin defines a function called `extract` that extracts the archive file you pass it, and it supports a wide variety of archive filetypes.
+This plugin defines a function called `extract` that extracts the archive file you pass it, and it supports a wide variety of archive filetypes.
 
 #### History-substring-search
 
-As its title, it's extremely useful for finding the previous executed command when you can only recall part of it.
+The Plugin enables searching through commands history by typing a partial match of previous command.
+
 Use ⬆️ or ⬇️ to match commands from history
 ![[assets/Pasted image 20250105170317.png]]
 
 #### Web-search
 
-open your browser with terminal search content
+Open your browser with terminal search content
 ![[assets/Pasted image 20250105165205.png]]
 
 #### Z
@@ -145,8 +146,9 @@ sudo apt install bat
 
 ### VS Code Terminal Config
 
-VS Code terminal, add these properties to the user `settings.json` to enable `zsh`
-and `mono` fonts. you have to restart it to enable fonts.
+To config VS Code terminal, add the following properties to your user `settings.json` to enable `Zsh`and `monospace` fonts.
+
+> [!NOTE] A restart is required for font changes to take effect.
 
 ```json
 {
@@ -160,21 +162,22 @@ and `mono` fonts. you have to restart it to enable fonts.
 
 ## Shortcut
 
-Use `Tab` to autocomplete _file_, _directory_, _commands_.
+Use `Tab` to autocomplete file, directory, commands.
 
 Erase the whole line via `Ctrl+U`.
 
-`Home` or `End` \(`Ctrl+A`, `Ctrl+E`\) can jump to the front or the end of the command.
+`Home` or `End` (`Ctrl+A`, `Ctrl+E`) can jump to the front or the end of the command.
 
 `zsh-autosuggestions` with ➡️ gets the command from history, but sometimes the partial commands, words need to be modified to run,`Ctrl+U` remove the _word_ before the cursor.
 
-`Ctrl+D` helps us quit from _ssh_ connection.
+`Ctrl+D` terminates the current SSH connection.
 
 `history-substring-search` allows us to use `keyword` with ⬆️, ⬇️ to filter commands from history.
 
 `Ctrl+C` to kill the running program.`Ctrl+Z` to suspend it.
 
 Use `Ctrl+Shift+C` and `Ctrl+Shift+V` to _copy_ and _paste_.
+
 ## Reference
 
 1. [The Only 5 Zsh Plugins You Need](https://catalins.tech/zsh-plugins/)
