@@ -14,7 +14,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ### Install Fonts
 
-> [!INFO] Nerd-fonts
+> [!INFO]
 > __Nerd Fonts__ is a project that patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular 'iconic fonts' such as [Font Awesome](https://github.com/FortAwesome/Font-Awesome), [Devicons](https://github.com/devicons/devicon), [Octicons](https://github.com/primer/octicons), and [others](https://github.com/ryanoasis/nerd-fonts#glyph-sets).[\[2\]](https://github.com/ryanoasis/nerd-fonts)
 
 download and update cache
