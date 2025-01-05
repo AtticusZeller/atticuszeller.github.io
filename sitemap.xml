@@ -5,183 +5,19 @@
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticux.me/CS/Backend/FastApi/</loc>
+         <loc>https://notes.atticux.me/Backend/FastApi/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticux.me/CS/Backend/DB/PostgreSQL/</loc>
+         <loc>https://notes.atticux.me/Backend/DB/PostgreSQL/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticux.me/CS/Backend/DB/Sqlite/</loc>
+         <loc>https://notes.atticux.me/Backend/DB/Sqlite/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticux.me/CS/Backend/DB/ORM/SQLModel/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Pointer/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/packages/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/syntax/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/Queue/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/String/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/map/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/set/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/stack/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/unordered_map/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/unordered_set/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/vector/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/Pointer/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/Queue/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/String/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/algorithm/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/map/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/set/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/stack/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/unordered_map/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/unordered_set/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/vector/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/python/Std/Pathlib/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/python/Venv/Poetry/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/python/Venv/UV/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/Language/python/Venv/conda/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/OS/Docker/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/OS/GPU/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/OS/Ubuntu/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/OS/Ubuntu/Appearance/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/OS/Ubuntu/Gnome/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/OS/Ubuntu/Package/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/OS/Ubuntu/System/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/OS/Ubuntu/Terminal/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/OS/Ubuntu/bugs/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/OS/Windows/Package/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/OS/Windows/Powershell/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/VCS/Pre-commit/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/VCS/git/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/VCS/github/SSH_keypair_setup_for_GitHub/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/tools/Obsidian/</loc>
-         <lastmod>2025-01-05</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.atticux.me/CS/tools/IDE/JetBrains/</loc>
+         <loc>https://notes.atticux.me/Backend/DB/ORM/SQLModel/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
@@ -221,6 +57,106 @@
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/Pointer/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/packages/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/syntax/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/Data_model/Queue/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/Data_model/String/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/Data_model/map/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/Data_model/set/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/Data_model/stack/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/Data_model/unordered_map/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/Data_model/unordered_set/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/Data_model/vector/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/STL/Pointer/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/STL/Queue/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/STL/String/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/STL/algorithm/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/STL/map/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/STL/set/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/STL/stack/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/STL/unordered_map/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/STL/unordered_set/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/C%2B%2B/STL/vector/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/python/Std/Pathlib/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/python/Venv/Poetry/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/python/Venv/UV/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Language/python/Venv/conda/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
          <loc>https://notes.atticux.me/Learning/Reading%20list/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
@@ -230,6 +166,50 @@
     </url>
     <url>
          <loc>https://notes.atticux.me/Learning/Computer%20Vison/Image/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/OS/Docker/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/OS/GPU/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/OS/Ubuntu/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/OS/Ubuntu/Appearance/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/OS/Ubuntu/Gnome/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/OS/Ubuntu/Package/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/OS/Ubuntu/System/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/OS/Ubuntu/Terminal/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/OS/Ubuntu/bugs/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/OS/Windows/Package/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/OS/Windows/Powershell/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
@@ -250,6 +230,26 @@
     </url>
     <url>
          <loc>https://notes.atticux.me/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/VCS/Pre-commit/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/VCS/git/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/VCS/github/SSH_keypair_setup_for_GitHub/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/tools/Obsidian/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/tools/IDE/JetBrains/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
 </urlset>
