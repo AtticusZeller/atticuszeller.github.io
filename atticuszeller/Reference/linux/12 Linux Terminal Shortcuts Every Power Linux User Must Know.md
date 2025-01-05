@@ -9,7 +9,7 @@ description: Use Linux command line like a pro by mastering these terminal short
 tags:
 ---
 
-# 13 Linux Terminal Shortcuts Every Power Linux User Must Know
+# 12 Linux Terminal Shortcuts Every Power Linux User Must Know
 
 ## Must Know Linux Shortcuts
 
