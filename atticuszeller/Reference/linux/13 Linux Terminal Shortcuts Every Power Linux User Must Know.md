@@ -1,12 +1,12 @@
 ---
-title: 13 Linux Terminal Shortcuts Every Power Linux User Must Know [Free Cheatsheet]
+title: 13 Linux Terminal Shortcuts Every Power Linux User Must Know
 source: https://linuxhandbook.com/linux-shortcuts/
 author:
   - "[[Abhishek Prakash]]"
 published: 2018-06-28
 created: 2024-10-17
 description: Use Linux command line like a pro by mastering these terminal shortcuts and increase your productivity. Includes a free downloadable cheatsheet.
-tags: []
+tags:
 ---
 
 # 13 Linux Terminal Shortcuts Every Power Linux User Must Know
