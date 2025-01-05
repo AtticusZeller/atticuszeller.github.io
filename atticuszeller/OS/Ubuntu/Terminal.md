@@ -135,8 +135,13 @@ Alert the wrong syntax with red color
 
 #### Zsh-bat
 
-This plugin will replace `cat` with `bat`
-![[assets/Pasted image 20250105162357.png|300]]
+This plugin will replace `cat` with `batcat`
+
+```bash
+sudo apt install bat
+```
+
+![[assets/Pasted image 20250105174713.png|]]
 
 ### VS Code Terminal Config
 
