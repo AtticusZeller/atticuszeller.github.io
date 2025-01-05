@@ -89,7 +89,10 @@ plugins:
   # The git-revision-date-localized plugin adds support for adding the date of last update and creation of a document at the bottom of each page
   - git-revision-date-localized:
       enable_creation_date: true
-      type: iso_datetime
+      type: datetime #https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/howto/specify-locale/
+      timezone: Asia/Shanghai
+      locale: en
+
   # adjust to obsidian path
   - obsidian-bridge
   - pub-obsidian: # https://mkdocs-publisher.github.io/setup/installation/
