@@ -1,251 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://notes.atticuszeller.club/</loc>
+         <loc>https://notes.atticux.me/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Backend/FastApi/</loc>
+         <loc>https://notes.atticux.me/CS/Backend/FastApi/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Backend/DB/PostgreSQL/</loc>
+         <loc>https://notes.atticux.me/CS/Backend/DB/PostgreSQL/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Backend/DB/Sqlite/</loc>
+         <loc>https://notes.atticux.me/CS/Backend/DB/Sqlite/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Backend/DB/ORM/SQLModel/</loc>
+         <loc>https://notes.atticux.me/CS/Backend/DB/ORM/SQLModel/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/Pointer/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Pointer/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/packages/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/packages/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/syntax/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/syntax/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/Data_model/Queue/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/Queue/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/Data_model/String/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/String/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/Data_model/map/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/map/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/Data_model/set/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/set/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/Data_model/stack/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/stack/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/Data_model/unordered_map/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/unordered_map/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/Data_model/unordered_set/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/unordered_set/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/Data_model/vector/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/Data_model/vector/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/STL/Pointer/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/Pointer/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/STL/Queue/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/Queue/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/STL/String/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/String/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/STL/algorithm/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/algorithm/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/STL/map/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/map/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/STL/set/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/set/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/STL/stack/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/stack/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/STL/unordered_map/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/unordered_map/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/STL/unordered_set/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/unordered_set/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/C%2B%2B/STL/vector/</loc>
+         <loc>https://notes.atticux.me/CS/Language/C%2B%2B/STL/vector/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/python/Std/Pathlib/</loc>
+         <loc>https://notes.atticux.me/CS/Language/python/Std/Pathlib/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/python/Venv/Poetry/</loc>
+         <loc>https://notes.atticux.me/CS/Language/python/Venv/Poetry/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/python/Venv/UV/</loc>
+         <loc>https://notes.atticux.me/CS/Language/python/Venv/UV/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/Language/python/Venv/conda/</loc>
+         <loc>https://notes.atticux.me/CS/Language/python/Venv/conda/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/OS/Docker/</loc>
+         <loc>https://notes.atticux.me/CS/OS/Docker/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/OS/GPU/</loc>
+         <loc>https://notes.atticux.me/CS/OS/GPU/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/OS/Ubuntu/</loc>
+         <loc>https://notes.atticux.me/CS/OS/Ubuntu/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/OS/Ubuntu/Appearance/</loc>
+         <loc>https://notes.atticux.me/CS/OS/Ubuntu/Appearance/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/OS/Ubuntu/Gnome/</loc>
+         <loc>https://notes.atticux.me/CS/OS/Ubuntu/Gnome/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/OS/Ubuntu/Package/</loc>
+         <loc>https://notes.atticux.me/CS/OS/Ubuntu/Package/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/OS/Ubuntu/System/</loc>
+         <loc>https://notes.atticux.me/CS/OS/Ubuntu/System/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/OS/Ubuntu/Terminal/</loc>
+         <loc>https://notes.atticux.me/CS/OS/Ubuntu/Terminal/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/OS/Ubuntu/bugs/</loc>
+         <loc>https://notes.atticux.me/CS/OS/Ubuntu/bugs/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/OS/Windows/Package/</loc>
+         <loc>https://notes.atticux.me/CS/OS/Windows/Package/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/OS/Windows/Powershell/</loc>
+         <loc>https://notes.atticux.me/CS/OS/Windows/Powershell/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/VCS/Pre-commit/</loc>
+         <loc>https://notes.atticux.me/CS/VCS/Pre-commit/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/VCS/git/</loc>
+         <loc>https://notes.atticux.me/CS/VCS/git/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/VCS/github/SSH_keypair_setup_for_GitHub/</loc>
+         <loc>https://notes.atticux.me/CS/VCS/github/SSH_keypair_setup_for_GitHub/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/CS/tools/IDE/JetBrains/</loc>
+         <loc>https://notes.atticux.me/CS/tools/Obsidian/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Features/Admonitions/</loc>
+         <loc>https://notes.atticux.me/CS/tools/IDE/JetBrains/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Features/Diagrams/</loc>
+         <loc>https://notes.atticux.me/Features/Admonitions/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Features/Icons%2C%20Emojis/</loc>
+         <loc>https://notes.atticux.me/Features/Diagrams/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Features/Image/</loc>
+         <loc>https://notes.atticux.me/Features/Icons%2C%20Emojis/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Features/LaTeX%20Math%20Support/</loc>
+         <loc>https://notes.atticux.me/Features/Image/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Features/Table/</loc>
+         <loc>https://notes.atticux.me/Features/LaTeX%20Math%20Support/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Features/Text%20Formatting/</loc>
+         <loc>https://notes.atticux.me/Features/Table/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Features/code/</loc>
+         <loc>https://notes.atticux.me/Features/Text%20Formatting/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Features/footntoes/</loc>
+         <loc>https://notes.atticux.me/Features/code/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Learning/Reading%20list/</loc>
+         <loc>https://notes.atticux.me/Features/footntoes/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Learning/Computer%20Vison/3D/</loc>
+         <loc>https://notes.atticux.me/Learning/Reading%20list/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Learning/Computer%20Vison/Image/</loc>
+         <loc>https://notes.atticux.me/Learning/Computer%20Vison/3D/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Reference/Finding%20and%20managing%20research%20papers%20a%20survey%20of%20tools%20and%20products/</loc>
+         <loc>https://notes.atticux.me/Learning/Computer%20Vison/Image/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Reference/blog/Steph%20Ango/What%20can%20we%20remove/</loc>
+         <loc>https://notes.atticux.me/Reference/Finding%20and%20managing%20research%20papers%20a%20survey%20of%20tools%20and%20products/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Reference/linux/How%20to%20Monitor%20and%20Test%20the%20Health%20of%20SSD%20in%20Linux/</loc>
+         <loc>https://notes.atticux.me/Reference/blog/Steph%20Ango/What%20can%20we%20remove/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Reference/obsidian/Early%20access%20versions%20-%20Obsidian%20Help/</loc>
+         <loc>https://notes.atticux.me/Reference/linux/How%20to%20Monitor%20and%20Test%20the%20Health%20of%20SSD%20in%20Linux/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticuszeller.club/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/</loc>
+         <loc>https://notes.atticux.me/Reference/obsidian/Early%20access%20versions%20-%20Obsidian%20Help/</loc>
+         <lastmod>2025-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/</loc>
          <lastmod>2025-01-05</lastmod>
     </url>
 </urlset>
