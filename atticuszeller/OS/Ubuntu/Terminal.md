@@ -160,8 +160,21 @@ and `mono` fonts. you have to restart it to enable fonts.
 
 ## Shortcut
 
-![[assets/Pasted image 20250105103733.png]]
+Use `Tab` to autocomplete _file_, _directory_, _commands_.
 
+Erase the whole line via `Ctrl+U`.
+
+`Home` or `End` \(`Ctrl+A`, `Ctrl+E`\) can jump to the front or the end of the command.
+
+`zsh-autosuggestions` with ➡️ gets the command from history, but sometimes the partial commands, words need to be modified to run,`Ctrl+U` remove the _word_ before the cursor.
+
+`Ctrl+D` helps us quit from _ssh_ connection.
+
+`history-substring-search` allows us to use `keyword` with ⬆️, ⬇️ to filter commands from history.
+
+`Ctrl+C` to kill the running program.`Ctrl+Z` to suspend it.
+
+Use `Ctrl+Shift+C` and `Ctrl+Shift+V` to _copy_ and _paste_.
 ## Reference
 
 1. [The Only 5 Zsh Plugins You Need](https://catalins.tech/zsh-plugins/)
