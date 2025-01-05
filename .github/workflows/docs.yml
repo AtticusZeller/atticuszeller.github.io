@@ -10,10 +10,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Set timezone
-        run: |
-          sudo timedatectl set-timezone Asia/Shanghai
-
       - uses: actions/checkout@v4
         with:
           # get full git commit to adjust for git-revision-date-localized plugin
