@@ -2,7 +2,7 @@
 
 ## Theme
 
-[GitHub - vinceliuice/WhiteSur-gtk-theme: MacOS Big Sure like theme for Gnome desktops](https://github.com/vinceliuice/WhiteSur-gtk-theme)
+[WhiteSur-gtk-theme](https://github.com/vinceliuice/WhiteSur-gtk-theme)
 
 ### Basic Extension
 
