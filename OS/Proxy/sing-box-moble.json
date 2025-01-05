@@ -238,7 +238,7 @@
       },
       {
         "action": "resolve",
-        "server": "dns_direct"
+        "server": "dns_proxy"
       },
       {
         "rule_set": "geoip-cn",
