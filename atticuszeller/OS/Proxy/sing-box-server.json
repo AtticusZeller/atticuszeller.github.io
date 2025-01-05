@@ -25,7 +25,8 @@
         "certificate_path": "/root/cert-CF/magic.atticux.me/fullchain.pem",
         "key_path": "/root/cert-CF/magic.atticux.me/privkey.pem"
       },
-      "brutal_debug": false
+      "brutal_debug": false,
+      "ignore_client_bandwidth": true
     }
   ],
   "outbounds": [
