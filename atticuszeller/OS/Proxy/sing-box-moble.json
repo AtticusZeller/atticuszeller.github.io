@@ -239,10 +239,6 @@
         "outbound": "direct"
       },
       {
-        "action": "resolve",
-        "server": "dns_direct"
-      },
-      {
         "rule_set": "geoip-cn",
         "outbound": "direct"
       }
