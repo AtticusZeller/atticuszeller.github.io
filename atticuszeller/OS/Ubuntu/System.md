@@ -96,6 +96,14 @@ ssh ubuntu-laptop
 whoami
 ```
 
+### Cat with Bat
+
+```bash
+sudo apt install bat
+```
+
+`cat` is aliased to `/usr/bin/batcat`
+
 ## Basic Tools for Desktop
 
 ### Browse

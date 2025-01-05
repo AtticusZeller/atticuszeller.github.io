@@ -57,7 +57,7 @@ This shortcut is sort of opposite to Ctrl+A. Ctrl+A sends the cursor to the begi
 
 Typed a wrong command? Instead of using the backspace to discard the current command, use Ctrl+U shortcut in the Linux terminal. This shortcut ==erases everything== from the ==current cursor position to the beginning== of the line.
 
-> [!WARNING ] Ubuntu Terminal would erase everything of the line
+> [!WARNING ] Ubuntu Terminal would erase everything of one line
 
 ### 9\. Ctrl + K
 
