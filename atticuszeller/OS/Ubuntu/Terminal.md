@@ -81,7 +81,7 @@ plugins=(
 > [!NOTE]
  > plugin config must before the `source $ZSH/oh-my-zsh.sh`
 
-### Vscode
+### VScode
 
 vs code terminal , Add these properties to the user `settings.json`
 
