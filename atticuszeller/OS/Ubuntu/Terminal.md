@@ -14,8 +14,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ### Install Fonts
 
-> [!INFO] [Nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
-> __Nerd Fonts__ is a project that patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular 'iconic fonts' such as [Font Awesome](https://github.com/FortAwesome/Font-Awesome), [Devicons](https://github.com/devicons/devicon), [Octicons](https://github.com/primer/octicons), and [others](https://github.com/ryanoasis/nerd-fonts#glyph-sets).
+> [!INFO] Nerd-fonts
+> __Nerd Fonts__ is a project that patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular 'iconic fonts' such as [Font Awesome](https://github.com/FortAwesome/Font-Awesome), [Devicons](https://github.com/devicons/devicon), [Octicons](https://github.com/primer/octicons), and [others](https://github.com/ryanoasis/nerd-fonts#glyph-sets).[\[2\]](https://github.com/ryanoasis/nerd-fonts)
 
 download and update cache
 
@@ -116,7 +116,7 @@ open your browser with terminal search content
 
 #### Z
 
-> Zsh-z is a command-line tool that allows you to jump quickly to directories that you have visited frequently or recently.[\[2\]](https://github.com/agkozak/zsh-z)
+> Zsh-z is a command-line tool that allows you to jump quickly to directories that you have visited frequently or recently.[\[3\]](https://github.com/agkozak/zsh-z)
 
 ![[assets/Pasted image 20250105164146.png]]
 1. `cd` needs the specific directory, _keywords_ of your directory which visited before is enough for `z`
