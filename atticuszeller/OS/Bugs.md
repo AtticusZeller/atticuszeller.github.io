@@ -1,6 +1,6 @@
-# Bugs
+## Bugs
 
-## Time Wrong in Dul System
+### Time Wrong in Dul System
 
 To change the RTC setting to UTC in Windows, you need to edit the registry:
 
