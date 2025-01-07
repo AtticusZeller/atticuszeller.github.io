@@ -1,4 +1,4 @@
-
+# Git
 
 Git game in [Learn Git Branching](https://learngitbranching.js.org/?locale=en_US)
 
@@ -163,6 +163,28 @@ git submodule update --init --recursive
 rm -rf third_party/GS_ICP_SLAM
 rm -rf .git/modules/third_party/GS_ICP_SLAM
 git config --remove-section submodule.third_party/GS_ICP_SLAM
+```
+
+### Modify Git Commit Messages
+
+open rebase editor with 4 latest commit
+
+```bash
+git rebase -i HEAD~4
+```
+
+replace `pick` with `edit` and save.
+start to edit commit message.
+
+```bash
+git commit --amend
+```
+
+save the results
+
+```bash
+git rebase --continue
+git push --force
 ```
 
 ## LFS
