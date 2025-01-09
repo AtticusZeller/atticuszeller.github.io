@@ -27,6 +27,10 @@
         "server": "dns_direct"
       },
       {
+        "domain_suffix": [
+          "obsidian.md",
+          "zotero.org"
+        ],
         "rule_set": "geosite-python",
         "server": "google"
       },
