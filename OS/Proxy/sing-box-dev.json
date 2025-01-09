@@ -27,10 +27,6 @@
         "server": "dns_direct"
       },
       {
-        "domain_suffix": [
-          "obsidian.md",
-          "zotero.org"
-        ],
         "rule_set": "geosite-python",
         "server": "google"
       },
@@ -192,7 +188,6 @@
       },
       {
         "domain_suffix": [
-          "obsidian.md",
           "zotero.org"
         ],
         "rule_set": [
@@ -222,6 +217,7 @@
         ],
         "domain_suffix": [
           ".cn",
+          "obsidian.md",
           "metacubexd.pages.dev",
           "atticux.me"
         ],
