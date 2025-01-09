@@ -11,13 +11,8 @@
         "detour": "direct"
       },
       {
-        "tag": "cloudflare-gateway",
-        "address": "172.64.36.1",
-        "detour": "proxy"
-      },
-      {
-        "tag": "google",
-        "address": "8.8.8.8",
+        "tag": "dns_proxy",
+        "address": "h3://1.1.1.1/dns-query",
         "detour": "proxy"
       }
     ],
@@ -27,15 +22,11 @@
         "server": "dns_direct"
       },
       {
-        "rule_set": "geosite-python",
-        "server": "google"
-      },
-      {
         "rule_set": "geosite-cn",
         "server": "dns_direct"
       }
     ],
-    "final": "cloudflare-gateway",
+    "final": "dns_proxy",
     "reverse_mapping": true,
     "strategy": "prefer_ipv4"
   },
@@ -72,7 +63,7 @@
         "🔥San Francisco TCP",
         "direct"
       ],
-      "default": "🔥San Francisco TCP"
+      "default": "⚡San Francisco Hy2"
     },
     {
       "type": "direct",
@@ -188,6 +179,7 @@
       },
       {
         "domain_suffix": [
+          "obsidian.md",
           "zotero.org"
         ],
         "rule_set": [
@@ -217,7 +209,6 @@
         ],
         "domain_suffix": [
           ".cn",
-          "obsidian.md",
           "metacubexd.pages.dev",
           "atticux.me"
         ],
