@@ -1,7 +1,8 @@
+# Git
+
 ## Git
 
 Git game in [Learn Git Branching](https://learngitbranching.js.org/?locale=en_US)
-：
 
 ### Init
 
@@ -194,9 +195,9 @@ git push --force
 git checkout -b backup-branch
 # under your-feature-branch
 git checkout your-feature-branch
-# rest to main 
+# rest to main
 git reset --hard upstream/dev-next
-# pick new commit 
+# pick new commit
 git cherry-pick backup-branch
 git push -f origin
 ```
