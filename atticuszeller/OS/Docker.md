@@ -49,3 +49,9 @@ sudo systemctl enable containerd.service
 ```bash
 docker ps
 ```
+
+### [Usage and rate limits \| Docker Docs](https://docs.docker.com/docker-hub/download-rate-limit/#how-do-i-authenticate-pulls)
+
+```bash
+docker login
+```
