@@ -1,10 +1,15 @@
 # Appearance
 
-[theme\_manager.sh](https://github.com/AtticusZeller/scripts/blob/main/theme_manager.sh)
+## Fonts
+
+Install __bold__ [[OS/Ubuntu/Terminal#Install Fonts|Nerd Fonts]] and [[OS/Ubuntu/Gnome#Tweaks|Tweak]] your system fonts, sharp and slim fonts would easy your eyes.
+
+> `Comic Sans MS` in obsidian looks like handwriting fonts.
 
 ## Theme
 
-[WhiteSur-gtk-theme](https://github.com/vinceliuice/WhiteSur-gtk-theme)
+1. [theme\_manager.sh](https://github.com/AtticusZeller/scripts/blob/main/theme_manager.sh)
+2. [WhiteSur-gtk-theme](https://github.com/vinceliuice/WhiteSur-gtk-theme)
 
 ### Basic Extension
 
