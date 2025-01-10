@@ -45,6 +45,12 @@ rm -r "$(uv tool dir)"
 rm ~/.cargo/bin/uv ~/.cargo/bin/uvx
 ```
 
+- enable Sudo
+
+```bash
+sudo ln -sf $(which uv) /usr/local/bin/
+```
+
 # [python](https://docs.astral.sh/uv/concepts/python-versions/#installing-a-python-version)
 
 - `uv` will [automatically fetch Python versions](https://docs.astral.sh/uv/guides/install-python/#automatic-python-downloads) as needed — you don't need to install Python to get started.
@@ -70,7 +76,7 @@ package installed as tool would be manage in a special isolated environment
 `uvx` == `uv tool run`
 
 ```bash
-uvx ruff check
+ruff check
 ```
 
 # Dependencies
