@@ -194,7 +194,6 @@
       {
         "domain_suffix": [
           "obsidian.md",
-          "atticux.me",
           "zotero.org"
         ],
         "rule_set": [
@@ -224,7 +223,8 @@
         ],
         "domain_suffix": [
           ".cn",
-          "metacubexd.pages.dev"
+          "metacubexd.pages.dev",
+          "atticux.me"
         ],
         "rule_set": "geosite-cn",
         "outbound": "direct"
