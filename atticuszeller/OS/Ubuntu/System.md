@@ -124,6 +124,12 @@ sudo apt update && sudo apt remove FireFox
 sudo apt install firefox
 ```
 
+#### settings
+1. enable Ctrl+Tab cycles through tabs in recently used order
+2. Fonts settings
+
+
+
 [PWA plugin](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/)
 
 ### Use Eye Protection Mode
