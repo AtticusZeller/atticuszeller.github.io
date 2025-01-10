@@ -25,6 +25,8 @@ sudo docker run hello-world
 docker compose version
 ```
 
+## Docker Commands
+
 ### Use Docker by User without `sudo`
 
 [Post-installation steps | Docker Docs](https://docs.docker.com/engine/install/linux-postinstall/)
@@ -54,4 +56,12 @@ docker ps
 
 ```bash
 docker login
+```
+
+## Docker Compose
+
+### Restart
+
+```bash
+docker compose down && docker compose up -d
 ```
