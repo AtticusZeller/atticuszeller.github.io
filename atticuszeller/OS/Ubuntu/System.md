@@ -92,11 +92,16 @@ ssh ubuntu-laptop
 
 ### Current User
 
- ```bash
-whoami
+```bash
+ whoami
 ```
 
-`cat` is aliased to `/usr/bin/batcat`
+### Display Server
+
+```bash
+code /etc/gdm3/custom.conf
+# WaylandEnable=true
+```
 
 ## Basic Tools for Desktop
 
