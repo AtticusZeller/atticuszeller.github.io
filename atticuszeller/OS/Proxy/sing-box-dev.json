@@ -81,7 +81,7 @@
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "magic.atticux.me",
+        "server_name": "notes.atticux.me",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
