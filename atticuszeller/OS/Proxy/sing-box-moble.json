@@ -12,7 +12,7 @@
       },
       {
         "tag": "dns_proxy",
-        "address": "h3://1.1.1.1/dns-query",
+        "address": "h3://8.8.8.8/dns-query",
         "detour": "proxy"
       }
     ],

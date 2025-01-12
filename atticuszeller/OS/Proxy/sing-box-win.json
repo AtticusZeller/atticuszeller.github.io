@@ -11,8 +11,8 @@
                 "detour": "direct"
             },
             {
-        "tag": "dns_proxy",
-        "address": "h3://1.1.1.1/dns-query",
+                "tag": "dns_proxy",
+                "address": "h3://8.8.8.8/dns-query",
                 "detour": "proxy"
             }
         ],
@@ -26,7 +26,7 @@
                 "server": "dns_direct"
             }
         ],
-    "final": "dns_proxy",
+        "final": "dns_proxy",
         "reverse_mapping": true,
         "strategy": "prefer_ipv4"
     },
