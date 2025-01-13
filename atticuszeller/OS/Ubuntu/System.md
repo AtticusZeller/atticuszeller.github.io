@@ -98,6 +98,8 @@ ssh ubuntu-laptop
 
 ### Display Server
 
+enable [wayland](https://linuxconfig.org/how-to-enable-disable-wayland-on-ubuntu-22-04-desktop)
+
 ```bash
 code /etc/gdm3/custom.conf
 # WaylandEnable=true

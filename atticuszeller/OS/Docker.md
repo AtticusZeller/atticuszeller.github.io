@@ -65,3 +65,9 @@ docker login
 ```bash
 docker compose down && docker compose up -d
 ```
+
+## Linter
+
+```bash
+brew install hadolint
+```
