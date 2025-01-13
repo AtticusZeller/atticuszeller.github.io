@@ -1,0 +1,195 @@
+# Docker
+
+[A Docker Tutorial for Beginners](https://docker-curriculum.com)
+
+## [Terminology](https://docker-curriculum.com/#terminology)
+
+- _Containers_ - Created from Docker images and run the actual application. We create a container using `docker run`. A list of running containers can be seen using the `docker ps` command.
+- _Images_ - The blueprints of our application which form the basis of containers.
+- _Docker Daemon_ - The background service running on the host that manages building, running and distributing Docker containers. The daemon is the process that runs in the operating system which clients talk to.
+- _Docker Client_ - The command line tool that allows the user to interact with the daemon. More generally, there can be other forms of clients too - such as [docker-desktop](https://www.docker.com/products/docker-desktop/) which provide a GUI to the users.
+- _Docker Hub_ - A [registry](https://hub.docker.com/explore/) of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.
+- The `TAG` refers to a particular __snapshot__ of the image and the `IMAGE ID` is the corresponding unique __identifier__ for that image.
+
+An important distinction to be aware of when it comes to images is the difference between base and child images.
+
+- __Base images__ are images that have no parent image, usually images with an OS like ubuntu, busybox or debian.
+- __Child images__ are images that build on base images and add additional functionality.
+
+Then there are official and user images, which can be both base and child images.
+
+- __Official images__ are images that are officially maintained and supported by the folks at Docker. These are typically one word long. In the list of images above, the `python`, `ubuntu`, `busybox` and `hello-world` images are official images.
+- __User images__ are images created and shared by users like you and me. They build on base images and add additional functionality. Typically, these are formatted as `user/image-name`.
+
+## [Install Docker and - Compose](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+
+```bash
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+# install docker engine
+sudo apt update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+```bash
+# tests
+sudo docker run hello-world
+docker compose version
+```
+
+## [Dockerfile](https://docs.docker.com/reference/dockerfile/)
+
+A [Dockerfile](https://docs.docker.com/engine/reference/builder/) is a simple text file that contains a list of commands that the Docker client calls while creating an \(child\) __image__.
+
+We start with specifying our base image. Use the `FROM` keyword to do that -
+
+```bash
+# base image from bookworm=debian12 with slim python
+FROM python:3.12-slim-bookworm
+```
+
+create a directory if does not exist and `cd` to it for the following commands
+
+```bash
+# set a directory for the app
+WORKDIR /app
+```
+
+```bash
+# copy all the files to the pws
+COPY . .
+```
+
+The primary purpose of `CMD` is to tell the container which command it should run when it is started.
+
+```bash
+CMD ["python", "./app.py"]
+```
+
+### Docker Build
+
+This username should be the same one you created when you registered on [Docker hub](https://hub.docker.com/).
+it takes an optional tag name with `-t` and a location of the directory containing the `Dockerfile`.
+
+```bash
+docker build -t yourusername/hello-world .
+```
+
+> copy `.gitignore` to `.dockerignore` to slim the `/app`
+
+#### [Cache](https://docs.docker.com/build/cache/)
+
+How it works?
+
+```Dockerfile
+# syntax=docker/dockerfile:1
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y build-essentials
+COPY main.c Makefile /src/
+WORKDIR /src/
+RUN make build
+```
+
+Each instruction in this Dockerfile translates to a layer in your final image.
+![[assets/Pasted image 20250113205117.png]]
+
+If a layer changes, all other layers that come after it are also affected.
+![[assets/Pasted image 20250113205156.png]]
+
+[docker integration with uv](https://docs.astral.sh/uv/guides/integration/docker/) and [template](https://github.com/AtticusZeller/python-uv/blob/main/Dockerfile)
+
+### Docker Run
+
+```bash
+docker run yourusername/hello-world:latest
+```
+
+### Docker Push
+
+If this is the first time you are pushing an image, the client will ask you to login. Provide the same credentials that you used for logging into Docker Hub.
+
+```bash
+docker login
+```
+
+It is important to have the format of `yourusername/image_name` so that the client knows where to publish.
+
+```bash
+docker push yourusername/hello-world
+```
+
+Now that your image is online, anyone who has docker installed can play with your app by typing just a single command.
+
+## Docker Commands
+
+### Use Docker by User without `sudo`
+
+[Post-installation steps | Docker Docs](https://docs.docker.com/engine/install/linux-postinstall/)
+
+```bash
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+# tests
+docker run hello-world
+```
+
+### Auto Start
+
+```bash
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+```
+
+### Check the Running Container
+
+```bash
+# ps= process status,show running containers
+docker ps
+# show containers that are running or exited
+docker ps -a
+```
+
+### [Usage and rate limits \| Docker Docs](https://docs.docker.com/docker-hub/download-rate-limit/#how-do-i-authenticate-pulls)
+
+```bash
+docker login
+```
+
+### Remove Containers
+
+deletes all containers that have a status of `exited
+
+```bash
+docker container prune
+```
+
+### Remove Image
+
+```bash
+docker rmi <image_id>
+```
+
+## Docker Compose
+
+### Restart
+
+```bash
+docker compose down && docker compose up -d
+```
+
+## Linter
+
+```bash
+brew install hadolint
+```
