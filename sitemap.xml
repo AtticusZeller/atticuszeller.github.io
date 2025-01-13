@@ -5,6 +5,10 @@
          <lastmod>2025-01-13</lastmod>
     </url>
     <url>
+         <loc>https://notes.atticux.me/Backend/Docker/</loc>
+         <lastmod>2025-01-13</lastmod>
+    </url>
+    <url>
          <loc>https://notes.atticux.me/Backend/FastApi/</loc>
          <lastmod>2025-01-13</lastmod>
     </url>
@@ -18,6 +22,10 @@
     </url>
     <url>
          <loc>https://notes.atticux.me/Backend/DB/ORM/SQLModel/</loc>
+         <lastmod>2025-01-13</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Backend/Proxy/Traefik/</loc>
          <lastmod>2025-01-13</lastmod>
     </url>
     <url>
@@ -185,10 +193,6 @@
          <lastmod>2025-01-13</lastmod>
     </url>
     <url>
-         <loc>https://notes.atticux.me/OS/Docker/</loc>
-         <lastmod>2025-01-13</lastmod>
-    </url>
-    <url>
          <loc>https://notes.atticux.me/OS/GPU/</loc>
          <lastmod>2025-01-13</lastmod>
     </url>
@@ -234,6 +238,10 @@
     </url>
     <url>
          <loc>https://notes.atticux.me/Reference/blog/Steph%20Ango/What%20can%20we%20remove/</loc>
+         <lastmod>2025-01-13</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.atticux.me/Reference/devops/A%20Docker%20Tutorial%20for%20Beginners/</loc>
          <lastmod>2025-01-13</lastmod>
     </url>
     <url>
