@@ -13,6 +13,10 @@
 - Search for software: `apt search <keyword>`
 - Display package information: `apt show <package-name>`
 
+```bash
+sudo rm /etc/apt/sources.list.d/<package>
+```
+
 ### Principles
 
 APT is an advanced package management tool that uses dpkg as its backend. APT can:
