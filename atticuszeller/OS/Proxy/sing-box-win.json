@@ -34,6 +34,7 @@
     "enabled": true,
     "interval": "30m0s",
     "server": "time.tencent.com",
+    "write_to_system": true,
     "server_port": 123
   },
   "inbounds": [
