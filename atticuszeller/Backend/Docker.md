@@ -11,6 +11,8 @@
 - _Docker Hub_ - A [registry](https://hub.docker.com/explore/) of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.
 - The `TAG` refers to a particular __snapshot__ of the image and the `IMAGE ID` is the corresponding unique __identifier__ for that image.
 
+### Image
+
 An important distinction to be aware of when it comes to images is the difference between base and child images.
 
 - __Base images__ are images that have no parent image, usually images with an OS like ubuntu, busybox or debian.
@@ -20,6 +22,8 @@ Then there are official and user images, which can be both base and child images
 
 - __Official images__ are images that are officially maintained and supported by the folks at Docker. These are typically one word long. In the list of images above, the `python`, `ubuntu`, `busybox` and `hello-world` images are official images.
 - __User images__ are images created and shared by users like you and me. They build on base images and add additional functionality. Typically, these are formatted as `user/image-name`.
+
+
 
 ## [Install Docker and - Compose](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 
