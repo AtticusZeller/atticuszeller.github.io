@@ -29,11 +29,11 @@ docker compose version
 
 [A Docker Tutorial for Beginners](https://docker-curriculum.com)
 
-- _Containers_  Created from Docker images and run the actual application. We create a container using `docker run`. A list of running containers can be seen using the `docker ps` command.
-- _Images_  The blueprints of our application which form the basis of containers.
-- _Docker Daemon_  The background service running on the host that manages building, running and distributing Docker containers. The daemon is the process that runs in the operating system which clients talk to.
-- _Docker Client_  The command line tool that allows the user to interact with the daemon. More generally, there can be other forms of clients too - such as [docker-desktop](https://www.docker.com/products/docker-desktop/) which provide a GUI to the users.
-- _Docker Hub_   A [registry](https://hub.docker.com/explore/) of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.
+- _Containers_ Created from Docker images and run the actual application. We create a container using `docker run`. A list of running containers can be seen using the `docker ps` command.
+- _Images_ The blueprints of our application which form the basis of containers.
+- _Docker Daemon_ The background service running on the host that manages building, running and distributing Docker containers. The daemon is the process that runs in the operating system which clients talk to.
+- _Docker Client_ The command line tool that allows the user to interact with the daemon. More generally, there can be other forms of clients too - such as [docker-desktop](https://www.docker.com/products/docker-desktop/) which provide a GUI to the users.
+- _Docker Hub_ A [registry](https://hub.docker.com/explore/) of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.
 - The `TAG` refers to a particular __snapshot__ of the image and the `IMAGE ID` is the corresponding unique __identifier__ for that image.
 
 ## Docker Image
