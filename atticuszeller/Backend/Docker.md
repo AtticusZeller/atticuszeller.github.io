@@ -1,30 +1,5 @@
 # Docker
 
-[A Docker Tutorial for Beginners](https://docker-curriculum.com)
-
-## [Terminology](https://docker-curriculum.com/#terminology)
-
-- _Containers_ - Created from Docker images and run the actual application. We create a container using `docker run`. A list of running containers can be seen using the `docker ps` command.
-- _Images_ - The blueprints of our application which form the basis of containers.
-- _Docker Daemon_ - The background service running on the host that manages building, running and distributing Docker containers. The daemon is the process that runs in the operating system which clients talk to.
-- _Docker Client_ - The command line tool that allows the user to interact with the daemon. More generally, there can be other forms of clients too - such as [docker-desktop](https://www.docker.com/products/docker-desktop/) which provide a GUI to the users.
-- _Docker Hub_ - A [registry](https://hub.docker.com/explore/) of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.
-- The `TAG` refers to a particular __snapshot__ of the image and the `IMAGE ID` is the corresponding unique __identifier__ for that image.
-
-### Image
-
-An important distinction to be aware of when it comes to images is the difference between base and child images.
-
-- __Base images__ are images that have no parent image, usually images with an OS like ubuntu, busybox or debian.
-- __Child images__ are images that build on base images and add additional functionality.
-
-Then there are official and user images, which can be both base and child images.
-
-- __Official images__ are images that are officially maintained and supported by the folks at Docker. These are typically one word long. In the list of images above, the `python`, `ubuntu`, `busybox` and `hello-world` images are official images.
-- __User images__ are images created and shared by users like you and me. They build on base images and add additional functionality. Typically, these are formatted as `user/image-name`.
-
-
-
 ## [Install Docker and - Compose](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 
 ```bash
@@ -50,33 +25,65 @@ sudo docker run hello-world
 docker compose version
 ```
 
-## [Dockerfile](https://docs.docker.com/reference/dockerfile/)
+[A Docker Tutorial for Beginners](https://docker-curriculum.com)
+
+## [Terminology](https://docker-curriculum.com/#terminology)
+
+- _Containers_ - Created from Docker images and run the actual application. We create a container using `docker run`. A list of running containers can be seen using the `docker ps` command.
+- _Images_ - The blueprints of our application which form the basis of containers.
+- _Docker Daemon_ - The background service running on the host that manages building, running and distributing Docker containers. The daemon is the process that runs in the operating system which clients talk to.
+- _Docker Client_ - The command line tool that allows the user to interact with the daemon. More generally, there can be other forms of clients too - such as [docker-desktop](https://www.docker.com/products/docker-desktop/) which provide a GUI to the users.
+- _Docker Hub_ - A [registry](https://hub.docker.com/explore/) of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.
+- The `TAG` refers to a particular __snapshot__ of the image and the `IMAGE ID` is the corresponding unique __identifier__ for that image.
+
+## Docker Image
+
+An important distinction to be aware of when it comes to images is the difference between base and child images.
+
+- __Base images__ are images that have no parent image, usually images with an OS like ubuntu, busybox or debian.
+- __Child images__ are images that build on base images and add additional functionality.
+
+Then there are official and user images, which can be both base and child images.
+
+- __Official images__ are images that are officially maintained and supported by the folks at Docker. These are typically one word long. In the list of images above, the `python`, `ubuntu`, `busybox` and `hello-world` images are official images.
+- __User images__ are images created and shared by users like you and me. They build on base images and add additional functionality. Typically, these are formatted as `user/image-name`.
+
+### [Dockerfile](https://docs.docker.com/reference/dockerfile/)
 
 A [Dockerfile](https://docs.docker.com/engine/reference/builder/) is a simple text file that contains a list of commands that the Docker client calls while creating an \(child\) __image__.
 
-We start with specifying our base image. Use the `FROM` keyword to do that -
+`FROM <image>` - this specifies the _base image_ that the build will extend.
 
 ```bash
 # base image from bookworm=debian12 with slim python
 FROM python:3.12-slim-bookworm
 ```
 
-create a directory if does not exist and `cd` to it for the following commands
+`WORKDIR <path>` - this instruction specifies the "working directory" or the path in the image where files will be copied and commands will be executed.
 
 ```bash
 # set a directory for the app
 WORKDIR /app
 ```
 
+`COPY <host-path> <image-path>` - this instruction tells the builder to copy files from the host and put them into the container image.
+
 ```bash
-# copy all the files to the pws
+# copy all the files to the $(pwd)
 COPY . .
 ```
 
-The primary purpose of `CMD` is to tell the container which command it should run when it is started.
+`RUN <command>` - this instruction tells the builder to run the specified command.
 
 ```bash
 CMD ["python", "./app.py"]
+```
+
+`ENV <name> <value>` - this instruction sets an environment variable that a running container will use.
+
+```bash
+# Ensure virtual environment binaries are in PATH： https://docs.astral.sh/uv/guides/integration/docker/#using-the-environment
+ENV PATH="/app/.venv/bin:$PATH"
 ```
 
 ### Docker Build
@@ -134,6 +141,17 @@ docker push yourusername/hello-world
 
 Now that your image is online, anyone who has docker installed can play with your app by typing just a single command.
 
+## Docker Compose
+
+> [!TIP] Dockerfile versus Compose file
+> A Dockerfile provides instructions to _build a container image_ while a Compose file _defines your running containers_. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.[\[1\]](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose/)
+
+### Commands
+
+```bash
+docker compose down && docker compose up -d
+```
+
 ## Docker Commands
 
 ### Use Docker by User without `sudo`
@@ -182,14 +200,6 @@ docker container prune
 
 ```bash
 docker rmi <image_id>
-```
-
-## Docker Compose
-
-### Restart
-
-```bash
-docker compose down && docker compose up -d
 ```
 
 ## Linter
