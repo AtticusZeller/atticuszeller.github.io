@@ -7,12 +7,12 @@
     "servers": [
       {
         "tag": "dns_direct",
-        "address": "h3://223.5.5.5/dns-query",
+        "address": "h3://223.6.6.6/dns-query",
         "detour": "direct"
       },
       {
         "tag": "dns_proxy",
-        "address": "h3://1.0.0.1/dns-query",
+        "address": "h3://1.0.0.3/dns-query",
         "detour": "proxy"
       }
     ],
