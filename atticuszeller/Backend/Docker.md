@@ -25,10 +25,9 @@ sudo docker run hello-world
 docker compose version
 ```
 
-[A Docker Tutorial for Beginners](https://docker-curriculum.com)
-
 ## [Terminology](https://docker-curriculum.com/#terminology)
 
+[A Docker Tutorial for Beginners](https://docker-curriculum.com)
 - _Containers_ - Created from Docker images and run the actual application. We create a container using `docker run`. A list of running containers can be seen using the `docker ps` command.
 - _Images_ - The blueprints of our application which form the basis of containers.
 - _Docker Daemon_ - The background service running on the host that manages building, running and distributing Docker containers. The daemon is the process that runs in the operating system which clients talk to.
@@ -47,6 +46,8 @@ Then there are official and user images, which can be both base and child images
 
 - __Official images__ are images that are officially maintained and supported by the folks at Docker. These are typically one word long. In the list of images above, the `python`, `ubuntu`, `busybox` and `hello-world` images are official images.
 - __User images__ are images created and shared by users like you and me. They build on base images and add additional functionality. Typically, these are formatted as `user/image-name`.
+
+### Image Layers
 
 ### [Dockerfile](https://docs.docker.com/reference/dockerfile/)
 
@@ -97,9 +98,15 @@ docker build -t yourusername/hello-world .
 
 > copy `.gitignore` to `.dockerignore` to slim the `/app`
 
-#### [Cache](https://docs.docker.com/build/cache/)
+#### Cache
 
-How it works?
+> [!TIP] Using the build cache
+> Using the build cache effectively lets you achieve faster builds by reusing results from previous builds and skipping unnecessary work.
+> - Any changes to the command of a `RUN` instruction invalidates that layer.
+> - Any changes to files copied into the image with the `COPY` or `ADD` instructions.
+> - Once one layer is invalidated, all following layers are also invalidated.[\[1\]](https://docs.docker.com/get-started/docker-concepts/building-images/using-the-build-cache/)
+
+[How it works?](https://docs.docker.com/build/cache/)
 
 ```Dockerfile
 # syntax=docker/dockerfile:1
@@ -117,7 +124,29 @@ Each instruction in this Dockerfile translates to a layer in your final image.
 If a layer changes, all other layers that come after it are also affected.
 ![[assets/Pasted image 20250113205156.png]]
 
-[docker integration with uv](https://docs.astral.sh/uv/guides/integration/docker/) and [template](https://github.com/AtticusZeller/python-uv/blob/main/Dockerfile)
+Best practice ?
+
+we hope the layer frequently modified to be last one,which aims to prevent to take much time on rebuilding the other layers such as installing dependency.
+
+[Intermediate layers](https://docs.astral.sh/uv/guides/integration/docker/#intermediate-layers) and [template](https://github.com/AtticusZeller/python-uv/blob/main/Dockerfile)
+
+#### Multi-stage Builds
+
+For compiled languages,like C or Go or Rust, multi-stage builds let you compile in one stage and copy the compiled binaries into a final runtime image. No need to bundle the entire compiler in your final image.[\[2\]](https://docs.docker.com/get-started/docker-concepts/building-images/multi-stage-builds/#explanation)
+
+```Dockerfile
+# Stage 1: Build Environment
+FROM builder-image AS build-stage
+# Install build tools (e.g., Maven, Gradle)
+# Copy source code
+# Build commands (e.g., compile, package)
+
+# Stage 2: Runtime environment
+FROM runtime-image AS final-stage
+#  Copy application artifacts from the build stage (e.g., JAR file)
+COPY --from=build-stage /path/in/build/stage /path/to/place/in/final/stage
+# Define runtime configuration (e.g., CMD, ENTRYPOINT)
+```
 
 ### Docker Run
 
@@ -144,7 +173,7 @@ Now that your image is online, anyone who has docker installed can play with you
 ## Docker Compose
 
 > [!TIP] Dockerfile versus Compose file
-> A Dockerfile provides instructions to _build a container image_ while a Compose file _defines your running containers_. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.[\[1\]](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose/)
+> A Dockerfile provides instructions to _build a container image_ while a Compose file _defines your running containers_. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.[\[3\]](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose/)
 
 ### Commands
 
