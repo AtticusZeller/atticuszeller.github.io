@@ -50,6 +50,13 @@ Then there are official and user images, which can be both base and child images
 
 ### Image Layers
 
+container images are composed of layers. And each of these layers, once created, are immutable.
+![[assets/Pasted image 20250113205117.png]]
+Each layer in an image contains a set of file system __changes__ - additions, deletions, or modifications.
+
+![[assets/Pasted image 20250114175758.png]]
+This is beneficial because it allows layers to be __reused__ between images. Layers let you extend images of others by reusing their base layers, allowing you to add only the data that your application needs.[Understanding the image layers \| Docker Docs](https://docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/#stacking-the-layers)
+
 ### [Dockerfile](https://docs.docker.com/reference/dockerfile/)
 
 A [Dockerfile](https://docs.docker.com/engine/reference/builder/) is a simple text file that contains a list of commands that the Docker client calls while creating an \(child\) __image__.
@@ -120,7 +127,6 @@ RUN make build
 ```
 
 Each instruction in this Dockerfile translates to a layer in your final image.
-![[assets/Pasted image 20250113205117.png]]
 
 If a layer changes, all other layers that come after it are also affected.
 ![[assets/Pasted image 20250113205156.png]]
