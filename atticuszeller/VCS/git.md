@@ -196,6 +196,7 @@ git checkout -b backup-branch
 # under your-feature-branch
 git checkout your-feature-branch
 # rest to main
+git fetch upstream
 git reset --hard upstream/dev-next
 # pick new commit
 git cherry-pick backup-branch
