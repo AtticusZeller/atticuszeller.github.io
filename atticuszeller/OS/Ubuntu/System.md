@@ -105,7 +105,7 @@ code /etc/gdm3/custom.conf
 # WaylandEnable=true
 ```
 
-### Logs
+### Service
 
 ```bash
 journalctl --since "2025-01-14 08:09:00" --until "2025-01-14 08:09:30"
