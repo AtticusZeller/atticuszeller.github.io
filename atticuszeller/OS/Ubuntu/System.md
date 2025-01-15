@@ -107,6 +107,11 @@ code /etc/gdm3/custom.conf
 
 ### Service
 
+#### Service
+
+> [!TIP] service.type
+> It is recommended to use Type=exec for __long-running__ services, as it ensures that process setup errors (e.g. errors such as a missing service executable, or missing user) are properly tracked.[\[1\]](https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html#Type=)
+
 ```bash
 journalctl --since "2025-01-14 08:09:00" --until "2025-01-14 08:09:30"
 ```
