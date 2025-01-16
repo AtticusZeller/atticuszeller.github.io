@@ -12,7 +12,8 @@
       },
       {
         "tag": "dns_proxy",
-        "address": "2604:a880:4:1d0::3747:3000",
+        "address": "h3://magic.atticux.me:9443/dns-query",
+        "address_resolver": "dns_direct",
         "detour": "proxy"
       }
     ],
@@ -20,6 +21,10 @@
       {
         "outbound": "any",
         "server": "dns_direct"
+      },
+      {
+        "rule_set": "dns-filter",
+        "action": "reject"
       },
       {
         "rule_set": "geosite-cn",
@@ -353,6 +358,13 @@
         "tag": "geosite-cn",
         "format": "binary",
         "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "dns-filter",
+        "format": "binary",
+        "url": "https://raw.gh.atticux.me/Atticux-me/rule-sets/main/binary/adguard/AdGuardDNSFilter.srs",
         "download_detour": "direct"
       }
     ],

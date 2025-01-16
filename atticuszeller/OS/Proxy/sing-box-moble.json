@@ -23,6 +23,10 @@
         "server": "dns_direct"
       },
       {
+        "rule_set": "dns-filter",
+        "action": "reject"
+      },
+      {
         "rule_set": "geosite-cn",
         "server": "dns_direct"
       }
@@ -30,12 +34,6 @@
     "final": "dns_proxy",
     "reverse_mapping": true,
     "strategy": "prefer_ipv4"
-  },
-  "ntp": {
-    "enabled": true,
-    "interval": "30m0s",
-    "server": "time.tencent.com",
-    "server_port": 123
   },
   "inbounds": [
     {
@@ -78,7 +76,7 @@
         "🔥San Francisco TCP",
         "direct"
       ],
-      "default": "🔥San Francisco TCP"
+      "default": "⚡San Francisco Hy2"
     },
     {
       "type": "direct",
@@ -367,6 +365,13 @@
         "tag": "geosite-cn",
         "format": "binary",
         "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "dns-filter",
+        "format": "binary",
+        "url": "https://raw.gh.atticux.me/Atticux-me/rule-sets/main/binary/adguard/AdGuardDNSFilter.srs",
         "download_detour": "direct"
       }
     ],
