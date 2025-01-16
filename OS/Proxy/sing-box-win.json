@@ -363,7 +363,7 @@
         "type": "remote",
         "tag": "dns-filter",
         "format": "binary",
-        "url": "https://raw.gh.atticux.me/Atticux-me/rule-sets/raw/refs/heads/main/binary/adguard/AdGuardDNSFilter.srs",
+        "url": "https://raw.gh.atticux.me/Atticux-me/rule-sets/main/binary/adguard/AdGuardDNSFilter.srs",
         "download_detour": "direct"
       }
     ],
