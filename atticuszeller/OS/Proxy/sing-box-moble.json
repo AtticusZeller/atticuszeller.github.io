@@ -12,7 +12,7 @@
       },
       {
         "tag": "dns_proxy",
-        "address": "h3://magic.atticux.me:8327/dns-query",
+        "address": "h3://dns.atticux.me/dns-query/asfljsndfaoifa",
         "address_resolver": "dns_direct",
         "detour": "proxy"
       }
