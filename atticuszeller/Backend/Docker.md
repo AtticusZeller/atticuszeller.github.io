@@ -55,7 +55,21 @@ container images are composed of layers. And each of these layers, once created,
 Each layer in an image contains a set of file system __changes__ - additions, deletions, or modifications.
 
 ![[assets/Pasted image 20250114175758.png]]
-This is beneficial because it allows layers to be __reused__ between images. Layers let you extend images of others by reusing their base layers, allowing you to add only the data that your application needs.[Understanding the image layers \| Docker Docs](https://docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/#stacking-the-layers)
+This is beneficial because it allows layers to be __reused__ between images. Layers let you extend images of others by reusing their base layers, allowing you to add only the data that your application needs.
+
+The new layer is able to be stacked by `Dockerfile` or `docker container commit -m <container> <image>` manually. And `docker image history <image>` offers image layers info.[\[4\]](https://docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/#stacking-the-layers)
+
+```bash
+IMAGE          CREATED              CREATED BY                               SIZE      COMMENT
+c1502e2ec875   About a minute ago   /bin/bash                                33B       Add app
+5310da79c50a   4 minutes ago        /bin/bash                                126MB     Add node
+2b7cc08dcdbb   5 weeks ago          /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B
+<missing>      5 weeks ago          /bin/sh -c #(nop) ADD file:07cdbabf782942af0â¦   69.2MB
+<missing>      5 weeks ago          /bin/sh -c #(nop)  LABEL org.opencontainers.â¦   0B
+<missing>      5 weeks ago          /bin/sh -c #(nop)  LABEL org.opencontainers.â¦   0B
+<missing>      5 weeks ago          /bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH     0B
+<missing>      5 weeks ago          /bin/sh -c #(nop)  ARG RELEASE                  0B
+```
 
 ### [Dockerfile](https://docs.docker.com/reference/dockerfile/)
 
