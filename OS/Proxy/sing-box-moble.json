@@ -23,6 +23,10 @@
         "server": "dns_direct"
       },
       {
+        "rule_set": "dns-filter",
+        "action": "reject"
+      },
+      {
         "rule_set": "geosite-cn",
         "server": "dns_direct"
       }
@@ -367,6 +371,13 @@
         "tag": "geosite-cn",
         "format": "binary",
         "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "dns-filter",
+        "format": "binary",
+        "url": "https://raw.gh.atticux.me/Atticux-me/rule-sets/raw/refs/heads/main/binary/adguard/AdGuardDNSFilter.srs",
         "download_detour": "direct"
       }
     ],
