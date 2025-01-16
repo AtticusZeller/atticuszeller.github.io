@@ -174,10 +174,6 @@
         "outbound": "direct"
       },
       {
-        "protocol": "ssh",
-        "outbound": "direct"
-      },
-      {
         "domain_suffix": [
           "obsidian.md",
           "zotero.org"
@@ -202,6 +198,10 @@
           "geosite-telegram"
         ],
         "outbound": "proxy"
+      },
+      {
+        "protocol": "ssh",
+        "outbound": "direct"
       },
       {
         "domain_keyword": [
