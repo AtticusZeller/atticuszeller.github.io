@@ -513,9 +513,9 @@ In the last section, we saw how easy and fun it is to run applications with Dock
 
 Those of you who have experience running services in production know that usually apps nowadays are not that simple. There's almost always a database (or any other kind of __persistent storage__) involved. Systems such as [Redis](http://redis.io/) and [Memcached](http://memcached.org/) have become _de rigueur_ of most web application architectures. Hence, in this section we are going to spend some time learning how to Dockerize applications which rely on different services to run.
 
-In particular, we are going to see how we can run and manage __multi-container__ docker environments. Why multi-container you might ask? Well, one of the key points of Docker is the way it provides **isolation**. The idea of bundling a process with its dependencies in a sandbox (called containers) is what makes this so powerful.
+In particular, we are going to see how we can run and manage __multi-container__ docker environments. Why multi-container you might ask? Well, one of the key points of Docker is the way it provides __isolation__. The idea of bundling a process with its dependencies in a sandbox (called containers) is what makes this so powerful.
 
-Just like it's a good strategy to **decouple** your application tiers, it is wise to keep containers for each of the __services__ separate. Each tier is likely to have **different resource needs** and those needs might **grow at different rates**. By separating the tiers into different containers, we can compose each tier using the most appropriate instance type based on different resource needs. This also plays in very well with the whole [microservices](http://martinfowler.com/articles/microservices.html) movement which is one of the main reasons why Docker (or any other container technology) is at the [forefront](https://medium.com/aws-activate-startup-blog/using-containers-to-build-a-microservices-architecture-6e1b8bacb7d1#.xl3wryr5z) of modern **microservices architectures.**
+Just like it's a good strategy to __decouple__ your application tiers, it is wise to keep containers for each of the __services__ separate. Each tier is likely to have __different resource needs__ and those needs might __grow at different rates__. By separating the tiers into different containers, we can compose each tier using the most appropriate instance type based on different resource needs. This also plays in very well with the whole [microservices](http://martinfowler.com/articles/microservices.html) movement which is one of the main reasons why Docker (or any other container technology) is at the [forefront](https://medium.com/aws-activate-startup-blog/using-containers-to-build-a-microservices-architecture-6e1b8bacb7d1#.xl3wryr5z) of modern __microservices architectures.__
 
 ### SF Food Trucks
 
@@ -554,7 +554,7 @@ $ tree -L 2
 
 The `flask-app` folder contains the Python application, while the `utils` folder has some utilities to load the data into Elasticsearch. The directory also contains some YAML files and a Dockerfile, all of which we'll see in greater detail as we progress through this tutorial. If you are curious, feel free to take a look at the files.
 
-Now that you're excited (hopefully), let's think of how we can Dockerize the app. We can see that the application consists of a Flask backend server and an Elasticsearch service. A natural way to split this app would be to have two containers - one running the Flask process and another running the Elasticsearch (ES) process. That way if our app becomes popular, we can scale it by **adding more containers depending on where the bottleneck lies**.
+Now that you're excited (hopefully), let's think of how we can Dockerize the app. We can see that the application consists of a Flask backend server and an Elasticsearch service. A natural way to split this app would be to have two containers - one running the Flask process and another running the Elasticsearch (ES) process. That way if our app becomes popular, we can scale it by __adding more containers depending on where the bottleneck lies__.
 
 Great, so we need two containers. That shouldn't be hard right? We've already built our own Flask container in the previous section. And for Elasticsearch, let's see if we can find something on the hub.
 
@@ -588,7 +588,7 @@ $ docker run -d --name es -p 9200:9200 -p 9300:9300 -e "discovery.type=single-no
 
 > Note: If your container runs into memory issues, you might need to [tweak some JVM flags](https://github.com/elastic/elasticsearch-docker/issues/43#issuecomment-289377878) to limit its memory consumption.
 
-As seen above, we use `--name es` to give our container a name which makes it easy to use in subsequent commands. Once the container is started, we can see the logs by **running `docker container logs` with the container name (or ID) to inspect the logs**. You should see logs similar to below if Elasticsearch started successfully.
+As seen above, we use `--name es` to give our container a name which makes it easy to use in subsequent commands. Once the container is started, we can see the logs by __running `docker container logs` with the container name (or ID) to inspect the logs__. You should see logs similar to below if Elasticsearch started successfully.
 
 > Note: Elasticsearch takes a few seconds to start so you might need to wait before you see `initialized` in the logs.
 
@@ -694,7 +694,7 @@ Unable to connect to ES. Retrying in 5 secs...
 Out of retries. Bailing out...
 ```
 
-Oops! Our flask app was unable to run since it was unable to connect to Elasticsearch. **How do we tell one container about the other container and get them to talk to each other**? The answer lies in the next section.
+Oops! Our flask app was unable to run since it was unable to connect to Elasticsearch. __How do we tell one container about the other container and get them to talk to each other__? The answer lies in the next section.
 
 ### Docker Network
 
@@ -716,7 +716,7 @@ es = Elasticsearch(host='es')
 
 To make this work, we need to tell the Flask container that the ES container is running on `0.0.0.0` host (the port by default is `9200`) and that should make it work, right? Unfortunately, that is not correct since the IP `0.0.0.0` is the IP to access ES container from the __host machine__ i.e. from my Mac. Another container will not be able to access this on the same IP address. Okay if not that IP, then which IP address should the ES container be accessible by? I'm glad you asked this question.
 
-Now is a good time to start our exploration of networking in Docker. When docker is installed, it creates three networks automatically.
+Now is a good time to start our exploration of networking in Docker. When docker is installed, it creates __three__ networks automatically.
 
 ```
 $ docker network ls
@@ -726,7 +726,7 @@ a875bec5d6fd        host                host                local
 ead0e804a67b        none                null                local
 ```
 
-The __bridge__ network is the network in which containers are run by default. So that means that when I ran the ES container, it was running in this bridge network. To validate this, let's inspect the network.
+The __bridge__ network is the network in which containers are run by __default__. So that means that when I ran the ES container, it was running in this bridge network. To validate this, let's inspect the network.
 
 ```
 $ docker network inspect bridge
@@ -802,9 +802,9 @@ This should be fairly straightforward to you by now. We start the container in t
 Although we have figured out a way to make the containers talk to each other, there are still two problems with this approach -
 
 1. How do we tell the Flask container that `es` hostname stands for `172.17.0.2` or some other IP since the IP can change?
-2. Since the _bridge_ network is shared by every container by default, this method is __not secure__. How do we isolate our network?
+2. Since the _bridge_ network is __shared by every container by default__, this method is __not secure__. How do we isolate our network?
 
-The good news that Docker has a great answer to our questions. It allows us to define our own networks while keeping them isolated using the `docker network` command.
+The good news that Docker has a great answer to our questions. It allows us to __define our own networks while keeping them isolated__ using the `docker network` command.
 
 Let's first go ahead and create our own network.
 
@@ -820,7 +820,12 @@ a875bec5d6fd        host                host                local
 ead0e804a67b        none                null                local
 ```
 
-The `network create` command creates a new _bridge_ network, which is what we need at the moment. In terms of Docker, a bridge network uses a software bridge which allows containers connected to the same bridge network to communicate, while providing isolation from containers which are not connected to that bridge network. The Docker bridge driver automatically installs rules in the host machine so that containers on different bridge networks cannot communicate directly with each other. There are other kinds of networks that you can create, and you are encouraged to read about them in the official [docs](https://docs.docker.com/engine/userguide/networking/dockernetworks/).
+The `network create` command creates a new ___bridge___ network, which is what we need at the moment.
+
+> [!NOTE]
+> In terms of Docker, a bridge network uses a software bridge which allows containers connected to the same bridge network to communicate, while providing isolation from containers which are not connected to that bridge network.
+
+The Docker bridge driver automatically installs rules in the host machine so that containers on different bridge networks cannot communicate directly with each other. There are other kinds of networks that you can create, and you are encouraged to read about them in the official [docs](https://docs.docker.com/engine/userguide/networking/dockernetworks/).
 
 Now that we have a network, we can launch our containers inside this network using the `--net` flag. Let's do that - but first, in order to launch a new container with the same name, we will stop and remove our ES container that is running in the bridge (default) network.
 
@@ -907,7 +912,7 @@ Total trucks loaded:  733
 root@53af252b771a:/opt/flask-app# exit
 ```
 
-Wohoo! That works! On user-defined networks like foodtrucks-net, containers can not only communicate by IP address, but can also resolve a container name to an IP address. This capability is called _automatic service discovery_. Great! Let's launch our Flask container for real now -
+Wohoo! That works! On __user-defined networks__ like foodtrucks-net, containers can not only communicate by IP address, but can also ___resolve a container name to an IP address___. This capability is called _automatic service discovery_. Great! Let's launch our Flask container for real now -
 
 ```
 $ docker run -d --net foodtrucks-net -p 5000:5000 --name foodtrucks-web yourusername/foodtrucks-web
