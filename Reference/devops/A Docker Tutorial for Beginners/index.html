@@ -4699,14 +4699,14 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>es = Elasticsearch(host=&#39;es&#39;)
 </span></code></pre></div>
 <p>To make this work, we need to tell the Flask container that the ES container is running on <code>0.0.0.0</code> host (the port by default is <code>9200</code>) and that should make it work, right? Unfortunately, that is not correct since the IP <code>0.0.0.0</code> is the IP to access ES container from the <strong>host machine</strong> i.e. from my Mac. Another container will not be able to access this on the same IP address. Okay if not that IP, then which IP address should the ES container be accessible by? I'm glad you asked this question.</p>
-<p>Now is a good time to start our exploration of networking in Docker. When docker is installed, it creates three networks automatically.</p>
+<p>Now is a good time to start our exploration of networking in Docker. When docker is installed, it creates <strong>three</strong> networks automatically.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>$ docker network ls
 </span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>NETWORK ID          NAME                DRIVER              SCOPE
 </span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>c2c695315b3a        bridge              bridge              local
 </span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>a875bec5d6fd        host                host                local
 </span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>ead0e804a67b        none                null                local
 </span></code></pre></div>
-<p>The <strong>bridge</strong> network is the network in which containers are run by default. So that means that when I ran the ES container, it was running in this bridge network. To validate this, let's inspect the network.</p>
+<p>The <strong>bridge</strong> network is the network in which containers are run by <strong>default</strong>. So that means that when I ran the ES container, it was running in this bridge network. To validate this, let's inspect the network.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>$ docker network inspect bridge
 </span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>[
 </span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>    {
@@ -4775,9 +4775,9 @@
 <p>Although we have figured out a way to make the containers talk to each other, there are still two problems with this approach -</p>
 <ol>
 <li>How do we tell the Flask container that <code>es</code> hostname stands for <code>172.17.0.2</code> or some other IP since the IP can change?</li>
-<li>Since the <em>bridge</em> network is shared by every container by default, this method is <strong>not secure</strong>. How do we isolate our network?</li>
+<li>Since the <em>bridge</em> network is <strong>shared by every container by default</strong>, this method is <strong>not secure</strong>. How do we isolate our network?</li>
 </ol>
-<p>The good news that Docker has a great answer to our questions. It allows us to define our own networks while keeping them isolated using the <code>docker network</code> command.</p>
+<p>The good news that Docker has a great answer to our questions. It allows us to <strong>define our own networks while keeping them isolated</strong> using the <code>docker network</code> command.</p>
 <p>Let's first go ahead and create our own network.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>$ docker network create foodtrucks-net
 </span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>0815b2a3bb7a6608e850d05553cc0bda98187c4528d94621438f31d97a6fea3c
@@ -4789,7 +4789,12 @@
 </span><span id="__span-45-8"><a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a>a875bec5d6fd        host                host                local
 </span><span id="__span-45-9"><a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a>ead0e804a67b        none                null                local
 </span></code></pre></div>
-<p>The <code>network create</code> command creates a new <em>bridge</em> network, which is what we need at the moment. In terms of Docker, a bridge network uses a software bridge which allows containers connected to the same bridge network to communicate, while providing isolation from containers which are not connected to that bridge network. The Docker bridge driver automatically installs rules in the host machine so that containers on different bridge networks cannot communicate directly with each other. There are other kinds of networks that you can create, and you are encouraged to read about them in the official <a href="https://docs.docker.com/engine/userguide/networking/dockernetworks/">docs</a>.</p>
+<p>The <code>network create</code> command creates a new <strong><em>bridge</em></strong> network, which is what we need at the moment.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In terms of Docker, a bridge network uses a software bridge which allows containers connected to the same bridge network to communicate, while providing isolation from containers which are not connected to that bridge network.</p>
+</div>
+<p>The Docker bridge driver automatically installs rules in the host machine so that containers on different bridge networks cannot communicate directly with each other. There are other kinds of networks that you can create, and you are encouraged to read about them in the official <a href="https://docs.docker.com/engine/userguide/networking/dockernetworks/">docs</a>.</p>
 <p>Now that we have a network, we can launch our containers inside this network using the <code>--net</code> flag. Let's do that - but first, in order to launch a new container with the same name, we will stop and remove our ES container that is running in the bridge (default) network.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>$ docker container stop es
 </span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>es
@@ -4869,7 +4874,7 @@
 </span><span id="__span-47-26"><a id="__codelineno-47-26" name="__codelineno-47-26" href="#__codelineno-47-26"></a> * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 </span><span id="__span-47-27"><a id="__codelineno-47-27" name="__codelineno-47-27" href="#__codelineno-47-27"></a>root@53af252b771a:/opt/flask-app# exit
 </span></code></pre></div>
-<p>Wohoo! That works! On user-defined networks like foodtrucks-net, containers can not only communicate by IP address, but can also resolve a container name to an IP address. This capability is called <em>automatic service discovery</em>. Great! Let's launch our Flask container for real now -</p>
+<p>Wohoo! That works! On <strong>user-defined networks</strong> like foodtrucks-net, containers can not only communicate by IP address, but can also <strong><em>resolve a container name to an IP address</em></strong>. This capability is called <em>automatic service discovery</em>. Great! Let's launch our Flask container for real now -</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>$ docker run -d --net foodtrucks-net -p 5000:5000 --name foodtrucks-web yourusername/foodtrucks-web
 </span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>852fc74de2954bb72471b858dce64d764181dca0cf7693fed201d76da33df794
 </span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>
@@ -5351,7 +5356,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 17, 2025 17:48:17</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 17, 2025 19:16:36</span>
   </span>
 
     
