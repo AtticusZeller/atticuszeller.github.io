@@ -513,9 +513,9 @@ In the last section, we saw how easy and fun it is to run applications with Dock
 
 Those of you who have experience running services in production know that usually apps nowadays are not that simple. There's almost always a database (or any other kind of __persistent storage__) involved. Systems such as [Redis](http://redis.io/) and [Memcached](http://memcached.org/) have become _de rigueur_ of most web application architectures. Hence, in this section we are going to spend some time learning how to Dockerize applications which rely on different services to run.
 
-In particular, we are going to see how we can run and manage __multi-container__ docker environments. Why multi-container you might ask? Well, one of the key points of Docker is the way it provides isolation. The idea of bundling a process with its dependencies in a sandbox (called containers) is what makes this so powerful.
+In particular, we are going to see how we can run and manage __multi-container__ docker environments. Why multi-container you might ask? Well, one of the key points of Docker is the way it provides **isolation**. The idea of bundling a process with its dependencies in a sandbox (called containers) is what makes this so powerful.
 
-Just like it's a good strategy to decouple your application tiers, it is wise to keep containers for each of the __services__ separate. Each tier is likely to have different resource needs and those needs might grow at different rates. By separating the tiers into different containers, we can compose each tier using the most appropriate instance type based on different resource needs. This also plays in very well with the whole [microservices](http://martinfowler.com/articles/microservices.html) movement which is one of the main reasons why Docker (or any other container technology) is at the [forefront](https://medium.com/aws-activate-startup-blog/using-containers-to-build-a-microservices-architecture-6e1b8bacb7d1#.xl3wryr5z) of modern microservices architectures.
+Just like it's a good strategy to **decouple** your application tiers, it is wise to keep containers for each of the __services__ separate. Each tier is likely to have **different resource needs** and those needs might **grow at different rates**. By separating the tiers into different containers, we can compose each tier using the most appropriate instance type based on different resource needs. This also plays in very well with the whole [microservices](http://martinfowler.com/articles/microservices.html) movement which is one of the main reasons why Docker (or any other container technology) is at the [forefront](https://medium.com/aws-activate-startup-blog/using-containers-to-build-a-microservices-architecture-6e1b8bacb7d1#.xl3wryr5z) of modern **microservices architectures.**
 
 ### SF Food Trucks
 
@@ -554,7 +554,7 @@ $ tree -L 2
 
 The `flask-app` folder contains the Python application, while the `utils` folder has some utilities to load the data into Elasticsearch. The directory also contains some YAML files and a Dockerfile, all of which we'll see in greater detail as we progress through this tutorial. If you are curious, feel free to take a look at the files.
 
-Now that you're excited (hopefully), let's think of how we can Dockerize the app. We can see that the application consists of a Flask backend server and an Elasticsearch service. A natural way to split this app would be to have two containers - one running the Flask process and another running the Elasticsearch (ES) process. That way if our app becomes popular, we can scale it by adding more containers depending on where the bottleneck lies.
+Now that you're excited (hopefully), let's think of how we can Dockerize the app. We can see that the application consists of a Flask backend server and an Elasticsearch service. A natural way to split this app would be to have two containers - one running the Flask process and another running the Elasticsearch (ES) process. That way if our app becomes popular, we can scale it by **adding more containers depending on where the bottleneck lies**.
 
 Great, so we need two containers. That shouldn't be hard right? We've already built our own Flask container in the previous section. And for Elasticsearch, let's see if we can find something on the hub.
 
@@ -588,7 +588,7 @@ $ docker run -d --name es -p 9200:9200 -p 9300:9300 -e "discovery.type=single-no
 
 > Note: If your container runs into memory issues, you might need to [tweak some JVM flags](https://github.com/elastic/elasticsearch-docker/issues/43#issuecomment-289377878) to limit its memory consumption.
 
-As seen above, we use `--name es` to give our container a name which makes it easy to use in subsequent commands. Once the container is started, we can see the logs by running `docker container logs` with the container name (or ID) to inspect the logs. You should see logs similar to below if Elasticsearch started successfully.
+As seen above, we use `--name es` to give our container a name which makes it easy to use in subsequent commands. Once the container is started, we can see the logs by **running `docker container logs` with the container name (or ID) to inspect the logs**. You should see logs similar to below if Elasticsearch started successfully.
 
 > Note: Elasticsearch takes a few seconds to start so you might need to wait before you see `initialized` in the logs.
 
@@ -694,7 +694,7 @@ Unable to connect to ES. Retrying in 5 secs...
 Out of retries. Bailing out...
 ```
 
-Oops! Our flask app was unable to run since it was unable to connect to Elasticsearch. How do we tell one container about the other container and get them to talk to each other? The answer lies in the next section.
+Oops! Our flask app was unable to run since it was unable to connect to Elasticsearch. **How do we tell one container about the other container and get them to talk to each other**? The answer lies in the next section.
 
 ### Docker Network
 
