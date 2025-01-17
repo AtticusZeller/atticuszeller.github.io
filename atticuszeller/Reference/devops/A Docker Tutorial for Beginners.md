@@ -1086,7 +1086,7 @@ es                 /usr/local/bin/docker-entr ...   Up      0.0.0.0:9200->9200/t
 foodtrucks_web_1   python3 app.py                   Up      0.0.0.0:5000->5000/tcp
 ```
 
-Unsurprisingly, we can see both the containers running successfully. Where do the names come from? Those were created automatically by Compose. But does _Compose_ also create the network automatically? Good question! Let's find out.
+Unsurprisingly, we can see both the containers running successfully. Where do the names come from? Those were created automatically by Compose. But does _Compose_ also **create the network automatically**? Good question! Let's find out.
 
 First off, let us stop the services from running. We can always bring them back up in just one command. Data volumes will persist, so it’s possible to start the cluster again with the same data using docker-compose up. To destroy the cluster and the data volumes, just type `docker-compose down -v`.
 
@@ -1135,7 +1135,7 @@ a875bec5d6fd        host                 host                local
 ead0e804a67b        none                 null                local
 ```
 
-You can see that compose went ahead and created a new network called `foodtrucks_default` and attached both the new services in that network so that each of these are discoverable to the other. Each container for a service joins the default network and is both reachable by other containers on that network, and discoverable by them at a hostname identical to the container name.
+You can see that compose went ahead and created a new network called `foodtrucks_default` and attached both the new services in that network so that each of these are discoverable to the other. Each container for a service joins the default network and is both reachable by other containers on that network, and **discoverable** by them at a **hostname** identical to the container name.
 
 ```
 $ docker ps
