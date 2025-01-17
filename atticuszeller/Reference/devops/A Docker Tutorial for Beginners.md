@@ -968,7 +968,7 @@ Till now we've spent all our time exploring the Docker client. In the Docker eco
 3. [Docker Swarm](https://docs.docker.com/swarm/) - A native clustering solution for Docker
 4. [Kubernetes](https://kubernetes.io/) - Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.
 
-In this section, we are going to look at one of these tools, Docker Compose, and see how it can make dealing with multi-container apps easier.
+In this section, we are going to look at one of these tools, Docker Compose, and see how it can make dealing with **multi-container** apps easier.
 
 The background story of Docker Compose is quite interesting. Roughly around January 2014, a company called OrchardUp launched a tool called Fig. The idea behind Fig was to make isolated development environments work with Docker. The project was very well received on [Hacker News](https://news.ycombinator.com/item?id=7132044) - I oddly remember reading about it but didn't quite get the hang of it.
 
