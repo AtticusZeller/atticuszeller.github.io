@@ -27,10 +27,7 @@
         "action": "reject"
       },
       {
-        "rule_set": [
-          "geosite-cn",
-          "geosite-private"
-        ],
+        "rule_set": "direct-rule",
         "server": "dns_direct"
       }
     ],
@@ -182,29 +179,7 @@
         "outbound": "direct"
       },
       {
-        "domain_suffix": [
-          "obsidian.md",
-          "zotero.org"
-        ],
-        "rule_set": [
-          "geosite-github",
-          "geosite-python",
-          "geosite-ubuntu",
-          "geosite-cloudflare",
-          "geosite-onedrive",
-          "geosite-microsoft",
-          "geosite-youtube",
-          "geosite-spotify",
-          "geosite-google",
-          "geosite-reddit",
-          "geosite-protonmail",
-          "geosite-openai",
-          "geosite-apple",
-          "geosite-category-dev",
-          "geosite-category-scholar-!cn",
-          "geosite-geolocation-!cn",
-          "geosite-telegram"
-        ],
+        "rule_set": "proxy-rule",
         "outbound": "proxy"
       },
       {
@@ -212,15 +187,7 @@
         "outbound": "direct"
       },
       {
-        "domain_keyword": [
-          "cn"
-        ],
-        "domain_suffix": [
-          ".cn",
-          "metacubexd.pages.dev",
-          "atticux.me"
-        ],
-        "rule_set": "geosite-cn",
+        "rule_set": "direct-rule",
         "outbound": "direct"
       },
       {
@@ -231,121 +198,16 @@
     "rule_set": [
       {
         "type": "remote",
-        "tag": "geosite-geolocation-!cn",
+        "tag": "proxy-rule",
         "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+        "url": "https://raw.gh.atticux.me/AtticusZeller/rule-sets/main/binary/proxy.srs",
         "download_detour": "direct"
       },
       {
         "type": "remote",
-        "tag": "geosite-python",
+        "tag": "direct-rule",
         "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-python.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-ubuntu",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-ubuntu.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-cloudflare",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-cloudflare.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-onedrive",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-onedrive.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-reddit",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-reddit.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-protonmail",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-protonmail.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-category-dev",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-category-dev.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-category-scholar-!cn",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-category-scholar-!cn.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-github",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-github.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-microsoft",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-microsoft.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-youtube",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-spotify",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-spotify.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-google",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-google.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-apple",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-apple.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-openai",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-telegram",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-telegram.srs",
+        "url": "https://raw.gh.atticux.me/AtticusZeller/rule-sets/main/binary/direct.srs",
         "download_detour": "direct"
       },
       {
@@ -357,23 +219,9 @@
       },
       {
         "type": "remote",
-        "tag": "geosite-cn",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-private",
-        "format": "binary",
-        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-private.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
         "tag": "dns-filter",
         "format": "binary",
-        "url": "https://raw.gh.atticux.me/Atticux-me/rule-sets/main/binary/adguard/AdGuardDNSFilter.srs",
+        "url": "https://raw.gh.atticux.me/REIJI007/AdBlock_Rule_For_Sing-box/main/adblock_reject.srs",
         "download_detour": "direct"
       }
     ],
