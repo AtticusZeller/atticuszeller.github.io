@@ -23,10 +23,12 @@
       "tls": {
         "enabled": true,
         "certificate_path": "/root/cert-CF/magic.atticux.me/fullchain.pem",
-        "key_path": "/root/cert-CF/magic.atticux.me/privkey.pem"
+        "key_path": "/root/cert-CF/magic.atticux.me/privkey.pem",
+        "min_version": "1.3",
+        "alpn": "h3"
       },
       "brutal_debug": false,
-      "ignore_client_bandwidth": true
+      "ignore_client_bandwidth": false
     }
   ],
   "outbounds": [

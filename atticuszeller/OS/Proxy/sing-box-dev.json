@@ -23,14 +23,14 @@
         "server": "dns_direct"
       },
       {
-        "rule_set": [
-          "dns-filter",
-          "geosite-private"
-        ],
+        "rule_set": "dns-filter",
         "action": "reject"
       },
       {
-        "rule_set": "geosite-cn",
+        "rule_set": [
+          "geosite-cn",
+          "geosite-private"
+        ],
         "server": "dns_direct"
       }
     ],
