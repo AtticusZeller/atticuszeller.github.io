@@ -968,7 +968,7 @@ Till now we've spent all our time exploring the Docker client. In the Docker eco
 3. [Docker Swarm](https://docs.docker.com/swarm/) - A native clustering solution for Docker
 4. [Kubernetes](https://kubernetes.io/) - Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.
 
-In this section, we are going to look at one of these tools, Docker Compose, and see how it can make dealing with **multi-container** apps easier.
+In this section, we are going to look at one of these tools, Docker Compose, and see how it can make dealing with __multi-container__ apps easier.
 
 The background story of Docker Compose is quite interesting. Roughly around January 2014, a company called OrchardUp launched a tool called Fig. The idea behind Fig was to make isolated development environments work with Docker. The project was very well received on [Hacker News](https://news.ycombinator.com/item?id=7132044) - I oddly remember reading about it but didn't quite get the hang of it.
 
@@ -1086,7 +1086,7 @@ es                 /usr/local/bin/docker-entr ...   Up      0.0.0.0:9200->9200/t
 foodtrucks_web_1   python3 app.py                   Up      0.0.0.0:5000->5000/tcp
 ```
 
-Unsurprisingly, we can see both the containers running successfully. Where do the names come from? Those were created automatically by Compose. But does _Compose_ also **create the network automatically**? Good question! Let's find out.
+Unsurprisingly, we can see both the containers running successfully. Where do the names come from? Those were created automatically by Compose. But does _Compose_ also __create the network automatically__? Good question! Let's find out.
 
 First off, let us stop the services from running. We can always bring them back up in just one command. Data volumes will persist, so it’s possible to start the cluster again with the same data using docker-compose up. To destroy the cluster and the data volumes, just type `docker-compose down -v`.
 
@@ -1135,7 +1135,7 @@ a875bec5d6fd        host                 host                local
 ead0e804a67b        none                 null                local
 ```
 
-You can see that compose went ahead and created a new network called `foodtrucks_default` and attached both the new services in that network so that each of these are discoverable to the other. Each container for a service joins the default network and is both reachable by other containers on that network, and **discoverable** by them at a **hostname** identical to the container name.
+You can see that compose went ahead and created a new network called `foodtrucks_default` and attached both the new services in that network so that each of these are discoverable to the other. Each container for a service joins the default network and is both reachable by other containers on that network, and __discoverable__ by them at a __hostname__ identical to the container name.
 
 ```
 $ docker ps
