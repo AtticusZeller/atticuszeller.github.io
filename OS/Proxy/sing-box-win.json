@@ -23,7 +23,10 @@
         "server": "dns_direct"
       },
       {
-        "rule_set": "dns-filter",
+        "rule_set": [
+          "dns-filter",
+          "geosite-private"
+        ],
         "action": "reject"
       },
       {
@@ -159,7 +162,7 @@
       "tls": {
         "enabled": true,
         "server_name": "magic.atticux.me",
-        "insecure": true,
+        "min_version": "1.3",
         "alpn": "h3"
       }
     }
@@ -357,6 +360,13 @@
         "tag": "geosite-cn",
         "format": "binary",
         "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-private",
+        "format": "binary",
+        "url": "https://raw.gh.atticux.me/SagerNet/sing-geosite/rule-set/geosite-private.srs",
         "download_detour": "direct"
       },
       {
