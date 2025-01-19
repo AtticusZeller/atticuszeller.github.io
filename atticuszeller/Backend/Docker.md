@@ -257,3 +257,9 @@ docker rmi <image_id>
 ```bash
 brew install hadolint
 ```
+
+|  | No ENTRYPOINT | ENTRYPOINT exec_entry p1_entry | ENTRYPOINT ["exec_entry", "p1_entry"] |
+|--|---------------|--------------------------------|--------------------------------------|
+| No CMD | error, not allowed | /bin/sh -c exec_entry p1_entry | exec_entry p1_entry |
+| CMD ["exec_cmd", "p1_cmd"] | exec_cmd p1_cmd | /bin/sh -c exec_entry p1_entry | exec_entry p1_entry exec_cmd p1_cmd |
+| CMD exec_cmd p1_cmd | /bin/sh -c exec_cmd p1_cmd | /bin/sh -c exec_entry p1_entry | exec_entry p1_entry /bin/sh -c exec_cmd p1_cmd |
