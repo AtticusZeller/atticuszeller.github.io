@@ -1,6 +1,6 @@
 # Docker
 
-## [Install Docker and - Compose](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+## [Install Docker and Compose](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 
 ```bash
 # Add Docker's official GPG key:
