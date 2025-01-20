@@ -109,6 +109,10 @@ CMD ["python", "./app.py"]
 ENV PATH="/app/.venv/bin:$PATH"
 ```
 
+
+entry point,cmd,## [Shell and exec form](https://docs.docker.com/reference/dockerfile/#shell-and-exec-form)run,
+
+
 ### Docker Build
 
 This username should be the same one you created when you registered on [Docker hub](https://hub.docker.com/).
@@ -169,12 +173,6 @@ COPY --from=build-stage /path/in/build/stage /path/to/place/in/final/stage
 # Define runtime configuration (e.g., CMD, ENTRYPOINT)
 ```
 
-### Docker Run
-
-```bash
-docker run yourusername/hello-world:latest
-```
-
 ### Docker Push
 
 If this is the first time you are pushing an image, the client will ask you to login. Provide the same credentials that you used for logging into Docker Hub.
@@ -191,7 +189,15 @@ docker push yourusername/hello-world
 
 Now that your image is online, anyone who has docker installed can play with your app by typing just a single command.
 
-## Docker Compose
+## Docker Container
+
+### Run
+
+
+
+
+
+### Docker Compose
 
 > [!TIP] Dockerfile versus Compose file
 > A Dockerfile provides instructions to _build a container image_ while a Compose file _defines your running containers_. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.[\[3\]](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose/)
