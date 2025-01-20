@@ -96,12 +96,6 @@ WORKDIR /app
 COPY . .
 ```
 
-`RUN <command>` - this instruction tells the builder to run the specified command.
-
-```bash
-CMD ["python", "./app.py"]
-```
-
 `ENV <name> <value>` - this instruction sets an environment variable that a running container will use.
 
 ```bash
@@ -109,9 +103,54 @@ CMD ["python", "./app.py"]
 ENV PATH="/app/.venv/bin:$PATH"
 ```
 
+#### [Shell and exec form](https://docs.docker.com/reference/dockerfile/#shell-and-exec-form)
 
-entry point,cmd,## [Shell and exec form](https://docs.docker.com/reference/dockerfile/#shell-and-exec-form)run,
+The `RUN`, `CMD`, and `ENTRYPOINT` instructions all have two possible forms:
 
+- `INSTRUCTION ["executable","param1","param2"]` (exec form)
+- `INSTRUCTION command param1 param2` (shell form)
+
+> [!NOTE]
+> - The exec form makes it possible to avoid shell string munging, because it is parsed as a JSON array.
+> - The shell form always use a command shell and is parsed as a regular string, so it's more relaxed and inherits shell feature directly.
+
+for example, `$HOME` can not be parsed as string `"$HOME"` but replaced by shell.
+ on the contrary, we need to specify a command shell, or any other executable while using environment variables
+
+ ```Dockerfile
+ ENTRYPOINT ["/bin/bash", "-c", "echo hello"]
+ ```
+
+> [!TIP]
+> - The Exec form is best used to specify `ENTRYPOINT` and `CMD` instructions for settings of default arguments that can be overridden at runtime.And it also stops container [quicker](https://docs.docker.com/compose/support-and-feedback/faq/#why-do-my-services-take-10-seconds-to-recreate-or-stop) while running `docker compose stop`.
+> - The Shell form is most commonly used in `RUN` command, it lets you easier break long command in multiple lines with __backslash__
+
+```Dockerfile
+RUN source $HOME/.bashrc && \
+echo $HOME
+```
+
+`RUN [OPTIONS] <command>` - this instruction tells the builder to run the specified command.
+and creates a new layer on top of current layer.
+the [available](https://docs.docker.com/reference/dockerfile/#run) `[OPTIONS]` is helpful for accelerating the building process.
+
+```Dockerfile
+# Install dependencies
+# Ref: https://docs.astral.sh/uv/guides/integration/docker/#intermediate-layers
+RUN --mount=type=cache,target=/root/.cache/uv \
+--mount=type=bind,source=uv.lock,target=uv.lock \
+--mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+uv sync --frozen --no-install-project
+```
+
+`ENTRYPOINT ["executable", "param1", "param2"]`
+
+
+```bash
+CMD ["python", "./app.py"]
+```
+
+entry point,cmd,## run,
 
 ### Docker Build
 
@@ -192,10 +231,6 @@ Now that your image is online, anyone who has docker installed can play with you
 ## Docker Container
 
 ### Run
-
-
-
-
 
 ### Docker Compose
 
