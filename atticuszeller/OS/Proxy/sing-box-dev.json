@@ -14,7 +14,12 @@
         "tag": "dns_proxy",
         "address": "h3://dns.atticux.me/dns-query/asfljsndfaoifa",
         "address_resolver": "dns_direct",
+        "client_subnet": "137.184.125.132",
         "detour": "proxy"
+      },
+      {
+        "tag": "dns_fakeip",
+        "address": "fakeip"
       }
     ],
     "rules": [
@@ -27,13 +32,31 @@
         "action": "reject"
       },
       {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "dns_fakeip"
+      },
+      {
+        "rule_set": "proxy-rule",
+        "server": "dns_proxy"
+      },
+      {
         "rule_set": "direct-rule",
         "server": "dns_direct"
       }
     ],
     "final": "dns_proxy",
     "reverse_mapping": true,
-    "strategy": "prefer_ipv4"
+    "cache_capacity": 4096,
+    "strategy": "prefer_ipv4",
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true
   },
   "ntp": {
     "enabled": true,
@@ -233,6 +256,7 @@
     "cache_file": {
       "enabled": true,
       "path": "cache.db",
+      "store_fakeip": true,
       "store_rdrc": true
     },
     "clash_api": {
