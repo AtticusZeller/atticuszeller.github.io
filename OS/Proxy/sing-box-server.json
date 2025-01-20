@@ -51,7 +51,7 @@
       {
         "rule_set": [
           "geoip-cn",
-          "geosite-cn"
+          "direct-rule"
         ],
         "action": "reject",
         "method": "default"
@@ -67,9 +67,9 @@
       },
       {
         "type": "remote",
-        "tag": "geosite-cn",
+        "tag": "direct-rule",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "url": "https://raw.githubusercontent.com/AtticusZeller/rule-sets/main/binary/direct.srs",
         "download_detour": "direct"
       },
       {
