@@ -1,5 +1,13 @@
 # VSCode
 
+# [Install](https://code.visualstudio.com/docs/setup/linux)
+
+```bash
+echo "code code/add-microsoft-repo boolean true" | sudo debconf-set-selections
+sudo apt update
+sudo apt install code
+```
+
 ## Shortcut
 
 ### Terminal

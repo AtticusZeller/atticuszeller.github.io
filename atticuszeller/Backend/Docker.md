@@ -145,7 +145,6 @@ uv sync --frozen --no-install-project
 
 `ENTRYPOINT ["executable", "param1", "param2"]`
 
-
 ```bash
 CMD ["python", "./app.py"]
 ```
