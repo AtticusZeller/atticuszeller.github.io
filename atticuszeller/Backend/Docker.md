@@ -142,11 +142,28 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 uv sync --frozen --no-install-project
 ```
 
-`ENTRYPOINT ["executable", "param1", "param2"]`- it allows you to configure a container that run as executable.
+`ENTRYPOINT ["executable", "param1", "param2"]` - it allows you to configure a container that run as executable. command line arguments to `docker run <image>` will be appended after all elements in an exec form of `ENTRYPONIT`, and will __override all__ elements specified using `CMD`, so will the commands in `compose.yml`.
 
-command line arguments to `docker run <image>` will be appended after all elements in an exec form of `ENTRYPONIT`, and will override all elements specified using `CMD`.
+`CMD` instruction sets the command to be executed when running a container from an image.
+- `CMD ["executable","param1","param2"]` (exec form)
+- `CMD ["param1","param2"]` (exec form, as default parameters to `ENTRYPOINT`)
 
-entry point,cmd,## run,
+> [!tip]
+> we primarily use `CMD` to . Because it's much clearer for us to override it while debugging. Nobody wanna see something ugly like:
+> ```yaml
+> services:
+> 	backend:
+> 	    restart: "no"
+> 	    ports:
+> 	      - "8000:8000"
+> 	    build:
+> 	      context: ./backend
+> 	    command:
+> 	      - run
+> 	      - --reload
+> 	      - "app/main.py"
+> ```
+> there is no head of the `command`, quite scary.
 
 ### Docker Build
 
@@ -228,16 +245,17 @@ Now that your image is online, anyone who has docker installed can play with you
 
 ### Run
 
+`docker run` is aliases of `docker container run [OPTIONS] IMAGE [COMMAND] [ARG…]`,which defines how to create and run a new container from image.
+
+> [!warning]
+> While `docker run` is a convenient tool for launching container,it becomes difficult to manage a growing application stack with it. That's where `Docker Compose` comes to rescue.
+
 ### Docker Compose
+
+Docker Compose defines your entire __multi-container__ application in a single `YAML` file called `commpose.yml`. The file specifies configuration for all your containers,their dependencies, environment variables, and even volumes and networks.[\[3\]](https://docs.docker.com/get-started/docker-concepts/running-containers/multi-container-applications/#explanation)
 
 > [!TIP] Dockerfile versus Compose file
 > A Dockerfile provides instructions to _build a container image_ while a Compose file _defines your running containers_. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.[\[3\]](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose/)
-
-### Commands
-
-```bash
-docker compose down && docker compose up -d
-```
 
 ## Docker Commands
 
