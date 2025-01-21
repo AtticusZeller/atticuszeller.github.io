@@ -131,8 +131,7 @@ echo $HOME
 ```
 
 `RUN [OPTIONS] <command>` - this instruction tells the builder to run the specified command.
-and creates a new layer on top of current layer.
-the [available](https://docs.docker.com/reference/dockerfile/#run) `[OPTIONS]` is helpful for accelerating the building process.
+and creates a new layer on top of current layer. The [available](https://docs.docker.com/reference/dockerfile/#run) `[OPTIONS]` is helpful for accelerating the building process.
 
 ```Dockerfile
 # Install dependencies
@@ -143,11 +142,9 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 uv sync --frozen --no-install-project
 ```
 
-`ENTRYPOINT ["executable", "param1", "param2"]`
+`ENTRYPOINT ["executable", "param1", "param2"]`- it allows you to configure a container that run as executable.
 
-```bash
-CMD ["python", "./app.py"]
-```
+command line arguments to `docker run <image>` will be appended after all elements in an exec form of `ENTRYPONIT`, and will override all elements specified using `CMD`.
 
 entry point,cmd,## run,
 
