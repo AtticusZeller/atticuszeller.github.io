@@ -265,9 +265,11 @@ af3e60c1b1c0   host      host      local
 > [!cite]- host and none network
 > The latter two are not fully-fledged networks, but are used to start a container connected directly to the Docker daemon host's networking stack, or to start a container with no network devices. This tutorial will connect two containers to the `bridge` network.[\[3\]](https://docs.docker.com/engine/network/tutorials/standalone/#use-the-default-bridge-network)
 
+if you have not specified any `--network` flags, the containers connect to the __default__ `bridge` network, which can not ___resolve a container name to an IP address___,but it works for __user-defined__ networks[\[cite\]](https://docs.docker.com/engine/network/tutorials/standalone/#use-user-defined-bridge-networks),and containers will connect to the same user-defined networks bridge which created by docker compose.
 
-
-
+> [!note]
+> Automatic service discovery can only resolve __custom container names__, not default automatically generated container names[\[2\]](https://docs.docker.com/engine/network/tutorials/standalone/#use-user-defined-bridge-networks)
+> `docker run --name <custom_container_name>` == the service name of `compose.yml` [\[3\]](https://docs.docker.com/compose/how-tos/networking/)
 
 docker container is designed as network isolation, __publishing a port__ provides the ability to connect or communicate other containers or be accessed by host machine.
 
@@ -280,7 +282,19 @@ services:
       - 8080:80
 ```
 
+#### Host
+
+If you use the `host` network mode for a container, that container's network stack __isn't isolated__ from the Docker host (the container __shares__ the host's networking namespace), and the container doesn't get its own IP-address allocated.[\[6\]](https://docs.docker.com/engine/network/drivers/host/)
+
 ### Volume
+
+Volumes are a storage mechanism that provide the ability to __persist__ data __beyond__ the lifecycle of an individual container.[\[5\]](https://docs.docker.com/get-started/docker-concepts/running-containers/persisting-container-data/)so it can be shared by other or _old_ containers.
+
+### [Sharing files between a host and container](https://docs.docker.com/get-started/docker-concepts/running-containers/sharing-local-files/#sharing-files-between-a-host-and-container)
+
+```bash
+docker run -v /HOST/PATH:/CONTAINER/PATH -it nginx
+```
 
 ### Docker Compose
 
