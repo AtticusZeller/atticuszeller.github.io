@@ -27,8 +27,6 @@ docker compose version
 
 ## [Terminology](https://docker-curriculum.com/#terminology)
 
-[A Docker Tutorial for Beginners](https://docker-curriculum.com)
-
 - _Containers_ Created from Docker images and run the actual application. We create a container using `docker run`. A list of running containers can be seen using the `docker ps` command.
 - _Images_ The blueprints of our application which form the basis of containers.
 - _Docker Daemon_ The background service running on the host that manages building, running and distributing Docker containers. The daemon is the process that runs in the operating system which clients talk to.
@@ -247,8 +245,42 @@ Now that your image is online, anyone who has docker installed can play with you
 
 `docker run` is aliases of `docker container run [OPTIONS] IMAGE [COMMAND] [ARG…]`,which defines how to create and run a new container from image.
 
-> [!warning]
+> [!warning] Important
 > While `docker run` is a convenient tool for launching container,it becomes difficult to manage a growing application stack with it. That's where `Docker Compose` comes to rescue.
+
+### Network
+
+#### Bridge
+
+When docker is installed, it creates __three__ networks automatically.
+
+```bash
+docker network ls
+NETWORK ID     NAME      DRIVER    SCOPE
+1f50a9c659fd   bridge    bridge    local
+af3e60c1b1c0   host      host      local
+534df30aa391   none      null      local
+```
+
+> [!cite]- host and none network
+> The latter two are not fully-fledged networks, but are used to start a container connected directly to the Docker daemon host's networking stack, or to start a container with no network devices. This tutorial will connect two containers to the `bridge` network.[\[3\]](https://docs.docker.com/engine/network/tutorials/standalone/#use-the-default-bridge-network)
+
+
+
+
+
+docker container is designed as network isolation, __publishing a port__ provides the ability to connect or communicate other containers or be accessed by host machine.
+
+```yaml
+services:
+  app:
+    image: docker/welcome-to-docker
+    ports:
+      #- HOST_PORT:CONTAINER_PORT
+      - 8080:80
+```
+
+### Volume
 
 ### Docker Compose
 
