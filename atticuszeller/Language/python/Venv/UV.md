@@ -63,6 +63,32 @@ uv sync
 source .venv/bin/activate
 ```
 
+activate in `zsh` automatically
+
+```bash
+if ! grep -q "auto_activate_venv" ~/.zshrc; then
+    echo '
+function auto_activate_venv() {
+    # finding .venv
+    local current_dir="$PWD"
+    while [[ "$current_dir" != "/" ]]; do
+        if [[ -d "$current_dir/.venv" ]]; then
+            source "$current_dir/.venv/bin/activate"
+            # echo "🐍 Virtual environment activated: $current_dir/.venv"
+            return
+        fi
+        current_dir="$(dirname "$current_dir")"
+    done
+}
+
+# Initial check when opening terminal
+auto_activate_venv' >> ~/.zshrc
+    echo "Added auto_activate_venv to .zshrc"
+else
+    echo "auto_activate_venv already exists in .zshrc"
+fi
+```
+
 - [Finding a Python executable](https://docs.astral.sh/uv/concepts/python-versions/#finding-a-python-executable:~:text=To%20find%20a%20Python%20executable%2C%20use%20the%20uv%20python%20find%20command%3A)
 
 ```shell
