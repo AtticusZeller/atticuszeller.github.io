@@ -3647,33 +3647,56 @@
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>uv<span class="w"> </span>sync
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
 </span></code></pre></div>
+<p>activate in <code>zsh</code> automatically</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span><span class="s2">&quot;auto_activate_venv&quot;</span><span class="w"> </span>~/.zshrc<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="s1">function auto_activate_venv() {</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="s1">    # finding .venv</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="s1">    local current_dir=&quot;$PWD&quot;</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="s1">    while [ &quot;$current_dir&quot; != &quot;/&quot; ]( &quot;$current_dir&quot; != &quot;/&quot; .md){#47e010c339cd919406d4a5e8f42af386}; do</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="s1">        if [ -d &quot;$current_dir/.venv&quot; ]( -d &quot;$current_dir/.venv&quot; .md){#c18c97e3ae6919a2d4a1ffbb719124ee}; then</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="s1">            source &quot;$current_dir/.venv/bin/activate&quot;</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="s1">            # echo &quot;🐍 Virtual environment activated: $current_dir/.venv&quot;</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="s1">            return</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="s1">        fi</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="s1">        current_dir=&quot;$(dirname &quot;$current_dir&quot;)&quot;</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="s1">    done</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="s1">}</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="s1"># Initial check when opening terminal</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="s1">auto_activate_venv&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Added auto_activate_venv to .zshrc&quot;</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="k">else</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;auto_activate_venv already exists in .zshrc&quot;</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="k">fi</span>
+</span></code></pre></div>
 <ul>
 <li><a href="https://docs.astral.sh/uv/concepts/python-versions/#finding-a-python-executable:~:text=To%20find%20a%20Python%20executable%2C%20use%20the%20uv%20python%20find%20command%3A">Finding a Python executable</a></li>
 </ul>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>uv<span class="w"> </span>python<span class="w"> </span>find
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>uv<span class="w"> </span>python<span class="w"> </span>find
 </span></code></pre></div>
 <h1 id="tool">Tool<a class="headerlink" href="#tool" title="Permanent link">&para;</a></h1>
 <p>package installed as tool would be manage in a special isolated environment</p>
 <p><code>uvx</code> == <code>uv tool run</code></p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ruff<span class="w"> </span>check
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ruff<span class="w"> </span>check
 </span></code></pre></div>
 <h1 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h1>
 <h2 id="scripts"><a href="https://docs.astral.sh/uv/guides/scripts">Scripts</a><a class="headerlink" href="#scripts" title="Permanent link">&para;</a></h2>
 <p>we can add dependencies that are automatically managed by <code>uv</code> on calling:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>uv<span class="w"> </span>add<span class="w"> </span>--script<span class="w"> </span>&lt;your_script.py&gt;<span class="w"> </span><span class="s2">&quot;&lt;package_a&gt;&quot;</span><span class="w"> </span><span class="s2">&quot;&lt;package_b&gt;&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>uv<span class="w"> </span>add<span class="w"> </span>--script<span class="w"> </span>&lt;your_script.py&gt;<span class="w"> </span><span class="s2">&quot;&lt;package_a&gt;&quot;</span><span class="w"> </span><span class="s2">&quot;&lt;package_b&gt;&quot;</span>
 </span></code></pre></div>
 <p>then we would find some the declaration of dependencies in your <code>your_script.py</code></p>
 <h2 id="project"><a href="https://docs.astral.sh/uv/concepts/projects">Project</a><a class="headerlink" href="#project" title="Permanent link">&para;</a></h2>
 <p>we use <code>pyproject.toml</code> to manage python projects' dependencies.</p>
 <h3 id="add">Add<a class="headerlink" href="#add" title="Permanent link">&para;</a></h3>
 <p>Package name and version would be added into <code>pyproject.toml</code> while calling:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>uv<span class="w"> </span>add<span class="w"> </span>requests
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>uv<span class="w"> </span>add<span class="w"> </span>requests
 </span></code></pre></div>
 <p>Specify a version constraint</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>uv<span class="w"> </span>add<span class="w"> </span><span class="s1">&#39;requests==2.31.0&#39;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>uv<span class="w"> </span>add<span class="w"> </span><span class="s1">&#39;requests==2.31.0&#39;</span>
 </span></code></pre></div>
 <p>Add a <code>git</code> dependency</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>uv<span class="w"> </span>add<span class="w"> </span>requests<span class="w"> </span>--git<span class="w"> </span>https://github.com/psf/requests
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>uv<span class="w"> </span>add<span class="w"> </span>requests<span class="w"> </span>--git<span class="w"> </span>https://github.com/psf/requests
 </span></code></pre></div>
 <p>There ate <em>three</em> sort of groups in <code>pyproject.toml</code></p>
 <ol>
@@ -3681,25 +3704,25 @@
 <li><code>dependency-groups</code> of <code>[tool.uv]</code> contains developments needed</li>
 <li><code>optional_group</code> of <code>[project.optional-dependencies]</code> contains special group needed</li>
 </ol>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># same to uv add --group dev pytest</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>uv<span class="w"> </span>add<span class="w"> </span>pytest<span class="w"> </span>--dev
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># same to uv add --group dev pytest</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>uv<span class="w"> </span>add<span class="w"> </span>pytest<span class="w"> </span>--dev
 </span></code></pre></div>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>uv<span class="w"> </span>add<span class="w"> </span>--group<span class="w"> </span>docs<span class="w"> </span>mkdocs
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>uv<span class="w"> </span>add<span class="w"> </span>--group<span class="w"> </span>docs<span class="w"> </span>mkdocs
 </span></code></pre></div>
 <h3 id="sync">Sync<a class="headerlink" href="#sync" title="Permanent link">&para;</a></h3>
 <p>sync all dependencies from <code>pyproject.toml</code></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>uv sync --all-extras --all-groups
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>uv sync --all-extras --all-groups
 </span></code></pre></div>
 <p><code>sync</code> -&gt;<code>dependencies</code>, <code>--all-extras</code> -&gt; <code>--optional</code>, <code>--all-groups</code> -&gt; <code>dependency-groups</code></p>
 <h3 id="update">Update<a class="headerlink" href="#update" title="Permanent link">&para;</a></h3>
 <p>update all</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>uv<span class="w"> </span>lock<span class="w"> </span>--upgrade
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>uv<span class="w"> </span>lock<span class="w"> </span>--upgrade
 </span></code></pre></div>
 <p>update specified</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>uv<span class="w"> </span>lock<span class="w"> </span>--upgrade-package<span class="w"> </span>requests
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>uv<span class="w"> </span>lock<span class="w"> </span>--upgrade-package<span class="w"> </span>requests
 </span></code></pre></div>
 <p>remove</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>uv<span class="w"> </span>remove<span class="w"> </span>requests
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>uv<span class="w"> </span>remove<span class="w"> </span>requests
 </span></code></pre></div>
 
 
@@ -3723,7 +3746,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 10, 2025 12:10:53</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 22, 2025 21:25:31</span>
   </span>
 
     
