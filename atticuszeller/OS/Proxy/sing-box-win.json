@@ -14,6 +14,7 @@
         "tag": "dns_proxy",
         "address": "h3://dns.atticux.me/dns-query/asfljsndfaoifa",
         "address_resolver": "dns_direct",
+        "client_subnet": "137.184.125.132",
         "detour": "proxy"
       },
       {
@@ -124,23 +125,22 @@
       "type": "vless",
       "tag": "🌟San Francisco WS",
       "tcp_fast_open": true,
-      "tcp_multi_path": true,
-      "server": "magic.atticux.me",
+      "udp_fragment": true,
+      "server": "104.23.96.99",
       "server_port": 2053,
       "uuid": "6a5f528d-1641-406f-95b8-ee9c574d79b3",
       "tls": {
         "enabled": true,
-        "server_name": "magic.atticux.me",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "server_name": "cdn.atticux.me",
+        "min_version": "1.3",
+        "alpn": "h3"
       },
       "transport": {
         "type": "ws",
         "path": "/ws",
+        "max_early_data": 2048,
         "headers": {
-          "Host": "magic.atticux.me"
+          "Host": "cdn.atticux.me"
         }
       }
     },
@@ -171,12 +171,12 @@
       "tag": "⚡San Francisco Hy2",
       "connect_timeout": "5s",
       "tcp_fast_open": true,
-      "tcp_multi_path": true,
+      "tcp_multi_path": false,
       "udp_fragment": true,
       "server": "magic.atticux.me",
       "server_port": 8443,
-      "up_mbps": 500,
-      "down_mbps": 500,
+      "up_mbps": 200,
+      "down_mbps": 200,
       "password": "UptVghIUI1djt/K2wwfrYQ==",
       "tls": {
         "enabled": true,
@@ -262,7 +262,7 @@
       "default_mode": "Rule",
       "access_control_allow_origin": [
         "http://127.0.0.1",
-        "https://metacubexd.pages.dev"
+        "https://metacubexd.atticux.me"
       ],
       "access_control_allow_private_network": true
     }
