@@ -170,7 +170,6 @@
     {
       "type": "hysteria2",
       "tag": "⚡San Francisco Hy2",
-      "network": "tcp",
       "tcp_fast_open": true,
       "tcp_multi_path": false,
       "udp_fragment": true,
