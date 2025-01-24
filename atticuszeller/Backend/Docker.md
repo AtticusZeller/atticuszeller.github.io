@@ -55,7 +55,7 @@ Each layer in an image contains a set of file system __changes__ - additions, de
 ![[assets/Pasted image 20250114175758.png]]
 This is beneficial because it allows layers to be __reused__ between images. Layers let you extend images of others by reusing their base layers, allowing you to add only the data that your application needs.
 
-The new layer is able to be stacked by `Dockerfile` or `docker container commit -m <container> <image>` manually. And `docker image history <image>` offers image layers info.[\[4\]](https://docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/#stacking-the-layers)
+The new layer is able to be stacked by `Dockerfile` or `docker container commit -m <container> <image>` manually. And `docker image history <image>` offers image layers info.[^1]
 
 ```bash
 IMAGE          CREATED              CREATED BY                               SIZE      COMMENT
@@ -180,7 +180,7 @@ docker build -t yourusername/hello-world .
 > Using the build cache effectively lets you achieve faster builds by reusing results from previous builds and skipping unnecessary work.
 > - Any changes to the command of a `RUN` instruction invalidates that layer.
 > - Any changes to files copied into the image with the `COPY` or `ADD` instructions.
-> - Once one layer is invalidated, all following layers are also invalidated.[\[1\]](https://docs.docker.com/get-started/docker-concepts/building-images/using-the-build-cache/)
+> - Once one layer is invalidated, all following layers are also invalidated. [^2]
 
 [How it works?](https://docs.docker.com/build/cache/)
 
@@ -358,3 +358,7 @@ docker rmi <image_id>
 ```bash
 brew install hadolint
 ```
+
+[^1]: https://docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/#stacking-the-layers
+
+[^2]: https://docs.docker.com/get-started/docker-concepts/building-images/using-the-build-cache/
