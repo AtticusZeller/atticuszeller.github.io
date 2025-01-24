@@ -10,10 +10,7 @@
       "listen": "::",
       "listen_port": 8443,
       "tcp_fast_open": true,
-      "tcp_multi_path": true,
       "udp_fragment": true,
-      "up_mbps": 5000,
-      "down_mbps": 5000,
       "users": [
         {
           "name": "atticux",
@@ -27,7 +24,7 @@
         "min_version": "1.3",
         "alpn": "h3"
       },
-      "brutal_debug": false,
+      "brutal_debug": true,
       "ignore_client_bandwidth": false
     },
     {
