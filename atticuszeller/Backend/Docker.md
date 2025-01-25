@@ -298,13 +298,15 @@ docker run -v /HOST/PATH:/CONTAINER/PATH -it nginx
 
 ### Docker Compose
 
-Docker Compose defines your entire __multi-container__ application in a single `YAML` file called `commpose.yml`. The file specifies configuration for all your containers,their dependencies, environment variables, and even volumes and networks.[^9]
+****
+![[assets/Pasted image 20250125163300.png]][^9]
+Docker Compose defines your entire __multi-container__ application in a single `YAML` file called `commpose.yml`. The file specifies configuration for all your containers,their dependencies, environment variables, and even volumes and networks.[^10]
 
 #### Configuration
 
-There are __3__ ways for `docker compose` to read configs, merge, extend, include.,[^10] __merge__ configs is most widely used while developing, extend and include are suitable for multiple services or teams.
+There are __3__ ways for `docker compose` to read configs, merge, extend, include.,[^11] __merge__ configs is most widely used while developing, extend and include are suitable for multiple services or teams.
 
-Default behavior of `docker compose up`? Compose read __2__ files, a `compose.yaml` and an optional `compose.override.yaml` file. By convention, the `compose.yaml` contains your __base__ configuration. The override file can contain configuration __overrides__ for existing services or entirely __new__ services.[^11]
+Default behavior of `docker compose up`? Compose read __2__ files, a `compose.yaml` and an optional `compose.override.yaml` file. By convention, the `compose.yaml` contains your __base__ configuration. The override file can contain configuration __overrides__ for existing services or entirely __new__ services.[^12]
 
 > [!example] Strategy Use a two-file approach for different environments
 > 1. `compose.yml`: Main configuration for production
@@ -312,26 +314,25 @@ Default behavior of `docker compose up`? Compose read __2__ files, a `compose.ya
 > 1. `compose.override.yml`: Override file for development
 > 	- Automatically used with: `docker compose up -d`
 >
-> This strategy allows you to maintain a base configuration for production while easily switching to a development setup with overrides.[^12]
+> This strategy allows you to maintain a base configuration for production while easily switching to a development setup with overrides.[^13]
 
-what if i don't like default behavior? To specify or merge multiple configs use `docker compose -f <config_path> up`.[^13]
+what if i don't like default behavior? To specify or merge multiple configs use `docker compose -f <config_path> up`.[^14]
 
 > [!Note]
-> Paths are evaluated relative to the __base file__. When you use multiple Compose files, you must make sure all paths in the files are relative to the base Compose file (the first Compose file specified with `-f`).[^13]
+> Paths are evaluated relative to the __base file__. When you use multiple Compose files, you must make sure all paths in the files are relative to the base Compose file (the first Compose file specified with `-f`).[^14]
 
 how to merge? precedence?
 - For __single-value__ options like `image`, `command` or `mem_limit`, the new value replaces the old value.
 - For the __multi-value__\(list\) options `ports`, `expose`, `external_links`, `dns`, `dns_search`, and `tmpfs`, Compose __concatenates__ both sets of values.
-- For __key-value__ options `environment`, `labels`, `volumes`, and `devices`, Compose "merges" entries together with __locally__ defined values taking precedence.[^14]
+- For __key-value__ options `environment`, `labels`, `volumes`, and `devices`, Compose "merges" entries together with __locally__ defined values taking precedence.[^15]
 
 > [!tip] `compose.yaml` or `docker-compose.yaml`?
-> The default path for a Compose file is `compose.yaml` (preferred) or `compose.yml` that is placed in the working directory. Compose also supports `docker-compose.yaml` and `docker-compose.yml` for backwards compatibility of __earlier__ versions. If both files exist, Compose prefers the __canonical__ `compose.yaml`.[^15]
-
-****
-![[assets/Pasted image 20250125163300.png]][^16]
+> The default path for a Compose file is `compose.yaml` (preferred) or `compose.yml` that is placed in the working directory. Compose also supports `docker-compose.yaml` and `docker-compose.yml` for backwards compatibility of __earlier__ versions. If both files exist, Compose prefers the __canonical__ `compose.yaml`.[^16]
 
 > [!TIP] Dockerfile versus Compose file
 > A Dockerfile provides instructions to _build a container image_ while a Compose file _defines your running containers_. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.[^17]
+
+#### Project name
 
 ## Docker Commands
 
@@ -397,12 +398,12 @@ brew install hadolint
 [^6]: https://docs.docker.com/compose/how-tos/networking/
 [^7]: https://docs.docker.com/engine/network/drivers/host/
 [^8]: https://docs.docker.com/get-started/docker-concepts/running-containers/persisting-container-data/
-[^9]: https://docs.docker.com/get-started/docker-concepts/running-containers/multi-container-applications/#explanation
-[^10]: https://docs.docker.com/compose/how-tos/multiple-compose-files/
-[^11]: https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/
-[^12]: https://github.com/fastapi/full-stack-fastapi-template
-[^13]: https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/#how-to-merge-multiple-compose-files
-[^14]: https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/#merging-rules
-[^15]: https://docs.docker.com/compose/intro/compose-application-model/#the-compose-file
-[^16]: https://docs.docker.com/compose/images/compose-application.webp
+[^9]: https://docs.docker.com/compose/images/compose-application.webp
+[^10]: https://docs.docker.com/get-started/docker-concepts/running-containers/multi-container-applications/#explanation
+[^11]: https://docs.docker.com/compose/how-tos/multiple-compose-files/
+[^12]: https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/
+[^13]: https://github.com/fastapi/full-stack-fastapi-template
+[^14]: https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/#how-to-merge-multiple-compose-files
+[^15]: https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/#merging-rules
+[^16]: https://docs.docker.com/compose/intro/compose-application-model/#the-compose-file
 [^17]: https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose
