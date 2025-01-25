@@ -207,7 +207,7 @@ we hope the layer frequently modified to be last one,which aims to prevent to ta
 
 #### Multi-stage Builds
 
-For compiled languages,like C or Go or Rust, multi-stage builds let you compile in one stage and copy the compiled binaries into a final runtime image. No need to bundle the entire compiler in your final image.[\[2\]](https://docs.docker.com/get-started/docker-concepts/building-images/multi-stage-builds/#explanation)
+For compiled languages,like C or Go or Rust, multi-stage builds let you compile in one stage and copy the compiled binaries into a final runtime image. No need to bundle the entire compiler in your final image.[^3]
 
 ```Dockerfile
 # Stage 1: Build Environment
@@ -263,13 +263,13 @@ af3e60c1b1c0   host      host      local
 ```
 
 > [!cite]- host and none network
-> The latter two are not fully-fledged networks, but are used to start a container connected directly to the Docker daemon host's networking stack, or to start a container with no network devices. This tutorial will connect two containers to the `bridge` network.[\[3\]](https://docs.docker.com/engine/network/tutorials/standalone/#use-the-default-bridge-network)
+> The latter two are not fully-fledged networks, but are used to start a container connected directly to the Docker daemon host's networking stack, or to start a container with no network devices. This tutorial will connect two containers to the `bridge` network.[^4]
 
-if you have not specified any `--network` flags, the containers connect to the __default__ `bridge` network, which can not ___resolve a container name to an IP address___,but it works for __user-defined__ networks[\[cite\]](https://docs.docker.com/engine/network/tutorials/standalone/#use-user-defined-bridge-networks),and containers will connect to the same user-defined networks bridge which created by docker compose.
+if you have not specified any `--network` flags, the containers connect to the __default__ `bridge` network, which can not ___resolve a container name to an IP address___,but it works for __user-defined__ networks[^5],and containers will connect to the same user-defined networks bridge which created by docker compose.
 
 > [!note]
-> Automatic service discovery can only resolve __custom container names__, not default automatically generated container names[\[2\]](https://docs.docker.com/engine/network/tutorials/standalone/#use-user-defined-bridge-networks)
-> `docker run --name <custom_container_name>` == the service name of `compose.yml` [\[3\]](https://docs.docker.com/compose/how-tos/networking/)
+> Automatic service discovery can only resolve __custom container names__, not default automatically generated container names[^5]
+> `docker run --name <custom_container_name>` == the service name of `compose.yml` [^6]
 
 docker container is designed as network isolation, __publishing a port__ provides the ability to connect or communicate other containers or be accessed by host machine.
 
@@ -284,11 +284,11 @@ services:
 
 #### Host
 
-If you use the `host` network mode for a container, that container's network stack __isn't isolated__ from the Docker host (the container __shares__ the host's networking namespace), and the container doesn't get its own IP-address allocated.[\[6\]](https://docs.docker.com/engine/network/drivers/host/)
+If you use the `host` network mode for a container, that container's network stack __isn't isolated__ from the Docker host (the container __shares__ the host's networking namespace), and the container doesn't get its own IP-address allocated.[^7]
 
 ### Volume
 
-Volumes are a storage mechanism that provide the ability to __persist__ data __beyond__ the lifecycle of an individual container.[\[5\]](https://docs.docker.com/get-started/docker-concepts/running-containers/persisting-container-data/)so it can be shared by other or _old_ containers.
+Volumes are a storage mechanism that provide the ability to __persist__ data __beyond__ the lifecycle of an individual container.[^8]so it can be shared by other or _old_ containers.
 
 ### [Sharing files between a host and container](https://docs.docker.com/get-started/docker-concepts/running-containers/sharing-local-files/#sharing-files-between-a-host-and-container)
 
@@ -298,10 +298,10 @@ docker run -v /HOST/PATH:/CONTAINER/PATH -it nginx
 
 ### Docker Compose
 
-Docker Compose defines your entire __multi-container__ application in a single `YAML` file called `commpose.yml`. The file specifies configuration for all your containers,their dependencies, environment variables, and even volumes and networks.[\[3\]](https://docs.docker.com/get-started/docker-concepts/running-containers/multi-container-applications/#explanation)
+Docker Compose defines your entire __multi-container__ application in a single `YAML` file called `commpose.yml`. The file specifies configuration for all your containers,their dependencies, environment variables, and even volumes and networks.[^9]
 
 > [!TIP] Dockerfile versus Compose file
-> A Dockerfile provides instructions to _build a container image_ while a Compose file _defines your running containers_. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.[\[3\]](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose/)
+> A Dockerfile provides instructions to _build a container image_ while a Compose file _defines your running containers_. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.[^10]
 
 ## Docker Commands
 
@@ -362,3 +362,19 @@ brew install hadolint
 [^1]: https://docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/#stacking-the-layers
 
 [^2]: https://docs.docker.com/get-started/docker-concepts/building-images/using-the-build-cache/
+
+[^3]: https://docs.docker.com/get-started/docker-concepts/building-images/multi-stage-builds/#explanation)
+
+[^4]: https://docs.docker.com/engine/network/tutorials/standalone/#use-the-default-bridge-network
+
+[^5]: https://docs.docker.com/engine/network/tutorials/standalone/#use-user-defined-bridge-networks
+
+[^6]: https://docs.docker.com/compose/how-tos/networking/
+
+[^7]: https://docs.docker.com/engine/network/drivers/host/
+
+[^8]: https://docs.docker.com/get-started/docker-concepts/running-containers/persisting-container-data/
+
+[^9]: https://docs.docker.com/get-started/docker-concepts/running-containers/multi-container-applications/#explanation
+
+[^10]: https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose
