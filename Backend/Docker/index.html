@@ -775,6 +775,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Docker Compose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -4062,6 +4077,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Docker Compose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -4420,10 +4450,45 @@ it takes an optional tag name with <code>-t</code> and a location of the directo
 </span></code></pre></div>
 <h3 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">&para;</a></h3>
 <p>Docker Compose defines your entire <strong>multi-container</strong> application in a single <code>YAML</code> file called <code>commpose.yml</code>. The file specifies configuration for all your containers,their dependencies, environment variables, and even volumes and networks.<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup></p>
-<p><a class="glightbox" href="../../assets/Pasted%20image%2020250125163300.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pasted image 20250125163300.png" loading="lazy" src="../../assets/Pasted%20image%2020250125163300.png" /></a><sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup></p>
+<h4 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h4>
+<p>There are <strong>3</strong> ways for <code>docker compose</code> to read configs, merge, extend, include.,<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup> <strong>merge</strong> configs is most widely used while developing, extend and include are suitable for multiple services or teams.</p>
+<p>Default behavior of <code>docker compose up</code>? Compose read <strong>2</strong> files, a <code>compose.yaml</code> and an optional <code>compose.override.yaml</code> file. By convention, the <code>compose.yaml</code> contains your <strong>base</strong> configuration. The override file can contain configuration <strong>overrides</strong> for existing services or entirely <strong>new</strong> services.<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup></p>
+<div class="admonition example">
+<p class="admonition-title">Strategy Use a two-file approach for different environments</p>
+<ol>
+<li>
+<p><code>compose.yml</code>: Main configuration for production</p>
+<ul>
+<li>Run with: <code>docker compose -f compose.yml up -d</code></li>
+</ul>
+</li>
+<li>
+<p><code>compose.override.yml</code>: Override file for development</p>
+<ul>
+<li>Automatically used with: <code>docker compose up -d</code></li>
+</ul>
+</li>
+</ol>
+<p>This strategy allows you to maintain a base configuration for production while easily switching to a development setup with overrides.<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup></p>
+</div>
+<p>what if i don't like default behavior? To specify or merge multiple configs use <code>docker compose -f &lt;config_path&gt; up</code>.<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">13</a></sup></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Paths are evaluated relative to the <strong>base file</strong>. When you use multiple Compose files, you must make sure all paths in the files are relative to the base Compose file (the first Compose file specified with <code>-f</code>).<sup id="fnref2:13"><a class="footnote-ref" href="#fn:13">13</a></sup></p>
+</div>
+<p>how to merge? precedence?
+- For <strong>single-value</strong> options like <code>image</code>, <code>command</code> or <code>mem_limit</code>, the new value replaces the old value.
+- For the <strong>multi-value</strong><span class="arithmatex">\(list\)</span> options <code>ports</code>, <code>expose</code>, <code>external_links</code>, <code>dns</code>, <code>dns_search</code>, and <code>tmpfs</code>, Compose <strong>concatenates</strong> both sets of values.
+- For <strong>key-value</strong> options <code>environment</code>, <code>labels</code>, <code>volumes</code>, and <code>devices</code>, Compose "merges" entries together with <strong>locally</strong> defined values taking precedence.<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">14</a></sup></p>
+<div class="admonition tip">
+<p class="admonition-title"><code>compose.yaml</code> or <code>docker-compose.yaml</code>?</p>
+<p>The default path for a Compose file is <code>compose.yaml</code> (preferred) or <code>compose.yml</code> that is placed in the working directory. Compose also supports <code>docker-compose.yaml</code> and <code>docker-compose.yml</code> for backwards compatibility of <strong>earlier</strong> versions. If both files exist, Compose prefers the <strong>canonical</strong> <code>compose.yaml</code>.<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">15</a></sup></p>
+</div>
+<hr />
+<p><a class="glightbox" href="../../assets/Pasted%20image%2020250125163300.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pasted image 20250125163300.png" loading="lazy" src="../../assets/Pasted%20image%2020250125163300.png" /></a><sup id="fnref:16"><a class="footnote-ref" href="#fn:16">16</a></sup></p>
 <div class="admonition tip">
 <p class="admonition-title">Dockerfile versus Compose file</p>
-<p>A Dockerfile provides instructions to <em>build a container image</em> while a Compose file <em>defines your running containers</em>. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup></p>
+<p>A Dockerfile provides instructions to <em>build a container image</em> while a Compose file <em>defines your running containers</em>. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">17</a></sup></p>
 </div>
 <h2 id="docker-commands">Docker Commands<a class="headerlink" href="#docker-commands" title="Permanent link">&para;</a></h2>
 <h3 id="use-docker-by-user-without-sudo">Use Docker by User without <code>sudo</code><a class="headerlink" href="#use-docker-by-user-without-sudo" title="Permanent link">&para;</a></h3>
@@ -4488,10 +4553,28 @@ it takes an optional tag name with <code>-t</code> and a location of the directo
 <p>https://docs.docker.com/get-started/docker-concepts/running-containers/multi-container-applications/#explanation&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
 <li id="fn:10">
-<p>https://docs.docker.com/compose/images/compose-application.webp&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+<p>https://docs.docker.com/compose/how-tos/multiple-compose-files/&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
 </li>
 <li id="fn:11">
-<p>https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+<p>https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p>https://github.com/fastapi/full-stack-fastapi-template&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:13">
+<p>https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/#how-to-merge-multiple-compose-files&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:13" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p>https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/#merging-rules&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:15">
+<p>https://docs.docker.com/compose/intro/compose-application-model/#the-compose-file&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:16">
+<p>https://docs.docker.com/compose/images/compose-application.webp&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:17">
+<p>https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 17 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -4517,7 +4600,7 @@ it takes an optional tag name with <code>-t</code> and a location of the directo
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 25, 2025 16:33:41</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 25, 2025 17:35:55</span>
   </span>
 
     
