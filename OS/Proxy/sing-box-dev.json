@@ -1,6 +1,6 @@
 {
   "log": {
-    "level": "warning",
+    "level": "debug",
     "timestamp": true
   },
   "dns": {
@@ -15,7 +15,7 @@
         "address": "h3://dns.atticux.me/dns-query/asfljsndfaoifa",
         "address_resolver": "dns_direct",
         "client_subnet": "137.184.125.132",
-        "detour": "proxy"
+        "detour": "⚡San Francisco Hy2"
       },
       {
         "tag": "dns_fakeip",
@@ -55,8 +55,7 @@
       "enabled": true,
       "inet4_range": "198.18.0.0/15",
       "inet6_range": "fc00::/18"
-    },
-    "independent_cache": true
+    }
   },
   "ntp": {
     "enabled": true,
@@ -124,7 +123,7 @@
     },
     {
       "type": "vless",
-      "tag": "🌟San Francisco WS",
+      "tag": "💨San Francisco gRPC",
       "tcp_fast_open": true,
       "udp_fragment": true,
       "server": "104.23.96.99",
@@ -134,15 +133,14 @@
         "enabled": true,
         "server_name": "cdn.atticux.me",
         "min_version": "1.3",
-        "alpn": "h3"
+        "alpn": [
+          "h3",
+          "h2"
+        ]
       },
       "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "max_early_data": 2048,
-        "headers": {
-          "Host": "cdn.atticux.me"
-        }
+        "type": "grpc",
+        "service_name": "TunService"
       }
     },
     {

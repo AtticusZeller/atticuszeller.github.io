@@ -4356,7 +4356,7 @@ it takes an optional tag name with <code>-t</code> and a location of the directo
 <p>we hope the layer frequently modified to be last one,which aims to prevent to take much time on rebuilding the other layers such as installing dependency.</p>
 <p><a href="https://docs.astral.sh/uv/guides/integration/docker/#intermediate-layers">Intermediate layers</a> and <a href="https://github.com/AtticusZeller/python-uv/blob/main/Dockerfile">template</a></p>
 <h4 id="multi-stage-builds">Multi-stage Builds<a class="headerlink" href="#multi-stage-builds" title="Permanent link">&para;</a></h4>
-<p>For compiled languages,like C or Go or Rust, multi-stage builds let you compile in one stage and copy the compiled binaries into a final runtime image. No need to bundle the entire compiler in your final image.<a href="https://docs.docker.com/get-started/docker-concepts/building-images/multi-stage-builds/#explanation">[2]</a></p>
+<p>For compiled languages,like C or Go or Rust, multi-stage builds let you compile in one stage and copy the compiled binaries into a final runtime image. No need to bundle the entire compiler in your final image.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
 <div class="language-Dockerfile highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c"># Stage 1: Build Environment</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">FROM</span><span class="w"> </span><span class="s">builder-image</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">build-stage</span>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="c"># Install build tools (e.g., Maven, Gradle)</span>
@@ -4395,13 +4395,13 @@ it takes an optional tag name with <code>-t</code> and a location of the directo
 </span></code></pre></div>
 <details class="quote">
 <summary>host and none network</summary>
-<p>The latter two are not fully-fledged networks, but are used to start a container connected directly to the Docker daemon host's networking stack, or to start a container with no network devices. This tutorial will connect two containers to the <code>bridge</code> network.<a href="https://docs.docker.com/engine/network/tutorials/standalone/#use-the-default-bridge-network">[3]</a></p>
+<p>The latter two are not fully-fledged networks, but are used to start a container connected directly to the Docker daemon host's networking stack, or to start a container with no network devices. This tutorial will connect two containers to the <code>bridge</code> network.<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 </details>
-<p>if you have not specified any <code>--network</code> flags, the containers connect to the <strong>default</strong> <code>bridge</code> network, which can not <strong><em>resolve a container name to an IP address</em></strong>,but it works for <strong>user-defined</strong> networks<a href="https://docs.docker.com/engine/network/tutorials/standalone/#use-user-defined-bridge-networks">[cite]</a>,and containers will connect to the same user-defined networks bridge which created by docker compose.</p>
+<p>if you have not specified any <code>--network</code> flags, the containers connect to the <strong>default</strong> <code>bridge</code> network, which can not <strong><em>resolve a container name to an IP address</em></strong>,but it works for <strong>user-defined</strong> networks<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>,and containers will connect to the same user-defined networks bridge which created by docker compose.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Automatic service discovery can only resolve <strong>custom container names</strong>, not default automatically generated container names<a href="https://docs.docker.com/engine/network/tutorials/standalone/#use-user-defined-bridge-networks">[2]</a></p>
-<p><code>docker run --name &lt;custom_container_name&gt;</code> == the service name of <code>compose.yml</code> <a href="https://docs.docker.com/compose/how-tos/networking/">[3]</a></p>
+<p>Automatic service discovery can only resolve <strong>custom container names</strong>, not default automatically generated container names<sup id="fnref2:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
+<p><code>docker run --name &lt;custom_container_name&gt;</code> == the service name of <code>compose.yml</code> <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></p>
 </div>
 <p>docker container is designed as network isolation, <strong>publishing a port</strong> provides the ability to connect or communicate other containers or be accessed by host machine.</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nt">services</span><span class="p">:</span>
@@ -4412,17 +4412,17 @@ it takes an optional tag name with <code>-t</code> and a location of the directo
 </span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
 </span></code></pre></div>
 <h4 id="host">Host<a class="headerlink" href="#host" title="Permanent link">&para;</a></h4>
-<p>If you use the <code>host</code> network mode for a container, that container's network stack <strong>isn't isolated</strong> from the Docker host (the container <strong>shares</strong> the host's networking namespace), and the container doesn't get its own IP-address allocated.<a href="https://docs.docker.com/engine/network/drivers/host/">[6]</a></p>
+<p>If you use the <code>host</code> network mode for a container, that container's network stack <strong>isn't isolated</strong> from the Docker host (the container <strong>shares</strong> the host's networking namespace), and the container doesn't get its own IP-address allocated.<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></p>
 <h3 id="volume">Volume<a class="headerlink" href="#volume" title="Permanent link">&para;</a></h3>
-<p>Volumes are a storage mechanism that provide the ability to <strong>persist</strong> data <strong>beyond</strong> the lifecycle of an individual container.<a href="https://docs.docker.com/get-started/docker-concepts/running-containers/persisting-container-data/">[5]</a>so it can be shared by other or <em>old</em> containers.</p>
+<p>Volumes are a storage mechanism that provide the ability to <strong>persist</strong> data <strong>beyond</strong> the lifecycle of an individual container.<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup>so it can be shared by other or <em>old</em> containers.</p>
 <h3 id="sharing-files-between-a-host-and-container"><a href="https://docs.docker.com/get-started/docker-concepts/running-containers/sharing-local-files/#sharing-files-between-a-host-and-container">Sharing files between a host and container</a><a class="headerlink" href="#sharing-files-between-a-host-and-container" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>/HOST/PATH:/CONTAINER/PATH<span class="w"> </span>-it<span class="w"> </span>nginx
 </span></code></pre></div>
 <h3 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">&para;</a></h3>
-<p>Docker Compose defines your entire <strong>multi-container</strong> application in a single <code>YAML</code> file called <code>commpose.yml</code>. The file specifies configuration for all your containers,their dependencies, environment variables, and even volumes and networks.<a href="https://docs.docker.com/get-started/docker-concepts/running-containers/multi-container-applications/#explanation">[3]</a></p>
+<p>Docker Compose defines your entire <strong>multi-container</strong> application in a single <code>YAML</code> file called <code>commpose.yml</code>. The file specifies configuration for all your containers,their dependencies, environment variables, and even volumes and networks.<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup></p>
 <div class="admonition tip">
 <p class="admonition-title">Dockerfile versus Compose file</p>
-<p>A Dockerfile provides instructions to <em>build a container image</em> while a Compose file <em>defines your running containers</em>. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.<a href="https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose/">[3]</a></p>
+<p>A Dockerfile provides instructions to <em>build a container image</em> while a Compose file <em>defines your running containers</em>. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup></p>
 </div>
 <h2 id="docker-commands">Docker Commands<a class="headerlink" href="#docker-commands" title="Permanent link">&para;</a></h2>
 <h3 id="use-docker-by-user-without-sudo">Use Docker by User without <code>sudo</code><a class="headerlink" href="#use-docker-by-user-without-sudo" title="Permanent link">&para;</a></h3>
@@ -4465,6 +4465,30 @@ it takes an optional tag name with <code>-t</code> and a location of the directo
 <li id="fn:2">
 <p>https://docs.docker.com/get-started/docker-concepts/building-images/using-the-build-cache/&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
+<li id="fn:3">
+<p>https://docs.docker.com/get-started/docker-concepts/building-images/multi-stage-builds/#explanation)&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>https://docs.docker.com/engine/network/tutorials/standalone/#use-the-default-bridge-network&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>https://docs.docker.com/engine/network/tutorials/standalone/#use-user-defined-bridge-networks&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>https://docs.docker.com/compose/how-tos/networking/&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>https://docs.docker.com/engine/network/drivers/host/&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>https://docs.docker.com/get-started/docker-concepts/running-containers/persisting-container-data/&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>https://docs.docker.com/get-started/docker-concepts/running-containers/multi-container-applications/#explanation&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
 </ol>
 </div>
 
@@ -4489,7 +4513,7 @@ it takes an optional tag name with <code>-t</code> and a location of the directo
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 24, 2025 08:36:21</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 25, 2025 16:01:51</span>
   </span>
 
     
