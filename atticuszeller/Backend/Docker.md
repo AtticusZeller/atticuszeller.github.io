@@ -300,8 +300,19 @@ docker run -v /HOST/PATH:/CONTAINER/PATH -it nginx
 
 Docker Compose defines your entire __multi-container__ application in a single `YAML` file called `commpose.yml`. The file specifies configuration for all your containers,their dependencies, environment variables, and even volumes and networks.[^9]
 
+![[assets/Pasted image 20250125163300.png]][^10]
+
+
+
+
+
+
+
+
+
+
 > [!TIP] Dockerfile versus Compose file
-> A Dockerfile provides instructions to _build a container image_ while a Compose file _defines your running containers_. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.[^10]
+> A Dockerfile provides instructions to _build a container image_ while a Compose file _defines your running containers_. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.[^11]
 
 ## Docker Commands
 
@@ -368,4 +379,5 @@ brew install hadolint
 [^7]: https://docs.docker.com/engine/network/drivers/host/
 [^8]: https://docs.docker.com/get-started/docker-concepts/running-containers/persisting-container-data/
 [^9]: https://docs.docker.com/get-started/docker-concepts/running-containers/multi-container-applications/#explanation
-[^10]: https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose
+[^10]: https://docs.docker.com/compose/images/compose-application.webp
+[^11]: https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose
