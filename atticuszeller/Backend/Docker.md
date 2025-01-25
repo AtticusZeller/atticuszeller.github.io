@@ -265,7 +265,7 @@ af3e60c1b1c0   host      host      local
 > [!cite]- host and none network
 > The latter two are not fully-fledged networks, but are used to start a container connected directly to the Docker daemon host's networking stack, or to start a container with no network devices. This tutorial will connect two containers to the `bridge` network.[^4]
 
-if you have not specified any `--network` flags, the containers connect to the __default__ `bridge` network, which can not ___resolve a container name to an IP address___,but it works for __user-defined__ networks[^5],and containers will connect to the same user-defined networks bridge which created by docker compose.
+if you have not specified any `--network` flags, the containers connect to the __default__ `bridge` network, which can not ___resolve a container name to an IP address___,but it works for __user-defined__ networks,[^5]and containers will connect to the same user-defined networks bridge which created by docker compose.
 
 > [!note]
 > Automatic service discovery can only resolve __custom container names__, not default automatically generated container names[^5]
@@ -360,21 +360,12 @@ brew install hadolint
 ```
 
 [^1]: https://docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/#stacking-the-layers
-
 [^2]: https://docs.docker.com/get-started/docker-concepts/building-images/using-the-build-cache/
-
 [^3]: https://docs.docker.com/get-started/docker-concepts/building-images/multi-stage-builds/#explanation)
-
 [^4]: https://docs.docker.com/engine/network/tutorials/standalone/#use-the-default-bridge-network
-
 [^5]: https://docs.docker.com/engine/network/tutorials/standalone/#use-user-defined-bridge-networks
-
 [^6]: https://docs.docker.com/compose/how-tos/networking/
-
 [^7]: https://docs.docker.com/engine/network/drivers/host/
-
 [^8]: https://docs.docker.com/get-started/docker-concepts/running-containers/persisting-container-data/
-
 [^9]: https://docs.docker.com/get-started/docker-concepts/running-containers/multi-container-applications/#explanation
-
 [^10]: https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose
