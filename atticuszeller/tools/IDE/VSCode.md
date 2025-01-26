@@ -14,3 +14,5 @@ sudo apt install code
 
 1. open|close terminal ctrl+\`
 2. create and open new terminal ctrl+shift +\`
+
+![[assets/Pasted image 20250126132827.png]]
