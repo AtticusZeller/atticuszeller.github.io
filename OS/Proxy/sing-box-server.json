@@ -88,6 +88,12 @@
   "route": {
     "rules": [
       {
+        "domain_suffix": [
+          "kaggle.com"
+        ],
+        "outbound": "direct"
+      },
+      {
         "rule_set": [
           "geosite-google",
           "geosite-youtube",
