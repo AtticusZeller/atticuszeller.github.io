@@ -254,10 +254,7 @@ sudo apt upgrade
 
 ### Increase Swap Space via Swap File
 
-_extend to 16gb for example_
-[How to increase swap space? - Ask Ubuntu](https://askubuntu.com/questions/178712/how-to-increase-swap-space)
-
-_extend to 16gb for example_
+[_extend to 16gb for example_](https://askubuntu.com/questions/178712/how-to-increase-swap-space)
 
 ```bash
 sudo swapoff -a
