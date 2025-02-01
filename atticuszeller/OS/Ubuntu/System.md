@@ -197,10 +197,22 @@ sudo chmod +x ./scripts/ocr_clipboard.sh
 - command :`~/DevSpace/ocr_clipboard.sh`
 - shortcuts : `ctrl+win+Q`
 
-### Gpu Monito
+### Gpu Monitor
 
 ```bash
-conda install -c conda-forge nvtop
+uv tool install nvitop
+```
+
+### CPU ,RAM, SWAP Monitor
+
+```bash
+sudo apt install htop
+```
+
+### Clean Hard Driver
+
+```bash
+sudo apt install ncdu
 ```
 
 ### Fan Mode

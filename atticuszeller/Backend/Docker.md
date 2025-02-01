@@ -378,6 +378,12 @@ deletes all containers that have a status of `exited
 docker container prune
 ```
 
+### Clean up
+
+```bash
+docker system prune -f
+```
+
 ### Remove Image
 
 ```bash
