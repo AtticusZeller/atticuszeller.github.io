@@ -3814,6 +3814,77 @@
 <li>create and open new terminal ctrl+shift +`</li>
 </ol>
 <p><a class="glightbox" href="../../../assets/Pasted%20image%2020250126132827.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pasted image 20250126132827.png" loading="lazy" src="../../../assets/Pasted%20image%2020250126132827.png" /></a></p>
+<h2 id="variables-reference"><a href="https://code.visualstudio.com/docs/editor/variables-reference">variables-reference</a><a class="headerlink" href="#variables-reference" title="Permanent link">&para;</a></h2>
+<h3 id="common">common<a class="headerlink" href="#common" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="si">${</span><span class="nv">env</span><span class="p">:</span><span class="nv">HOME</span><span class="si">}</span>
+</span></code></pre></div>
+<h3 id="predefined-variables">Predefined Variables<a class="headerlink" href="#predefined-variables" title="Permanent link">&para;</a></h3>
+<p>The following predefined variables are supported:</p>
+<ul>
+<li><strong>${userHome}</strong> - the path of the user's home folder</li>
+<li><strong>${workspaceFolder}</strong> - the path of the folder opened in VS Code</li>
+<li><strong>${workspaceFolderBasename}</strong> - the name of the folder opened in VS Code without any slashes (/)</li>
+<li><strong>${file}</strong> - the current opened file</li>
+<li><strong>${fileWorkspaceFolder}</strong> - the current opened file's workspace folder</li>
+<li><strong>${relativeFile}</strong> - the current opened file relative to <code>workspaceFolder</code></li>
+<li><strong>${relativeFileDirname}</strong> - the current opened file's dirname relative to <code>workspaceFolder</code></li>
+<li><strong>${fileBasename}</strong> - the current opened file's basename</li>
+<li><strong>${fileBasenameNoExtension}</strong> - the current opened file's basename with no file extension</li>
+<li><strong>${fileExtname}</strong> - the current opened file's extension</li>
+<li><strong>${fileDirname}</strong> - the current opened file's folder path</li>
+<li><strong>${fileDirnameBasename}</strong> - the current opened file's folder name</li>
+<li><strong>${cwd}</strong> - the task runner's current working directory upon the startup of VS Code</li>
+<li><strong>${lineNumber}</strong> - the current selected line number in the active file</li>
+<li><strong>${selectedText}</strong> - the current selected text in the active file</li>
+<li><strong>${execPath}</strong> - the path to the running VS Code executable</li>
+<li><strong>${defaultBuildTask}</strong> - the name of the default build task</li>
+<li><strong>${pathSeparator}</strong> - the character used by the operating system to separate components in file paths</li>
+<li><strong>${/}</strong> - shorthand for <strong>${pathSeparator}</strong></li>
+</ul>
+<h4 id="predefined-variables-examples">Predefined Variables Examples<a class="headerlink" href="#predefined-variables-examples" title="Permanent link">&para;</a></h4>
+<p>Supposing that you have the following requirements:</p>
+<ol>
+<li>A file located at <code>/home/your-username/your-project/folder/file.ext</code> opened in your editor;</li>
+<li>The directory <code>/home/your-username/your-project</code> opened as your root workspace.</li>
+</ol>
+<p>So you will have the following values for each variable:</p>
+<ul>
+<li><strong>${userHome}</strong> - <code>/home/your-username</code></li>
+<li><strong>${workspaceFolder}</strong> - <code>/home/your-username/your-project</code></li>
+<li><strong>${workspaceFolderBasename}</strong> - <code>your-project</code></li>
+<li><strong>${file}</strong> - <code>/home/your-username/your-project/folder/file.ext</code></li>
+<li><strong>${fileWorkspaceFolder}</strong> - <code>/home/your-username/your-project</code></li>
+<li><strong>${relativeFile}</strong> - <code>folder/file.ext</code></li>
+<li><strong>${relativeFileDirname}</strong> - <code>folder</code></li>
+<li><strong>${fileBasename}</strong> - <code>file.ext</code></li>
+<li><strong>${fileBasenameNoExtension}</strong> - <code>file</code></li>
+<li><strong>${fileDirname}</strong> - <code>/home/your-username/your-project/folder</code></li>
+<li><strong>${fileExtname}</strong> - <code>.ext</code></li>
+<li><strong>${lineNumber}</strong> - line number of the cursor</li>
+<li><strong>${selectedText}</strong> - text selected in your code editor</li>
+<li><strong>${execPath}</strong> - location of Code.exe</li>
+<li><strong>${pathSeparator}</strong> - <code>/</code> on macOS or linux, <code>\</code> on Windows</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use IntelliSense inside string values for <code>tasks.json</code> and <code>launch.json</code> to get a full list of predefined variables.</p>
+</div>
+<h4 id="variables-scoped-per-workspace-folder">Variables Scoped per Workspace Folder<a class="headerlink" href="#variables-scoped-per-workspace-folder" title="Permanent link">&para;</a></h4>
+<p>By appending the root folder's name to a variable (separated by a colon), it is possible to reach into sibling root folders of a workspace. Without the root folder name, the variable is scoped to the same folder where it is used.</p>
+<p>For example, in a multi root workspace with folders <code>Server</code> and <code>Client</code>, a <code>${workspaceFolder:Client}</code> refers to the path of the <code>Client</code> root.</p>
+<h3 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
+<p>You can also reference environment variables through the <code>${env:Name}</code> syntax (for example, <code>${env:USERNAME}</code>).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  &quot;type&quot;: &quot;node&quot;,
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  &quot;request&quot;: &quot;launch&quot;,
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  &quot;name&quot;: &quot;Launch Program&quot;,
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  &quot;program&quot;: &quot;${workspaceFolder}/app.js&quot;,
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  &quot;cwd&quot;: &quot;${workspaceFolder}&quot;,
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  &quot;args&quot;: [&quot;${env:USERNAME}&quot;]
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>}
+</span></code></pre></div>
+<h3 id="configuration-variables">Configuration Variables<a class="headerlink" href="#configuration-variables" title="Permanent link">&para;</a></h3>
+<p>You can reference VS Code settings ("configurations") through <code>${config:Name}</code> syntax (for example, <code>${config:editor.fontSize}</code>).</p>
 
 
 
@@ -3836,7 +3907,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 26, 2025 13:28:39</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 5, 2025 09:33:55</span>
   </span>
 
     
