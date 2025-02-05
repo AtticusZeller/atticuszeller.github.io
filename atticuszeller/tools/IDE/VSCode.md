@@ -19,13 +19,11 @@ sudo apt install code
 
 ## [variables-reference](https://code.visualstudio.com/docs/editor/variables-reference)
 
-
-### common
+### Common
 
 ```bash
 ${env:HOME}
 ```
-
 
 ### Predefined Variables
 
