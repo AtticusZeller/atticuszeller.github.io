@@ -153,7 +153,7 @@ To config VS Code terminal, add the following properties to your user `settings
 ```json
 {
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono"
-  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.defaultProfile.linux": "zsh"
