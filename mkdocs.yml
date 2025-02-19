@@ -102,9 +102,6 @@ plugins:
       obsidian_dir: .obsidian
       backlinks:
         enabled: true
-      callouts:
-        enabled: true
-        indentation: spaces
       # links:
       #   wikilinks_enabled: true
       #   img_lazy: true
@@ -116,7 +113,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/solid/paper-plane
-      link: mailto:GitHub.AJZ@pm.me
+      link: mailto:hello@atticux.me
     - icon: fontawesome/brands/github
       link: https://github.com/AtticusZeller
     - icon: fontawesome/brands/linkedin
@@ -177,6 +174,8 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   # Image
   - md_in_html
+  # callouts
+  - obsidian_callouts
 
 # math and mermaid
 extra_javascript:
