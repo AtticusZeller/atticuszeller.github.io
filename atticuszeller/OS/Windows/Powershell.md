@@ -15,6 +15,7 @@ Import-Module PSReadLine
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
 Import-Module Terminal-Icons
+Set-PSReadLineKeyHandler -Chord Tab -Function MenuComplete
 ```
 
 set `powershell` as default instead of `windows powershell`
@@ -60,9 +61,10 @@ where.exe poetry
 
 ### Add Path
 
-_admin_
+> [!INFO] Especially for invoking commands through program itself instead of `pwsh`
 
 ```powershell
+# admin
 # use Tab to autocomlete to make sure path exit
 $newPath = "C:\Program Files\xpdf-tools-win-4.05\bin64"
 $currentPath = [Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
@@ -77,17 +79,8 @@ if ($currentPath -notlike "*$newPath*") {
 [Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine) -split ";"
 ```
 
+### Using `bash` to Handle Shell
 
-
-### Using `bash` to handle shell 
-
-
-1. add `"C:\Program Files\Git\bin"` into `PATH` in windows, then `bash`
-2. append settings of `vscode` 
-```json
-{
-	"terminal.integrated.env.windows": {
-		"PATH": "${env:PATH};C:\\Program Files\\Git\\bin"
-	}
-}
+```powershell
+Add-Content -Path $PROFILE -Value "`n`$env:PATH += `";C:\Program Files\Git\bin`""
 ```
