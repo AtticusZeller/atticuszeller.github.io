@@ -63,26 +63,31 @@ where.exe poetry
 _admin_
 
 ```powershell
-# 获取当前系统路径
-$currentPath = [Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
-
-# 要添加的新路径
+# use Tab to autocomlete to make sure path exit
 $newPath = "C:\Program Files\xpdf-tools-win-4.05\bin64"
-
-# 检查新路径是否已经存在于系统路径中
-if ($currentPath -notcontains $newPath) {
-    # 如果不存在，则添加新路径
+$currentPath = [Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
+if ($currentPath -notlike "*$newPath*") {
     $updatedPath = $currentPath + ";" + $newPath
-
-    # 设置新的系统路径
     [Environment]::SetEnvironmentVariable("Path", $updatedPath, [System.EnvironmentVariableTarget]::Machine)
-
     Write-Output "Path added successfully."
 } else {
     Write-Output "Path already exists in the system PATH."
 }
 # check path
-# 输出当前系统路径
-[Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
+[Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine) -split ";"
+```
 
+
+
+### Using `bash` to handle shell 
+
+
+1. add `"C:\Program Files\Git\bin"` into `PATH` in windows, then `bash`
+2. append settings of `vscode` 
+```json
+{
+	"terminal.integrated.env.windows": {
+		"PATH": "${env:PATH};C:\\Program Files\\Git\\bin"
+	}
+}
 ```
