@@ -17,6 +17,7 @@
 ⚡ Fun fact: I'm also an avid reader and a sports aficionado
 
 📫 How to reach me:
+
 * Email: __hello@atticux.me__
 
 🎓 Academic Profile:
