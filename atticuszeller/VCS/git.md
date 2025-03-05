@@ -10,7 +10,7 @@ Git game in [Learn Git Branching](https://learngitbranching.js.org/?locale=en_US
 
 ```bash
 git config --global user.name "A.J.Zeller"
-git config --global user.email "atticus.zeller@pm.me"
+git config --global user.email "hello@atticux.me"
 git config --global init.defaultBranch main
 git config credential.helper
 ```
