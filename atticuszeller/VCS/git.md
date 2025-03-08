@@ -213,7 +213,7 @@ git tag -d $(git describe --abbrev=0 --tags)
 git tag -l
 git push origin main --tags -f
 ```
-
+add tags via `vscode` git plugin
 ### LFS
 
 ```
