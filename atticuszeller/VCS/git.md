@@ -203,17 +203,19 @@ git cherry-pick backup-branch
 git push -f origin
 ```
 
-
-#### tags
+#### Tags
 
 delete latest tag
+
 ```bash
 git tag -d $(git describe --abbrev=0 --tags)
 # check if deleted
 git tag -l
 git push origin main --tags -f
 ```
+
 add tags via `vscode` git plugin
+
 ### LFS
 
 ```
