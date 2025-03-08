@@ -203,6 +203,14 @@ git cherry-pick backup-branch
 git push -f origin
 ```
 
+
+#### tags
+
+delete latest tag
+```bash
+git tag -d $(git describe --abbrev=0 --tags)
+```
+
 ### LFS
 
 ```
