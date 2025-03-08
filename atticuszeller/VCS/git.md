@@ -209,6 +209,9 @@ git push -f origin
 delete latest tag
 ```bash
 git tag -d $(git describe --abbrev=0 --tags)
+# check if deleted
+git tag -l
+git push origin main --tags -f
 ```
 
 ### LFS
