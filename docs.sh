@@ -30,7 +30,7 @@ get_docs_dir() {
 
 # Replace with your actual domain
 # Ref: https://www.mkdocs.org/user-guide/deploying-your-docs/#custom-domains
-CUSTOM_DOMAIN="notes.atticux.me"
+CUSTOM_DOMAIN="docs.atticux.me"
 
 # Function to setup CNAME and KaTeX
 setup_files() {
