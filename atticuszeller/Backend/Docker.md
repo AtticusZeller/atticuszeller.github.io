@@ -147,7 +147,7 @@ uv sync --frozen --no-install-project
 - `CMD ["param1","param2"]` (exec form, as default parameters to `ENTRYPOINT`)
 
 > [!tip]
-> we primarily use `CMD` to . Because it's much clearer for us to override it while debugging. Nobody wanna see something ugly like:
+> we primarily use `CMD`. Because it's much clearer for us to override it while debugging. Nobody wanna see something ugly like:
 > ```yaml
 > services:
 > 	backend:
@@ -322,6 +322,7 @@ what if i don't like default behavior? To specify or merge multiple configs use 
 > Paths are evaluated relative to the __base file__. When you use multiple Compose files, you must make sure all paths in the files are relative to the base Compose file (the first Compose file specified with `-f`).[^14]
 
 how to merge? precedence?
+
 - For __single-value__ options like `image`, `command` or `mem_limit`, the new value replaces the old value.
 - For the __multi-value__\(list\) options `ports`, `expose`, `external_links`, `dns`, `dns_search`, and `tmpfs`, Compose __concatenates__ both sets of values.
 - For __key-value__ options `environment`, `labels`, `volumes`, and `devices`, Compose "merges" entries together with __locally__ defined values taking precedence.[^15]
