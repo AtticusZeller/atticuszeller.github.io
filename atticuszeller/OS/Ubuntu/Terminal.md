@@ -165,6 +165,7 @@ To config VS Code terminal, add the following properties to your user `settings
 Use `Tab` to autocomplete file, directory, commands.
 
 Erase the whole line via `Ctrl+U`.
+Clear screen using `Ctrl+L`.
 
 `Home` or `End` (`Ctrl+A`, `Ctrl+E`) can jump to the front or the end of the command.
 
