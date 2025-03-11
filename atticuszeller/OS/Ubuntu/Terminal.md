@@ -162,22 +162,22 @@ To config VS Code terminal, add the following properties to your user `settings
 
 ## Shortcut
 
-Use `Tab` to autocomplete file, directory, commands.
+Use `Tab` to autocomplete file, directory, commands
 
-Erase the whole line via `Ctrl+U`.
-Clear screen using `Ctrl+L`.
+Erase the whole line via `Ctrl+U`
+Clear screen using `Ctrl+L`
 
-`Home` or `End` (`Ctrl+A`, `Ctrl+E`) can jump to the front or the end of the command.
+`Home` or `End` (`Ctrl+A`, `Ctrl+E`) can jump to the front or the end of the command
 
-`zsh-autosuggestions` with ➡️ gets the command from history, but sometimes the partial commands, words need to be modified to run,`Ctrl+U` remove the _word_ before the cursor.
+`zsh-autosuggestions` with ➡️ gets the command from history, but sometimes the partial commands, words need to be modified to run,`Ctrl+U` remove the _word_ before the cursor
 
-`Ctrl+D` terminates the current SSH connection.
+`Ctrl+D` terminates the current SSH connection
 
-`history-substring-search` allows us to use `keyword` with ⬆️, ⬇️ to filter commands from history.
+`history-substring-search` allows us to use `keyword` with ⬆️, ⬇️ to filter commands from history
 
-`Ctrl+C` to kill the running program.`Ctrl+Z` to suspend it.
+`Ctrl+C` to kill the running program, `Ctrl+Z` to suspend it
 
-Use `Ctrl+Shift+C` and `Ctrl+Shift+V` to _copy_ and _paste_.
+Use `Ctrl+Shift+C` and `Ctrl+Shift+V` to _copy_ and _paste_
 
 ## Reference
 
