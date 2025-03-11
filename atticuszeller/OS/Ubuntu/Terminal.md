@@ -84,7 +84,6 @@ plugins=(
     extract
     docker
     history-substring-search
-    web-search
     z
     zsh-autosuggestions
     zsh-syntax-highlighting
@@ -109,12 +108,6 @@ The Plugin enables searching through commands history by typing a partial match 
 
 Use ⬆️ or ⬇️ to match commands from history
 ![[assets/Pasted image 20250105170317.png]]
-
-#### Web-search
-
-Open your browser with terminal search content
-![[assets/Pasted image 20250105165205.png]]
-
 #### Z
 
 > Zsh-z is a command-line tool that allows you to jump quickly to directories that you have visited frequently or recently.[\[3\]](https://github.com/agkozak/zsh-z)
