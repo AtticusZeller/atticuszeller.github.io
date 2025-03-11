@@ -108,6 +108,7 @@ The Plugin enables searching through commands history by typing a partial match 
 
 Use ⬆️ or ⬇️ to match commands from history
 ![[assets/Pasted image 20250105170317.png]]
+
 #### Z
 
 > Zsh-z is a command-line tool that allows you to jump quickly to directories that you have visited frequently or recently.[\[3\]](https://github.com/agkozak/zsh-z)
@@ -151,6 +152,21 @@ To config VS Code terminal, add the following properties to your user `settings
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.defaultProfile.linux": "zsh"
 }
+```
+
+## Tmux
+
+install via `sudo apt install tmux`
+config
+
+```bash
+git clone --single-branch https://github.com/gpakosz/.tmux.git ~/.local/share/oh-my-tmux
+
+mkdir -p ~/.config/tmux
+
+ln -s ~/.local/share/oh-my-tmux/.tmux.conf ~/.config/tmux/tmux.conf
+
+cp ~/.local/share/oh-my-tmux/.tmux.conf.local ~/.config/tmux/tmux.conf.local
 ```
 
 ## Shortcut
