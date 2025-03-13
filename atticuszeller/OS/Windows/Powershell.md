@@ -84,3 +84,11 @@ if ($currentPath -notlike "*$newPath*") {
 ```powershell
 Add-Content -Path $PROFILE -Value "`n`$env:PATH += `";C:\Program Files\Git\bin`""
 ```
+
+### SUDO
+
+```powershell
+winget install gerardog.gsudo
+```
+
+settings->?(sudo)->Enable sudo _inline_
