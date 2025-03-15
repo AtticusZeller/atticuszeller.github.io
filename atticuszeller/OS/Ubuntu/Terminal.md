@@ -178,9 +178,9 @@ split panes `prefix` + `_` vertically
 
 switch in different split panes `prefix` + `h/j/k/l` or ⬆️/⬅️/➡️/⬇️
 
-scroll up or down in split panes `prefix` + `[` into copy mode
-then ⬆️/⬇️ or `PgUp`/`PgDn`
-`g` to specify which line to go
+scroll up or down in split panes `prefix` + `[` into copy mode, then
+- ⬆️/⬇️ or `PgUp`/`PgDn`
+- `g` to specify which line to go
 
 ## Shortcut
 
