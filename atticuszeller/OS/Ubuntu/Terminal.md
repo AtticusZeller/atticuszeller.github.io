@@ -169,6 +169,17 @@ ln -s ~/.local/share/oh-my-tmux/.tmux.conf ~/.config/tmux/tmux.conf
 cp ~/.local/share/oh-my-tmux/.tmux.conf.local ~/.config/tmux/tmux.conf.local
 ```
 
+prefix is `Ctrl+a/b`
+
+kill all session `tmux kill-server`
+
+split windows `prefix` + `-` horizontally
+split windows `prefix` + `_` vertically
+
+scroll up or down in split panes `prefix` + `[` into copy mode
+then ⬆️/⬇️ or `PgUp`/`PgDn`
+`g` to specify which line to go
+
 ## Shortcut
 
 Use `Tab` to autocomplete file, directory, commands
