@@ -173,8 +173,10 @@ prefix is `Ctrl+a/b`
 
 kill all session `tmux kill-server`
 
-split windows `prefix` + `-` horizontally
-split windows `prefix` + `_` vertically
+split panes `prefix` + `-` horizontally
+split panes `prefix` + `_` vertically
+
+switch in different split panes `prefix` + `h/j/k/l` or ⬆️/⬅️/➡️/⬇️
 
 scroll up or down in split panes `prefix` + `[` into copy mode
 then ⬆️/⬇️ or `PgUp`/`PgDn`
