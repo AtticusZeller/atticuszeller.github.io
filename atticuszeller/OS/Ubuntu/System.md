@@ -96,6 +96,12 @@ ssh ubuntu-laptop
  whoami
 ```
 
+change folder owner to current user
+
+```bash
+sudo chown -R $USER:$USER ~/DevSpace/repo/.venv
+```
+
 ### Display Server
 
 enable [wayland](https://linuxconfig.org/how-to-enable-disable-wayland-on-ubuntu-22-04-desktop)
