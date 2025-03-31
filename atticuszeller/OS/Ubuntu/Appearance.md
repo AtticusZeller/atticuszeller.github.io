@@ -19,16 +19,21 @@ Install __bold__ [[OS/Ubuntu/Terminal#Install Fonts|Nerd Fonts]] and [[OS/Ubuntu
 ### Extension
 
 - [user-themes](https://extensions.gnome.org/extension/19/user-themes/) to enable gnome-shell theme (and not just the application theme)
-- [dash-to-dock](https://extensions.gnome.org/extension/307/dash-to-dock)
-- [blur-my-shell](https://extensions.gnome.org/extension/3193/blur-my-shell)
+- [dash-to-dock](https://extensions.gnome.org/extension/307/dash-to-dock)disable system dock first
+- [blur-my-shell](https://extensions.gnome.org/extension/3193/blur-my-shell) disable dock blur to avoid conflicting
 - [quick-settings-tweaks](https://github.com/qwreey/quick-settings-tweaks) enhance setting panel
-- [search-light](https://github.com/icedman/search-light)
-- [CoverflowAltTab](https://github.com/dsheeler/CoverflowAltTab)
+quick search
+- [search-light](https://github.com/icedman/search-light) `ctrl` + `alt` + `space` ,maximize border radius,`0.3` for width,`0.4` for height
+advanced tabs
+- [CoverflowAltTab](https://github.com/dsheeler/CoverflowAltTab) enable style timeline for switching recent windows , windows title is top position,hide panel while switching,icons-> style-> attached,disable key-bind of switching apps
+windows move,max,min animation
 - [compiz-windows-effect](https://github.com/hermes83/compiz-windows-effect)
+- [compiz-alike-magic-lamp-effect](https://github.com/hermes83/compiz-alike-magic-lamp-effect)
 
 ```bash
 sudo apt install gnome-shell-extension-manager gnome-tweaks neofetch
 ```
+
 ### Install
 
 ```bash
@@ -46,12 +51,6 @@ cd WhiteSure-gtk-theme
 
 > [!NOTE]
 > enable solid one in `Tweaks`
-
-Flatpak
-
-```bash
-sudo flatpak override --filesystem=xdg-config/gtk-3.0 && sudo flatpak override --filesystem=xdg-config/gtk-4.0
-```
 
 ### Tweak
 
