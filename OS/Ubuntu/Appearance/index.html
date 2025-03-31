@@ -3753,12 +3753,16 @@
 <h3 id="extension">Extension<a class="headerlink" href="#extension" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://extensions.gnome.org/extension/19/user-themes/">user-themes</a> to enable gnome-shell theme (and not just the application theme)</li>
-<li><a href="https://extensions.gnome.org/extension/307/dash-to-dock">dash-to-dock</a></li>
-<li><a href="https://extensions.gnome.org/extension/3193/blur-my-shell">blur-my-shell</a></li>
-<li><a href="https://github.com/qwreey/quick-settings-tweaks">quick-settings-tweaks</a> enhance setting panel</li>
-<li><a href="https://github.com/icedman/search-light">search-light</a></li>
-<li><a href="https://github.com/dsheeler/CoverflowAltTab">CoverflowAltTab</a></li>
+<li><a href="https://extensions.gnome.org/extension/307/dash-to-dock">dash-to-dock</a>disable system dock first</li>
+<li><a href="https://extensions.gnome.org/extension/3193/blur-my-shell">blur-my-shell</a> disable dock blur to avoid conflicting</li>
+<li><a href="https://github.com/qwreey/quick-settings-tweaks">quick-settings-tweaks</a> enhance setting panel
+quick search</li>
+<li><a href="https://github.com/icedman/search-light">search-light</a> <code>ctrl</code> + <code>alt</code> + <code>space</code> ,maximize border radius,<code>0.3</code> for width,<code>0.4</code> for height
+advanced tabs</li>
+<li><a href="https://github.com/dsheeler/CoverflowAltTab">CoverflowAltTab</a> enable style timeline for switching recent windows , windows title is top position,hide panel while switching,icons-&gt; style-&gt; attached,disable key-bind of switching apps
+windows move,max,min animation</li>
 <li><a href="https://github.com/hermes83/compiz-windows-effect">compiz-windows-effect</a></li>
+<li><a href="https://github.com/hermes83/compiz-alike-magic-lamp-effect">compiz-alike-magic-lamp-effect</a></li>
 </ul>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gnome-shell-extension-manager<span class="w"> </span>gnome-tweaks<span class="w"> </span>neofetch
 </span></code></pre></div>
@@ -3776,30 +3780,27 @@
 <p class="admonition-title">Note</p>
 <p>enable solid one in <code>Tweaks</code></p>
 </div>
-<p>Flatpak</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>flatpak<span class="w"> </span>override<span class="w"> </span>--filesystem<span class="o">=</span>xdg-config/gtk-3.0<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>flatpak<span class="w"> </span>override<span class="w"> </span>--filesystem<span class="o">=</span>xdg-config/gtk-4.0
-</span></code></pre></div>
 <h3 id="tweak">Tweak<a class="headerlink" href="#tweak" title="Permanent link">&para;</a></h3>
 <p>Firefox , GDE, Flatpak</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./tweaks.sh<span class="w"> </span>-F<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>-f<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>--dash-to-dock<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>--color<span class="w"> </span>Dark<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>--theme<span class="w"> </span>blue
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./tweaks.sh<span class="w"> </span>-F<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>-f<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>--dash-to-dock<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>--color<span class="w"> </span>Dark<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>--theme<span class="w"> </span>blue
 </span></code></pre></div>
 <p>Lock Screen</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>./tweaks.sh<span class="w"> </span>-g<span class="w"> </span>-N
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>./tweaks.sh<span class="w"> </span>-g<span class="w"> </span>-N
 </span></code></pre></div>
 <h2 id="icons">Icons<a class="headerlink" href="#icons" title="Permanent link">&para;</a></h2>
 <p><a href="https://github.com/vinceliuice/WhiteSur-icon-theme">GitHub - vinceliuice/WhiteSur-icon-theme: MacOS Big Sure style icon theme for linux desktops</a></p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:vinceliuice/WhiteSur-icon-theme.git
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">cd</span><span class="w"> </span>WhiteSure-icon-theme
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>./install.sh<span class="w"> </span>-a<span class="w"> </span>-b
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:vinceliuice/WhiteSur-icon-theme.git
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">cd</span><span class="w"> </span>WhiteSure-icon-theme
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>./install.sh<span class="w"> </span>-a<span class="w"> </span>-b
 </span></code></pre></div>
 <h2 id="cursors">Cursors<a class="headerlink" href="#cursors" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:vinceliuice/McMojave-cursors.git
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">cd</span><span class="w"> </span>McMojave-cursors
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>sudo<span class="w"> </span>./install.sh
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:vinceliuice/McMojave-cursors.git
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">cd</span><span class="w"> </span>McMojave-cursors
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>sudo<span class="w"> </span>./install.sh
 </span></code></pre></div>
 <h2 id="wallpaper">Wallpaper<a class="headerlink" href="#wallpaper" title="Permanent link">&para;</a></h2>
 <p><a class="glightbox" href="../../../assets/Pasted%20image%2020241126135048.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="assets/Pasted image 20241126135048.png" src="../../../assets/Pasted%20image%2020241126135048.png" /></a>
@@ -3826,7 +3827,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="March 31, 2025 10:13:48">March 31, 2025 10:13:48</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="March 31, 2025 10:27:50">March 31, 2025 10:27:50</span>
   </span>
 
     
