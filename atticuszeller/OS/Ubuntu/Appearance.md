@@ -22,6 +22,8 @@ Install __bold__ [[OS/Ubuntu/Terminal#Install Fonts|Nerd Fonts]] and [[OS/Ubuntu
 - [dash-to-dock](https://extensions.gnome.org/extension/307/dash-to-dock)
 - [blur-my-shell](https://extensions.gnome.org/extension/3193/blur-my-shell)
 - [quick-settings-tweaks](https://github.com/qwreey/quick-settings-tweaks) enhance setting panel
+- [search-light](https://github.com/icedman/search-light)
+- [CoverflowAltTab](https://github.com/dsheeler/CoverflowAltTab)
 
 ```bash
 sudo apt install gnome-shell-extension-manager gnome-tweaks neofetch
