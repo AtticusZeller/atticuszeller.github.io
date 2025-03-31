@@ -24,6 +24,7 @@ Install __bold__ [[OS/Ubuntu/Terminal#Install Fonts|Nerd Fonts]] and [[OS/Ubuntu
 - [quick-settings-tweaks](https://github.com/qwreey/quick-settings-tweaks) enhance setting panel
 - [search-light](https://github.com/icedman/search-light)
 - [CoverflowAltTab](https://github.com/dsheeler/CoverflowAltTab)
+- [compiz-windows-effect](https://github.com/hermes83/compiz-windows-effect)
 
 ```bash
 sudo apt install gnome-shell-extension-manager gnome-tweaks neofetch
