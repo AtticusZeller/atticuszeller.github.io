@@ -8,19 +8,28 @@ Install __bold__ [[OS/Ubuntu/Terminal#Install Fonts|Nerd Fonts]] and [[OS/Ubuntu
 
 ## Theme
 
-1. [theme\_manager.sh](https://github.com/AtticusZeller/scripts/blob/main/theme_manager.sh)
-2. [WhiteSur-gtk-theme](https://github.com/vinceliuice/WhiteSur-gtk-theme)
+![How to Make Ubuntu 24.04 Look Like MacOS SONOMA (UPDATED GUIDE) - YouTube](https://www.youtube.com/watch?v=45Iz8bQGYuE&list=WL&index=2)
 
-### Basic Extension
+### Setting
+
+1. multitasking -> hot corner, active screen edges
+2. [theme\_manager.sh](https://github.com/AtticusZeller/scripts/blob/main/theme_manager.sh)
+3. [WhiteSur-gtk-theme](https://github.com/vinceliuice/WhiteSur-gtk-theme)
+
+### Extension
 
 - [user-themes](https://extensions.gnome.org/extension/19/user-themes/) to enable gnome-shell theme (and not just the application theme)
 - [dash-to-dock](https://extensions.gnome.org/extension/307/dash-to-dock)
 - [blur-my-shell](https://extensions.gnome.org/extension/3193/blur-my-shell)
+- [quick-settings-tweaks](https://github.com/qwreey/quick-settings-tweaks) enhance setting panel
 
+```bash
+sudo apt install gnome-shell-extension-manager gnome-tweaks neofetch
+```
 ### Install
 
 ```bash
-git clone git@github.com:vinceliuice/WhiteSur-gtk-theme.git
+git clone git@github.com:vinceliuice/WhiteSur-gtk-theme.git --depth 1
 cd WhiteSure-gtk-theme
 ```
 
