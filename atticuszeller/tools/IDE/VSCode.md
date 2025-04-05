@@ -22,6 +22,12 @@ sudo apt install code
 
 ![[assets/Pasted image 20250126132827.png]]
 
+### Editor
+
+- `ctrl + shift + ⬅️/➡️` expand to select
+- `ctrl + D` select multiple same variables in current file
+- `ctrl + alt/shift + ➖` go back or forward from cursor history
+
 ## [variables-reference](https://code.visualstudio.com/docs/editor/variables-reference)
 
 ### Common
