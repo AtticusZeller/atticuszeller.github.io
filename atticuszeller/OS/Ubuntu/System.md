@@ -225,19 +225,16 @@ sudo apt install ncdu
 
 use `Legion` in windows to set mode
 
-### Screenshot
+### AppImage
 
-[Snipaste Downloads](https://www.snipaste.com/download.html)
+[I get some errors related to something called “FUSE” — AppImage  documentation](https://docs.appimage.org/user-guide/troubleshooting/fuse.html#setting-up-fuse-2-x-alongside-of-fuse-3-x-on-recent-ubuntu-22-04-debian-and-their-derivatives)
+
+
 
 ```bash
-sudo apt-get update
-sudo apt-get install fuse
-chmod +x /home/atticuszz/Downloads/Snipaste-2.8.9-Beta-x86_64.AppImage
-/home/atticuszz/Downloads/Snipaste-2.8.9-Beta-x86_64.AppImage --appimage-extract
-# create desktop app then
-mkdir -p ~/.config/autostart/
-cp ~/Desktop/Snipaste.desktop ~/.config/autostart/
+sudo apt install libfuse2
 ```
+
 
 ### Install .tar.gz
 
