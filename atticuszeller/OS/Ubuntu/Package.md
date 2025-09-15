@@ -12,6 +12,7 @@
 - Uninstall software: `sudo apt remove <package-name>`
 - Search for software: `apt search <keyword>`
 - Display package information: `apt show <package-name>`
+- Display Version table, installed, next version: `apt policy <package-name>`
 
 ```bash
 sudo rm /etc/apt/sources.list.d/<package>
