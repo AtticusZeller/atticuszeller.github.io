@@ -126,7 +126,7 @@ journalctl --since "2025-01-14 08:09:00" --until "2025-01-14 08:09:30"
 
 ### Browse
 
-#### [FireFox](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04)
+#### [FireFox](https://launchpad.net/~mozillateam/+archive/ubuntu/ppa)
 
 ```bash
 sudo snap remove firefox
