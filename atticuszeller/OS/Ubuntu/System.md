@@ -124,36 +124,54 @@ journalctl --since "2025-01-14 08:09:00" --until "2025-01-14 08:09:30"
 
 ## Basic Tools for Desktop
 
-### Browse
+### Browser
 
-#### [FireFox](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04)
+#### [FireFox](https://launchpad.net/~mozillateam/+archive/ubuntu/ppa)
 
 ```bash
 sudo snap remove firefox
 ```
 
 ```bash
-sudo install -d -m 0755 /etc/apt/keyrings
-wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
-echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
-echo '
-Package: *
-Pin: origin packages.mozilla.org
-Pin-Priority: 1000
-
-Package: firefox*
-Pin: release o=Ubuntu
-Pin-Priority: -1' | sudo tee /etc/apt/preferences.d/mozilla
-sudo apt update && sudo apt remove FireFox
+sudo add-apt-repository ppa:mozillateam/ppa -y
+# ignore snap firefox
+echo 'Package: firefox*
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001' | sudo tee /etc/apt/preferences.d/mozilla-firefox
+sudo apt update
 sudo apt install firefox
 ```
 
-#### Settings
+### Settings
 
 1. enable Ctrl+Tab cycles through tabs in recently used order
 2. Fonts settings
 
-[PWA plugin](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/)
+[PWA plugin](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/) failed to work on my ubuntu 24.04 now
+
+### Chrome
+
+Setup key with:
+
+```bash
+
+mkdir /etc/apt/keyrings
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo tee /etc/apt/keyrings/google.asc >/dev/null
+
+```
+
+Setup repository with:
+
+```bash
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/google.asc] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+```
+
+Setup package with:
+
+```bash
+sudo apt-get update
+sudo apt-get install google-chrome-stable
+```
 
 ### Use Eye Protection Mode
 
@@ -165,6 +183,11 @@ setting-> display-> night light
 sudo apt-get update
 sudo apt-get install ibus ibus-pinyin ibus-libpinyin
 ```
+
+![[assets/Pasted image 20251122165120.png]]
+modify options in preference
+- enable `Remember every input as a phrase.`
+- set `Cloud Input Option` as `baidu`
 
 > [!WARNING]
 > remember to reboot and add input resources in `setting->keyboard`

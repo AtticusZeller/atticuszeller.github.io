@@ -162,9 +162,9 @@ git submodule update --init --recursive
  remove
 
 ```bash
-rm -rf third_party/GS_ICP_SLAM
-rm -rf .git/modules/third_party/GS_ICP_SLAM
-git config --remove-section submodule.third_party/GS_ICP_SLAM
+git submodule deinit issaclab
+git rm issaclab
+rm -rf .git/modules/issaclab
 ```
 
 #### Modify Git Commit Messages
