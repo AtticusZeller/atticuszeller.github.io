@@ -124,7 +124,7 @@ journalctl --since "2025-01-14 08:09:00" --until "2025-01-14 08:09:30"
 
 ## Basic Tools for Desktop
 
-### Browse
+### Browser
 
 #### [FireFox](https://launchpad.net/~mozillateam/+archive/ubuntu/ppa)
 
@@ -142,12 +142,36 @@ sudo apt update
 sudo apt install firefox
 ```
 
-#### Settings
+### Settings
 
 1. enable Ctrl+Tab cycles through tabs in recently used order
 2. Fonts settings
 
-[PWA plugin](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/)
+[PWA plugin](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/) failed to work on my ubuntu 24.04 now
+
+### Chrome
+
+Setup key with:
+
+```bash
+
+mkdir /etc/apt/keyrings
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo tee /etc/apt/keyrings/google.asc >/dev/null
+
+```
+
+Setup repository with:
+
+```bash
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/google.asc] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+```
+
+Setup package with:
+
+```bash
+sudo apt-get update
+sudo apt-get install google-chrome-stable
+```
 
 ### Use Eye Protection Mode
 
@@ -159,6 +183,11 @@ setting-> display-> night light
 sudo apt-get update
 sudo apt-get install ibus ibus-pinyin ibus-libpinyin
 ```
+
+![[assets/Pasted image 20251122165120.png]]
+modify options in preference
+- enable `Remember every input as a phrase.`
+- set `Cloud Input Option` as `baidu`
 
 > [!WARNING]
 > remember to reboot and add input resources in `setting->keyboard`
