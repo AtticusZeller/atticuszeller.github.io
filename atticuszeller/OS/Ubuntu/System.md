@@ -20,6 +20,20 @@ HandleLidSwitchDocked=ignore
 sudo systemctl restart systemd-logind
 ```
 
+### Lock Screen on Lid Switch
+
+```bash
+sudo nano /etc/systemd/logind.conf
+# make sure
+HandleLidSwitch=lock
+# then run
+sudo systemctl restart systemd-logind
+```
+
+settings-> power, disable automatic suspend
+
+> aim to prevent to fail to wake up ,black screen on Ubuntu + Nivida
+
 ### [usermod](https://phoenixnap.com/kb/usermod-linux)
 
 add into `sudo` group
@@ -142,7 +156,7 @@ sudo apt update
 sudo apt install firefox
 ```
 
-### Settings
+#### Settings
 
 1. enable Ctrl+Tab cycles through tabs in recently used order
 2. Fonts settings

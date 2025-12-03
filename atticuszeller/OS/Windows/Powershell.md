@@ -9,7 +9,7 @@ oh-my-posh font install
 code  $PROFILE
 ```
 
-```txt
+```PowerShell
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\peru.omp.json" | Invoke-Expression
 Import-Module PSReadLine
 Set-PSReadLineOption -PredictionSource History

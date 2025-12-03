@@ -21,12 +21,6 @@ tweak your fronts,etc
 sudo apt install gnome-tweaks
 ```
 
-## Phone
-
-```bash
-sudo apt install gnome-shell-extension-gsconnect
-```
-
 ## Accelerate
 
 - Impatience
