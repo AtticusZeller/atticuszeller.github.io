@@ -313,7 +313,7 @@ Default behavior of `docker compose up`? Compose read __2__ files, a `compose.ya
 > 	- Run with: `docker compose -f compose.yml up -d`
 > 1. `compose.override.yml`: Override file for development
 > 	- Automatically used with: `docker compose up -d`
->
+> 
 > This strategy allows you to maintain a base configuration for production while easily switching to a development setup with overrides.[^13]
 
 what if i don't like default behavior? To specify or merge multiple configs use `docker compose -f <config_path> up`.[^14]

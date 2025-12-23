@@ -1,5 +1,11 @@
 # Pytorch
 
+设置第二张卡作为设备使用
+
+```bash
+export CUDA_VISIBLE_DEVICES=1
+```
+
 ## Bincount
 
 ```python

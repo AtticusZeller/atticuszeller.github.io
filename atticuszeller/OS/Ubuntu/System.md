@@ -136,6 +136,24 @@ code /etc/gdm3/custom.conf
 journalctl --since "2025-01-14 08:09:00" --until "2025-01-14 08:09:30"
 ```
 
+### CPU Mode
+
+```bash
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor | sort | uniq
+```
+
+the output is __powersave__/__performance__
+
+enable performance via `cpupower`
+
+```bash
+sudo apt-get install linux-tools-common
+cpupower frequency-info # Check available governors
+sudo cpupower frequency-set -g performance # Set governor with root permissions
+```
+
+[^1]
+
 ## Basic Tools for Desktop
 
 ### Browser
@@ -194,17 +212,28 @@ setting-> display-> night light
 ### Keyboard
 
 ```bash
-sudo apt-get update
-sudo apt-get install ibus ibus-pinyin ibus-libpinyin
+sudo apt install fcitx5 fcitx5-chinese-addons fcitx5-frontend-gtk4 fcitx5-frontend-gtk3 fcitx5-frontend-qt5
 ```
 
-![[assets/Pasted image 20251122165120.png]]
-modify options in preference
-- enable `Remember every input as a phrase.`
-- set `Cloud Input Option` as `baidu`
+- add `fcitx5` into `Startup Applications` in `gnome-tweaks`
+- run `im-config` and add `pinyin` input method
 
-> [!WARNING]
-> remember to reboot and add input resources in `setting->keyboard`
+switch input method by pressing `ctrl+space`
+
+#### Theme
+
+![](https://github.com/thep0y/fcitx5-themes-candlelight/raw/main/images/mac-light.png)
+![](https://github.com/thep0y/fcitx5-themes-candlelight/raw/main/images/mac-dark.png)
+
+```bash
+git clone https://github.com/thep0y/fcitx5-themes-candlelight.git
+mkdir -p ~/.local/share/fcitx5/themes
+cp -r fcitx5-themes-candlelight/macOS-light ~/.local/share/fcitx5/themes/
+cp -r fcitx5-themes-candlelight/macOS-dark ~/.local/share/fcitx5/themes/
+```
+
+select the theme in `addons->Classic User Interface`
+[^2][^3]
 
 ### System Backup
 
@@ -282,7 +311,6 @@ tar -xzf filepath
 sudo nano /etc/apt/sources.list
 sudo apt update
 sudo apt upgrade
-
 ```
 
 ### Dual System Extend Disk for Ubuntu
@@ -426,3 +454,7 @@ curl -sS https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg | sudo 
 echo "deb https://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update && sudo apt-get install spotify-client
 ```
+
+[^1]: [Simulation Performance and Tuning — Isaac Lab Documentation](https://isaac-sim.github.io/IsaacLab/main/source/how-to/simulation_performance.html)
+[^2]: [GitHub - fcitx/fcitx5: Next generation of fcitx, cross-platform input method framework.](https://github.com/fcitx/fcitx5)
+[^3]: [GitHub - thep0y/fcitx5-themes-candlelight: fcitx5的简约风格皮肤——烛光。](https://github.com/thep0y/fcitx5-themes-candlelight.git)

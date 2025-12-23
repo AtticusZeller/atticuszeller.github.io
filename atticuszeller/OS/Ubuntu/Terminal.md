@@ -167,6 +167,9 @@ mkdir -p ~/.config/tmux
 ln -s ~/.local/share/oh-my-tmux/.tmux.conf ~/.config/tmux/tmux.conf
 
 cp ~/.local/share/oh-my-tmux/.tmux.conf.local ~/.config/tmux/tmux.conf.local
+
+# make sure read the latest config
+tmux kill-server
 ```
 
 prefix is `Ctrl+a/b`
@@ -181,6 +184,20 @@ switch in different split panes `prefix` + `h/j/k/l` or ⬆️/⬅️/➡️/⬇
 scroll up or down in split panes `prefix` + `[` into copy mode, then
 - ⬆️/⬇️ or `PgUp`/`PgDn`
 - `g` to specify which line to go
+
+keep session running in background
+
+```bash
+tmux new -s proxy
+sing-box-cli run
+```
+
+press `ctrl+B` then `d` to detach
+go back to session
+
+```bash
+tmux attach -t proxy
+```
 
 ## Shortcut
 

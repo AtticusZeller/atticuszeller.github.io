@@ -12,9 +12,9 @@ provide codebase context to LLM
 ## Prompts
 
 ```chatgpt
-here is my instrctions
-1. answer me in chinese but no chinese in code examples 
-2. explain why should we do it and show the code which should be modified but all the codebase 
+here is my instructions
+1. answer me in chinese but no chinese in code examples
+2. explain why should we do it and show the code which should be modified but all the codebase
 3. do not show me the too comprehensive suggestions, we prefer the simple but useful solutions all the time
 ```
 

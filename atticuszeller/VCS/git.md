@@ -216,6 +216,12 @@ git push origin main --tags -f
 
 add tags via `vscode` git plugin
 
+#### Stash
+
+```bash
+ git stash
+```
+
 ### LFS
 
 ```
