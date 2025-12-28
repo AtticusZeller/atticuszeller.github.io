@@ -13,7 +13,8 @@ latex 写作工具
 自定义期刊比如人工智能，计算机，机器人期刊可以手动额外添加
 35 一年会员
 
-> 通过doi拉取的期刊信息，有时候arxiv 的doi是看不到正确的期刊信息的，需要手动检索正确的条目
+> 通过 doi 拉取的期刊信息，有时候 arxiv 的 doi 是看不到正确的期刊信息的，需要手动检索正确的条目
+
 ## Zotero
 
 核心参考文档 [Zotero 中文社区 \| Zotero 中文维护小组](https://zotero-chinese.com/)
@@ -36,15 +37,14 @@ Android version [Zotero - Apps on Google Play](https://play.google.com/store/app
 
 ### Config
 
-
-
-#### pdf resolvers
+#### Pdf Resolvers
 
 ![[assets/Pasted image 20251222202508.png|300]]
 
 find `Config Eiditor` on the buttom of `edit->advanced` panel
 
-set `extensions.zotero.findPDFs.resolvers`  as following:
+set `extensions.zotero.findPDFs.resolvers` as following:
+
 ```json
 [{
   "name": "Google Scholar PDF",
@@ -56,7 +56,14 @@ set `extensions.zotero.findPDFs.resolvers`  as following:
   "automatic": true
 }]
 ```
- it will download pdf from google scholar 
+
+ it will download pdf from google scholar
+
+如果 zotero 里面拉取失败，Google scholar 有 pdf，但是需要手动验证，可能得打开网页手动验证或者关掉代理重试
+
+> 真下载不了的那种，必须要充钱的，用 [sci-down](https://www.scidown.cn/)
+
+但是得注册 sci-down 网盘 [注册账号链接](https://www.scidown.cn/wangpan/link.php?yq=llllll99)[完整注册教程xhs](http://xhslink.com/o/6WrxWUQpvas)
 
 #### Core Plugin
 
@@ -97,15 +104,13 @@ sync
 
 > 插件可能需要自己手动在不同平台手动安装配置
 
-[zotero-better-notes.](https://github.com/windingwind/zotero-better-notes#readme) 是完全不需要的也不推荐，加工后的笔记，在 obsidian 里面编写，引用 zotero 的文章采用 zotero-integration 插件来解决简单内置 footnote 不清晰的问题。zotero 只负责阅读 pdf，高亮，批注。联动 obsidian 和 zotero 分层笔记模式只需要
+- [zotero-better-notes.](https://github.com/windingwind/zotero-better-notes#readme) 作为基本的笔记功能，可以显示 markdown，配合其他插件使用
 - __Obsidian 端：__ 安装 Zotero Integration 插件。
 - __Zotero 端：__ 安装 Better BibTex（这个是核心，为了生成稳定的引用键，比如 Smith2023）。
 - [zotero-pdf-translate.](https://github.com/windingwind/zotero-pdf-translate) 翻译问题，还是不建议全文翻译，这个太偷懒了。。，采用内置的局部翻译，摘要和总结直接翻译看就行了，选中翻译，配置 Google studio 的免费 api 额度，用 gemini 3 flash 翻译
 - [Ethereal Style for Zotero](https://zotero-chinese.com/user-guide/plugins/style) 可以显示更多的阅读状态和期刊信息等等，影响因子和分区等等需要 esayscholar 浏览器插件 api
 
-> # Awesome GPT for Zotero 比较多余，没必要再塞一个
-> sci-hub只能抓取21年之前的pdf，没什么用了
-
+> sci-hub 只能抓取 21 年之前的 pdf，没什么用了
 
 - [Tara](https://github.com/l0o0/tara/tree/z7) 蒲公英插件解决了，很多插件，配置没有同步的问题，把这些配置信息打包成一个附件 `Tara_backup` 然后随着内置的 sync 功能上传，然后新的设备恢复这些插件和配置
 - [Zotero Attanger](https://zotero-chinese.com/user-guide/plugins/zotero-attanger) 网上直接拉的 pdf 命名需要进行规范化一下，或者更规范的管理附件等等需求，由它自动实现
@@ -116,11 +121,13 @@ sync
 	- api 要切换到 ![[assets/Pasted image 20251218154000.png|200]] 因为
 - [zotero-format-metadata](https://github.com/northword/zotero-format-metadata/tree/main) 格式化 metadata
 - [zoplicate](https://github.com/ChenglongMa/zoplicate#readme) 处理重复的附件
-- [zotero-actions-tags](https://github.com/windingwind/zotero-actions-tags#readme) 自动贴上没读的标签
-- [GPT Meet Zotero.](https://github.com/MuiseDestiny/zotero-gpt) 接上 deepseek 总结全文，快速判断文章是否值得阅读
+- [zotero-actions-tags](https://github.com/windingwind/zotero-actions-tags#readme) 自动贴上没读的标签，自定义快捷键和脚本行为，添加 tags 脚本 [^2]
+- [GPT Meet Zotero.](https://github.com/MuiseDestiny/zotero-gpt) 接上 gemini 3 总结全文，快速判断文章是否值得阅读
+- 前端 [pdf2zh](https://github.com/guaguastandup/zotero-pdf2zh?tab=readme-ov-file) ，配置 deepseek 全文翻译，生成 pdf 并且解析论文，方便快速阅读，后端按照官网教程显示，跑一下 flask 接住前端，然后 pdf2zh_next 解析生成 pdf
 
 #### Obsidian Zotero Integretion
 
 - [Zotero import template for the Zotero integration plugin for Obsidian. Screenshots and usage guide over in the Obsidian forum here: https://forum.obsidian.md/t/zotero-integration-import-templates/36310/105?u=feralflora · GitHub](https://gist.github.com/FeralFlora/78f494c1862ce4457cef28d9d9ba5a01?referrer=grok.com)
 
 [^1]: [数据与文件的同步 \| Zotero 中文社区](https://zotero-chinese.com/user-guide/sync)
+[^2]: [Add tag shortcut (working in Zotero 7) · windingwind/zotero-actions-tags · Discussion #390 · GitHub](https://github.com/windingwind/zotero-actions-tags/discussions/390)
