@@ -211,7 +211,14 @@ delete latest tag
 git tag -d $(git describe --abbrev=0 --tags)
 # check if deleted
 git tag -l
+
+# force to update tags 
 git push origin main --tags -f
+
+# delete tags both local and remote
+git tag -d v1.12.14
+git push origin --delete v1.12.14
+git ls-remote --tags origin
 ```
 
 add tags via `vscode` git plugin
