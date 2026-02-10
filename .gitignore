@@ -166,5 +166,5 @@ cython_debug/
 .ruff_cache/
 site
 .vscode/
-private/
+99_Private/
 drafts/
