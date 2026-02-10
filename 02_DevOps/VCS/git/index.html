@@ -5,29 +5,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.atticux.me/">
+        <link rel="canonical" href="https://docs.atticux.me/02_DevOps/VCS/git/">
       
       
+        <link rel="prev" href="../../OS/Windows/scoop/">
       
-        <link rel="next" href="01_Lang/C%2B%2B/Pointer/">
+      
+        <link rel="next" href="../github/SSH_keypair_setup_for_GitHub/">
       
       
         
       
       
-      <link rel="icon" href="assets/logo/logo.svg">
+      <link rel="icon" href="../../../assets/logo/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Notes</title>
+        <title>Git - Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -48,13 +50,13 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -83,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#home" class="md-skip">
+        <a href="#git" class="md-skip">
           Skip to content
         </a>
       
@@ -97,9 +99,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
       
-  <img src="assets/logo/logo.svg" alt="logo">
+  <img src="../../../assets/logo/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Git
             
           </span>
         </div>
@@ -232,11 +234,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -264,7 +264,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="01_Lang/C%2B%2B/Pointer/" class="md-tabs__link">
+        <a href="../../../01_Lang/C%2B%2B/Pointer/" class="md-tabs__link">
           
   
   
@@ -285,6 +285,8 @@
   
   
   
+    
+  
   
     
     
@@ -292,11 +294,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="02_DevOps/Backend/Docker/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Backend/Docker/" class="md-tabs__link">
           
   
   
@@ -328,7 +332,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="03_AI/LLM/Technique/" class="md-tabs__link">
+        <a href="../../../03_AI/LLM/Technique/" class="md-tabs__link">
           
   
   
@@ -353,7 +357,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="04_Tools/Gemini/" class="md-tabs__link">
+        <a href="../../../04_Tools/Gemini/" class="md-tabs__link">
           
   
   
@@ -389,9 +393,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
       
-  <img src="assets/logo/logo.svg" alt="logo">
+  <img src="../../../assets/logo/logo.svg" alt="logo">
 
     </a>
     Notes
@@ -415,19 +419,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -443,7 +438,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -579,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Pointer/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/Pointer/" class="md-nav__link">
         
   
   
@@ -607,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/packages/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/packages/" class="md-nav__link">
         
   
   
@@ -635,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/syntax/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/syntax/" class="md-nav__link">
         
   
   
@@ -733,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/Queue/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/Data_model/Queue/" class="md-nav__link">
         
   
   
@@ -761,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/String/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/Data_model/String/" class="md-nav__link">
         
   
   
@@ -789,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/map/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/Data_model/map/" class="md-nav__link">
         
   
   
@@ -817,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/set/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/Data_model/set/" class="md-nav__link">
         
   
   
@@ -845,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/stack/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/Data_model/stack/" class="md-nav__link">
         
   
   
@@ -873,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/unordered_map/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/Data_model/unordered_map/" class="md-nav__link">
         
   
   
@@ -901,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/unordered_set/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/Data_model/unordered_set/" class="md-nav__link">
         
   
   
@@ -929,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/vector/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/Data_model/vector/" class="md-nav__link">
         
   
   
@@ -1039,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/Pointer/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/STL/Pointer/" class="md-nav__link">
         
   
   
@@ -1067,7 +1061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/Queue/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/STL/Queue/" class="md-nav__link">
         
   
   
@@ -1095,7 +1089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/String/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/STL/String/" class="md-nav__link">
         
   
   
@@ -1123,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/algorithm/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/STL/algorithm/" class="md-nav__link">
         
   
   
@@ -1151,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/map/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/STL/map/" class="md-nav__link">
         
   
   
@@ -1179,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/set/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/STL/set/" class="md-nav__link">
         
   
   
@@ -1207,7 +1201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/stack/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/STL/stack/" class="md-nav__link">
         
   
   
@@ -1235,7 +1229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/unordered_map/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/STL/unordered_map/" class="md-nav__link">
         
   
   
@@ -1263,7 +1257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/unordered_set/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/STL/unordered_set/" class="md-nav__link">
         
   
   
@@ -1291,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/vector/" class="md-nav__link">
+      <a href="../../../01_Lang/C%2B%2B/STL/vector/" class="md-nav__link">
         
   
   
@@ -1391,7 +1385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/golang/config/" class="md-nav__link">
+      <a href="../../../01_Lang/golang/config/" class="md-nav__link">
         
   
   
@@ -1487,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/python/Mypy/" class="md-nav__link">
+      <a href="../../../01_Lang/python/Mypy/" class="md-nav__link">
         
   
   
@@ -1515,7 +1509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/python/Pytest/" class="md-nav__link">
+      <a href="../../../01_Lang/python/Pytest/" class="md-nav__link">
         
   
   
@@ -1599,7 +1593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/python/Std/Pathlib/" class="md-nav__link">
+      <a href="../../../01_Lang/python/Std/Pathlib/" class="md-nav__link">
         
   
   
@@ -1647,8 +1641,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1662,19 +1658,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -1692,7 +1691,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1724,17 +1723,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1">
         
           
-          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
             
   
   
@@ -1770,7 +1772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/Backend/Docker/" class="md-nav__link">
+      <a href="../../Backend/Docker/" class="md-nav__link">
         
   
   
@@ -1798,7 +1800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/Backend/ssh/" class="md-nav__link">
+      <a href="../../Backend/ssh/" class="md-nav__link">
         
   
   
@@ -1882,7 +1884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/Backend/Proxy/Traefik/" class="md-nav__link">
+      <a href="../../Backend/Proxy/Traefik/" class="md-nav__link">
         
   
   
@@ -1946,10 +1948,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1957,7 +1962,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="02_DevOps/OS/" class="md-nav__link ">
+            <a href="../../OS/" class="md-nav__link ">
               
   
   
@@ -1975,7 +1980,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -2001,7 +2006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Bugs/" class="md-nav__link">
+      <a href="../../OS/Bugs/" class="md-nav__link">
         
   
   
@@ -2029,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/GPU/" class="md-nav__link">
+      <a href="../../OS/GPU/" class="md-nav__link">
         
   
   
@@ -2092,7 +2097,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="02_DevOps/OS/Ubuntu/" class="md-nav__link ">
+            <a href="../../OS/Ubuntu/" class="md-nav__link ">
               
   
   
@@ -2136,7 +2141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Appearance/" class="md-nav__link">
+      <a href="../../OS/Ubuntu/Appearance/" class="md-nav__link">
         
   
   
@@ -2164,7 +2169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Bugs/" class="md-nav__link">
+      <a href="../../OS/Ubuntu/Bugs/" class="md-nav__link">
         
   
   
@@ -2192,7 +2197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Gnome/" class="md-nav__link">
+      <a href="../../OS/Ubuntu/Gnome/" class="md-nav__link">
         
   
   
@@ -2220,7 +2225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Package/" class="md-nav__link">
+      <a href="../../OS/Ubuntu/Package/" class="md-nav__link">
         
   
   
@@ -2248,7 +2253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/System/" class="md-nav__link">
+      <a href="../../OS/Ubuntu/System/" class="md-nav__link">
         
   
   
@@ -2276,7 +2281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Terminal/" class="md-nav__link">
+      <a href="../../OS/Ubuntu/Terminal/" class="md-nav__link">
         
   
   
@@ -2372,7 +2377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Windows/Device/" class="md-nav__link">
+      <a href="../../OS/Windows/Device/" class="md-nav__link">
         
   
   
@@ -2400,7 +2405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Windows/Powershell/" class="md-nav__link">
+      <a href="../../OS/Windows/Powershell/" class="md-nav__link">
         
   
   
@@ -2428,7 +2433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Windows/scoop/" class="md-nav__link">
+      <a href="../../OS/Windows/scoop/" class="md-nav__link">
         
   
   
@@ -2469,8 +2474,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2483,18 +2490,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3">
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
             
   
   
@@ -2512,7 +2522,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2527,10 +2537,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="02_DevOps/VCS/git/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2546,6 +2583,275 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Init
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Init">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auth
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-ssh-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start Ssh-agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-key-pair" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate Key-pair
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-ssh-key-pair-into-ssh-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add Ssh-key-pair into Ssh-agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-id_ed25519pub-into-github_ssh_setting-set-auth-key-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copy id_ed25519.pub into github_ssh_setting Set Auth Key Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-ssh-connect-by-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Ssh Connect by Https
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add Config
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-test-ssh-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Test Ssh Connect
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remote
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-track" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove Track
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roll-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roll back
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-from-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync from Github
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submodule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Submodule
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-git-commit-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modify Git Commit Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-pr-from-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update PR from Main
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tags
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stash
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2614,7 +2920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/VCS/github/SSH_keypair_setup_for_GitHub/" class="md-nav__link">
+      <a href="../github/SSH_keypair_setup_for_GitHub/" class="md-nav__link">
         
   
   
@@ -2781,7 +3087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/LLM/Technique/" class="md-nav__link">
+      <a href="../../../03_AI/LLM/Technique/" class="md-nav__link">
         
   
   
@@ -2875,7 +3181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Machine%20Learning/Data/" class="md-nav__link">
+      <a href="../../../03_AI/Machine%20Learning/Data/" class="md-nav__link">
         
   
   
@@ -2903,7 +3209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Machine%20Learning/Pytorch/" class="md-nav__link">
+      <a href="../../../03_AI/Machine%20Learning/Pytorch/" class="md-nav__link">
         
   
   
@@ -2997,7 +3303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Robots/Isaac%20lab/" class="md-nav__link">
+      <a href="../../../03_AI/Robots/Isaac%20lab/" class="md-nav__link">
         
   
   
@@ -3025,7 +3331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Robots/sim/" class="md-nav__link">
+      <a href="../../../03_AI/Robots/sim/" class="md-nav__link">
         
   
   
@@ -3134,7 +3440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Gemini/" class="md-nav__link">
+      <a href="../../../04_Tools/Gemini/" class="md-nav__link">
         
   
   
@@ -3162,7 +3468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Obsidian/" class="md-nav__link">
+      <a href="../../../04_Tools/Obsidian/" class="md-nav__link">
         
   
   
@@ -3246,7 +3552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/IDE/VSCode/" class="md-nav__link">
+      <a href="../../../04_Tools/IDE/VSCode/" class="md-nav__link">
         
   
   
@@ -3396,7 +3702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Learning_Legacy/Computer%20Vison/3D/" class="md-nav__link">
+      <a href="../../../04_Tools/Learning_Legacy/Computer%20Vison/3D/" class="md-nav__link">
         
   
   
@@ -3424,7 +3730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Learning_Legacy/Computer%20Vison/Image/" class="md-nav__link">
+      <a href="../../../04_Tools/Learning_Legacy/Computer%20Vison/Image/" class="md-nav__link">
         
   
   
@@ -3532,7 +3838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/Finding%20and%20managing%20research%20papers%20a%20survey%20of%20tools%20and%20products/" class="md-nav__link">
+      <a href="../../../04_Tools/Reference/Finding%20and%20managing%20research%20papers%20a%20survey%20of%20tools%20and%20products/" class="md-nav__link">
         
   
   
@@ -3672,7 +3978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/blog/Steph%20Ango/What%20can%20we%20remove/" class="md-nav__link">
+      <a href="../../../04_Tools/Reference/blog/Steph%20Ango/What%20can%20we%20remove/" class="md-nav__link">
         
   
   
@@ -3772,7 +4078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/devops/A%20Docker%20Tutorial%20for%20Beginners/" class="md-nav__link">
+      <a href="../../../04_Tools/Reference/devops/A%20Docker%20Tutorial%20for%20Beginners/" class="md-nav__link">
         
   
   
@@ -3866,7 +4172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/linux/12%20Linux%20Terminal%20Shortcuts%20Every%20Power%20Linux%20User%20Must%20Know/" class="md-nav__link">
+      <a href="../../../04_Tools/Reference/linux/12%20Linux%20Terminal%20Shortcuts%20Every%20Power%20Linux%20User%20Must%20Know/" class="md-nav__link">
         
   
   
@@ -3894,7 +4200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/linux/Understanding%20Systemd%20Units%20and%20Unit%20Files%20%20DigitalOcean/" class="md-nav__link">
+      <a href="../../../04_Tools/Reference/linux/Understanding%20Systemd%20Units%20and%20Unit%20Files%20%20DigitalOcean/" class="md-nav__link">
         
   
   
@@ -3986,7 +4292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/" class="md-nav__link">
+      <a href="../../../04_Tools/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/" class="md-nav__link">
         
   
   
@@ -4088,7 +4394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Research/Journal/" class="md-nav__link">
+      <a href="../../../04_Tools/Research/Journal/" class="md-nav__link">
         
   
   
@@ -4116,7 +4422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Research/tools/" class="md-nav__link">
+      <a href="../../../04_Tools/Research/tools/" class="md-nav__link">
         
   
   
@@ -4172,6 +4478,263 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Init
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Init">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auth
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-ssh-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start Ssh-agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-key-pair" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate Key-pair
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-ssh-key-pair-into-ssh-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add Ssh-key-pair into Ssh-agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-id_ed25519pub-into-github_ssh_setting-set-auth-key-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copy id_ed25519.pub into github_ssh_setting Set Auth Key Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-ssh-connect-by-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Ssh Connect by Https
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add Config
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-test-ssh-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Test Ssh Connect
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remote
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-track" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove Track
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roll-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roll back
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-from-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync from Github
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submodule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Submodule
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-git-commit-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modify Git Commit Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-pr-from-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update PR from Main
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tags
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stash
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4190,29 +4753,152 @@
   
 
 
-<h1 id="home">Home<a class="headerlink" href="#home" title="Permanent link">¶</a></h1>
-<h1 align="center">Hi there, I'm Atticus Zeller 👋</h1>
-
-<p>🔭 I'm currently working on computer vision, deep learning, and 3D-reconstruction research projects.</p>
-<p>🌱 Currently completing my undergraduate studies and preparing for postgraduate studies in Artificial Intelligence.</p>
-<p>🛠️ Tech Stack:</p>
-<ul>
-<li>Programming languages: Python | C++</li>
-<li>Frontend: Streamlit</li>
-<li>Backend: FastAPI | SQL databases</li>
-<li>DevOps: Linux | Shell | Git | Docker</li>
-<li>Deep Learning: PyTorch | NumPy | Weights &amp; Biases</li>
-</ul>
-<p>⚡ Fun fact: I'm also an avid reader and a sports aficionado</p>
-<p>📫 How to reach me:</p>
-<ul>
-<li>Email: <strong>hello@atticux.me</strong></li>
-</ul>
-<p>🎓 Academic Profile:</p>
-<ul>
-<li>ORCID: <a href="https://orcid.org/0009-0008-5460-325X">https://orcid.org/0009-0008-5460-325X</a></li>
-<li><a href="https://arxiv.org/abs/2412.20056">GSplatLoc: Ultra-Precise Camera Localization via 3D Gaussian Splatting</a></li>
-</ul>
+<h1 id="git">Git<a class="headerlink" href="#git" title="Permanent link">¶</a></h1>
+<h2 id="git_1">Git<a class="headerlink" href="#git_1" title="Permanent link">¶</a></h2>
+<p>Git game in <a href="https://learngitbranching.js.org/?locale=en_US">Learn Git Branching</a></p>
+<h3 id="init">Init<a class="headerlink" href="#init" title="Permanent link">¶</a></h3>
+<h4 id="auth">Auth<a class="headerlink" href="#auth" title="Permanent link">¶</a></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"A.J.Zeller"</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"hello@atticux.me"</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>init.defaultBranch<span class="w"> </span>main
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>git<span class="w"> </span>config<span class="w"> </span>credential.helper
+</span></code></pre></div>
+<h4 id="ssh">SSH<a class="headerlink" href="#ssh" title="Permanent link">¶</a></h4>
+<p><em>in admin powershell</em></p>
+<h5 id="start-ssh-agent">Start Ssh-agent<a class="headerlink" href="#start-ssh-agent" title="Permanent link">¶</a></h5>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">Get-Service</span> <span class="n">-Name</span> <span class="n">ssh-agent</span> <span class="p">|</span> <span class="nb">Set-Service</span> <span class="n">-StartupType</span> <span class="n">Manual</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">Start-Service</span> <span class="n">ssh-agent</span>
+</span></code></pre></div>
+<h5 id="generate-key-pair">Generate Key-pair<a class="headerlink" href="#generate-key-pair" title="Permanent link">¶</a></h5>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">"atticus.zeller@pm.me"</span>
+</span></code></pre></div>
+<p><em>in normal powershell</em></p>
+<h5 id="add-ssh-key-pair-into-ssh-agent">Add Ssh-key-pair into Ssh-agent<a class="headerlink" href="#add-ssh-key-pair-into-ssh-agent" title="Permanent link">¶</a></h5>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">ssh-add</span> <span class="n">C</span><span class="p">:\</span><span class="n">Users</span><span class="p">\</span><span class="n">18317</span><span class="p">\.</span><span class="n">ssh</span><span class="p">\</span><span class="n">id_ed25519</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ssh-add<span class="w"> </span>~/.ssh/id_ed25519
+</span></code></pre></div>
+<h5 id="copy-id_ed25519pub-into-github_ssh_setting-set-auth-key-type">Copy id_ed25519.pub into <a href="https://github.com/settings/keys">github_ssh_setting</a> Set Auth Key Type<a class="headerlink" href="#copy-id_ed25519pub-into-github_ssh_setting-set-auth-key-type" title="Permanent link">¶</a></h5>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cat </span><span class="p">~/.</span><span class="n">ssh</span><span class="p">/</span><span class="n">id_ed25519</span><span class="p">.</span><span class="n">pub</span> <span class="p">|</span> <span class="n">clip</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>cat<span class="w"> </span>~/.ssh/id_ed25519.pub
+</span></code></pre></div>
+<h5 id="test-ssh-connect-by-https">Test Ssh Connect by Https<a class="headerlink" href="#test-ssh-connect-by-https" title="Permanent link">¶</a></h5>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ssh<span class="w"> </span>-T<span class="w"> </span>-p<span class="w"> </span><span class="m">443</span><span class="w"> </span>git@ssh.github.com
+</span></code></pre></div>
+<h5 id="add-config">Add Config<a class="headerlink" href="#add-config" title="Permanent link">¶</a></h5>
+<p>add the following text into <code>~/.ssh/config</code></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>nano<span class="w"> </span>~/.ssh/config
+</span></code></pre></div>
+<p>windows in <code>c:\user\your_user_name\.ssh\config</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Host github.com
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    Hostname ssh.github.com
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    Port 443
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    User git
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    # 30327 is your local proxy port
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    ProxyCommand nc -X connect -x 127.0.0.1:30327 %h %p
+</span></code></pre></div>
+<h5 id="test-test-ssh-connect">Test Test Ssh Connect<a class="headerlink" href="#test-test-ssh-connect" title="Permanent link">¶</a></h5>
+<p><em>you may need to enter yes as it's requiring to trust connection to github</em></p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">ssh</span> <span class="n">-T</span> <span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="n">com</span>
+</span></code></pre></div>
+<h4 id="remote">Remote<a class="headerlink" href="#remote" title="Permanent link">¶</a></h4>
+<p>list remote repo</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>remote<span class="w"> </span>-v
+</span></code></pre></div>
+<p>add remote</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>init
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Initial commit"</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>&lt;remote_repo_URL&gt;
+</span></code></pre></div>
+<p>associate remote</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</span></code></pre></div>
+<p>set https to ssh</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>&lt;remote_repo_URL&gt;
+</span></code></pre></div>
+<h4 id="remove-track">Remove Track<a class="headerlink" href="#remove-track" title="Permanent link">¶</a></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>git<span class="w"> </span>rm<span class="w"> </span>--cached<span class="w"> </span>&lt;file_path_or_folder&gt;
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="c1"># if folder add -r</span>
+</span></code></pre></div>
+<h4 id="roll-back">Roll back<a class="headerlink" href="#roll-back" title="Permanent link">¶</a></h4>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># force roll back some commit</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>&lt;commit<span class="w"> </span>hash&gt;
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="c1"># force push remote</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main<span class="w"> </span>-f
+</span></code></pre></div>
+<h4 id="sync-from-github">Sync from Github<a class="headerlink" href="#sync-from-github" title="Permanent link">¶</a></h4>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>git<span class="w"> </span>fetch<span class="w"> </span>origin
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>origin/main
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>git<span class="w"> </span>clean<span class="w"> </span>-fd
+</span></code></pre></div>
+<h4 id="submodule">Submodule<a class="headerlink" href="#submodule" title="Permanent link">¶</a></h4>
+<p>clone with submodule</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>git<span class="w"> </span>clone<span class="w"> </span>--recurse-submodules<span class="w"> </span>&lt;repository-url&gt;
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="c1"># if forget to with params --recurse-submodules try following</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init<span class="w"> </span>--recursive
+</span></code></pre></div>
+<p>add submodule or clone in main as submodule</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>&lt;repository-url&gt;<span class="w"> </span>&lt;sub_repo_relative_path_to_root&gt;
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="c1"># if no .gitsubmodules appears try it</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init<span class="w"> </span>--recursive
+</span></code></pre></div>
+<p>remove</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>git<span class="w"> </span>submodule<span class="w"> </span>deinit<span class="w"> </span>issaclab
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>git<span class="w"> </span>rm<span class="w"> </span>issaclab
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>rm<span class="w"> </span>-rf<span class="w"> </span>.git/modules/issaclab
+</span></code></pre></div>
+<h4 id="modify-git-commit-messages">Modify Git Commit Messages<a class="headerlink" href="#modify-git-commit-messages" title="Permanent link">¶</a></h4>
+<p>open rebase editor with 4 latest commit</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~4
+</span></code></pre></div>
+<p>replace <code>pick</code> with <code>edit</code> and save.
+start to edit commit message.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>git<span class="w"> </span>commit<span class="w"> </span>--amend
+</span></code></pre></div>
+<p>save the results</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>git<span class="w"> </span>rebase<span class="w"> </span>--continue
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>git<span class="w"> </span>push<span class="w"> </span>--force
+</span></code></pre></div>
+<h4 id="update-pr-from-main">Update PR from Main<a class="headerlink" href="#update-pr-from-main" title="Permanent link">¶</a></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>backup-branch
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="c1"># under your-feature-branch</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>your-feature-branch
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="c1"># rest to main</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>git<span class="w"> </span>fetch<span class="w"> </span>upstream
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>upstream/dev-next
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="c1"># pick new commit</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>git<span class="w"> </span>cherry-pick<span class="w"> </span>backup-branch
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>git<span class="w"> </span>push<span class="w"> </span>-f<span class="w"> </span>origin
+</span></code></pre></div>
+<h4 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">¶</a></h4>
+<p>delete latest tag</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>git<span class="w"> </span>tag<span class="w"> </span>-d<span class="w"> </span><span class="k">$(</span>git<span class="w"> </span>describe<span class="w"> </span>--abbrev<span class="o">=</span><span class="m">0</span><span class="w"> </span>--tags<span class="k">)</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="c1"># check if deleted</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>git<span class="w"> </span>tag<span class="w"> </span>-l
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="c1"># force to update tags </span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main<span class="w"> </span>--tags<span class="w"> </span>-f
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="c1"># delete tags both local and remote</span>
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>git<span class="w"> </span>tag<span class="w"> </span>-d<span class="w"> </span>v1.12.14
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>v1.12.14
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>git<span class="w"> </span>ls-remote<span class="w"> </span>--tags<span class="w"> </span>origin
+</span></code></pre></div>
+<p>add tags via <code>vscode</code> git plugin</p>
+<h4 id="stash">Stash<a class="headerlink" href="#stash" title="Permanent link">¶</a></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="w"> </span>git<span class="w"> </span>stash
+</span></code></pre></div>
+<h3 id="lfs">LFS<a class="headerlink" href="#lfs" title="Permanent link">¶</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>git lfs install
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>git lfs track "*.onnx"
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>git add .gitattributes
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>git add  "&lt;file_path&gt;.onnx"
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>git commit -m "add extractor model .onnx"
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>git push origin main
+</span></code></pre></div>
 
 
 
@@ -4235,7 +4921,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="March 8, 2025 20:16:26 CST">March 8, 2025 20:16:26</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="December 29, 2025 09:56:40 CST">December 29, 2025 09:56:40</span>
   </span>
 
     
@@ -4279,15 +4965,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
+          
+          <a href="../../OS/Windows/scoop/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Scoop">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Scoop
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="01_Lang/C%2B%2B/Pointer/" class="md-footer__link md-footer__link--next" aria-label="Next: Pointer">
+          <a href="../github/SSH_keypair_setup_for_GitHub/" class="md-footer__link md-footer__link--next" aria-label="Next: SSH">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Pointer
+                SSH
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4365,12 +5067,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "content.footnote.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.footer", "navigation.top", "navigation.tracking", "toc.follow", "header.autohide", "search.suggest", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.footnote.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.footer", "navigation.top", "navigation.tracking", "toc.follow", "header.autohide", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="js/katex.js"></script>
+        <script src="../../../js/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       

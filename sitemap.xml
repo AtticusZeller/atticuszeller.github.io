@@ -2,286 +2,250 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.atticux.me/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Backend/Docker/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/Pointer/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Backend/FastApi/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/packages/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Backend/ssh/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/syntax/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Backend/DB/PostgreSQL/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/Data_model/Queue/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Backend/DB/Sqlite/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/Data_model/String/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Backend/DB/ORM/SQLModel/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/Data_model/map/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Backend/Proxy/Traefik/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/Data_model/set/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/LLM/Technique/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/Data_model/stack/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/Pointer/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/Data_model/unordered_map/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/packages/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/Data_model/unordered_set/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/syntax/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/Data_model/vector/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/Data_model/Queue/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/STL/Pointer/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/Data_model/String/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/STL/Queue/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/Data_model/map/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/STL/String/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/Data_model/set/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/STL/algorithm/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/Data_model/stack/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/STL/map/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/Data_model/unordered_map/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/STL/set/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/Data_model/unordered_set/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/STL/stack/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/Data_model/vector/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/STL/unordered_map/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/STL/Pointer/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/STL/unordered_set/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/STL/Queue/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/C%2B%2B/STL/vector/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/STL/String/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/golang/config/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/STL/algorithm/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/python/Mypy/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/STL/map/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/python/Pytest/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/STL/set/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/01_Lang/python/Std/Pathlib/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/STL/stack/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/Backend/Docker/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/STL/unordered_map/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/Backend/ssh/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/STL/unordered_set/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/Backend/Proxy/Traefik/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/C%2B%2B/STL/vector/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/OS/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/golang/config/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/OS/Bugs/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/python/Mypy/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/OS/GPU/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/python/Pytest/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/OS/Ubuntu/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/python/Std/Pathlib/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/OS/Ubuntu/Appearance/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/python/Venv/Poetry/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/OS/Ubuntu/Bugs/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/python/Venv/UV/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/OS/Ubuntu/Gnome/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Language/python/Venv/conda/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/OS/Ubuntu/Package/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Learning/Obsidian/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/OS/Ubuntu/System/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Learning/Computer%20Vison/3D/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/OS/Ubuntu/Terminal/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Learning/Computer%20Vison/Image/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/OS/Windows/Device/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Machine%20Learning/Data/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/OS/Windows/Powershell/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Machine%20Learning/Pytorch/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/OS/Windows/scoop/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Machine%20Learning/basics/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/VCS/git/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/OS/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/02_DevOps/VCS/github/SSH_keypair_setup_for_GitHub/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/OS/Bugs/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/03_AI/LLM/Technique/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/OS/GPU/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/03_AI/Machine%20Learning/Data/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/OS/Ubuntu/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/03_AI/Machine%20Learning/Pytorch/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/OS/Ubuntu/Appearance/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/03_AI/Robots/Isaac%20lab/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/OS/Ubuntu/Bugs/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/03_AI/Robots/sim/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/OS/Ubuntu/Gnome/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/04_Tools/Gemini/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/OS/Ubuntu/Package/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/04_Tools/Obsidian/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/OS/Ubuntu/System/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/04_Tools/IDE/VSCode/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/OS/Ubuntu/Terminal/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/04_Tools/Learning_Legacy/Computer%20Vison/3D/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/OS/Windows/Device/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/04_Tools/Learning_Legacy/Computer%20Vison/Image/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/OS/Windows/Powershell/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/04_Tools/Reference/Finding%20and%20managing%20research%20papers%20a%20survey%20of%20tools%20and%20products/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/OS/Windows/scoop/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/04_Tools/Reference/blog/Steph%20Ango/What%20can%20we%20remove/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Reference/Finding%20and%20managing%20research%20papers%20a%20survey%20of%20tools%20and%20products/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/04_Tools/Reference/devops/A%20Docker%20Tutorial%20for%20Beginners/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Reference/blog/Steph%20Ango/What%20can%20we%20remove/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/04_Tools/Reference/linux/12%20Linux%20Terminal%20Shortcuts%20Every%20Power%20Linux%20User%20Must%20Know/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Reference/devops/A%20Docker%20Tutorial%20for%20Beginners/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/04_Tools/Reference/linux/Understanding%20Systemd%20Units%20and%20Unit%20Files%20%20DigitalOcean/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Reference/linux/12%20Linux%20Terminal%20Shortcuts%20Every%20Power%20Linux%20User%20Must%20Know/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/04_Tools/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Reference/linux/Understanding%20Systemd%20Units%20and%20Unit%20Files%20%20DigitalOcean/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/04_Tools/Research/Journal/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
     <url>
-         <loc>https://docs.atticux.me/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/</loc>
-         <lastmod>2026-02-09</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.atticux.me/Robots/Isaac%20lab/</loc>
-         <lastmod>2026-02-09</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.atticux.me/Robots/sim/</loc>
-         <lastmod>2026-02-09</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.atticux.me/Scholar/Journal/</loc>
-         <lastmod>2026-02-09</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.atticux.me/Scholar/tools/</loc>
-         <lastmod>2026-02-09</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.atticux.me/VCS/git/</loc>
-         <lastmod>2026-02-09</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.atticux.me/VCS/github/SSH_keypair_setup_for_GitHub/</loc>
-         <lastmod>2026-02-09</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.atticux.me/tools/Gemini/</loc>
-         <lastmod>2026-02-09</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.atticux.me/tools/IDE/JetBrains/</loc>
-         <lastmod>2026-02-09</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.atticux.me/tools/IDE/VSCode/</loc>
-         <lastmod>2026-02-09</lastmod>
+         <loc>https://docs.atticux.me/04_Tools/Research/tools/</loc>
+         <lastmod>2026-02-10</lastmod>
     </url>
 </urlset>

@@ -5,29 +5,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.atticux.me/">
+        <link rel="canonical" href="https://docs.atticux.me/02_DevOps/Backend/Proxy/Traefik/">
       
       
+        <link rel="prev" href="../../ssh/">
       
-        <link rel="next" href="01_Lang/C%2B%2B/Pointer/">
+      
+        <link rel="next" href="../../../OS/">
       
       
         
       
       
-      <link rel="icon" href="assets/logo/logo.svg">
+      <link rel="icon" href="../../../../assets/logo/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Notes</title>
+        <title>Traefik - Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -48,13 +50,13 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -83,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#home" class="md-skip">
+        <a href="#traefik" class="md-skip">
           Skip to content
         </a>
       
@@ -97,9 +99,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
       
-  <img src="assets/logo/logo.svg" alt="logo">
+  <img src="../../../../assets/logo/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Traefik
             
           </span>
         </div>
@@ -232,11 +234,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
         
   
   
@@ -264,7 +264,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="01_Lang/C%2B%2B/Pointer/" class="md-tabs__link">
+        <a href="../../../../01_Lang/C%2B%2B/Pointer/" class="md-tabs__link">
           
   
   
@@ -285,6 +285,8 @@
   
   
   
+    
+  
   
     
     
@@ -292,11 +294,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="02_DevOps/Backend/Docker/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Docker/" class="md-tabs__link">
           
   
   
@@ -328,7 +332,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="03_AI/LLM/Technique/" class="md-tabs__link">
+        <a href="../../../../03_AI/LLM/Technique/" class="md-tabs__link">
           
   
   
@@ -353,7 +357,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="04_Tools/Gemini/" class="md-tabs__link">
+        <a href="../../../../04_Tools/Gemini/" class="md-tabs__link">
           
   
   
@@ -389,9 +393,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
       
-  <img src="assets/logo/logo.svg" alt="logo">
+  <img src="../../../../assets/logo/logo.svg" alt="logo">
 
     </a>
     Notes
@@ -415,19 +419,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -443,7 +438,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -579,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Pointer/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/Pointer/" class="md-nav__link">
         
   
   
@@ -607,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/packages/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/packages/" class="md-nav__link">
         
   
   
@@ -635,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/syntax/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/syntax/" class="md-nav__link">
         
   
   
@@ -733,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/Queue/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/Data_model/Queue/" class="md-nav__link">
         
   
   
@@ -761,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/String/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/Data_model/String/" class="md-nav__link">
         
   
   
@@ -789,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/map/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/Data_model/map/" class="md-nav__link">
         
   
   
@@ -817,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/set/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/Data_model/set/" class="md-nav__link">
         
   
   
@@ -845,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/stack/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/Data_model/stack/" class="md-nav__link">
         
   
   
@@ -873,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/unordered_map/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/Data_model/unordered_map/" class="md-nav__link">
         
   
   
@@ -901,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/unordered_set/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/Data_model/unordered_set/" class="md-nav__link">
         
   
   
@@ -929,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/vector/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/Data_model/vector/" class="md-nav__link">
         
   
   
@@ -1039,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/Pointer/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/STL/Pointer/" class="md-nav__link">
         
   
   
@@ -1067,7 +1061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/Queue/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/STL/Queue/" class="md-nav__link">
         
   
   
@@ -1095,7 +1089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/String/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/STL/String/" class="md-nav__link">
         
   
   
@@ -1123,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/algorithm/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/STL/algorithm/" class="md-nav__link">
         
   
   
@@ -1151,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/map/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/STL/map/" class="md-nav__link">
         
   
   
@@ -1179,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/set/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/STL/set/" class="md-nav__link">
         
   
   
@@ -1207,7 +1201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/stack/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/STL/stack/" class="md-nav__link">
         
   
   
@@ -1235,7 +1229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/unordered_map/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/STL/unordered_map/" class="md-nav__link">
         
   
   
@@ -1263,7 +1257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/unordered_set/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/STL/unordered_set/" class="md-nav__link">
         
   
   
@@ -1291,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/vector/" class="md-nav__link">
+      <a href="../../../../01_Lang/C%2B%2B/STL/vector/" class="md-nav__link">
         
   
   
@@ -1391,7 +1385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/golang/config/" class="md-nav__link">
+      <a href="../../../../01_Lang/golang/config/" class="md-nav__link">
         
   
   
@@ -1487,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/python/Mypy/" class="md-nav__link">
+      <a href="../../../../01_Lang/python/Mypy/" class="md-nav__link">
         
   
   
@@ -1515,7 +1509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/python/Pytest/" class="md-nav__link">
+      <a href="../../../../01_Lang/python/Pytest/" class="md-nav__link">
         
   
   
@@ -1599,7 +1593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/python/Std/Pathlib/" class="md-nav__link">
+      <a href="../../../../01_Lang/python/Std/Pathlib/" class="md-nav__link">
         
   
   
@@ -1647,8 +1641,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1662,19 +1658,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -1692,7 +1691,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1707,8 +1706,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1723,18 +1724,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1">
         
           
-          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
             
   
   
@@ -1752,7 +1756,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1770,7 +1774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/Backend/Docker/" class="md-nav__link">
+      <a href="../../Docker/" class="md-nav__link">
         
   
   
@@ -1798,7 +1802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/Backend/ssh/" class="md-nav__link">
+      <a href="../../ssh/" class="md-nav__link">
         
   
   
@@ -1823,8 +1827,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1839,11 +1845,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
@@ -1864,7 +1870,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1879,10 +1885,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="02_DevOps/Backend/Proxy/Traefik/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1898,6 +1913,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1946,10 +1962,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1957,7 +1976,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="02_DevOps/OS/" class="md-nav__link ">
+            <a href="../../../OS/" class="md-nav__link ">
               
   
   
@@ -1975,7 +1994,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -2001,7 +2020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Bugs/" class="md-nav__link">
+      <a href="../../../OS/Bugs/" class="md-nav__link">
         
   
   
@@ -2029,7 +2048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/GPU/" class="md-nav__link">
+      <a href="../../../OS/GPU/" class="md-nav__link">
         
   
   
@@ -2092,7 +2111,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="02_DevOps/OS/Ubuntu/" class="md-nav__link ">
+            <a href="../../../OS/Ubuntu/" class="md-nav__link ">
               
   
   
@@ -2136,7 +2155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Appearance/" class="md-nav__link">
+      <a href="../../../OS/Ubuntu/Appearance/" class="md-nav__link">
         
   
   
@@ -2164,7 +2183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Bugs/" class="md-nav__link">
+      <a href="../../../OS/Ubuntu/Bugs/" class="md-nav__link">
         
   
   
@@ -2192,7 +2211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Gnome/" class="md-nav__link">
+      <a href="../../../OS/Ubuntu/Gnome/" class="md-nav__link">
         
   
   
@@ -2220,7 +2239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Package/" class="md-nav__link">
+      <a href="../../../OS/Ubuntu/Package/" class="md-nav__link">
         
   
   
@@ -2248,7 +2267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/System/" class="md-nav__link">
+      <a href="../../../OS/Ubuntu/System/" class="md-nav__link">
         
   
   
@@ -2276,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Terminal/" class="md-nav__link">
+      <a href="../../../OS/Ubuntu/Terminal/" class="md-nav__link">
         
   
   
@@ -2372,7 +2391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Windows/Device/" class="md-nav__link">
+      <a href="../../../OS/Windows/Device/" class="md-nav__link">
         
   
   
@@ -2400,7 +2419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Windows/Powershell/" class="md-nav__link">
+      <a href="../../../OS/Windows/Powershell/" class="md-nav__link">
         
   
   
@@ -2428,7 +2447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Windows/scoop/" class="md-nav__link">
+      <a href="../../../OS/Windows/scoop/" class="md-nav__link">
         
   
   
@@ -2484,17 +2503,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3">
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
             
   
   
@@ -2530,7 +2552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/VCS/git/" class="md-nav__link">
+      <a href="../../../VCS/git/" class="md-nav__link">
         
   
   
@@ -2614,7 +2636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/VCS/github/SSH_keypair_setup_for_GitHub/" class="md-nav__link">
+      <a href="../../../VCS/github/SSH_keypair_setup_for_GitHub/" class="md-nav__link">
         
   
   
@@ -2781,7 +2803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/LLM/Technique/" class="md-nav__link">
+      <a href="../../../../03_AI/LLM/Technique/" class="md-nav__link">
         
   
   
@@ -2875,7 +2897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Machine%20Learning/Data/" class="md-nav__link">
+      <a href="../../../../03_AI/Machine%20Learning/Data/" class="md-nav__link">
         
   
   
@@ -2903,7 +2925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Machine%20Learning/Pytorch/" class="md-nav__link">
+      <a href="../../../../03_AI/Machine%20Learning/Pytorch/" class="md-nav__link">
         
   
   
@@ -2997,7 +3019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Robots/Isaac%20lab/" class="md-nav__link">
+      <a href="../../../../03_AI/Robots/Isaac%20lab/" class="md-nav__link">
         
   
   
@@ -3025,7 +3047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Robots/sim/" class="md-nav__link">
+      <a href="../../../../03_AI/Robots/sim/" class="md-nav__link">
         
   
   
@@ -3134,7 +3156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Gemini/" class="md-nav__link">
+      <a href="../../../../04_Tools/Gemini/" class="md-nav__link">
         
   
   
@@ -3162,7 +3184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Obsidian/" class="md-nav__link">
+      <a href="../../../../04_Tools/Obsidian/" class="md-nav__link">
         
   
   
@@ -3246,7 +3268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/IDE/VSCode/" class="md-nav__link">
+      <a href="../../../../04_Tools/IDE/VSCode/" class="md-nav__link">
         
   
   
@@ -3396,7 +3418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Learning_Legacy/Computer%20Vison/3D/" class="md-nav__link">
+      <a href="../../../../04_Tools/Learning_Legacy/Computer%20Vison/3D/" class="md-nav__link">
         
   
   
@@ -3424,7 +3446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Learning_Legacy/Computer%20Vison/Image/" class="md-nav__link">
+      <a href="../../../../04_Tools/Learning_Legacy/Computer%20Vison/Image/" class="md-nav__link">
         
   
   
@@ -3532,7 +3554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/Finding%20and%20managing%20research%20papers%20a%20survey%20of%20tools%20and%20products/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/Finding%20and%20managing%20research%20papers%20a%20survey%20of%20tools%20and%20products/" class="md-nav__link">
         
   
   
@@ -3672,7 +3694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/blog/Steph%20Ango/What%20can%20we%20remove/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/blog/Steph%20Ango/What%20can%20we%20remove/" class="md-nav__link">
         
   
   
@@ -3772,7 +3794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/devops/A%20Docker%20Tutorial%20for%20Beginners/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/devops/A%20Docker%20Tutorial%20for%20Beginners/" class="md-nav__link">
         
   
   
@@ -3866,7 +3888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/linux/12%20Linux%20Terminal%20Shortcuts%20Every%20Power%20Linux%20User%20Must%20Know/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/linux/12%20Linux%20Terminal%20Shortcuts%20Every%20Power%20Linux%20User%20Must%20Know/" class="md-nav__link">
         
   
   
@@ -3894,7 +3916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/linux/Understanding%20Systemd%20Units%20and%20Unit%20Files%20%20DigitalOcean/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/linux/Understanding%20Systemd%20Units%20and%20Unit%20Files%20%20DigitalOcean/" class="md-nav__link">
         
   
   
@@ -3986,7 +4008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/" class="md-nav__link">
         
   
   
@@ -4088,7 +4110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Research/Journal/" class="md-nav__link">
+      <a href="../../../../04_Tools/Research/Journal/" class="md-nav__link">
         
   
   
@@ -4116,7 +4138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Research/tools/" class="md-nav__link">
+      <a href="../../../../04_Tools/Research/tools/" class="md-nav__link">
         
   
   
@@ -4190,29 +4212,8 @@
   
 
 
-<h1 id="home">Home<a class="headerlink" href="#home" title="Permanent link">¶</a></h1>
-<h1 align="center">Hi there, I'm Atticus Zeller 👋</h1>
-
-<p>🔭 I'm currently working on computer vision, deep learning, and 3D-reconstruction research projects.</p>
-<p>🌱 Currently completing my undergraduate studies and preparing for postgraduate studies in Artificial Intelligence.</p>
-<p>🛠️ Tech Stack:</p>
-<ul>
-<li>Programming languages: Python | C++</li>
-<li>Frontend: Streamlit</li>
-<li>Backend: FastAPI | SQL databases</li>
-<li>DevOps: Linux | Shell | Git | Docker</li>
-<li>Deep Learning: PyTorch | NumPy | Weights &amp; Biases</li>
-</ul>
-<p>⚡ Fun fact: I'm also an avid reader and a sports aficionado</p>
-<p>📫 How to reach me:</p>
-<ul>
-<li>Email: <strong>hello@atticux.me</strong></li>
-</ul>
-<p>🎓 Academic Profile:</p>
-<ul>
-<li>ORCID: <a href="https://orcid.org/0009-0008-5460-325X">https://orcid.org/0009-0008-5460-325X</a></li>
-<li><a href="https://arxiv.org/abs/2412.20056">GSplatLoc: Ultra-Precise Camera Localization via 3D Gaussian Splatting</a></li>
-</ul>
+<h1 id="traefik">Traefik<a class="headerlink" href="#traefik" title="Permanent link">¶</a></h1>
+<p><a href="https://traefik.io/traefik/">Traefik</a> is an application proxy that routes requests to the right service.</p>
 
 
 
@@ -4235,7 +4236,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="March 8, 2025 20:16:26 CST">March 8, 2025 20:16:26</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="January 21, 2025 08:57:35 CST">January 21, 2025 08:57:35</span>
   </span>
 
     
@@ -4245,7 +4246,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 16, 2024 14:05:14 CST">November 16, 2024 14:05:14</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="January 13, 2025 21:37:04 CST">January 13, 2025 21:37:04</span>
   </span>
 
     
@@ -4279,15 +4280,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
+          
+          <a href="../../ssh/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Ssh">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Ssh
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="01_Lang/C%2B%2B/Pointer/" class="md-footer__link md-footer__link--next" aria-label="Next: Pointer">
+          <a href="../../../OS/" class="md-footer__link md-footer__link--next" aria-label="Next: OS">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Pointer
+                OS
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4365,12 +4382,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "content.footnote.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.footer", "navigation.top", "navigation.tracking", "toc.follow", "header.autohide", "search.suggest", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.copy", "content.footnote.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.footer", "navigation.top", "navigation.tracking", "toc.follow", "header.autohide", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="js/katex.js"></script>
+        <script src="../../../../js/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       

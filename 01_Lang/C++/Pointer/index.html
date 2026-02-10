@@ -5,29 +5,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.atticux.me/">
+        <link rel="canonical" href="https://docs.atticux.me/01_Lang/C%2B%2B/Pointer/">
       
       
+        <link rel="prev" href="../../..">
       
-        <link rel="next" href="01_Lang/C%2B%2B/Pointer/">
+      
+        <link rel="next" href="../packages/">
       
       
         
       
       
-      <link rel="icon" href="assets/logo/logo.svg">
+      <link rel="icon" href="../../../assets/logo/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Notes</title>
+        <title>Pointer - Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -48,13 +50,13 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -83,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#home" class="md-skip">
+        <a href="#pointer" class="md-skip">
           Skip to content
         </a>
       
@@ -97,9 +99,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
       
-  <img src="assets/logo/logo.svg" alt="logo">
+  <img src="../../../assets/logo/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Pointer
             
           </span>
         </div>
@@ -232,11 +234,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -253,6 +253,8 @@
   
   
   
+    
+  
   
     
     
@@ -260,11 +262,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="01_Lang/C%2B%2B/Pointer/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -296,7 +300,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="02_DevOps/Backend/Docker/" class="md-tabs__link">
+        <a href="../../../02_DevOps/Backend/Docker/" class="md-tabs__link">
           
   
   
@@ -328,7 +332,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="03_AI/LLM/Technique/" class="md-tabs__link">
+        <a href="../../../03_AI/LLM/Technique/" class="md-tabs__link">
           
   
   
@@ -353,7 +357,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="04_Tools/Gemini/" class="md-tabs__link">
+        <a href="../../../04_Tools/Gemini/" class="md-tabs__link">
           
   
   
@@ -389,9 +393,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
       
-  <img src="assets/logo/logo.svg" alt="logo">
+  <img src="../../../assets/logo/logo.svg" alt="logo">
 
     </a>
     Notes
@@ -415,19 +419,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -443,7 +438,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -452,8 +446,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -467,19 +463,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -497,7 +496,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -512,8 +511,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -532,18 +533,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
         
           
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
             
   
   
@@ -561,7 +565,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -576,10 +580,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Pointer/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pointer
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -595,6 +626,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C++ 智能指针简介
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C++ 智能指针简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        智能指针类型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        创建和使用智能指针
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        代码示例
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -607,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/packages/" class="md-nav__link">
+      <a href="../packages/" class="md-nav__link">
         
   
   
@@ -635,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/syntax/" class="md-nav__link">
+      <a href="../syntax/" class="md-nav__link">
         
   
   
@@ -733,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/Queue/" class="md-nav__link">
+      <a href="../Data_model/Queue/" class="md-nav__link">
         
   
   
@@ -761,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/String/" class="md-nav__link">
+      <a href="../Data_model/String/" class="md-nav__link">
         
   
   
@@ -789,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/map/" class="md-nav__link">
+      <a href="../Data_model/map/" class="md-nav__link">
         
   
   
@@ -817,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/set/" class="md-nav__link">
+      <a href="../Data_model/set/" class="md-nav__link">
         
   
   
@@ -845,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/stack/" class="md-nav__link">
+      <a href="../Data_model/stack/" class="md-nav__link">
         
   
   
@@ -873,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/unordered_map/" class="md-nav__link">
+      <a href="../Data_model/unordered_map/" class="md-nav__link">
         
   
   
@@ -901,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/unordered_set/" class="md-nav__link">
+      <a href="../Data_model/unordered_set/" class="md-nav__link">
         
   
   
@@ -929,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/vector/" class="md-nav__link">
+      <a href="../Data_model/vector/" class="md-nav__link">
         
   
   
@@ -1039,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/Pointer/" class="md-nav__link">
+      <a href="../STL/Pointer/" class="md-nav__link">
         
   
   
@@ -1067,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/Queue/" class="md-nav__link">
+      <a href="../STL/Queue/" class="md-nav__link">
         
   
   
@@ -1095,7 +1196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/String/" class="md-nav__link">
+      <a href="../STL/String/" class="md-nav__link">
         
   
   
@@ -1123,7 +1224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/algorithm/" class="md-nav__link">
+      <a href="../STL/algorithm/" class="md-nav__link">
         
   
   
@@ -1151,7 +1252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/map/" class="md-nav__link">
+      <a href="../STL/map/" class="md-nav__link">
         
   
   
@@ -1179,7 +1280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/set/" class="md-nav__link">
+      <a href="../STL/set/" class="md-nav__link">
         
   
   
@@ -1207,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/stack/" class="md-nav__link">
+      <a href="../STL/stack/" class="md-nav__link">
         
   
   
@@ -1235,7 +1336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/unordered_map/" class="md-nav__link">
+      <a href="../STL/unordered_map/" class="md-nav__link">
         
   
   
@@ -1263,7 +1364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/unordered_set/" class="md-nav__link">
+      <a href="../STL/unordered_set/" class="md-nav__link">
         
   
   
@@ -1291,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/vector/" class="md-nav__link">
+      <a href="../STL/vector/" class="md-nav__link">
         
   
   
@@ -1345,17 +1446,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
             
   
   
@@ -1391,7 +1495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/golang/config/" class="md-nav__link">
+      <a href="../../golang/config/" class="md-nav__link">
         
   
   
@@ -1441,17 +1545,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
             
   
   
@@ -1487,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/python/Mypy/" class="md-nav__link">
+      <a href="../../python/Mypy/" class="md-nav__link">
         
   
   
@@ -1515,7 +1622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/python/Pytest/" class="md-nav__link">
+      <a href="../../python/Pytest/" class="md-nav__link">
         
   
   
@@ -1599,7 +1706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/python/Std/Pathlib/" class="md-nav__link">
+      <a href="../../python/Std/Pathlib/" class="md-nav__link">
         
   
   
@@ -1770,7 +1877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/Backend/Docker/" class="md-nav__link">
+      <a href="../../../02_DevOps/Backend/Docker/" class="md-nav__link">
         
   
   
@@ -1798,7 +1905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/Backend/ssh/" class="md-nav__link">
+      <a href="../../../02_DevOps/Backend/ssh/" class="md-nav__link">
         
   
   
@@ -1882,7 +1989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/Backend/Proxy/Traefik/" class="md-nav__link">
+      <a href="../../../02_DevOps/Backend/Proxy/Traefik/" class="md-nav__link">
         
   
   
@@ -1957,7 +2064,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="02_DevOps/OS/" class="md-nav__link ">
+            <a href="../../../02_DevOps/OS/" class="md-nav__link ">
               
   
   
@@ -2001,7 +2108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Bugs/" class="md-nav__link">
+      <a href="../../../02_DevOps/OS/Bugs/" class="md-nav__link">
         
   
   
@@ -2029,7 +2136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/GPU/" class="md-nav__link">
+      <a href="../../../02_DevOps/OS/GPU/" class="md-nav__link">
         
   
   
@@ -2092,7 +2199,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="02_DevOps/OS/Ubuntu/" class="md-nav__link ">
+            <a href="../../../02_DevOps/OS/Ubuntu/" class="md-nav__link ">
               
   
   
@@ -2136,7 +2243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Appearance/" class="md-nav__link">
+      <a href="../../../02_DevOps/OS/Ubuntu/Appearance/" class="md-nav__link">
         
   
   
@@ -2164,7 +2271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Bugs/" class="md-nav__link">
+      <a href="../../../02_DevOps/OS/Ubuntu/Bugs/" class="md-nav__link">
         
   
   
@@ -2192,7 +2299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Gnome/" class="md-nav__link">
+      <a href="../../../02_DevOps/OS/Ubuntu/Gnome/" class="md-nav__link">
         
   
   
@@ -2220,7 +2327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Package/" class="md-nav__link">
+      <a href="../../../02_DevOps/OS/Ubuntu/Package/" class="md-nav__link">
         
   
   
@@ -2248,7 +2355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/System/" class="md-nav__link">
+      <a href="../../../02_DevOps/OS/Ubuntu/System/" class="md-nav__link">
         
   
   
@@ -2276,7 +2383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Terminal/" class="md-nav__link">
+      <a href="../../../02_DevOps/OS/Ubuntu/Terminal/" class="md-nav__link">
         
   
   
@@ -2372,7 +2479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Windows/Device/" class="md-nav__link">
+      <a href="../../../02_DevOps/OS/Windows/Device/" class="md-nav__link">
         
   
   
@@ -2400,7 +2507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Windows/Powershell/" class="md-nav__link">
+      <a href="../../../02_DevOps/OS/Windows/Powershell/" class="md-nav__link">
         
   
   
@@ -2428,7 +2535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Windows/scoop/" class="md-nav__link">
+      <a href="../../../02_DevOps/OS/Windows/scoop/" class="md-nav__link">
         
   
   
@@ -2530,7 +2637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/VCS/git/" class="md-nav__link">
+      <a href="../../../02_DevOps/VCS/git/" class="md-nav__link">
         
   
   
@@ -2614,7 +2721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/VCS/github/SSH_keypair_setup_for_GitHub/" class="md-nav__link">
+      <a href="../../../02_DevOps/VCS/github/SSH_keypair_setup_for_GitHub/" class="md-nav__link">
         
   
   
@@ -2781,7 +2888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/LLM/Technique/" class="md-nav__link">
+      <a href="../../../03_AI/LLM/Technique/" class="md-nav__link">
         
   
   
@@ -2875,7 +2982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Machine%20Learning/Data/" class="md-nav__link">
+      <a href="../../../03_AI/Machine%20Learning/Data/" class="md-nav__link">
         
   
   
@@ -2903,7 +3010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Machine%20Learning/Pytorch/" class="md-nav__link">
+      <a href="../../../03_AI/Machine%20Learning/Pytorch/" class="md-nav__link">
         
   
   
@@ -2997,7 +3104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Robots/Isaac%20lab/" class="md-nav__link">
+      <a href="../../../03_AI/Robots/Isaac%20lab/" class="md-nav__link">
         
   
   
@@ -3025,7 +3132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Robots/sim/" class="md-nav__link">
+      <a href="../../../03_AI/Robots/sim/" class="md-nav__link">
         
   
   
@@ -3134,7 +3241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Gemini/" class="md-nav__link">
+      <a href="../../../04_Tools/Gemini/" class="md-nav__link">
         
   
   
@@ -3162,7 +3269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Obsidian/" class="md-nav__link">
+      <a href="../../../04_Tools/Obsidian/" class="md-nav__link">
         
   
   
@@ -3246,7 +3353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/IDE/VSCode/" class="md-nav__link">
+      <a href="../../../04_Tools/IDE/VSCode/" class="md-nav__link">
         
   
   
@@ -3396,7 +3503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Learning_Legacy/Computer%20Vison/3D/" class="md-nav__link">
+      <a href="../../../04_Tools/Learning_Legacy/Computer%20Vison/3D/" class="md-nav__link">
         
   
   
@@ -3424,7 +3531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Learning_Legacy/Computer%20Vison/Image/" class="md-nav__link">
+      <a href="../../../04_Tools/Learning_Legacy/Computer%20Vison/Image/" class="md-nav__link">
         
   
   
@@ -3532,7 +3639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/Finding%20and%20managing%20research%20papers%20a%20survey%20of%20tools%20and%20products/" class="md-nav__link">
+      <a href="../../../04_Tools/Reference/Finding%20and%20managing%20research%20papers%20a%20survey%20of%20tools%20and%20products/" class="md-nav__link">
         
   
   
@@ -3672,7 +3779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/blog/Steph%20Ango/What%20can%20we%20remove/" class="md-nav__link">
+      <a href="../../../04_Tools/Reference/blog/Steph%20Ango/What%20can%20we%20remove/" class="md-nav__link">
         
   
   
@@ -3772,7 +3879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/devops/A%20Docker%20Tutorial%20for%20Beginners/" class="md-nav__link">
+      <a href="../../../04_Tools/Reference/devops/A%20Docker%20Tutorial%20for%20Beginners/" class="md-nav__link">
         
   
   
@@ -3866,7 +3973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/linux/12%20Linux%20Terminal%20Shortcuts%20Every%20Power%20Linux%20User%20Must%20Know/" class="md-nav__link">
+      <a href="../../../04_Tools/Reference/linux/12%20Linux%20Terminal%20Shortcuts%20Every%20Power%20Linux%20User%20Must%20Know/" class="md-nav__link">
         
   
   
@@ -3894,7 +4001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/linux/Understanding%20Systemd%20Units%20and%20Unit%20Files%20%20DigitalOcean/" class="md-nav__link">
+      <a href="../../../04_Tools/Reference/linux/Understanding%20Systemd%20Units%20and%20Unit%20Files%20%20DigitalOcean/" class="md-nav__link">
         
   
   
@@ -3986,7 +4093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/" class="md-nav__link">
+      <a href="../../../04_Tools/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/" class="md-nav__link">
         
   
   
@@ -4088,7 +4195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Research/Journal/" class="md-nav__link">
+      <a href="../../../04_Tools/Research/Journal/" class="md-nav__link">
         
   
   
@@ -4116,7 +4223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Research/tools/" class="md-nav__link">
+      <a href="../../../04_Tools/Research/tools/" class="md-nav__link">
         
   
   
@@ -4172,6 +4279,64 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C++ 智能指针简介
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C++ 智能指针简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        智能指针类型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        创建和使用智能指针
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        代码示例
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4190,29 +4355,105 @@
   
 
 
-<h1 id="home">Home<a class="headerlink" href="#home" title="Permanent link">¶</a></h1>
-<h1 align="center">Hi there, I'm Atticus Zeller 👋</h1>
-
-<p>🔭 I'm currently working on computer vision, deep learning, and 3D-reconstruction research projects.</p>
-<p>🌱 Currently completing my undergraduate studies and preparing for postgraduate studies in Artificial Intelligence.</p>
-<p>🛠️ Tech Stack:</p>
+<h1 id="pointer">Pointer<a class="headerlink" href="#pointer" title="Permanent link">¶</a></h1>
+<h2 id="c">C++ 智能指针简介<a class="headerlink" href="#c" title="Permanent link">¶</a></h2>
+<p>智能指针是现代 C++ 中用于自动管理内存的对象，通过封装原始指针，它们帮助程序员避免内存泄漏并提供异常安全。C++11 标准引入了几种智能指针类型，使得资源管理更加简单和安全。</p>
+<h3 id="_1">智能指针类型<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p><strong><code>std::unique_ptr</code></strong></p>
+</li>
+<li>
+<p><strong>特性</strong>：提供对内存的独占所有权，即同一时间内只有一个 <code>std::unique_ptr</code> 可以拥有资源。</p>
+</li>
+<li><strong>典型用途</strong>：用于需要明确单一所有权的情况，例如在函数内部创建临时对象。</li>
+<li><strong>不可复制</strong>：只能移动，确保所有权的唯一性。</li>
+<li>
+<p><strong>引入版本</strong>：C++11。</p>
+</li>
+<li>
+<p><strong><code>std::shared_ptr</code></strong></p>
+</li>
+<li>
+<p><strong>特性</strong>：支持多重所有权概念，即多个 <code>std::shared_ptr</code> 对象可以共享同一个资源。</p>
+</li>
+<li><strong>典型用途</strong>：用于对象生命周期需要由多个所有者共同管理的情况，例如在多个数据结构之间共享数据。</li>
+<li>
+<p><strong>引入版本</strong>：C++11。</p>
+</li>
+<li>
+<p><strong><code>std::weak_ptr</code></strong></p>
+</li>
+<li><strong>特性</strong>：提供一种非拥有性的智能指针，用来观察 <code>std::shared_ptr</code>，但不影响其引用计数。</li>
+<li><strong>典型用途</strong>：用于解决 <code>std::shared_ptr</code> 可能导致的循环引用问题。</li>
+<li><strong>引入版本</strong>：C++11。</li>
+</ol>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">class</span><span class="w"> </span><span class="nc">Parent</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">class</span><span class="w"> </span><span class="nc">Parent</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">enable_shared_from_this</span><span class="o">&lt;</span><span class="n">Parent</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Child</span><span class="o">&gt;</span><span class="w"> </span><span class="n">child</span><span class="p">;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="o">~</span><span class="n">Parent</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Parent destroyed</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">setChild</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Child</span><span class="o">&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="n">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="n">child</span><span class="o">-&gt;</span><span class="n">setParent</span><span class="p">(</span><span class="n">shared_from_this</span><span class="p">());</span><span class="w">  </span><span class="c1">// 使用 shared_from_this() 获取当前对象的 shared_ptr</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">};</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Parent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parent</span><span class="p">;</span><span class="w">  </span><span class="c1">// 使用 weak_ptr 避免循环引用</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="o">~</span><span class="n">Child</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Child destroyed</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">setParent</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Parent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="n">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w">  </span><span class="c1">// 设置 parent 为传入的 shared_ptr</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">};</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Parent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Parent</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Child</span><span class="o">&gt;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Child</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">    </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">setChild</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Parent use count: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">use_count</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 输出会是 2，因为 child 也持有 parent 的 shared_ptr</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Child use count: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">use_count</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">   </span><span class="c1">// 输出 1</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="_2">创建和使用智能指针<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
 <ul>
-<li>Programming languages: Python | C++</li>
-<li>Frontend: Streamlit</li>
-<li>Backend: FastAPI | SQL databases</li>
-<li>DevOps: Linux | Shell | Git | Docker</li>
-<li>Deep Learning: PyTorch | NumPy | Weights &amp; Biases</li>
+<li><strong><code>std::make_shared</code></strong></li>
+<li><strong>描述</strong>：用于构造 <code>std::shared_ptr</code> 的优选方法，因为它可以在单一操作中分配内存，提高效率并减少异常风险。</li>
+<li><strong>引入版本</strong>：C++11。</li>
+<li><strong><code>std::make_unique</code></strong></li>
+<li><strong>描述</strong>：用于构造 <code>std::unique_ptr</code> 的方法。类似于 <code>std::make_shared</code>，但专为 <code>std::unique_ptr</code> 设计。</li>
+<li><strong>引入版本</strong>：C++14。</li>
+<li><strong><code>shared_from_this</code></strong></li>
+<li><strong>描述</strong>：当类继承自 <code>std::enable_shared_from_this</code> 时，你可以安全地在类内部获取一个指向自己的 <code>std::shared_ptr</code>。</li>
+<li><strong>引入版本</strong>：C++11。</li>
 </ul>
-<p>⚡ Fun fact: I'm also an avid reader and a sports aficionado</p>
-<p>📫 How to reach me:</p>
-<ul>
-<li>Email: <strong>hello@atticux.me</strong></li>
-</ul>
-<p>🎓 Academic Profile:</p>
-<ul>
-<li>ORCID: <a href="https://orcid.org/0009-0008-5460-325X">https://orcid.org/0009-0008-5460-325X</a></li>
-<li><a href="https://arxiv.org/abs/2412.20056">GSplatLoc: Ultra-Precise Camera Localization via 3D Gaussian Splatting</a></li>
-</ul>
+<p><code>shared_from_this()</code> 只能在 <code>std::shared_ptr</code> 已经拥有该对象时才能安全调用。如果在任何 <code>std::shared_ptr</code> 拥有对象之前调用它，程序将抛出 <code>std::bad_weak_ptr</code> 异常。</p>
+<h2 id="_3">代码示例<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">enable_shared_from_this</span><span class="o">&lt;</span><span class="n">MyClass</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">show</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">sharedPtr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shared_from_this</span><span class="p">();</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"MyClass instance has "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sharedPtr</span><span class="p">.</span><span class="n">use_count</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" references</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">};</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">myObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MyClass</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="n">myObject</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span><span class="w">  </span><span class="c1">// 显示引用计数</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
+</span></code></pre></div>
 
 
 
@@ -4235,7 +4476,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="March 8, 2025 20:16:26 CST">March 8, 2025 20:16:26</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 16, 2024 14:05:14 CST">November 16, 2024 14:05:14</span>
   </span>
 
     
@@ -4279,15 +4520,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
+          
+          <a href="../../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="01_Lang/C%2B%2B/Pointer/" class="md-footer__link md-footer__link--next" aria-label="Next: Pointer">
+          <a href="../packages/" class="md-footer__link md-footer__link--next" aria-label="Next: Packages">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Pointer
+                Packages
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4365,12 +4622,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "content.footnote.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.footer", "navigation.top", "navigation.tracking", "toc.follow", "header.autohide", "search.suggest", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.footnote.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.footer", "navigation.top", "navigation.tracking", "toc.follow", "header.autohide", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="js/katex.js"></script>
+        <script src="../../../js/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       

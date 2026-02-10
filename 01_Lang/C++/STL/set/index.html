@@ -5,29 +5,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.atticux.me/">
+        <link rel="canonical" href="https://docs.atticux.me/01_Lang/C%2B%2B/STL/set/">
       
       
+        <link rel="prev" href="../map/">
       
-        <link rel="next" href="01_Lang/C%2B%2B/Pointer/">
+      
+        <link rel="next" href="../stack/">
       
       
         
       
       
-      <link rel="icon" href="assets/logo/logo.svg">
+      <link rel="icon" href="../../../../assets/logo/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Notes</title>
+        <title>Set - Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -48,13 +50,13 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -83,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#home" class="md-skip">
+        <a href="#set" class="md-skip">
           Skip to content
         </a>
       
@@ -97,9 +99,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
       
-  <img src="assets/logo/logo.svg" alt="logo">
+  <img src="../../../../assets/logo/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Set
             
           </span>
         </div>
@@ -232,11 +234,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
         
   
   
@@ -253,6 +253,8 @@
   
   
   
+    
+  
   
     
     
@@ -260,11 +262,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="01_Lang/C%2B%2B/Pointer/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Pointer/" class="md-tabs__link">
           
   
   
@@ -296,7 +300,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="02_DevOps/Backend/Docker/" class="md-tabs__link">
+        <a href="../../../../02_DevOps/Backend/Docker/" class="md-tabs__link">
           
   
   
@@ -328,7 +332,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="03_AI/LLM/Technique/" class="md-tabs__link">
+        <a href="../../../../03_AI/LLM/Technique/" class="md-tabs__link">
           
   
   
@@ -353,7 +357,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="04_Tools/Gemini/" class="md-tabs__link">
+        <a href="../../../../04_Tools/Gemini/" class="md-tabs__link">
           
   
   
@@ -389,9 +393,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
       
-  <img src="assets/logo/logo.svg" alt="logo">
+  <img src="../../../../assets/logo/logo.svg" alt="logo">
 
     </a>
     Notes
@@ -415,19 +419,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -443,7 +438,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -452,8 +446,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -467,19 +463,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -497,7 +496,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -512,8 +511,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -532,18 +533,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
         
           
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
             
   
   
@@ -561,7 +565,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -579,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Pointer/" class="md-nav__link">
+      <a href="../../Pointer/" class="md-nav__link">
         
   
   
@@ -607,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/packages/" class="md-nav__link">
+      <a href="../../packages/" class="md-nav__link">
         
   
   
@@ -635,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/syntax/" class="md-nav__link">
+      <a href="../../syntax/" class="md-nav__link">
         
   
   
@@ -733,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/Queue/" class="md-nav__link">
+      <a href="../../Data_model/Queue/" class="md-nav__link">
         
   
   
@@ -761,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/String/" class="md-nav__link">
+      <a href="../../Data_model/String/" class="md-nav__link">
         
   
   
@@ -789,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/map/" class="md-nav__link">
+      <a href="../../Data_model/map/" class="md-nav__link">
         
   
   
@@ -817,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/set/" class="md-nav__link">
+      <a href="../../Data_model/set/" class="md-nav__link">
         
   
   
@@ -845,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/stack/" class="md-nav__link">
+      <a href="../../Data_model/stack/" class="md-nav__link">
         
   
   
@@ -873,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/unordered_map/" class="md-nav__link">
+      <a href="../../Data_model/unordered_map/" class="md-nav__link">
         
   
   
@@ -901,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/unordered_set/" class="md-nav__link">
+      <a href="../../Data_model/unordered_set/" class="md-nav__link">
         
   
   
@@ -929,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/Data_model/vector/" class="md-nav__link">
+      <a href="../../Data_model/vector/" class="md-nav__link">
         
   
   
@@ -962,8 +966,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -996,11 +1002,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_5">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_5" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1_5" id="__nav_2_1_5_label" tabindex="0">
@@ -1021,7 +1027,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1039,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/Pointer/" class="md-nav__link">
+      <a href="../Pointer/" class="md-nav__link">
         
   
   
@@ -1067,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/Queue/" class="md-nav__link">
+      <a href="../Queue/" class="md-nav__link">
         
   
   
@@ -1095,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/String/" class="md-nav__link">
+      <a href="../String/" class="md-nav__link">
         
   
   
@@ -1123,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/algorithm/" class="md-nav__link">
+      <a href="../algorithm/" class="md-nav__link">
         
   
   
@@ -1151,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/map/" class="md-nav__link">
+      <a href="../map/" class="md-nav__link">
         
   
   
@@ -1176,10 +1182,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/set/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Set
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1195,6 +1228,103 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initialization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Insert Elements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Elements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing Elements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterating-through-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterating through Set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-common-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Common Operations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1207,7 +1337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/stack/" class="md-nav__link">
+      <a href="../stack/" class="md-nav__link">
         
   
   
@@ -1235,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/unordered_map/" class="md-nav__link">
+      <a href="../unordered_map/" class="md-nav__link">
         
   
   
@@ -1263,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/unordered_set/" class="md-nav__link">
+      <a href="../unordered_set/" class="md-nav__link">
         
   
   
@@ -1291,7 +1421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/C%2B%2B/STL/vector/" class="md-nav__link">
+      <a href="../vector/" class="md-nav__link">
         
   
   
@@ -1345,17 +1475,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
             
   
   
@@ -1391,7 +1524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/golang/config/" class="md-nav__link">
+      <a href="../../../golang/config/" class="md-nav__link">
         
   
   
@@ -1441,17 +1574,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
             
   
   
@@ -1487,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/python/Mypy/" class="md-nav__link">
+      <a href="../../../python/Mypy/" class="md-nav__link">
         
   
   
@@ -1515,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/python/Pytest/" class="md-nav__link">
+      <a href="../../../python/Pytest/" class="md-nav__link">
         
   
   
@@ -1599,7 +1735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Lang/python/Std/Pathlib/" class="md-nav__link">
+      <a href="../../../python/Std/Pathlib/" class="md-nav__link">
         
   
   
@@ -1770,7 +1906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/Backend/Docker/" class="md-nav__link">
+      <a href="../../../../02_DevOps/Backend/Docker/" class="md-nav__link">
         
   
   
@@ -1798,7 +1934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/Backend/ssh/" class="md-nav__link">
+      <a href="../../../../02_DevOps/Backend/ssh/" class="md-nav__link">
         
   
   
@@ -1882,7 +2018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/Backend/Proxy/Traefik/" class="md-nav__link">
+      <a href="../../../../02_DevOps/Backend/Proxy/Traefik/" class="md-nav__link">
         
   
   
@@ -1957,7 +2093,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="02_DevOps/OS/" class="md-nav__link ">
+            <a href="../../../../02_DevOps/OS/" class="md-nav__link ">
               
   
   
@@ -2001,7 +2137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Bugs/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Bugs/" class="md-nav__link">
         
   
   
@@ -2029,7 +2165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/GPU/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/GPU/" class="md-nav__link">
         
   
   
@@ -2092,7 +2228,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="02_DevOps/OS/Ubuntu/" class="md-nav__link ">
+            <a href="../../../../02_DevOps/OS/Ubuntu/" class="md-nav__link ">
               
   
   
@@ -2136,7 +2272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Appearance/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Ubuntu/Appearance/" class="md-nav__link">
         
   
   
@@ -2164,7 +2300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Bugs/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Ubuntu/Bugs/" class="md-nav__link">
         
   
   
@@ -2192,7 +2328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Gnome/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Ubuntu/Gnome/" class="md-nav__link">
         
   
   
@@ -2220,7 +2356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Package/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Ubuntu/Package/" class="md-nav__link">
         
   
   
@@ -2248,7 +2384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/System/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Ubuntu/System/" class="md-nav__link">
         
   
   
@@ -2276,7 +2412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Ubuntu/Terminal/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Ubuntu/Terminal/" class="md-nav__link">
         
   
   
@@ -2372,7 +2508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Windows/Device/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Windows/Device/" class="md-nav__link">
         
   
   
@@ -2400,7 +2536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Windows/Powershell/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Windows/Powershell/" class="md-nav__link">
         
   
   
@@ -2428,7 +2564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/OS/Windows/scoop/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Windows/scoop/" class="md-nav__link">
         
   
   
@@ -2530,7 +2666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/VCS/git/" class="md-nav__link">
+      <a href="../../../../02_DevOps/VCS/git/" class="md-nav__link">
         
   
   
@@ -2614,7 +2750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_DevOps/VCS/github/SSH_keypair_setup_for_GitHub/" class="md-nav__link">
+      <a href="../../../../02_DevOps/VCS/github/SSH_keypair_setup_for_GitHub/" class="md-nav__link">
         
   
   
@@ -2781,7 +2917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/LLM/Technique/" class="md-nav__link">
+      <a href="../../../../03_AI/LLM/Technique/" class="md-nav__link">
         
   
   
@@ -2875,7 +3011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Machine%20Learning/Data/" class="md-nav__link">
+      <a href="../../../../03_AI/Machine%20Learning/Data/" class="md-nav__link">
         
   
   
@@ -2903,7 +3039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Machine%20Learning/Pytorch/" class="md-nav__link">
+      <a href="../../../../03_AI/Machine%20Learning/Pytorch/" class="md-nav__link">
         
   
   
@@ -2997,7 +3133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Robots/Isaac%20lab/" class="md-nav__link">
+      <a href="../../../../03_AI/Robots/Isaac%20lab/" class="md-nav__link">
         
   
   
@@ -3025,7 +3161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_AI/Robots/sim/" class="md-nav__link">
+      <a href="../../../../03_AI/Robots/sim/" class="md-nav__link">
         
   
   
@@ -3134,7 +3270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Gemini/" class="md-nav__link">
+      <a href="../../../../04_Tools/Gemini/" class="md-nav__link">
         
   
   
@@ -3162,7 +3298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Obsidian/" class="md-nav__link">
+      <a href="../../../../04_Tools/Obsidian/" class="md-nav__link">
         
   
   
@@ -3246,7 +3382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/IDE/VSCode/" class="md-nav__link">
+      <a href="../../../../04_Tools/IDE/VSCode/" class="md-nav__link">
         
   
   
@@ -3396,7 +3532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Learning_Legacy/Computer%20Vison/3D/" class="md-nav__link">
+      <a href="../../../../04_Tools/Learning_Legacy/Computer%20Vison/3D/" class="md-nav__link">
         
   
   
@@ -3424,7 +3560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Learning_Legacy/Computer%20Vison/Image/" class="md-nav__link">
+      <a href="../../../../04_Tools/Learning_Legacy/Computer%20Vison/Image/" class="md-nav__link">
         
   
   
@@ -3532,7 +3668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/Finding%20and%20managing%20research%20papers%20a%20survey%20of%20tools%20and%20products/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/Finding%20and%20managing%20research%20papers%20a%20survey%20of%20tools%20and%20products/" class="md-nav__link">
         
   
   
@@ -3672,7 +3808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/blog/Steph%20Ango/What%20can%20we%20remove/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/blog/Steph%20Ango/What%20can%20we%20remove/" class="md-nav__link">
         
   
   
@@ -3772,7 +3908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/devops/A%20Docker%20Tutorial%20for%20Beginners/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/devops/A%20Docker%20Tutorial%20for%20Beginners/" class="md-nav__link">
         
   
   
@@ -3866,7 +4002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/linux/12%20Linux%20Terminal%20Shortcuts%20Every%20Power%20Linux%20User%20Must%20Know/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/linux/12%20Linux%20Terminal%20Shortcuts%20Every%20Power%20Linux%20User%20Must%20Know/" class="md-nav__link">
         
   
   
@@ -3894,7 +4030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/linux/Understanding%20Systemd%20Units%20and%20Unit%20Files%20%20DigitalOcean/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/linux/Understanding%20Systemd%20Units%20and%20Unit%20Files%20%20DigitalOcean/" class="md-nav__link">
         
   
   
@@ -3986,7 +4122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/" class="md-nav__link">
         
   
   
@@ -4088,7 +4224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Research/Journal/" class="md-nav__link">
+      <a href="../../../../04_Tools/Research/Journal/" class="md-nav__link">
         
   
   
@@ -4116,7 +4252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_Tools/Research/tools/" class="md-nav__link">
+      <a href="../../../../04_Tools/Research/tools/" class="md-nav__link">
         
   
   
@@ -4172,6 +4308,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initialization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Insert Elements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Elements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing Elements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterating-through-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterating through Set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-common-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Common Operations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4190,29 +4411,71 @@
   
 
 
-<h1 id="home">Home<a class="headerlink" href="#home" title="Permanent link">¶</a></h1>
-<h1 align="center">Hi there, I'm Atticus Zeller 👋</h1>
-
-<p>🔭 I'm currently working on computer vision, deep learning, and 3D-reconstruction research projects.</p>
-<p>🌱 Currently completing my undergraduate studies and preparing for postgraduate studies in Artificial Intelligence.</p>
-<p>🛠️ Tech Stack:</p>
+<h1 id="set">Set<a class="headerlink" href="#set" title="Permanent link">¶</a></h1>
 <ul>
-<li>Programming languages: Python | C++</li>
-<li>Frontend: Streamlit</li>
-<li>Backend: FastAPI | SQL databases</li>
-<li>DevOps: Linux | Shell | Git | Docker</li>
-<li>Deep Learning: PyTorch | NumPy | Weights &amp; Biases</li>
+<li>std::set is an associative container that contains a sorted set of unique objects. It is usually implemented as a red-black tree.</li>
 </ul>
-<p>⚡ Fun fact: I'm also an avid reader and a sports aficionado</p>
-<p>📫 How to reach me:</p>
+<h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">¶</a></h2>
 <ul>
-<li>Email: <strong>hello@atticux.me</strong></li>
+<li><strong>Empty Set</strong>:</li>
 </ul>
-<p>🎓 Academic Profile:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mySet</span><span class="p">;</span>
+</span></code></pre></div>
+<h2 id="insert-elements">Insert Elements<a class="headerlink" href="#insert-elements" title="Permanent link">¶</a></h2>
 <ul>
-<li>ORCID: <a href="https://orcid.org/0009-0008-5460-325X">https://orcid.org/0009-0008-5460-325X</a></li>
-<li><a href="https://arxiv.org/abs/2412.20056">GSplatLoc: Ultra-Precise Camera Localization via 3D Gaussian Splatting</a></li>
+<li><strong>Insert Single Element</strong> (Average case O(log n)):</li>
 </ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">mySet</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Insert an element</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Emplace Element</strong> (Average case O(log n)):</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">mySet</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Construct and insert element</span>
+</span></code></pre></div>
+<h2 id="access-elements">Access Elements<a class="headerlink" href="#access-elements" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Find Element</strong> (Average case O(log n)):</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mySet</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Returns iterator to the element if found, otherwise returns mySet.end()</span>
+</span></code></pre></div>
+<h2 id="removing-elements">Removing Elements<a class="headerlink" href="#removing-elements" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Remove Element by Value</strong> (Average case O(log n)):</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">mySet</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Erases element with value 10</span>
+</span></code></pre></div>
+<h2 id="query-attributes">Query Attributes<a class="headerlink" href="#query-attributes" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Get Set Size</strong> (O(1)):</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mySet</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="c1">// Returns the number of elements</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Check if Set is Empty</strong> (O(1)):</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isEmpty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mySet</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span><span class="w"> </span><span class="c1">// Returns true if set is empty, otherwise false</span>
+</span></code></pre></div>
+<h2 id="iterating-through-set">Iterating through Set<a class="headerlink" href="#iterating-through-set" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Using Iterator</strong> (O(n)):</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mySet</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">mySet</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">it</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="c1">// Access the element as *it</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Using Range-based For Loop</strong> (O(n)):</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">elem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mySet</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="c1">// Access the element directly as elem</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="other-common-operations">Other Common Operations<a class="headerlink" href="#other-common-operations" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Clear Set</strong> (O(n)):</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">mySet</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"> </span><span class="c1">// Removes all elements from the set</span>
+</span></code></pre></div>
 
 
 
@@ -4235,7 +4498,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="March 8, 2025 20:16:26 CST">March 8, 2025 20:16:26</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 16, 2024 14:05:14 CST">November 16, 2024 14:05:14</span>
   </span>
 
     
@@ -4279,15 +4542,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
+          
+          <a href="../map/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Map">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Map
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="01_Lang/C%2B%2B/Pointer/" class="md-footer__link md-footer__link--next" aria-label="Next: Pointer">
+          <a href="../stack/" class="md-footer__link md-footer__link--next" aria-label="Next: Stack">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Pointer
+                Stack
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4365,12 +4644,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "content.footnote.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.footer", "navigation.top", "navigation.tracking", "toc.follow", "header.autohide", "search.suggest", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.copy", "content.footnote.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.footer", "navigation.top", "navigation.tracking", "toc.follow", "header.autohide", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="js/katex.js"></script>
+        <script src="../../../../js/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
