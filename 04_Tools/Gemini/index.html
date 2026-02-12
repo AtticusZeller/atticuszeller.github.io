@@ -3441,6 +3441,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mobile-deployment-androidtermux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile Deployment (Android/Termux)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mobile Deployment (Android/Termux)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-network-base-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Network &amp; Base Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-terminal-environment-zsh-p10k" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Terminal Environment (Zsh + P10k)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-install-gemini-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Install Gemini Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-connect-obsidian-the-core-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Connect Obsidian (The Core Logic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4736,6 +4808,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mobile-deployment-androidtermux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile Deployment (Android/Termux)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mobile Deployment (Android/Termux)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-network-base-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Network &amp; Base Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-terminal-environment-zsh-p10k" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Terminal Environment (Zsh + P10k)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-install-gemini-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Install Gemini Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-connect-obsidian-the-core-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Connect Obsidian (The Core Logic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4965,6 +5109,119 @@ We adopt a <strong>Hybrid Strategy</strong> for managing agent capabilities. Thi
 <p><strong>Usage:</strong></p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="se">\d</span>aily<span class="w"> </span><span class="s2">"Woke up at 8am, feel good. Plan to study Gemini CLI."</span>
 </span></code></pre></div>
+<h2 id="mobile-deployment-androidtermux">Mobile Deployment (Android/Termux)<a class="headerlink" href="#mobile-deployment-androidtermux" title="Permanent link">¶</a></h2>
+<p>This guide details the <strong>Termux + Gemini CLI + Obsidian</strong> deployment on Android.
+<strong>Core Philosophy:</strong> Single-direction sync (Obsidian -&gt; Termux) for configuration, running directly in the Vault for context awareness.</p>
+<h3 id="phase-1-network-base-installation">Phase 1: Network &amp; Base Installation<a class="headerlink" href="#phase-1-network-base-installation" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Install Termux</strong>: Download from <a href="https://f-droid.org/en/packages/com.termux/">F-Droid</a> or GitHub.</li>
+<li>
+<p><strong>Fix Repositories (Global CDN)</strong>:
+    Prevent slow mirrors by locking to the official global CDN.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"deb https://packages.termux.dev/apt/termux-main stable main"</span><span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$PREFIX</span>/etc/apt/sources.list
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Install Dependencies</strong>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>pkg<span class="w"> </span>update<span class="w"> </span>-y<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>pkg<span class="w"> </span>upgrade<span class="w"> </span>-y
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>pkg<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>curl<span class="w"> </span>wget<span class="w"> </span>tar<span class="w"> </span>nodejs-lts<span class="w"> </span>termux-api<span class="w"> </span>-y
+</span></code></pre></div>
+</li>
+</ol>
+<h3 id="phase-2-terminal-environment-zsh-p10k">Phase 2: Terminal Environment (Zsh + P10k)<a class="headerlink" href="#phase-2-terminal-environment-zsh-p10k" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p><strong>Install Nerd Font (Critical for Icons)</strong>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.termux
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>wget<span class="w"> </span>https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>tar<span class="w"> </span>-xf<span class="w"> </span>JetBrainsMono.tar.xz
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>mv<span class="w"> </span>JetBrainsMonoNerdFont-Regular.ttf<span class="w"> </span>~/.termux/font.ttf
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>rm<span class="w"> </span>JetBrainsMono*
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>termux-reload-settings
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Install Oh My Zsh &amp; Plugins</strong>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>pkg<span class="w"> </span>install<span class="w"> </span>zsh<span class="w"> </span>-y
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">"</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://github.com/romkatv/powerlevel10k.git<span class="w"> </span><span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.oh-my-zsh/custom</span><span class="si">}</span>/themes/powerlevel10k
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zsh-users/zsh-autosuggestions.git<span class="w"> </span><span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-autosuggestions
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zsh-users/zsh-syntax-highlighting.git<span class="w"> </span><span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-syntax-highlighting
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Configure <code>.zshrc</code></strong>:
+    Edit <code>~/.zshrc</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">"powerlevel10k/powerlevel10k"</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nv">plugins</span><span class="o">=(</span>git<span class="w"> </span>zsh-autosuggestions<span class="w"> </span>zsh-syntax-highlighting<span class="o">)</span>
+</span></code></pre></div>
+</li>
+</ol>
+<h3 id="phase-3-install-gemini-agent">Phase 3: Install Gemini Agent<a class="headerlink" href="#phase-3-install-gemini-agent" title="Permanent link">¶</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@mmmbuto/gemini-cli-termux@latest
+</span></code></pre></div>
+<h3 id="phase-4-connect-obsidian-the-core-logic">Phase 4: Connect Obsidian (The Core Logic)<a class="headerlink" href="#phase-4-connect-obsidian-the-core-logic" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p><strong>Grant Storage Permission</strong>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>termux-setup-storage
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="c1"># Click 'Allow' on the popup</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Link Vault</strong>:
+    <em>Adjust <code>~/storage/shared/Documents/Vault</code> to your actual Vault path.</em></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>ln<span class="w"> </span>-s<span class="w"> </span>~/storage/shared/Documents/Vault<span class="w"> </span>~/Vault
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Inject Startup Script (<code>chat</code>)</strong>:
+    Add this function to the end of <code>~/.zshrc</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Gemini Launcher: One-way Sync (Obsidian -&gt; Termux)</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">function</span><span class="w"> </span>chat<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">VAULT_PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/Vault"</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="c1"># Check for Vault</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">"</span><span class="nv">$VAULT_PATH</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"❌ Error: Vault not found at </span><span class="nv">$VAULT_PATH</span><span class="s2">"</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">1</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">    </span><span class="k">fi</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">    </span><span class="c1"># Enter Vault (Gemini uses current dir for context)</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="s2">"</span><span class="nv">$VAULT_PATH</span><span class="s2">"</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">return</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"🔄 Syncing configuration (Obsidian -&gt; Termux)..."</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">    </span><span class="c1"># Force Copy Config (99_system -&gt; .gemini)</span>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">    </span><span class="c1"># Only updates settings/skills. Does NOT touch memory files.</span>
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">"99_system/agents/gemini"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">        </span>cp<span class="w"> </span>-rf<span class="w"> </span>99_system/agents/gemini<span class="w"> </span>./.gemini
+</span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">    </span><span class="k">else</span>
+</span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"⚠️ Warning: Config source not found in 99_system/agents/gemini"</span>
+</span><span id="__span-16-22"><a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="w">    </span><span class="k">fi</span>
+</span><span id="__span-16-23"><a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a>
+</span><span id="__span-16-24"><a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"🚀 Starting Gemini CLI..."</span>
+</span><span id="__span-16-25"><a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="w">    </span>gemini
+</span><span id="__span-16-26"><a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"✅ Session ended."</span>
+</span><span id="__span-16-27"><a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="o">}</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Apply Changes</strong>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">source</span><span class="w"> </span>~/.zshrc
+</span></code></pre></div>
+</li>
+</ol>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>In Obsidian</strong>: Manage all agent settings, prompts, and skills in <code>99_system/agents/gemini</code>.</li>
+<li><strong>In Termux</strong>: Open the app and type <code>chat</code>.<ul>
+<li>Script navigates to Vault.</li>
+<li>Updates local config from <code>99_system</code>.</li>
+<li>Launches Gemini with full context.</li>
+</ul>
+</li>
+</ol>
 <div class="footnote">
 <hr>
 <ol>
@@ -5001,7 +5258,7 @@ We adopt a <strong>Hybrid Strategy</strong> for managing agent capabilities. Thi
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="February 12, 2026 14:28:55 CST">February 12, 2026 14:28:55</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="February 12, 2026 14:53:31 CST">February 12, 2026 14:53:31</span>
   </span>
 
     
