@@ -246,6 +246,128 @@ __Usage:__
 \daily "Woke up at 8am, feel good. Plan to study Gemini CLI."
 ```
 
+## Mobile Deployment (Android/Termux)
+
+This guide details the __Termux + Gemini CLI + Obsidian__ deployment on Android.
+__Core Philosophy:__ Single-direction sync (Obsidian -> Termux) for configuration, running directly in the Vault for context awareness.
+
+### Phase 1: Network & Base Installation
+
+1. __Install Termux__: Download from [F-Droid](https://f-droid.org/en/packages/com.termux/) or GitHub.
+2. __Fix Repositories (Global CDN)__:
+	Prevent slow mirrors by locking to the official global CDN.
+
+	```bash
+    echo "deb https://packages.termux.dev/apt/termux-main stable main" > $PREFIX/etc/apt/sources.list
+    ```
+
+3. __Install Dependencies__:
+
+	```bash
+    pkg update -y && pkg upgrade -y
+    pkg install git curl wget tar nodejs-lts termux-api -y
+    ```
+
+### Phase 2: Terminal Environment (Zsh + P10k)
+
+1. __Install Nerd Font (Critical for Icons)__:
+
+	```bash
+    mkdir -p ~/.termux
+    wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
+    tar -xf JetBrainsMono.tar.xz
+    mv JetBrainsMonoNerdFont-Regular.ttf ~/.termux/font.ttf
+    rm JetBrainsMono*
+    termux-reload-settings
+    ```
+
+2. __Install Oh My Zsh & Plugins__:
+
+	```bash
+    pkg install zsh -y
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    ```
+
+3. __Configure `.zshrc`__:
+	Edit `~/.zshrc`:
+
+	```bash
+    ZSH_THEME="powerlevel10k/powerlevel10k"
+    plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+    ```
+
+### Phase 3: Install Gemini Agent
+
+```bash
+npm install -g @mmmbuto/gemini-cli-termux@latest
+```
+
+### Phase 4: Connect Obsidian (The Core Logic)
+
+1. __Grant Storage Permission__:
+
+	```bash
+    termux-setup-storage
+    # Click 'Allow' on the popup
+    ```
+
+2. __Link Vault__:
+	_Adjust `~/storage/shared/Documents/Vault` to your actual Vault path._
+
+	```bash
+    ln -s ~/storage/shared/Documents/Vault ~/Vault
+    ```
+
+3. __Inject Startup Script (`chat`)__:
+	Add this function to the end of `~/.zshrc`:
+
+	```bash
+    # Gemini Launcher: One-way Sync (Obsidian -> Termux)
+    function chat() {
+        local VAULT_PATH="$HOME/Vault"
+
+        # Check for Vault
+        if [ ! -d "$VAULT_PATH" ]; then
+            echo "❌ Error: Vault not found at $VAULT_PATH"
+            return 1
+        fi
+
+        # Enter Vault (Gemini uses current dir for context)
+        cd "$VAULT_PATH" || return
+
+        echo "🔄 Syncing configuration (Obsidian -> Termux)..."
+
+        # Force Copy Config (99_system -> .gemini)
+        # Only updates settings/skills. Does NOT touch memory files.
+        if [ -d "99_system/agents/gemini" ]; then
+            cp -rf 99_system/agents/gemini ./.gemini
+        else
+            echo "⚠️ Warning: Config source not found in 99_system/agents/gemini"
+        fi
+
+        echo "🚀 Starting Gemini CLI..."
+        gemini
+        echo "✅ Session ended."
+    }
+    ```
+
+4. __Apply Changes__:
+
+	```bash
+    source ~/.zshrc
+    ```
+
+### Usage
+
+1. __In Obsidian__: Manage all agent settings, prompts, and skills in `99_system/agents/gemini`.
+2. __In Termux__: Open the app and type `chat`.
+	- Script navigates to Vault.
+	- Updates local config from `99_system`.
+	- Launches Gemini with full context.
+
 [^1]: [My Obsidian And Gemini CLI Workflow - YouTube](https://www.youtube.com/watch?v=JGwFsyyewYc)
 [^2]: [Agent Skills \| Gemini CLI](https://geminicli.com/docs/cli/skills/)
 [^3]: [Creating Agent Skills \| Gemini CLI](https://geminicli.com/docs/cli/creating-skills/)
