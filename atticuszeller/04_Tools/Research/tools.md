@@ -34,7 +34,7 @@ zotero 中除了文献条目的元数据，需要汇总的是对文章的批注 
 > date: {{ date | format("YYYY-MM-DD") }}
 > journal: "{{publicationTitle}}"
 > doi: {{DOI}}
-> tags: 
+> tags:
 >   - {{itemType}}
 > {%- if allTags %}
 >   - {{allTags | replace(" ", "_")}}
@@ -42,7 +42,7 @@ zotero 中除了文献条目的元数据，需要汇总的是对文章的批注 
 > category: literaturenote
 > citekey: {{citekey}}
 > ---
-> 
+>
 > > [!INFO] Metadata
 > > * **Title**:: [{{title}}]({{select}})
 > > * **Authors**:: {%- for creator in creators %} {{creator.firstName}} {{creator.lastName}}{% if not loop.last %}, {% endif %}{% endfor %}
@@ -55,24 +55,24 @@ zotero 中除了文献条目的元数据，需要汇总的是对文章的批注 
 > > * **DOI**:: [{{DOI}}](https://doi.org/{{DOI}})
 > {%- endif %}
 > > * **Attachments**:: {%- for attachment in attachments | filterby("path", "endswith", ".pdf") %} [{{attachment.title}}](file://{{attachment.path | replace(" ", "%20")}}) {%- endfor -%}
-> 
+>
 > <br>
-> 
+>
 > > [!ABSTRACT]- Abstract
 > > {{abstractNote}}
-> 
+>
 > ## 📝 研读笔记 (With Comments)
-> 
+>
 > {% persist "annotations" %}
-> 
+>
 > {% set newAnnotations = annotations | filterby("date", "dateafter", lastImportDate) %}
-> 
+>
 > {% if newAnnotations.length > 0 %}
-> 
+>
 > {%- for a in newAnnotations -%}
-> 
+>
 > {%- if a.comment %}
-> 
+>
 > > [!TIP] 💡 My Thought
 > > **原文 (p.{{a.pageLabel}})**:
 > >
@@ -81,36 +81,36 @@ zotero 中除了文献条目的元数据，需要汇总的是对文章的批注 
 > > > [Link to PDF]({{a.desktopURI}})
 > >
 > > {{a.comment | replace("\n", "\n> ")}}
-> 
+>
 > {% endif -%}
-> 
+>
 > {%- endfor %}
-> 
+>
 > ## 📌 关键摘录汇总 (Highlights Only)
-> 
+>
 > {%- for a in newAnnotations -%}
-> 
+>
 > {%- if not a.comment -%}
-> 
+>
 > * {{a.annotatedText | replace("\n", " ")}} ([p.{{a.pageLabel}}]({{a.desktopURI}}))
 > {% endif -%}
 > {%- endfor %}
 > {% endif %}
 > {% endpersist %}
-> 
+>
 > {# ----- 处理 Zotero 独立笔记 (Standalone Notes) ----- #}
-> 
+>
 > {%- if notes.length > 0 %}
-> 
+>
 > ## 📑 Zotero Notes (General Summary)
-> 
+>
 > {%- for note in notes %}
-> 
+>
 > > [!NOTE] {{note.title if note.title else "Zotero Note"}}
 > > {{note.note | replace("\n", "\n> ")}}
 > {% endfor -%}
 > {%- endif -%}
-> 
+>
 > ```
 
 配置对应输出目录和文件名 ![[assets/Pasted image 20260109121213.png|300]]
@@ -220,7 +220,7 @@ sync
     container_name: zotero-webdav
     restart: unless-stopped
     environment:
-      - USERNAME=Atticux      
+      - USERNAME=Atticux
       - PASSWORD=Zz030327#
       - TZ=Asia/Shanghai
       - UID=1000

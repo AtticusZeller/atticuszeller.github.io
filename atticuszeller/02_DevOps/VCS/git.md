@@ -212,7 +212,7 @@ git tag -d $(git describe --abbrev=0 --tags)
 # check if deleted
 git tag -l
 
-# force to update tags 
+# force to update tags
 git push origin main --tags -f
 
 # delete tags both local and remote

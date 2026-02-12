@@ -50,15 +50,15 @@ define dataset type using lighting [DataModule](https://lightning.ai/docs/pytorc
 > we need to split our training dataset into `train` and `val` data splits.
 >
 > 1. Use the `train` split to train the model.
-> 
+>
 > > Here the model will have access to both inputs (features) and outputs (labels) to optimize its internal weights.
 >
 > 1. After each iteration (epoch) through the training split, we will use the `val` split to determine the model's performance.
-> 
+>
 > > Here the model will not use the labels to optimize its weights but instead, we will use the validation performance to optimize training hyperparameters such as the learning rate, etc.
 >
 > 1. Finally, we will use a separate holdout [`test` dataset](https://github.com/GokuMohandas/Made-With-ML/blob/main/datasets/holdout.csv) to determine the model's performance after training.
-> 
+>
 > > This is our best measure of how the model may behave on new, unseen data that is from a similar distribution to our training dataset.[^1]
 
 ## Exploratory Data Analysis (EDA)
