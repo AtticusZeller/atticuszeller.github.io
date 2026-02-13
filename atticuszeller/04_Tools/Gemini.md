@@ -1,23 +1,85 @@
 # Gemini CLI
 
-## Obsidian Integration SOP
+## Part 1: General Configuration & Tools
 
-This guide details the configuration for integrating Gemini CLI with the Obsidian vault.
+This section covers universal configurations, extensions, and the skills ecosystem applicable to any Gemini CLI environment.
+
+### 1. Extensions Configuration
+
+#### GitHub MCP Extension
+To resolve authentication errors (e.g., `Authorization header is badly formatted`), you must configure a Personal Access Token (PAT).
+
+1.  **Generate Token**: Navigate to [GitHub Settings](https://github.com/settings/tokens) -> Developer Settings -> Personal access tokens (classic). Generate a token with `repo`, `read:org`, and `read:packages` scopes.
+2.  **Configure Environment**: Gemini CLI expects the token in the `.gemini/.env` file.
+
+    __Windows (PowerShell):__
+    ```powershell
+    "GITHUB_MCP_PAT=ghp_your_token_here" | Out-File -Encoding utf8 -Append .gemini/.env
+    ```
+    _Note: Replace `ghp_your_token_here` with your actual token._
+
+3.  **Restart**: Restart the CLI to load the new configuration. [^4]
+
+#### Context7 Extension (Documentation RAG)
+The `context7` extension provides real-time access to up-to-date documentation and code examples for thousands of libraries (e.g., PyTorch, FastAPI, React).
+
+*   **Benefits**:
+    *   **Accuracy**: Prevents model hallucinations of API details by fetching ground-truth documentation.
+    *   **Up-to-date**: Access latest versions of libraries that might be newer than the model's training data.
+*   **Core Tools**:
+    *   `resolve-library-id`: Search for a library and get its unique ID (e.g., `/pytorch/docs`).
+    *   `query-docs`: Query the documentation for specific tasks or examples. [^5]
+
+### 2. Skills Ecosystem
+
+#### Claude Ecosystem Compatibility
+Gemini CLI is largely compatible with the Claude skill ecosystem. You can leverage high-quality skills developed for Claude Code and Claude.ai.
+
+**Key Resources:**
+- [anthropics/skills](https://github.com/anthropics/skills): Official Anthropic skills for doc processing (PDF, PPTX, XLSX, etc.) and code testing. The gold standard for skill definitions.
+- [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills): Practical skills for Atlassian MCP (Jira/Confluence), Agile management, and frontend component generation.
+- [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills): A curated collection of 300+ skills from major providers (Vercel, Stripe, Cloudflare, Hugging Face), compatible with Claude Code, Cursor, and Gemini CLI.
+
+#### Recommended Dev Skills
+These are general-purpose development skills useful in any workspace.
+
+**Modern Python Skill**
+Useful for modern Python development standards.
+```bash
+gemini skills install https://github.com/trailofbits/skills.git --path plugins/modern-python/skills/modern-python --scope workspace
+```
+
+**Git Commit Skill**
+Automates structured git commit messages.
+```bash
+gemini skills install https://github.com/fvadicamo/dev-agent-skills.git --path skills/git-commit --scope workspace
+```
+
+---
+
+## Part 2: Obsidian Integration SOP
+
+This section details the specific configuration for integrating Gemini CLI with the Obsidian vault, managing the `99_system` structure, and mobile deployment.
+
+### 1. Architecture & Philosophy
+
 __Philosophy:__ Keep the context file (`GEMINI.md`) in the root for stability, and move configuration (`.gemini`) folder into a visible system directory (`99_system`) while maintaining CLI functionality via symbolic links.
 
-### 1. Context File (Memory)
+*   **Target Structure:**
+    *   `./GEMINI.md` -> `99_system/context/GEMINI.md` (Conceptually, though physically kept in root for sync safety)
+    *   `./.gemini` -> `99_system/agents/gemini` (Symlinked)
 
+#### Context File (Memory)
 __Action:__ Keep `GEMINI.md` in the __Vault Root__.
-- __Path:__ `./GEMINI.md`
-- __Reasoning:__ This is the primary instruction file. Keeping it as a physical file in the root ensures maximum compatibility with Obsidian Sync, Git, and cross-platform usage without symlink risks.
+*   __Path:__ `./GEMINI.md`
+*   __Reasoning:__ This is the primary instruction file. Keeping it as a physical file in the root ensures maximum compatibility with Obsidian Sync, Git, and cross-platform usage without symlink risks.
 
-### 2. Agent Configuration (Skills & Settings)
+### 2. Agent Configuration (Symlinks)
 
 __Action:__ Move the hidden `.gemini` folder to `99_system` and symlink it.
-- __Reasoning:__ Obsidian cannot display dot-folders (like `.gemini`). Moving the physical folder to `99_system` makes it visible and editable within Obsidian.
+__Reasoning:__ Obsidian cannot display dot-folders. Moving it makes it visible/editable in Obsidian.
 
 #### Windows (PowerShell Administrator)
-
 ```powershell
 # 1. Create the visible agent directory
 New-Item -ItemType Directory -Force -Path "99_system\agents"
@@ -31,10 +93,7 @@ New-Item -ItemType SymbolicLink -Path ".\.gemini" -Value ".\99_system\agents\gem
 ```
 
 #### Linux / Dual-Boot Repair Script
-
-Since Windows symlinks don't work in Linux, use this script to fix the `.gemini` link when switching OS. `GEMINI.md` needs no fix as it is a real file.
-
-__File:__ `fix_agent_config.sh` (in root)
+Since Windows symlinks don't work in Linux, use this script (`fix_agent_config.sh`) to fix the `.gemini` link when switching OS.
 
 ```bash
 #!/bin/bash
@@ -49,43 +108,13 @@ ln -s 99_system/agents/gemini .gemini
 echo "Done. Skills are now editable in Obsidian."
 ```
 
-### 3. Obsidian Native CLI Integration
-
-> [!info] Native CLI Support
-> Obsidian now provides a native Command Line Interface (CLI) for advanced vault management and automation. [Official Documentation](https://help.obsidian.md/cli).
-
-#### Prerequisites
-
-- __Installer Version__: 1.11.7 or higher.
-- __Early Access Version__: 1.12.x or higher.
-- __Catalyst Members (Windows)__: You must run the `.com` file provided in the Obsidian Discord to register the CLI handler.
-
-#### Setup Steps
-
-1. Open Obsidian __Settings__ → __General__.
-2. Toggle __Enable Command line interface__.
-3. Follow the prompt to register Obsidian CLI.
-
-### Reference
-
-- __Target Structure:__
-	- `99_system/context/GEMINI.md`: Long-term memory.
-	- `99_system/agents/gemini/`: Agent skills and settings.
-- __Root Links:__
-	- `./GEMINI.md` -> `99_system/context/GEMINI.md`
-	- `./.gemini` -> `99_system/agents/gemini`
-[^1]
-
-### Skills Configuration Strategy
+### 3. Skills Configuration Strategy
 
 [^2][^3]
-We adopt a __Hybrid Strategy__ for managing agent capabilities. This ensures a clean separation between generic tools (Global) and project-specific logic (Workspace).
+We adopt a __Hybrid Strategy__ for managing agent capabilities.
 
-#### 1. Global Skills (Public/Generic Tools)
-
-__Use Case:__ Generic utilities that apply to _any_ vault or project (e.g., Web Search, generic Markdown formatting). These are installed at the __User level__.
-
-__Installation Commands:__
+#### A. Global Skills (Public/Generic Tools)
+__Use Case:__ Generic utilities (Web Search, Markdown formatting) installed at the __User level__ (`~/.gemini/skills`).
 
 ```PowerShell
 # Obsidian Markdown formatting
@@ -95,24 +124,14 @@ gemini skills install https://github.com/kepano/obsidian-skills.git --path skill
 gemini skills install https://github.com/kepano/obsidian-skills.git --path skills/obsidian-cli --scope user
 ```
 
-- __Note:__ These skills are stored in `~/.gemini/skills` (System User Directory) and are not synced with the Obsidian Vault.
+#### B. Workspace Skills (Private/Project Logic)
+__Use Case:__ Logic specific to _this_ vault (SOPs, Scripts).
+__Location:__ `99_system/agents/gemini/skills/` (via symlink).
 
-#### 2. Workspace Skills (Private/Project Logic)
+1.  __Create Directory:__ `99_system/agents/gemini/skills/<skill_name>/`
+2.  __Create Definition:__ `SKILL.md` inside that folder.
 
-__Use Case:__ Logic specific to _this_ project/vault (e.g., "Obsidian Tasks" formatting rules, specific project SOPs, custom scripts). These are stored __inside the Vault__ and synced across devices.
-
-__Location:__ Due to the symbolic link configuration (`./.gemini` -> `./99_system/agents/gemini`), any skill created in the visible system folder is automatically recognized by the CLI.
-
-__Path:__ `99_system/agents/gemini/skills/`
-
-1. __Create Directory:__ `99_system/agents/gemini/skills/<skill_name>/`
-2. __Create Definition:__ Inside that folder, create `SKILL.md`.
-3. __Structure:__
-	- `SKILL.md`: Contains the system instructions.
-	- (Optional) `script.py` / `script.js` in `scripts/`: Executable logic.
-
-skill template
-
+**Skill Template:**
 ```Markdown
 ---
 name: my-custom-skill
@@ -125,42 +144,25 @@ version: 1.0.0
 [Write the detailed instructions, formatting rules, or persona definition here.]
 ```
 
-#### 3. Verification
-
-After installing global skills or creating local workspace skills, always refresh the CLI to load them.
-
+#### Verification
 ```Bash
-# In Gemini CLI
 /skills refresh
 /skills list
 ```
 
-- __Expected Result:__
-	- Global skills will appear (Scope: User/Global).
-	- Local skills in `99_system` will appear (Scope: Workspace).
+### 4. Advanced Usage & Personalization
 
-## Advanced Usage & Personalization
+#### A. Memory Management
+Gemini CLI offers two distinct ways to manage context:
 
-### 1. Memory Management
+1.  **Simple Facts (`save_memory`)**: "Remember that I prefer dark mode."
+2.  **Context Management (`context-manager` skill)**: Managing life phases in `GEMINI.md`.
 
-Gemini CLI offers two distinct ways to manage context and memory:
-
-#### A. Simple Facts (`save_memory`)
-
-For small, persistent details like preferences, specific IDs, or one-off facts.
-- __Usage:__ "Remember that I prefer dark mode."
-- __Mechanism:__ The agent uses the `save_memory` tool to store this in its long-term memory.
-
-#### B. Context Management (`context-manager` skill)
-
-For managing broader life phases, goals, and identity shifts within `GEMINI.md`.
-- __Usage:__ "Activate context-manager to update my current focus to 'Winter Break'."
-- __Mechanism:__ This skill systematically updates the `GEMINI.md` file, separating __Core Identity__ (long-term) from __Current Phase__ (short-term/quarterly goals).
-
+**Context Manager Skill Example:**
 ```markdown
 ---
 name: context-manager
-description: Manage user context in GEMINI.md by splitting memory into 'Core Identity' (long-term) and 'Current Phase' (short-term). Use this skill when the user provides personal information, updates on current projects, or changes in focus.
+description: Manage user context in GEMINI.md by splitting memory into 'Core Identity' (long-term) and 'Current Phase' (short-term).
 version: 1.0.0
 ---
 
@@ -169,55 +171,14 @@ version: 1.0.0
 You are the custodian of the user's personal context file (`GEMINI.md`). Your goal is to maintain a high-fidelity, up-to-date model of the user by categorizing information into two distinct layers: **Core Identity** (Static) and **Current Phase** (Dynamic).
 
 ### Operational Rules
-
-When updating `GEMINI.md`, you must strictly adhere to the following structure for the **User Context** section. Do not mix long-term traits with short-term goals.
-
-#### 1. 🧬 Core Identity & Tech Stack (Long-Term Memory)
-*   **Definition**: Information that rarely changes (e.g., Name, Role, Research Focus, Tech Stack, Personality).
-*   **Update Trigger**: Explicit user profile updates or major life changes (e.g., graduation, new job).
-*   **Format**: Use clear bullet points or sub-headers.
-    *   **User Identity**: Name, Role, Research Focus, Commercial Interests.
-    *   **Technical Stack**: OS, Tools, Languages, Workflow preferences.
-    *   **Communication**: Tone, Format preferences (e.g., "Direct", "LaTeX for math").
-    *   **Personal Interests**: Hobbies, aesthetics, relationship status.
-
-#### 2. 📅 Current Phase & Focus (Short-Term Memory)
-*   **Definition**: Information relevant to the current specific timeframe (e.g., "Winter Break 2026", "Thesis Crunch", "Internship Hunt").
-*   **Update Trigger**: Conversation context indicating a shift in focus, new projects, or changing daily habits.
-*   **Format**:
-    *   **Current Date/Phase**: Explicitly state the active time window (e.g., "Winter Break 2026: Feb 08 - Mar 02").
-    *   **Active Constraints**: Temporary limitations (e.g., "Living at home", "Gym closed").
-    *   **Key Goals**: Top 3-5 priorities for this specific phase.
-    *   **Recent Shifts**: Changes in mindset or strategy (e.g., "SNR Principle", "Transitioning to Career Mindset").
-
-### Examples
-
-**Example 1: Updating Core Identity**
-User: "I'm switching from PyTorch to JAX for my new research."
-Agent Action: Update the **Technical Stack** section in `GEMINI.md` to reflect "JAX" as the primary framework, moving "PyTorch" to secondary or keeping it if still relevant.
-
-**Example 2: Updating Current Phase**
-User: "School starts next week. I need to focus on my thesis and stop the gaming."
-Agent Action:
-1.  Update **Current Phase** to "Spring Semester Start".
-2.  Add **Active Constraint**: "Thesis focus, No gaming".
-3.  Remove outdated "Winter Break" goals.
-
-**Example 3: New Preference**
-User: "Stop using emojis in your responses."
-Agent Action: Update **Communication** in **Core Identity** with "No emojis".
+... [See full protocol in previous versions]
 ```
 
-### 2. Custom Commands
+#### B. Custom Commands
+Encapsulate complex prompts in `99_system/agents/gemini/commands/`.
 
-For repetitive, complex prompts (like daily planning or specific coding tasks), encapsulate them into custom commands.
-
-- __Documentation:__ [Custom Commands | Gemini CLI](https://geminicli.com/docs/cli/custom-commands/)
-- __Location:__ `99_system/agents/gemini/commands/` (symlinked to `.gemini/commands/`).
-
-#### Example: The Private Secretary (`\daily`)
-
-Create a file `99_system/agents/gemini/commands/daily.toml`:
+**Example: The Private Secretary (`\daily`)**
+File: `99_system/agents/gemini/commands/daily.toml`
 
 ```toml
 description = "Acts as a private secretary to organize the daily note."
@@ -240,60 +201,38 @@ Task:
 """
 ```
 
-__Usage:__
+__Usage:__ `\daily "Woke up at 8am, feel good. Plan to study Gemini CLI."`
 
-```bash
-\daily "Woke up at 8am, feel good. Plan to study Gemini CLI."
-```
+### 5. Obsidian Native CLI Integration
 
-## GitHub MCP Extension Configuration
+> [!info] Native CLI Support
+> Obsidian now provides a native Command Line Interface (CLI). [Official Documentation](https://help.obsidian.md/cli).
 
-To resolve authentication errors (e.g., `Authorization header is badly formatted`), you must configure a Personal Access Token (PAT).
+#### Setup Steps
+1.  Open Obsidian __Settings__ → __General__.
+2.  Toggle __Enable Command line interface__.
+3.  Follow the prompt to register Obsidian CLI.
 
-### 1. Generate Token
-Navigate to [GitHub Settings](https://github.com/settings/tokens) -> Developer Settings -> Personal access tokens (classic). Generate a token with `repo` and `read:org` scopes.
-
-### 2. Configure Environment
-Gemini CLI expects the token in the `.gemini/.env` file.
-
-__Windows (PowerShell):__
-```powershell
-"GITHUB_MCP_PAT=ghp_your_token_here" | Out-File -Encoding utf8 -Append .gemini/.env
-```
-_Note: Replace `ghp_your_token_here` with your actual token._
-
-### 3. Restart
-Restart the CLI to load the new configuration.
-
-[^4]
-
-## Mobile Deployment (Android/Termux)
+### 6. Mobile Deployment (Android/Termux)
 
 This guide details the __Termux + Gemini CLI + Obsidian__ deployment on Android.
-__Core Philosophy:__ Single-direction sync (Obsidian -> Termux) for configuration, running directly in the Vault for context awareness.
+__Core Philosophy:__ Single-direction sync (Obsidian -> Termux) for configuration, running directly in the Vault.
 
-### Phase 1: Network & Base Installation
-
-1. __Install Termux__: Download from [F-Droid](https://f-droid.org/en/packages/com.termux/) or GitHub.
-2. __Fix Repositories (Global CDN)__:
-	Prevent slow mirrors by locking to the official global CDN.
-
-	```bash
+#### Phase 1: Network & Base Installation
+1.  __Install Termux__: Download from [F-Droid](https://f-droid.org/en/packages/com.termux/).
+2.  __Fix Repositories__:
+    ```bash
     echo "deb https://packages.termux.dev/apt/termux-main stable main" > $PREFIX/etc/apt/sources.list
     ```
-
-3. __Install Dependencies__:
-
-	```bash
+3.  __Install Dependencies__:
+    ```bash
     pkg update -y && pkg upgrade -y
     pkg install git curl wget tar nodejs-lts termux-api -y
     ```
 
-### Phase 2: Terminal Environment (Zsh + P10k)
-
-1. __Install Nerd Font (Critical for Icons)__:
-
-	```bash
+#### Phase 2: Terminal Environment (Zsh + P10k)
+1.  __Install Nerd Font__:
+    ```bash
     mkdir -p ~/.termux
     wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
     tar -xf JetBrainsMono.tar.xz
@@ -301,51 +240,31 @@ __Core Philosophy:__ Single-direction sync (Obsidian -> Termux) for configuratio
     rm JetBrainsMono*
     termux-reload-settings
     ```
-
-2. __Install Oh My Zsh & Plugins__:
-
-	```bash
+2.  __Install Oh My Zsh & Plugins__:
+    ```bash
     pkg install zsh -y
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
     git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     ```
-
-3. __Configure `.zshrc`__:
-	Edit `~/.zshrc`:
-
-	```bash
+3.  __Configure `.zshrc`__:
+    ```bash
     ZSH_THEME="powerlevel10k/powerlevel10k"
     plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
     ```
 
-### Phase 3: Install Gemini Agent
-
+#### Phase 3: Install Gemini Agent
 ```bash
 npm install -g @mmmbuto/gemini-cli-termux@latest
 ```
 
-### Phase 4: Connect Obsidian (The Core Logic)
+#### Phase 4: Connect Obsidian (The Core Logic)
+1.  __Grant Storage Permission__: `termux-setup-storage`
+2.  __Link Vault__: `ln -s ~/storage/shared/Documents/Vault ~/Vault`
+3.  __Inject Startup Script (`chat`)__: Add to `.zshrc`:
 
-1. __Grant Storage Permission__:
-
-	```bash
-    termux-setup-storage
-    # Click 'Allow' on the popup
-    ```
-
-2. __Link Vault__:
-	_Adjust `~/storage/shared/Documents/Vault` to your actual Vault path._
-
-	```bash
-    ln -s ~/storage/shared/Documents/Vault ~/Vault
-    ```
-
-3. __Inject Startup Script (`chat`)__:
-	Add this function to the end of `~/.zshrc`:
-
-	```bash
+    ```bash
     # Gemini Launcher: One-way Sync (Obsidian -> Termux)
     function chat() {
         local VAULT_PATH="$HOME/Vault"
@@ -362,7 +281,6 @@ npm install -g @mmmbuto/gemini-cli-termux@latest
         echo "🔄 Syncing configuration (Obsidian -> Termux)..."
 
         # Force Copy Config (99_system -> .gemini)
-        # Only updates settings/skills. Does NOT touch memory files.
         if [ -d "99_system/agents/gemini" ]; then
             cp -rf 99_system/agents/gemini ./.gemini
         else
@@ -374,22 +292,14 @@ npm install -g @mmmbuto/gemini-cli-termux@latest
         echo "✅ Session ended."
     }
     ```
+4.  __Apply__: `source ~/.zshrc`
 
-4. __Apply Changes__:
+#### Usage
+*   **Termux**: Type `chat`.
 
-	```bash
-    source ~/.zshrc
-    ```
-
-### Usage
-
-1. __In Obsidian__: Manage all agent settings, prompts, and skills in `99_system/agents/gemini`.
-2. __In Termux__: Open the app and type `chat`.
-	- Script navigates to Vault.
-	- Updates local config from `99_system`.
-	- Launches Gemini with full context.
-
+---
 [^1]: [My Obsidian And Gemini CLI Workflow - YouTube](https://www.youtube.com/watch?v=JGwFsyyewYc)
 [^2]: [Agent Skills \| Gemini CLI](https://geminicli.com/docs/cli/skills/)
 [^3]: [Creating Agent Skills \| Gemini CLI](https://geminicli.com/docs/cli/creating-skills/)
 [^4]: [GitHub MCP Server Configuration](https://github.com/github/github-mcp-server)
+[^5]: [Context7 Extension | Gemini CLI](https://geminicli.com/extensions/?name=upstashcontext7)
