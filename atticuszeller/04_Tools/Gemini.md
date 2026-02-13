@@ -246,6 +246,27 @@ __Usage:__
 \daily "Woke up at 8am, feel good. Plan to study Gemini CLI."
 ```
 
+## GitHub MCP Extension Configuration
+
+To resolve authentication errors (e.g., `Authorization header is badly formatted`), you must configure a Personal Access Token (PAT).
+
+### 1. Generate Token
+Navigate to [GitHub Settings](https://github.com/settings/tokens) -> Developer Settings -> Personal access tokens (classic). Generate a token with `repo` and `read:org` scopes.
+
+### 2. Configure Environment
+Gemini CLI expects the token in the `.gemini/.env` file.
+
+__Windows (PowerShell):__
+```powershell
+"GITHUB_MCP_PAT=ghp_your_token_here" | Out-File -Encoding utf8 -Append .gemini/.env
+```
+_Note: Replace `ghp_your_token_here` with your actual token._
+
+### 3. Restart
+Restart the CLI to load the new configuration.
+
+[^4]
+
 ## Mobile Deployment (Android/Termux)
 
 This guide details the __Termux + Gemini CLI + Obsidian__ deployment on Android.
@@ -371,3 +392,4 @@ npm install -g @mmmbuto/gemini-cli-termux@latest
 [^1]: [My Obsidian And Gemini CLI Workflow - YouTube](https://www.youtube.com/watch?v=JGwFsyyewYc)
 [^2]: [Agent Skills \| Gemini CLI](https://geminicli.com/docs/cli/skills/)
 [^3]: [Creating Agent Skills \| Gemini CLI](https://geminicli.com/docs/cli/creating-skills/)
+[^4]: [GitHub MCP Server Configuration](https://github.com/github/github-mcp-server)
