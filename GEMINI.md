@@ -12,7 +12,7 @@ This directory (`.../atticuszeller.github.io`) is **Vault 3** of your personal e
 *   **Vault 3 (This Vault)**: **Execution & Code**. (Snippets, Configs, Deployment).
 
 **Agent Rule**:
-*   **Skill Mandate**: When reading or writing Markdown files, **YOU MUST** activate and use the `obsidian-markdown` skill to ensure correct formatting (wikilinks, callouts, frontmatter).
+*   **Skill Mandate**: For **ANY** text generation or modification, **YOU MUST** activate and use the `obsidian-markdown` skill. This is strict policy to ensure correct syntax (wikilinks, callouts, frontmatter) across all vaults.
 *   **Skill Preference**: For Obsidian vault operations (opening files, searching, managing plugins), **prioritize** using the `obsidian-cli` skill if it offers the required functionality. Otherwise, use standard file operations.
 *   **DO** write code snippets (`bash`, `python`, `yaml`), CLI commands, and installation steps.
 *   **DO NOT** write long theoretical essays or personal journal entries.

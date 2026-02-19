@@ -39,7 +39,7 @@ Gemini CLI is largely compatible with the Claude skill ecosystem. You can levera
 - [anthropics/skills](https://github.com/anthropics/skills): Official Anthropic skills for doc processing (PDF, PPTX, XLSX, etc.) and code testing. The gold standard for skill definitions.
 - [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills): Practical skills for Atlassian MCP (Jira/Confluence), Agile management, and frontend component generation.
 - [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills): A curated collection of 300+ skills from major providers (Vercel, Stripe, Cloudflare, Hugging Face), compatible with Claude Code, Cursor, and Gemini CLI.
-
+-  [GitHub - K-Dense-AI/claude-scientific-skills: A set of ready to use scientific skills for Claude](https://github.com/K-Dense-AI/claude-scientific-skills/tree/main) 
 #### Recommended Dev Skills
 These are general-purpose development skills useful in any workspace.
 
@@ -53,6 +53,30 @@ gemini skills install https://github.com/trailofbits/skills.git --path plugins/m
 Automates structured git commit messages.
 ```bash
 gemini skills install https://github.com/fvadicamo/dev-agent-skills.git --path skills/git-commit --scope workspace
+```
+
+#### Advanced: Porting & Installing Complex Skill Sets (Claude to Gemini)
+When migrating complex skill collections (e.g., scientific tools) from Claude to Gemini, follow this recursive discovery and installation workflow.
+
+**Core Principles:**
+1.  **Consult Docs**: Use `@cli_help` to check Gemini CLI syntax when adapting Claude code.
+2.  **Recursive Discovery**: Use the GitHub MCP server to explore repository trees and identify missing dependent skills.
+3.  **Manual Installation**: Construct `gemini skills install` commands for specific sub-paths.
+
+**Example Scenario:**
+*Goal: Install scientific skills from `K-Dense-AI/claude-scientific-skills` and fix dependencies.*
+
+**Prompt Template:**
+> "@99_system/agents/gemini/skills/ I have installed `scientific-schematics` and `generate-image`. Please check for missing dependencies.
+> 1. Use **GitHub MCP** to recursively list files in `https://github.com/K-Dense-AI/claude-scientific-skills/tree/main`.
+> 2. If skills are missing, manually execute:
+>    `run_shell_command(command="gemini skills install https://github.com/K-Dense-AI/claude-scientific-skills.git --path scientific-skills/<skill_name> --scope workspace")`
+> 3. Continuously correct **Claude-specific syntax** to Gemini syntax during installation.
+> 4. Note: `.gemini` is symlinked to `99_system\agents\gemini\skills`, so standard paths apply."
+
+**Key Command Pattern:**
+```bash
+gemini skills install <repo_url> --path <relative_path_to_skill> --scope workspace
 ```
 
 ---
@@ -122,6 +146,10 @@ gemini skills install https://github.com/kepano/obsidian-skills.git --path skill
 
 # Obsidian Native CLI Bridge
 gemini skills install https://github.com/kepano/obsidian-skills.git --path skills/obsidian-cli --scope user
+
+# PDF Processing (Anthropic Official)
+# Capabilities: Extract text/tables, merge/split, OCR, fill forms, encrypt/decrypt.
+gemini skills install https://github.com/anthropics/skills.git --path skills/pdf --scope user
 ```
 
 #### B. Workspace Skills (Private/Project Logic)
