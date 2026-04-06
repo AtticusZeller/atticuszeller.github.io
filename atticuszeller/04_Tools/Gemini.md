@@ -39,7 +39,7 @@ Gemini CLI is largely compatible with the Claude skill ecosystem. You can levera
 - [anthropics/skills](https://github.com/anthropics/skills): Official Anthropic skills for doc processing (PDF, PPTX, XLSX, etc.) and code testing. The gold standard for skill definitions.
 - [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills): Practical skills for Atlassian MCP (Jira/Confluence), Agile management, and frontend component generation.
 - [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills): A curated collection of 300+ skills from major providers (Vercel, Stripe, Cloudflare, Hugging Face), compatible with Claude Code, Cursor, and Gemini CLI.
--  [GitHub - K-Dense-AI/claude-scientific-skills: A set of ready to use scientific skills for Claude](https://github.com/K-Dense-AI/claude-scientific-skills/tree/main) 
+-  [GitHub - K-Dense-AI/claude-scientific-skills: A set of ready to use scientific skills for Claude](https://github.com/K-Dense-AI/claude-scientific-skills/tree/main)
 #### Recommended Dev Skills
 These are general-purpose development skills useful in any workspace.
 
