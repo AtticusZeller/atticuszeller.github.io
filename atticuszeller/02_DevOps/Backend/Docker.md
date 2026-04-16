@@ -290,6 +290,50 @@ If you use the `host` network mode for a container, that container's network sta
 
 Volumes are a storage mechanism that provide the ability to __persist__ data __beyond__ the lifecycle of an individual container.[^8]so it can be shared by other or _old_ containers.
 
+### NVIDIA GPU Support
+
+To use NVIDIA GPUs within Docker containers (especially with Docker Compose), you must install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
+
+#### Installation (Ubuntu)
+
+```bash
+curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
+  && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+    sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+    sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+
+sudo apt-get update
+sudo apt-get install -y nvidia-container-toolkit
+
+# Configure Docker runtime
+export NVIDIA_CONTAINER_TOOLKIT_VERSION=1.18.2-1
+sudo apt-get install -y \
+      nvidia-container-toolkit=${NVIDIA_CONTAINER_TOOLKIT_VERSION} \
+      nvidia-container-toolkit-base=${NVIDIA_CONTAINER_TOOLKIT_VERSION} \
+      libnvidia-container-tools=${NVIDIA_CONTAINER_TOOLKIT_VERSION} \
+      libnvidia-container1=${NVIDIA_CONTAINER_TOOLKIT_VERSION}
+```
+
+##### Prerequisites
+
+- You installed a supported container engine (Docker, Containerd, CRI-O, Podman).
+- You installed the NVIDIA Container Toolkit.
+
+##### Configuring Docker
+
+1. Configure the container runtime by using the `nvidia-ctk` command:
+
+```bash
+sudo nvidia-ctk runtime configure --runtime=docker
+```
+
+The `nvidia-ctk` command modifies the `/etc/docker/daemon.json` file on the host. The file is updated so that Docker can use the NVIDIA Container Runtime.
+2. Restart the Docker daemon:
+
+```bash
+sudo systemctl restart docker
+```
+
 ### [Sharing files between a host and container](https://docs.docker.com/get-started/docker-concepts/running-containers/sharing-local-files/#sharing-files-between-a-host-and-container)
 
 ```bash
@@ -313,7 +357,7 @@ Default behavior of `docker compose up`? Compose read __2__ files, a `compose.ya
 > 	- Run with: `docker compose -f compose.yml up -d`
 > 1. `compose.override.yml`: Override file for development
 > 	- Automatically used with: `docker compose up -d`
->
+> 
 > This strategy allows you to maintain a base configuration for production while easily switching to a development setup with overrides.[^13]
 
 what if i don't like default behavior? To specify or merge multiple configs use `docker compose -f <config_path> up`.[^14]

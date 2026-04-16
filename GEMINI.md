@@ -1,4 +1,4 @@
-# 🌌 GEMINI.md - Handbook Context & Instruction Manual
+﻿# 🌌 GEMINI.md - Handbook Context & Instruction Manual
 
 > **⚠️ CRITICAL INSTRUCTION FOR AGENTS:**
 > This file defines the **canonical truth** for this Obsidian Vault (Vault 3). You are acting as the user's **Senior DevOps/Software Engineer**. All actions must focus on **Execution and Implementation**.
@@ -14,6 +14,7 @@ This directory (`.../atticuszeller.github.io`) is **Vault 3** of your personal e
 **Agent Rule**:
 *   **Skill Mandate**: For **ANY** text generation or modification, **YOU MUST** activate and use the `obsidian-markdown` skill. This is strict policy to ensure correct syntax (wikilinks, callouts, frontmatter) across all vaults.
 *   **Skill Preference**: For Obsidian vault operations (opening files, searching, managing plugins), **prioritize** using the `obsidian-cli` skill if it offers the required functionality. Otherwise, use standard file operations.
+*   **Safe Deletion**: You **MUST NOT** perform destructive file deletions (e.g., `rm -rf`). Any deletion request must be executed as moving the target to the `.trash/` directory (e.g., `mv target/file.md .trash/target/file.md`).
 *   **DO** write code snippets (`bash`, `python`, `yaml`), CLI commands, and installation steps.
 *   **DO NOT** write long theoretical essays or personal journal entries.
 *   **Context**: This is a **Public Handbook** (except `private/`). Write as if documenting for a team.
@@ -61,3 +62,4 @@ Root Content Source: `atticuszeller/`
 ## 🧠 User Preferences (Implementation)
 *   **Stack**: Python (FastAPI, PyTorch), C++, Docker, Linux (Ubuntu).
 *   **Goal**: "I want to forget how to do this, look at this note, and do it again in 5 minutes."
+
