@@ -5,29 +5,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.atticux.me/">
+        <link rel="canonical" href="https://docs.atticux.me/atticuszeller/01_Lang/C%2B%2B/STL/vector/">
       
       
+        <link rel="prev" href="../unordered_set/">
       
-        <link rel="next" href="GEMINI/">
+      
+        <link rel="next" href="../../../golang/config/">
       
       
         
       
       
-      <link rel="icon" href="assets/logo/logo.svg">
+      <link rel="icon" href="../../../../../assets/logo/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Notes</title>
+        <title>Initialization - Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -48,13 +50,13 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -83,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#current-focus" class="md-skip">
+        <a href="#initialization" class="md-skip">
           Skip to content
         </a>
       
@@ -97,9 +99,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../../../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
       
-  <img src="assets/logo/logo.svg" alt="logo">
+  <img src="../../../../../assets/logo/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Initialization
             
           </span>
         </div>
@@ -232,11 +234,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
         
   
   
@@ -255,7 +255,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="GEMINI/" class="md-tabs__link">
+      <a href="../../../../../GEMINI/" class="md-tabs__link">
         
   
   
@@ -274,7 +274,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="START_HERE/" class="md-tabs__link">
+      <a href="../../../../../START_HERE/" class="md-tabs__link">
         
   
   
@@ -291,11 +291,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="atticuszeller/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
           
   
   
@@ -331,9 +333,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../../../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
       
-  <img src="assets/logo/logo.svg" alt="logo">
+  <img src="../../../../../assets/logo/logo.svg" alt="logo">
 
     </a>
     Notes
@@ -357,35 +359,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
         
   
   
@@ -401,57 +378,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#current-focus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔭 Current Focus
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛠️ Tech Stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#selected-open-source-research" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📦 Selected Open Source &amp; Research
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -463,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="GEMINI/" class="md-nav__link">
+      <a href="../../../../../GEMINI/" class="md-nav__link">
         
   
   
@@ -490,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="START_HERE/" class="md-nav__link">
+      <a href="../../../../../START_HERE/" class="md-nav__link">
         
   
   
@@ -514,6 +440,8 @@
       
   
   
+    
+  
   
   
     
@@ -535,20 +463,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="atticuszeller/" class="md-nav__link ">
+            <a href="../../../../" class="md-nav__link ">
               
   
   
@@ -566,13 +497,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -589,8 +520,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -605,18 +538,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
             
   
   
@@ -634,7 +570,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -649,8 +585,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -673,11 +611,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" checked="">
         
           
           <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
@@ -698,7 +636,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -716,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/Pointer/" class="md-nav__link">
+      <a href="../../Pointer/" class="md-nav__link">
         
   
   
@@ -744,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/packages/" class="md-nav__link">
+      <a href="../../packages/" class="md-nav__link">
         
   
   
@@ -772,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/syntax/" class="md-nav__link">
+      <a href="../../syntax/" class="md-nav__link">
         
   
   
@@ -870,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/Data_model/Queue/" class="md-nav__link">
+      <a href="../../Data_model/Queue/" class="md-nav__link">
         
   
   
@@ -898,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/Data_model/String/" class="md-nav__link">
+      <a href="../../Data_model/String/" class="md-nav__link">
         
   
   
@@ -926,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/Data_model/map/" class="md-nav__link">
+      <a href="../../Data_model/map/" class="md-nav__link">
         
   
   
@@ -954,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/Data_model/set/" class="md-nav__link">
+      <a href="../../Data_model/set/" class="md-nav__link">
         
   
   
@@ -982,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/Data_model/stack/" class="md-nav__link">
+      <a href="../../Data_model/stack/" class="md-nav__link">
         
   
   
@@ -1010,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/Data_model/unordered_map/" class="md-nav__link">
+      <a href="../../Data_model/unordered_map/" class="md-nav__link">
         
   
   
@@ -1038,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/Data_model/unordered_set/" class="md-nav__link">
+      <a href="../../Data_model/unordered_set/" class="md-nav__link">
         
   
   
@@ -1066,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/Data_model/vector/" class="md-nav__link">
+      <a href="../../Data_model/vector/" class="md-nav__link">
         
   
   
@@ -1099,8 +1037,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1133,11 +1073,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1_5">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1_5" checked="">
         
           
           <label class="md-nav__link" for="__nav_4_2_1_5" id="__nav_4_2_1_5_label" tabindex="0">
@@ -1158,7 +1098,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_1_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_1_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2_1_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1176,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/STL/Pointer/" class="md-nav__link">
+      <a href="../Pointer/" class="md-nav__link">
         
   
   
@@ -1204,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/STL/Queue/" class="md-nav__link">
+      <a href="../Queue/" class="md-nav__link">
         
   
   
@@ -1232,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/STL/String/" class="md-nav__link">
+      <a href="../String/" class="md-nav__link">
         
   
   
@@ -1260,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/STL/algorithm/" class="md-nav__link">
+      <a href="../algorithm/" class="md-nav__link">
         
   
   
@@ -1288,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/STL/map/" class="md-nav__link">
+      <a href="../map/" class="md-nav__link">
         
   
   
@@ -1316,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/STL/set/" class="md-nav__link">
+      <a href="../set/" class="md-nav__link">
         
   
   
@@ -1344,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/STL/stack/" class="md-nav__link">
+      <a href="../stack/" class="md-nav__link">
         
   
   
@@ -1372,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/STL/unordered_map/" class="md-nav__link">
+      <a href="../unordered_map/" class="md-nav__link">
         
   
   
@@ -1400,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/STL/unordered_set/" class="md-nav__link">
+      <a href="../unordered_set/" class="md-nav__link">
         
   
   
@@ -1425,10 +1365,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/C%2B%2B/STL/vector/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1444,6 +1393,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1528,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/golang/config/" class="md-nav__link">
+      <a href="../../../golang/config/" class="md-nav__link">
         
   
   
@@ -1624,7 +1574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/python/Mypy/" class="md-nav__link">
+      <a href="../../../python/Mypy/" class="md-nav__link">
         
   
   
@@ -1652,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/python/Pytest/" class="md-nav__link">
+      <a href="../../../python/Pytest/" class="md-nav__link">
         
   
   
@@ -1736,7 +1686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/01_Lang/python/Std/Pathlib/" class="md-nav__link">
+      <a href="../../../python/Std/Pathlib/" class="md-nav__link">
         
   
   
@@ -1802,17 +1752,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
             
   
   
@@ -1908,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/Backend/Docker/" class="md-nav__link">
+      <a href="../../../../02_DevOps/Backend/Docker/" class="md-nav__link">
         
   
   
@@ -1936,7 +1889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/Backend/ssh/" class="md-nav__link">
+      <a href="../../../../02_DevOps/Backend/ssh/" class="md-nav__link">
         
   
   
@@ -2020,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/Backend/Proxy/Traefik/" class="md-nav__link">
+      <a href="../../../../02_DevOps/Backend/Proxy/Traefik/" class="md-nav__link">
         
   
   
@@ -2095,7 +2048,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="atticuszeller/02_DevOps/OS/" class="md-nav__link ">
+            <a href="../../../../02_DevOps/OS/" class="md-nav__link ">
               
   
   
@@ -2139,7 +2092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/OS/Bugs/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Bugs/" class="md-nav__link">
         
   
   
@@ -2167,7 +2120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/OS/GPU/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/GPU/" class="md-nav__link">
         
   
   
@@ -2230,7 +2183,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="atticuszeller/02_DevOps/OS/Ubuntu/" class="md-nav__link ">
+            <a href="../../../../02_DevOps/OS/Ubuntu/" class="md-nav__link ">
               
   
   
@@ -2274,7 +2227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/OS/Ubuntu/Appearance/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Ubuntu/Appearance/" class="md-nav__link">
         
   
   
@@ -2302,7 +2255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/OS/Ubuntu/Bugs/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Ubuntu/Bugs/" class="md-nav__link">
         
   
   
@@ -2330,7 +2283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/OS/Ubuntu/Gnome/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Ubuntu/Gnome/" class="md-nav__link">
         
   
   
@@ -2358,7 +2311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/OS/Ubuntu/Package/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Ubuntu/Package/" class="md-nav__link">
         
   
   
@@ -2386,7 +2339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/OS/Ubuntu/System/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Ubuntu/System/" class="md-nav__link">
         
   
   
@@ -2414,7 +2367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/OS/Ubuntu/Terminal/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Ubuntu/Terminal/" class="md-nav__link">
         
   
   
@@ -2510,7 +2463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/OS/Windows/Device/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Windows/Device/" class="md-nav__link">
         
   
   
@@ -2538,7 +2491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/OS/Windows/Powershell/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Windows/Powershell/" class="md-nav__link">
         
   
   
@@ -2566,7 +2519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/OS/Windows/scoop/" class="md-nav__link">
+      <a href="../../../../02_DevOps/OS/Windows/scoop/" class="md-nav__link">
         
   
   
@@ -2668,7 +2621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/VCS/git/" class="md-nav__link">
+      <a href="../../../../02_DevOps/VCS/git/" class="md-nav__link">
         
   
   
@@ -2752,7 +2705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/02_DevOps/VCS/github/SSH_keypair_setup_for_GitHub/" class="md-nav__link">
+      <a href="../../../../02_DevOps/VCS/github/SSH_keypair_setup_for_GitHub/" class="md-nav__link">
         
   
   
@@ -2818,17 +2771,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4">
         
           
-          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="">
             
   
   
@@ -2920,7 +2876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/03_AI/LLM/Technique/" class="md-nav__link">
+      <a href="../../../../03_AI/LLM/Technique/" class="md-nav__link">
         
   
   
@@ -3014,7 +2970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/03_AI/Machine%20Learning/Data/" class="md-nav__link">
+      <a href="../../../../03_AI/Machine%20Learning/Data/" class="md-nav__link">
         
   
   
@@ -3042,7 +2998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/03_AI/Machine%20Learning/Pytorch/" class="md-nav__link">
+      <a href="../../../../03_AI/Machine%20Learning/Pytorch/" class="md-nav__link">
         
   
   
@@ -3136,7 +3092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/03_AI/Robots/Isaac%20lab/" class="md-nav__link">
+      <a href="../../../../03_AI/Robots/Isaac%20lab/" class="md-nav__link">
         
   
   
@@ -3164,7 +3120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/03_AI/Robots/sim/" class="md-nav__link">
+      <a href="../../../../03_AI/Robots/sim/" class="md-nav__link">
         
   
   
@@ -3230,17 +3186,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5">
         
           
-          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="">
             
   
   
@@ -3276,7 +3235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/Gemini/" class="md-nav__link">
+      <a href="../../../../04_Tools/Gemini/" class="md-nav__link">
         
   
   
@@ -3304,7 +3263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/Obsidian/" class="md-nav__link">
+      <a href="../../../../04_Tools/Obsidian/" class="md-nav__link">
         
   
   
@@ -3388,7 +3347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/IDE/VSCode/" class="md-nav__link">
+      <a href="../../../../04_Tools/IDE/VSCode/" class="md-nav__link">
         
   
   
@@ -3538,7 +3497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/Learning_Legacy/Computer%20Vison/3D/" class="md-nav__link">
+      <a href="../../../../04_Tools/Learning_Legacy/Computer%20Vison/3D/" class="md-nav__link">
         
   
   
@@ -3566,7 +3525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/Learning_Legacy/Computer%20Vison/Image/" class="md-nav__link">
+      <a href="../../../../04_Tools/Learning_Legacy/Computer%20Vison/Image/" class="md-nav__link">
         
   
   
@@ -3674,7 +3633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/Reference/Finding%20and%20managing%20research%20papers%20a%20survey%20of%20tools%20and%20products/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/Finding%20and%20managing%20research%20papers%20a%20survey%20of%20tools%20and%20products/" class="md-nav__link">
         
   
   
@@ -3814,7 +3773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/Reference/blog/Steph%20Ango/What%20can%20we%20remove/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/blog/Steph%20Ango/What%20can%20we%20remove/" class="md-nav__link">
         
   
   
@@ -3914,7 +3873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/Reference/devops/A%20Docker%20Tutorial%20for%20Beginners/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/devops/A%20Docker%20Tutorial%20for%20Beginners/" class="md-nav__link">
         
   
   
@@ -4008,7 +3967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/Reference/linux/12%20Linux%20Terminal%20Shortcuts%20Every%20Power%20Linux%20User%20Must%20Know/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/linux/12%20Linux%20Terminal%20Shortcuts%20Every%20Power%20Linux%20User%20Must%20Know/" class="md-nav__link">
         
   
   
@@ -4036,7 +3995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/Reference/linux/Understanding%20Systemd%20Units%20and%20Unit%20Files%20%20DigitalOcean/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/linux/Understanding%20Systemd%20Units%20and%20Unit%20Files%20%20DigitalOcean/" class="md-nav__link">
         
   
   
@@ -4128,7 +4087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/" class="md-nav__link">
+      <a href="../../../../04_Tools/Reference/obsidian/My%2010%2B%20Obsidian%20Plugins%20As%20a%20Medium%20Writer/" class="md-nav__link">
         
   
   
@@ -4230,7 +4189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/Research/Journal/" class="md-nav__link">
+      <a href="../../../../04_Tools/Research/Journal/" class="md-nav__link">
         
   
   
@@ -4258,7 +4217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/Research/tools/" class="md-nav__link">
+      <a href="../../../../04_Tools/Research/tools/" class="md-nav__link">
         
   
   
@@ -4358,7 +4317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/agents/claude-system-prompt/" class="md-nav__link">
+      <a href="../../../../04_Tools/agents/claude-system-prompt/" class="md-nav__link">
         
   
   
@@ -4386,7 +4345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/agents/config/" class="md-nav__link">
+      <a href="../../../../04_Tools/agents/config/" class="md-nav__link">
         
   
   
@@ -4414,7 +4373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/agents/gemini-system-prompt-final/" class="md-nav__link">
+      <a href="../../../../04_Tools/agents/gemini-system-prompt-final/" class="md-nav__link">
         
   
   
@@ -4442,7 +4401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/agents/gemini-system-prompt/" class="md-nav__link">
+      <a href="../../../../04_Tools/agents/gemini-system-prompt/" class="md-nav__link">
         
   
   
@@ -4470,7 +4429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="atticuszeller/04_Tools/agents/tools/" class="md-nav__link">
+      <a href="../../../../04_Tools/agents/tools/" class="md-nav__link">
         
   
   
@@ -4531,47 +4490,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#current-focus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔭 Current Focus
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛠️ Tech Stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#selected-open-source-research" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📦 Selected Open Source &amp; Research
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -4591,45 +4511,167 @@
   
 
 
-<h1 align="center">Hi there, I'm Atticus Zeller (周宙) 🤖</h1>
-
-<h3 align="center">Embodied AI Researcher &amp; VLA Algorithm Engineer</h3>
-
-<p align="center">
-  <a href="https://docs.atticux.me">Blog / Docs</a> •
-  <a href="mailto:hello@atticux.me">Email</a> •
-  <a href="https://orcid.org/0009-0008-5460-325X">ORCID</a>
-</p>
-
-<hr>
-<p>I am currently a Master's student in Artificial Intelligence at Shanghai Normal University. My research and engineering efforts are heavily focused on <strong>Vision-Language-Action (VLA) models</strong> and <strong>Reinforcement Learning</strong> for physical robotic manipulation. I bridge the gap between open-world semantic understanding and contact-rich precision control.</p>
-<h3 id="current-focus">🔭 Current Focus<a class="headerlink" href="#current-focus" title="Permanent link">¶</a></h3>
+<h1 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">¶</a></h1>
 <ul>
-<li><strong>VLA Deployment:</strong> Fine-tuning and deploying state-of-the-art VLA models (<code>SmolVLA</code>, <code>π0.5</code>) on the <strong>SO-ARM101</strong> bimanual robot.</li>
-<li><strong>RL for Robotics:</strong> Implementing residual online Reinforcement Learning (e.g., <em>RL Token</em>) to decouple high-level reasoning from low-level muscle reflexes.</li>
-<li><strong>Hardware-Software Co-design:</strong> Optimizing 50Hz control loops via Client-Server async inference architectures and addressing Sim-to-Real gaps using <strong>Isaac Lab</strong> / <strong>MuJoCo</strong>.</li>
+<li><strong>Empty Vector</strong>:</li>
 </ul>
-<h3 id="tech-stack">🛠️ Tech Stack<a class="headerlink" href="#tech-stack" title="Permanent link">¶</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec</span><span class="p">;</span>
+</span></code></pre></div>
 <ul>
-<li><strong>Embodied AI &amp; Robotics:</strong> LeRobot | SO-ARM101 | Action Chunking | Flow Matching | Sim2Real </li>
-<li><strong>Reinforcement Learning:</strong> TD3 | PPO | Behavior Cloning (BC) | DAgger | Residual RL</li>
-<li><strong>Deep Learning:</strong> PyTorch | HuggingFace | CUDA | 3D Gaussian Splatting</li>
-<li><strong>Simulation:</strong> MuJoCo | Isaac Lab / Isaac Sim</li>
-<li><strong>DevOps &amp; Backend:</strong> Linux | Docker | FastAPI | Git | Claude Agentic Workflow</li>
+<li><strong>Pre-allocate Size</strong>:</li>
 </ul>
-<h3 id="selected-open-source-research">📦 Selected Open Source &amp; Research<a class="headerlink" href="#selected-open-source-research" title="Permanent link">¶</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w">  </span><span class="c1">// Contains 10 elements, all initialized to 0</span>
+</span></code></pre></div>
 <ul>
-<li>📄 <strong><a href="https://arxiv.org/abs/2412.20056">GSplatLoc: Ultra-Precise Camera Localization via 3D Gaussian Splatting</a></strong> (1st Author)</li>
-<li>Formulated camera pose estimation as a gradient optimization problem to minimize translation and rotation errors in high-resolution 3DGS environments.</li>
-<li>🦾 <strong>LeRobot (VLA Pipeline SOPs)</strong></li>
-<li>Maintaining comprehensive Chinese engineering docs for <code>SO-ARM101 × VLA</code>. Covering data collection, 3D-2D mask projection filtering, LoRA fine-tuning, and asynchronous inference loops.</li>
-<li>⚡ <strong><a href="https://github.com/AtticusZeller/fastapi-supabase-template">fastapi-supabase-template</a></strong></li>
-<li>A highly concurrent async backend scaffolding boilerplate, deeply integrated with Docker and built via agentic workflows.</li>
+<li><strong>Pre-allocate Size with Value</strong>:</li>
 </ul>
-<p><br></p>
-<p align="center">
-  <i>"Replacing pure imitation with physical reflexes."</i>
-</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Contains 10 elements, all initialized to 1</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Initialize from Array</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Initialize from Another Vector</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec2</span><span class="p">(</span><span class="n">vec</span><span class="p">);</span>
+</span></code></pre></div>
+<h1 id="adding-elements">Adding Elements<a class="headerlink" href="#adding-elements" title="Permanent link">¶</a></h1>
+<ul>
+<li><strong>Append to End</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Insert at Beginning</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">vec</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Insert at Specific Position</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">vec</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+</span></code></pre></div>
+<ul>
+<li><strong>append vector</strong></li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">vec</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="n">vec_2</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">vec_2</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
+</span></code></pre></div>
+<h1 id="access-elements">Access Elements<a class="headerlink" href="#access-elements" title="Permanent link">¶</a></h1>
+<ul>
+<li><strong>Access Last Element</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">back</span><span class="p">();</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Access First Element</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Access i-th Element (0-based)</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">elem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></code></pre></div>
+<h1 id="removing-elements">Removing Elements<a class="headerlink" href="#removing-elements" title="Permanent link">¶</a></h1>
+<ul>
+<li><strong>Remove Last Element</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">vec</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span><span class="w">    </span><span class="o">-&gt;</span><span class="kt">void</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Remove i-th Element</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">vec</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Remove a Range of Elements</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">vec</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">);</span><span class="w">  </span><span class="c1">// Removes elements from i to j-1</span>
+</span></code></pre></div>
+<h1 id="query-attributes">Query Attributes<a class="headerlink" href="#query-attributes" title="Permanent link">¶</a></h1>
+<ul>
+<li><strong>Get Vector Size</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Check if Vector is Empty</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isEmpty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span>
+</span></code></pre></div>
+<h1 id="other-common-operations">Other Common Operations<a class="headerlink" href="#other-common-operations" title="Permanent link">¶</a></h1>
+<ul>
+<li><strong>Clear Vector</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">vec</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Resize Vector</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">vec</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span><span class="w">  </span><span class="c1">// New elements are initialized to 0</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Find Element Position</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">std</span><span class="o">::</span><span class="n">find</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">()</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Sort Vector</strong>:</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></code></pre></div>
+<h1 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h1>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">    </span><span class="c1">// 使用 std::min_element 和 lambda 函数找到最小正整数</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">min_element</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">*</span><span class="n">it</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"最小正整数是："</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">it</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"没有找到正整数"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>
+</span><span id="__span-21-21"><a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-21-22"><a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">    </span><span class="c1">// 先排序</span>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="w">    </span><span class="c1">// 使用 std::unique 去重</span>
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="w">    </span><span class="c1">// 删除多余元素</span>
+</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="w">    </span><span class="n">vec</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">last</span><span class="p">,</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a>
+</span><span id="__span-22-17"><a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a><span class="w">    </span><span class="c1">// 输出去重后的向量</span>
+</span><span id="__span-22-18"><a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">elem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">vec</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-19"><a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">elem</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" "</span><span class="p">;</span>
+</span><span id="__span-22-20"><a id="__codelineno-22-20" name="__codelineno-22-20" href="#__codelineno-22-20"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-22-21"><a id="__codelineno-22-21" name="__codelineno-22-21" href="#__codelineno-22-21"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-22-22"><a id="__codelineno-22-22" name="__codelineno-22-22" href="#__codelineno-22-22"></a>
+</span><span id="__span-22-23"><a id="__codelineno-22-23" name="__codelineno-22-23" href="#__codelineno-22-23"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-22-24"><a id="__codelineno-22-24" name="__codelineno-22-24" href="#__codelineno-22-24"></a><span class="p">}</span>
+</span></code></pre></div>
 
 
 
@@ -4696,15 +4738,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
+          
+          <a href="../unordered_set/" class="md-footer__link md-footer__link--prev" aria-label="Previous: unordered_set">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                unordered_set
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="GEMINI/" class="md-footer__link md-footer__link--next" aria-label="Next: 🌌 GEMINI.md - Handbook Context &amp;amp; Instruction Manual">
+          <a href="../../../golang/config/" class="md-footer__link md-footer__link--next" aria-label="Next: Config">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                🌌 GEMINI.md - Handbook Context &amp; Instruction Manual
+                Config
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4782,12 +4840,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "content.footnote.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.footer", "navigation.top", "navigation.tracking", "toc.follow", "header.autohide", "search.suggest", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["content.code.copy", "content.footnote.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.footer", "navigation.top", "navigation.tracking", "toc.follow", "header.autohide", "search.suggest", "search.highlight", "search.share"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="js/katex.js"></script>
+        <script src="../../../../../js/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
