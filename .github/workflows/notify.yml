@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   # createDispatchEvent 需要 contents:write
+  actions: write   # createWorkflowDispatch 需要 actions:write
 
 jobs:
   notify:
@@ -18,8 +18,9 @@ jobs:
       - uses: actions/github-script@v7
         with:
           script: |
-            await github.rest.repos.createDispatchEvent({
+            await github.rest.actions.createWorkflowDispatch({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              event_type: 'content-update'
+              workflow_id: 'deploy.yml',
+              ref: 'page'
             })
