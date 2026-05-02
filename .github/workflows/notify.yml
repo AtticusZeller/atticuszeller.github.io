@@ -1,0 +1,22 @@
+name: Notify Docs Build
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.md'
+      - 'assets/**'
+      - '.github/workflows/notify.yml'
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.repos.createDispatchEvent({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              event_type: 'content-update'
+            })
