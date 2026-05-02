@@ -2,8 +2,6 @@ name: Deploy Docs
 on:
   push:
     branches: [page]
-  repository_dispatch:
-    types: [content-update]
   workflow_dispatch:
 
 permissions:
