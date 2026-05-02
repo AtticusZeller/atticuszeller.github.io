@@ -8,6 +8,9 @@ on:
       - '.github/workflows/notify.yml'
   workflow_dispatch:
 
+permissions:
+  contents: write   # createDispatchEvent 需要 contents:write
+
 jobs:
   notify:
     runs-on: ubuntu-latest
