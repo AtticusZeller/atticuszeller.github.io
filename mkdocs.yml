@@ -11,7 +11,7 @@ repo_name: Notes
 
 
 # build target dir
-docs_dir: atticuszeller
+docs_dir: build
 # build output dir
 site_dir: site
 

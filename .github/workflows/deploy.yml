@@ -1,0 +1,45 @@
+name: Deploy Docs
+on:
+  push:
+    branches: [page]
+  repository_dispatch:
+    types: [content-update]
+  workflow_dispatch:
+
+permissions:
+  contents: write   # mkdocs gh-deploy 需要写 gh-pages
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: page
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: Sync notes from main
+        run: |
+          git fetch origin main
+          mkdir -p build
+          # 把 main 树解到 build/,排除 .github 与 99_Private
+          git archive origin/main | tar -x -C build/
+          rm -rf build/.github build/99_Private build/99_system
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+          cache-dependency-glob: ""
+
+      - name: Build & deploy
+        run: bash docs.sh deploy
