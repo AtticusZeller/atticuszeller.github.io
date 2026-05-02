@@ -14,9 +14,3 @@
 
 - `assets/` — 系统级资源(主题图标、字体、CSS 片段、agent 用的提示文件等)。
   笔记的图片附件继续放在 vault 根的 `assets/`,不要混。
-
-## 历史
-
-早期版本曾把 `.git` 通过 gitfile 重定位到 `99_system/git/atticuszeller.git/`,
-现已移除 — `.git` 直接位于 vault 根,Obsidian Sync 默认就跳过 hidden folders,
-obsidian-git 插件负责跨机 git 状态同步。
