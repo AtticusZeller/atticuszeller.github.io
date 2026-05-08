@@ -9,3 +9,9 @@ web 版本
 ```bash
 curl -fsSL https://raw.githubusercontent.com/AtticusZeller/scripts/refs/heads/main/run-cc-switch-web.sh | bash
 ```
+
+- [codex-relay](https://github.com/atticuszeller/codex-relay) 兼容旧版本 ChatGPT API chat 接口到 Codex，成功适配小米模型
+
+```bash
+uv install codex-relay
+```
